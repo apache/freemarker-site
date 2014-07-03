@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page title="Editor/IDE plugins">
+  <headsection>
+    <downloadWarnings />
+    <p>
+      Below you can find syntax highlight definitions and other plugins for text editors and
+      IDE-s that help you working with FreeMarker.
+      We encourage everybody to develop and send syntax highlight definitions or other
+      plugins for his/her favorite editor or IDE.
+    </p>
+    <p>
+      If you know of another product that should appear
+      here, <a href="mailto:freemarker-devel@lists.sourceforge.net">drop us a
+      note</a>.
+    </p>
+  </headsection>
+  <sections>
+    <section title="The plugins">
+      <p>Anybody wants to improve these syntax highlights is welcome!</p>
+      <table border="0" cellspacing="2" cellpadding="4">
+        <tr valign="top" align="center">
+          <th align="left" class="cell">Editor or IDE</th>
+          <th class="cell">Features</th>
+          <th class="cell">Version</th>
+          <th class="cell">File</th>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Eclipse</td>
+          <td class="cell">Syntax highlight, syntax error indicator,
+            code completion for macro names and bean property names.
+          </td>
+          <td class="cell" colspan="2">Part of the JBoss Tools Project. Install like this:
+            <ol>
+              <li><p>
+                In Eclipse, "Help" / "Eclipse Marketplace...", search for "JBoss Tools", "Install".
+                A tree of checkboxes will appear, uncheck all (by unchecking the root) except "FreeMarker IDE".
+                (On old Eclipse you may have to use the
+                <a href="http://www.jboss.org/tools/download/">JBoss Tools download page</a> instead.)
+              </p></li>
+              <li><p>
+                If the plugin comes with a different FreeMarker version than the one your app works with, it
+                will mark the usage of too fresh language features as errors, or the other way around. To fix this:<br />
+                Find <tt>freemarker*.jar</tt> under <tt><i>&lt;yourHome></i>/.eclipse/</tt>.
+                Exit Eclipse, and overwrite it with the jar you want (the file name must remain the same, with the
+                now false version number in it).
+                <br />Note that downgrading or changes in the 1st or 2nd version number can (in theory)
+                break the plugin.
+              </p></li>
+            </ol>
+          </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Emacs</td>
+          <td class="cell">Syntax highlight, indentation, block folding, some code navigation. Emacs major-mode for editing Web templates, includes FreeMarker support among others.</td>
+          <td class="cell"  colspan="2"><a href="http://web-mode.org/">The homepage of web-mode.el</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Eclipse (tried with 3.x)</td>
+          <td class="cell">FreeMarker documentation in the Eclipse help system.<br />
+              Requires FreeMarker 2.3rc1 (or later), or 2.2.6 (or later) from the 2.2.x series</td>
+          <td class="cell">2004-03-13</td>
+          <td class="cell"><a href="download/editor/fm-eclipse-help.tar.gz">fm-eclipse-help.tar.gz</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Emacs (tried with 20.7)</td>
+          <td class="cell">Syntax highlight</td>
+          <td class="cell">0.1</td>
+          <td class="cell"><a href="download/editor/ftl.el">ftl.el</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Kate and KWrite (tried with Kate 2.5.10 and 3.2)</td>
+          <td class="cell">Syntax highlight</td>
+          <td class="cell">2009-08-08</td>
+          <td class="cell"><a href="download/editor/kwriteftl.tar.gz">kwriteftl.tar.gz</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">NetBeans 6.0 or later</td>
+          <td class="cell">Syntax highlight, code completion, template navigation</td>
+          <td class="cell" colspan="2">Downloadable from the NetBeans plugins
+          site.
+          <br /><a href="http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=3755">NetBeans plugin download page...</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">TextPad 4 or later</td>
+          <td class="cell">Syntax highlight</td>
+          <td class="cell">2003-03-24</td>
+          <td class="cell"><a href="download/editor/textpadftl.zip">textpadftl.zip</a></td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">Vim ("Vi IMproved")</td>
+          <td class="cell">Syntax highlight</td>
+          <td class="cell">2011-10-07</td>
+	  <td class="cell"><a href="download/editor/ftl.vim">ftl.vim</a></td>
+        </tr>
+      </table>
+    </section>
+    <section title="Products that support FreeMarker out-of-the-box">
+      <table border="0" cellpadding="4">
+        <tr valign="top">
+          <td><a href="http://www.jetbrains.com/idea/">IntelliJ&#160;IDEA&#160;8.0</a></td>
+          <td>A well-known feature-rich commercial Java IDE.</td>
+        </tr>
+        <tr valign="top">
+          <td><a href="http://www.jedit.org">jEdit&#160;4.1</a></td>
+          <td>jEdit is a Free programmer's text editor written in Java.
+          It is highly customizable, extensible, and has an easy-to-use interface.</td>
+        </tr>
+        <tr valign="top">
+          <td><a href="http://www.modelworks.com">SitePad&#160;Pro&#160;6</a></td>
+          <td>SitePad Pro is an Integrated Development Environment (IDE) for Java, HTML, VRML and other files. It's commercial software.</td>
+        </tr>
+      </table>
+    </section>
+  </sections>
+</page>

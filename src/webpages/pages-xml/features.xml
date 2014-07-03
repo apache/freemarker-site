@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page title="Features">
+  <headsection>
+    <p>
+      A few feature highlights of FreeMarker.
+    </p>
+  </headsection>
+  <sections>
+    <section title="General purpose">
+      <ul>
+        <li>Can be used to generate any kind of text: HTML, XML, RTF, Java source code, etc.</li>
+        <li>Easy to embed into your product: Lightweight, no required dependencies. Doesn't assume servlet environment.</li>
+        <li>Pluggable template loader: you can load templates from any sources; local files, database, etc.</li>
+        <li>You can do whatever you want with the generated text: store it in a local file, send it as e-mail, send it back to a Web browser from a Web application, etc.</li>
+      </ul>
+    </section>
+    
+    <section title="Powerful template language">
+      <ul>
+        <li>All the usual directives: if/elseif/else, looping through lists, include other templates.</li>
+        <li>Creating and changing variables in templates.</li>
+        <li>Can use complex expressions to specify values almost everywhere.
+          <ul>
+            <li>String operations: concatenation, sub-string, uppercase, capitalize, escaping, etc.</li>
+            <li>Decimal precision arithmetic calculations</li>
+            <li>Boolean arithmetic</li>
+            <li>Reading array and associative array elements</li>
+            <li>Array and associative array literals</li>
+            <li>You can add your own functions (methods) for special calculations.</li>
+          </ul>
+        </li>
+        <li>Custom directives (macros) with named and positional parameters and with nested content (body). For example:<br/>
+            <tt>&lt;@myMacro color="red" width=2>...&lt;/@myMacro></tt><br />
+            These can be defined right in the templates, or even in Java.
+        </li>
+        <li>Custom directives can filter the output of their nested content, such as doing white-space compression, syntax highlighting, etc.</li>
+        <li>Name-spaces to help build and maintain reusable macro libraries or to divide big projects into separated modules without worrying about name clashes.</li>
+      </ul>
+    </section>
+    
+    <section title="Versatile data model">
+      <p>FreeMarker does not work through direct reflection on Java objects; the Java objects are exposed to the template as a tree of variables through pluggable object wrappers.
+      Thus, you can show the objects (Java beans, XML documents, SQL query result sets, etc.) in an abstract, tailored way for the template authors, without bothering them with technical details.
+      This also means that objects coming for non-Java JVM languages (such as Jython) can be accessed as conveniently as "native" objects (if the proper object wrapper is implemented).</p>
+    </section>
+    
+    <section title="Web-ready">
+      <ul>
+        <li>Designed for MVC pattern: separate visual design from application logic.</li>
+        <li>Built-in constructs in the template language to handle typical Web-related tasks like HTML-escaping.</li>
+        <li>Can be integrated with "Model 2" Web application frameworks out-of-the-box as JSP replacement.</li>
+        <li>Supports JSP taglibs (tested up to JSP 2.1 currently) via <tt>FreemarkerSerlvet</tt>, except that the JSP 2 "tag files" (i.e., when custom tags are <em>implemented</em> in JSP language rather than as Java classes) aren't supported.</li>
+      </ul>
+    </section>
+    
+    <section title="Internationalization/localization-aware">
+      <ul>
+        <li>Charset-aware (uses UNICODE internally).</li>
+        <li>Locale sensitive number and date/time formatting.</li>
+        <li>Non-US characters can be used in identifiers (as variable names).</li>
+        <li>Multiple variations of the same template for different languages.</li>
+      </ul>
+    </section>
+    
+    <section title="XML Processing Capabilities">
+      <ul>
+        <li>Terse way of walking XML nodes, like <tt>book.chapter[0].title</tt>.</li>
+        <li>Declarative/recursive XML processing (with the &lt;#recurse&gt; and &lt;#visit&gt; directives).</li>
+      </ul>
+    </section>
+    
+    <!-- This section needs reviewing... -->
+    <!--
+    <section title="Comparing with other products">
+      <p>
+        You might also be interested 
+        <a href="fmVsVel.html">what's difference between
+        FreeMarker and Apache Velocity</a>.
+      </p>
+      
+      <p>
+        FreeMarker 2.3 often can be used as an alternative to XSLT. You can read our comparison <a href="fmVsXSLT.html">here</a>. 
+      </p>
+    </section>
+    -->
+  </sections>
+</page>

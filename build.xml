@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<project name="FreeMarker Site" default="pack" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+
+  <!-- Ivy project coordinates: -->
+  <property name="moduleOrg" value="org.freemarker" />
+  <property name="moduleName" value="site" />
+  <property name="moduleBranch" value="1.0" />
+  
+  <!-- Will be overidden on the server: -->
+  <property name="server.ivy.repo.root" value="${basedir}/build/dummy-server-ivy-repo" />
+
+  <target name="init">
+    <condition property="deps.available">
+      <available file=".ivy" />
+    </condition>
+    <antcall target="_autoget-deps" />
+  
+    <tstamp>
+      <format property="timeStamp" pattern="yyyy-MM-dd HH:mm:ss z" timezone="GMT" />
+    </tstamp>
+  </target>
+
+  <target name="create-site-dirs" depends="init">
+    <mkdir dir="build/site/images"/>
+  </target>
+  
+  <target name="define-task" depends="init">
+    <ivy:cachepath pathid="ivy.dep" />
+    <taskdef name="freemarker" classname="freemarker.ext.ant.FreemarkerXmlTask"
+      classpathref="ivy.dep"
+    />
+  </target>
+
+  <target name="webpages-xml" depends="define-task">
+    <freemarker
+      basedir="src/webpages/pages-xml"
+      destdir="build/site"
+      includes="**/*.xml"
+      template="src/webpages/site.ftl"
+      projectfile="../site.xml"
+      encoding="utf-8"
+      incremental="no">
+      <!-- jython>
+        # We could do something interesting in here if we wanted to.
+        print "The FreeMarker main module is available: ${freemarker-src}"     
+      </jython -->
+    </freemarker>
+  </target>
+
+  <target name="eclipse-toc-xml" if="site.offline" depends="define-task">
+    <!-- Build table of content for the Eclipse plugin -->
+    <freemarker
+      basedir="src/webpages"
+      destdir="build/site/tmp"
+      includes="site.xml"
+      template="src/webpages/eclipse-toc.ftl"
+      encoding="iso-8859-1"
+      incremental="no">
+    </freemarker>
+    <!-- Rename the site.xml file into the toc.xml file and delete the site/tmp directory -->
+    <move file="build/site/tmp/site.html" tofile="build/site/eclipse-site-toc.xml"/>
+    <delete dir="build/site/tmp" />
+  </target>
+
+  <target name="webpages-literal" depends="create-site-dirs">
+    <antcall target="webpages-literal-offline" />
+    <antcall target="webpages-literal-online" />
+  </target>
+
+  <target name="webpages-literal-offline" depends="create-site-dirs" if="site.offline">
+    <echo message="1" />
+    <copy toDir="build/site">
+      <fileset dir="src/webpages/pages-literal" excludes="download/library/**" />
+    </copy>
+  </target>
+  
+  <target name="webpages-literal-online" depends="create-site-dirs" unless="site.offline">
+    <echo message="2" />
+    <copy toDir="build/site">
+      <fileset dir="src/webpages/pages-literal" />
+    </copy>
+  </target>
+  
+  <target name="site">
+    <!-- Ensure that we have an empty build/site directory: -->
+    <mkdir dir="build/site"/>
+    <delete includeEmptyDirs="true">
+      <fileset dir="build/site">
+          <include name="*/**"/>
+      </fileset>
+    </delete>
+    
+    <!-- Generate the new content: -->
+    <antcall target="webpages-xml" />
+    <antcall target="webpages-literal" />
+    <antcall target="eclipse-toc-xml" />
+  </target>
+  
+  <target name="clean">
+    <delete dir="build"/>
+  </target>
+  
+  <target name="all" depends="clean, site"/>
+
+  <target name="pack" depends="site">
+    <tar tarfile="build/site.tar" basedir="build/site"/>
+    <mkdir dir="build/artifacts" />
+    <gzip zipfile="build/artifacts/site.tar.gz" src="build/site.tar"/>
+    <delete file="build/site.tar"/>
+  </target>
+
+  <target name="artifacts" depends="pack"
+    description="Creates the artifacts for Ivy."
+  />
+
+  
+  <!-- ================================================================== -->
+  <!-- Dependency management (keep it exactly identical for all projects) -->
+  <!-- ================================================================== -->
+  
+  <target name="_autoget-deps" unless="deps.available">
+    <antcall target="update-deps" />
+  </target>
+  
+  <target name="update-deps"
+    description="Gets the latest version of the dependencies from the Web"
+  >
+    <echo>Getting dependencies...</echo>
+    <echo>-------------------------------------------------------</echo>
+    <ivy:settings id="remote" url="http://freemarker.org/repos/ivy/ivysettings-remote.xml" />
+    <!-- Build an own repository that will serve us even offline: -->
+    <ivy:retrieve settingsRef="remote" sync="true"
+      ivypattern=".ivy.part/repo/[organisation]/[module]/ivy-[revision].xml"
+      pattern=".ivy.part/repo/[organisation]/[module]/[artifact]-[revision].[ext]"
+    />
+    <echo>-------------------------------------------------------</echo>
+    <echo>*** Successfully acquired dependencies from the Web ***</echo>
+    <echo>Eclipse users: Now right-click on ivy.xml and Resolve! </echo>
+    <echo>-------------------------------------------------------</echo>
+    <!-- Only now that we got all the dependencies will we delete anything. -->
+    <!-- Thus a net or repo outage doesn't left us without the dependencies. -->
+
+    <!-- Save the resolution cache from the soon coming <delete>: -->
+    <move todir=".ivy.part/update-deps-reso-cache">
+      <fileset dir=".ivy/update-deps-reso-cache" />
+    </move>
+    <!-- Drop all the old stuff: -->
+    <delete dir=".ivy" />
+    <!-- And use the new stuff instead: -->
+    <move todir=".ivy">
+      <fileset dir=".ivy.part" />
+    </move>
+  </target>
+
+  <!-- Do NOT call this from 'clean'; offline guys would stuck after that. -->
+  <target name="clean-deps"
+    description="Deletes all dependencies"
+  >
+    <delete dir=".ivy" />
+  </target>
+
+  <target name="publish-override" depends="artifacts"
+    description="Ivy-publishes THIS project locally as an override"
+  >
+    <ivy:resolve />
+    <ivy:publish
+      pubrevision="${moduleBranch}-branch-head"
+      overwrite="true" forcedeliver="true"
+      resolver="freemarker-devel-local-override"
+    >
+      <artifacts pattern="build/artifacts/[artifact].[ext]" />
+    </ivy:publish>
+    <echo>-------------------------------------------------------</echo>
+    <echo>*** Don't forget to `ant unpublish-override` later! ***</echo>
+  </target>
+
+  <target name="unpublish-override"
+    description="Undoes publish-override (made in THIS project)"
+  >
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override/${moduleOrg}/${moduleName}" />
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override-cache/${moduleOrg}/${moduleName}" />
+  </target>  
+
+  <target name="unpublish-override-all"
+    description="Undoes publish-override-s made in ALL projects"
+  >
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override" />
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override-cache" />
+  </target>  
+
+  <target name="uninstall"
+    description="Deletes external files created by FreeMarker developement"
+  >
+    <delete dir="${user.home}/.ivy2/freemarker-devel-cache" />
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override" />
+    <delete dir="${user.home}/.ivy2/freemarker-devel-local-override-cache " />
+  </target>
+
+  <target name="report-deps"
+    description="Creates a HTML document that summarizes the dependencies."
+  >
+    <mkdir dir="build/deps-report" />
+    <ivy:resolve />
+    <ivy:report todir="build/deps-report" />
+  </target>
+  
+  <!--
+    This meant to be called on the Continuous Integration server, so the
+    integration builds appear in the freemarker.org public Ivy repository.
+    The artifacts must be already built.
+  -->
+  <target name="server-publish-last-build"
+    description="(For the Continuous Integration server only)"
+  >
+    <delete dir="build/dummy-server-ivy-repo" />
+    <ivy:resolve />
+    <ivy:publish
+      pubrevision="${moduleBranch}-branch-head"
+      overwrite="true" forcedeliver="true"
+      resolver="server-publishing-target"
+    >
+      <artifacts pattern="build/artifacts/[artifact].[ext]" />
+    </ivy:publish>
+  </target>
+  
+</project>

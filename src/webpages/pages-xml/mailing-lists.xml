@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<page title="Gmane">
+
+  <sections>
+    <section title="Subscription">
+      <p>
+        <i>Note: While the user mailing list still works and questions are answerred, it's more efficient to 
+        <a href="http://stackoverflow.com/questions/ask?tags=freemarker">put your question on Stack Overflow with tag "freemareker"</a>.
+        The FreeMarker maintainers are supposed to track questions with that tag.</i>
+      </p>
+      <p>
+        To discuss wishes, new features, other deeper issues, subscribe to the freemarker-developer mailing list.
+      </p>
+      <p><a href="https://sourceforge.net/p/freemarker/mailman/">You can see the lists and subscribe here...</a></p>
+    </section>
+  
+    <section title="Browse/search the mailing list archives">
+      <p>Choose mailing list:</p>
+      <ul>
+        <li><a href="http://news.gmane.org/gmane.comp.web.freemarker.user">freemarker-user@lists.sourceforge.net</a></li>
+        <li><a href="http://news.gmane.org/gmane.comp.web.freemarker.devel">freemarker-devel@lists.sourceforge.net</a></li>
+      </ul>
+    </section>
+
+    <section title="News interfaces">
+      <p>All interfaces are two-way (you can both write and read).</p>
+      <ul>
+        <li>For freemarker-user@lists.sourceforge.net:<br/>
+            <a href="nntp://news.gmane.org/gmane.comp.web.freemarker.user">nntp://news.gmane.org/gmane.comp.web.freemarker.user</a></li>
+        <li>For freemarker-devel@lists.sourceforge.net:<br/>
+            <a href="nntp://news.gmane.org/gmane.comp.web.freemarker.devel">nntp://news.gmane.org/gmane.comp.web.freemarker.devel</a></li>
+      </ul>
+    </section>
+  </sections>
+
+</page>
