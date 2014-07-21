@@ -173,6 +173,22 @@
          </description>
       </resource>
       <resource>
+         <name>Liferay Portal</name>
+         <url>http://www.liferay.com/products/liferay-portal/overview</url>
+         <description>
+            Liferay Portal is one of the most widely adapted enterprise portal
+            solutions. It's free and open source with optional enterprise
+            subscription. It leverages existing technologies and standards in its
+            stack where reasonable. It has strong focus on modularity,
+            extensibility, and integration with other systems. Core services
+            include Enterprise Content Management, document management, workflow
+            integration, users/roles, web publishing. Entire portals may be built
+            solely using the web UI and available components. It uses FreeMarker
+            for themes, page layout, fragments of structured content, email,
+            portlet views, code generation.
+         </description>
+      </resource>
+      <resource>
          <name>Lutece (2.0+)</name>
          <url>http://www.lutece.paris.fr</url>
          <description>
