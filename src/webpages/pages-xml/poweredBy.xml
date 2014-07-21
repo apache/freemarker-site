@@ -8,10 +8,13 @@
   <headsection>
     <p>
       Below is a non-comprehensive list of sites and products that use
-      FreeMarker. If you are a developer (or otherwise a representative) of a site or a production-ready
-      product that should appear here, <a href="mailto:freemarker-devel@lists.sourceforge.net">drop us a
-      note</a> that includes a short description (preferably less than 250 characters, or 500 for complex
-      frameworks) and an URL.
+      FreeMarker.
+    </p>
+    <p>
+      If you are a developer (or otherwise a representative) of a product or site
+      with substantial user base that uses FreeMarker, <a href="mailto:freemarker-devel@lists.sourceforge.net">drop us a
+      note</a> that includes a short one paragraph description (preferably less than 300 characters, or 600 for complex
+      frameworks) and an URL. The description should also include what FreeMarker is used for in your product.
     </p>
     <p>
       We'll also be glad if you display one of the following Powered by FreeMarker logos
