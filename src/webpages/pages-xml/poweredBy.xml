@@ -7,8 +7,7 @@
 <page title="Powered By FreeMarker">
   <headsection>
     <p>
-      Below is a non-comprehensive list of sites and products that use
-      FreeMarker.
+      Below is a non-comprehensive list of products and sites that use FreeMarker.
     </p>
     <p>
       If you are a developer (or otherwise a representative) of a product or site
@@ -64,6 +63,16 @@
             is based on exposing their custom object model to FreeMarker templates.
             See <a href="http://www.alfresco.org/mediawiki/index.php/Template_Guide">here</a> for more information.
          </description>
+      </resource>
+      <resource>
+        <name>Apache OFBiz</name>
+        <url>http://ofbiz.apache.org/</url>
+        <description>
+          Apache OFBiz is a project to create a suite 
+          of open-source enterprise/e-commerce applications and modules built 
+          on a common framework. In 2003 the project decided to switch from JSP
+          to FreeMarker for their view component.
+        </description>
       </resource>
       <resource>
          <name>APT-Jelly</name>
@@ -123,15 +132,6 @@
          </description>
       </resource>
       <resource>
-         <name>Hierarchical Inherited Rule-Interpreted XML</name>
-         <url>http://www.alphaworks.ibm.com/tech/hirixml</url>
-         <description>
-            Hierarchical Inherited Rule-Interpreted XML is A dynamic XML Engine that creates
-            dynamic DOMs built on dynamic rules and expressions where the expression may use
-            FreeMarker as the expression interpreter.
-         </description>
-      </resource>
-      <resource>
          <name>JCopist</name>
          <url>http://jcopist.sourceforge.net/</url>
          <description>
@@ -148,28 +148,11 @@
          </description>
       </resource>
       <resource>
-         <name>JMetra</name>
-         <url>http://www.jmetra.com</url>
-         <description>
-            JMetra is a source code analysis tool. It leverages FreeMarker to display the
-            source code metrics that it gathers.
-         </description>
-      </resource>
-      <resource>
          <name>JODReports</name>
          <url>http://jodreports.sourceforge.net/</url>
          <description>
             JODReports is an open source solution for creating office documents and reports in Java,
             using OpenOffice.org.
-         </description>
-      </resource>
-      <resource>
-         <name>Kinetic Fusion (Qmecom)</name>
-         <url>http://www.qmecom.com/</url>
-         <description>
-            KineticFusion (now part of the Qmecom platform) is an application for the creation and manipulation of SWF files,
-            the native format for movies that run within the Flash<sup>TM</sup> platform.
-            It leverages FreeMarker to provide templating capabilities.
          </description>
       </resource>
       <resource>
@@ -211,7 +194,7 @@
       </resource>
       <resource>
          <name>Mango</name>
-         <url>http://mango.serotoninsoftware.com/</url>
+         <url>http://infiniteautomation.com/</url>
          <description>
             Mango is browser-based, Ajax-enabled software that enables users to access and control
             electronic sensors, devices, and machines. It provides an interface with which diverse data
@@ -237,9 +220,9 @@
          <url>http://www.mrc-productivity.com/</url>
          <description>
             m-Power is software which automates enterprise web application development and
-			modernizes legacy business applications. m-Power offers 15 standard Web templates like
-			prompted reports, graphs, pivot tables, maintenance apps, and more.  m-Power reduces
-			Web application development time, lowers development costs, and increases productivity.
+            modernizes legacy business applications. m-Power offers 15 standard Web templates like
+            prompted reports, graphs, pivot tables, maintenance apps, and more.  m-Power reduces
+            Web application development time, lowers development costs, and increases productivity.
          </description>
       </resource>
       <resource>
@@ -289,18 +272,10 @@
             an affordable price.
          </description>
       </resource>
-      <resource>
-         <name>ZeroCode</name>
-         <url>http://www.zerocode.com</url>
-         <description>
-            ZeroCode allows you to build large, scalable, database-backed web 
-            applications with no programming effort, in minutes, from your browser.
-         </description>
-       </resource>
     </resources>  
     </section>
     
-    <section title="Web application frameworks that support FreeMarker">
+    <section title="Web application frameworks that support FreeMarker &quot;views&quot;">
       <p>Note that this list is not complete, since we only list products where the
       framework authors explicitly state that their product supports FreeMarker.
       For some frameworks not listed here, it is easy to plug any view component,
@@ -310,12 +285,12 @@
       For more information <a href="docs/pgui_misc_servlet.html">click here...</a></p>
       <resources>
         <resource>
-          <name>Cáñamo</name>
-          <url>http://canyamo.sourceforge.net</url>
+          <name>Apache Struts</name>
+          <url>http://struts.apache.org/</url>
           <description>
-            [Spanish language only.] Canyamo is a framework for creating portals. The main 
-            developer is Alberto Molpeceres and it is the framework underlying the
-            Spanish-language java portal <a href="http://javahispano.org">JavaHispano.</a>
+            Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications.
+            It favors convention over configuration, is extensible using a plugin architecture, and ships with plugins to support
+            REST, AJAX and JSON.
           </description>
         </resource>
         <resource>
@@ -336,16 +311,6 @@
           Starting from version 2.0b1, JPublish supports FreeMarker as a
           view layer. JPublish is a powerful web publishing system designed to 
           ensure a clean separation of developer roles.
-          </description>
-        </resource>
-        <resource>
-          <name>Open for Business</name>
-          <url>http://ofbiz.apache.org/</url>
-          <description>
-            <em>Open for Business</em> is an ongoing project to create a suite 
-          of open-source enterprise/e-commerce applications and modules built 
-          on a common framework. In 2003 the project decided to switch from JSP
-          to FreeMarker for their view component.
           </description>
         </resource>
         <resource>
@@ -390,13 +355,6 @@
            </description>
         </resource>
         <resource>
-          <name>WebWork</name>
-          <url>http://www.opensymphony.com/webwork/</url>
-          <description>
-            WebWork is a web-application framework built specifically with developer productivity and code simplicity in mind. It builds on top of XWork, which provides a generic command pattern framework and an Inversion of Control container. WebWork offers robust support for building reusable UI templates, such as form controls, UI themes, internationalization, dynamic form parameter mapping to JavaBeans, client and server side validation, and more. WebWork 2.2 switched to FreeMarker as its main view technology.
-          </description>
-        </resource>
-        <resource>
            <name>ztemplates</name>
            <url>http://www.ztemplates.org/</url>
            <description>
@@ -418,10 +376,6 @@
               and much more...</td>
         </tr>
         <tr valign="top">
-          <td><a href="http://www.atina.cl">www.atina.cl</a></td>
-          <td>A website oriented to young, in Spanish.</td>
-        </tr>
-        <tr valign="top">
           <td><a href="http://www.chemistaustralia.com.au">www.chemistaustralia.com.au</a></td>
           <td>Chemist Australia - an online pharmacy in Australia. Uses the WebWork2 framework.</td>
         </tr>
@@ -438,8 +392,7 @@
         </tr>
         <tr valign="top">
           <td><a href="http://freemarker.org">freemarker.org</a></td>
-          <td>Not surprisingly, the pages you view right now are generated using
-          FreeMarker. We do eat our own dog food!</td>
+          <td>Not surprisingly, the pages you view right now are generated using FreeMarker.</td>
         </tr>
         <tr valign="top">
           <td><a href="http://www.hesteinfo.dk">www.hesteinfo.dk</a></td>
@@ -459,17 +412,6 @@
           which uses FreeMarker templates for its presentation functionality.</td>
         </tr>
         <tr valign="top">
-          <td><a href="http://www.kikeres.hu">www.kikeres.hu</a></td>
-          <td>The Hungarian Governmental Information Locator System website.
-          Features both static pages that are offline generated from XML using
-          the FreeMarker XML support and a true servlet-served dynamic content.</td>
-        </tr>
-        <tr valign="top">
-          <td><a href="http://lastwords.com/">lastwords.com</a></td>
-          <td>A writer's workshop.
-          The vision: create an environment where authors of all ages and skills could read, submit, and critique the works of their peers.</td>
-        </tr>
-        <tr valign="top">
           <td><a href="http://musikk.telenormobil.no">musikk.telenormobil.no</a> and <a href="http://mp3.platekompaniet.no">mp3.platekompaniet.no</a></td>
           <td>Together form Norway's second largest MP3-download shop.</td>
         </tr>
@@ -477,11 +419,6 @@
           <td><a href="http://www.nadir.org">www.nadir.org</a></td>
           <td>Nadir is a German political news portal that uses the 
           above-listed, FreeMarker based Mir CMS.</td>
-        </tr>
-        <tr valign="top">
-          <td><a href="http://www.shopobot.com">www.shopobot.com</a></td>
-          <td>A comparison shopping site that shows prices over time and lets you
-          set up price alerts.</td>
         </tr>
         <tr valign="top">
           <td><a href="http://www.vogella.com">www.vogella.com</a></td>
