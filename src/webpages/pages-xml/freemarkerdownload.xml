@@ -17,13 +17,29 @@
   </headsection>
   
   <sections>
-  
+
+  <section title="2.3.21 Release Candidate 2">
+    <p>
+        <b>Test version</b> of the upcoming 2.3.21 (scheduled for 2014-10-12), released on 2014-09-29. Requires J2SE 1.4 or higher.<br/>
+        <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21-rc02/freemarker-2.3.21-rc02.tar.gz/download">
+            Download freemarker-2.3.21-rc02.tar.gz
+        </a>
+        (3.1 MB, includes binary, documentation and source code)
+        <br />
+        <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21-rc02/freemarker-gae-2.3.21-rc02.jar/download">
+            Google App Engine compatible binary
+        </a>
+        (This is only the binary.)
+    </p>
+  </section>
+
   <section title="2.3.20">
     <p>
         <b>The latest stable release,</b> released on 2013-06-27. Requires J2SE 1.2 or higher.<br/>
-    	<a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.20/freemarker-2.3.20.tar.gz/download">
-            Download freemarker-2.3.20.tar.gz (2.6 MB)
+        <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.20/freemarker-2.3.20.tar.gz/download">
+            Download freemarker-2.3.20.tar.gz
         </a>
+        (2.6 MB, includes binary, documentation and source code)
     </p>
     
     <p>For Maven (and for other dependency managers):</p>

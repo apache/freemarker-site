@@ -3,6 +3,16 @@
   <sections>
   <section title="News">
 
+    <section title="28 September 2014: FreeMarker 2.3.21 Release Candidate 2 was released">
+      <p>
+        This is the 2nd Release Candidate of 2.3.21, which is planned to be released on October 12.
+        Please test it! The change log can be found in the Manual, which is packed into the download below.
+      </p>
+      
+      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21-rc02/freemarker-2.3.21-rc02.tar.gz/download">Download it here...</a>
+      (GAE-compatible binary <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21-rc02/freemarker-gae-2.3.21-rc02.jar/download">here...</a>)</p>
+    </section>
+  
     <section title="27 June 2013: FreeMarker 2.3.20 was released">
       <p>
         This version comes with better error messages, better boolean formatting, higher multi-core performance, and many other smaller improvements and fixes.
