@@ -69,6 +69,17 @@
           <a href="${project_node.site.@deployUrl?html}"><img src="images/${poweredbyImage}" alt="Powered by FreeMarker" border="0"></a>
         </td>
     </table>
+    [#if !properties["site.offline"]??]
+      <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-55420501-1', 'auto');
+        ga('send', 'pageview');
+      </script>
+    [/#if]
   </body>
 </html>
 
