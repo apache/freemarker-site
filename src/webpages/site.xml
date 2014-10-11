@@ -10,7 +10,7 @@
     </group>
     <group name="Download">
       <item name="FreeMarker" url="freemarkerdownload.html"/>
-      <item name="中文版手册（PDF）" url="https://sourceforge.net/projects/freemarker/files/chinese-manual/FreeMarker_Manual_zh_CN.pdf/download"/>
+      <item name="中文版手册（for 2.3.19 - outdated!）" url="https://sourceforge.net/projects/freemarker/files/chinese-manual/FreeMarker_Manual_zh_CN.pdf/download"/>
       <item name="Editor/IDE plugins" url="editors.html"/>
       <item name="File generator tool (FMPP)" url="fmpp.html"/>
       <item name="FTL Libraries" url="libraries.html"/>
