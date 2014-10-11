@@ -5,12 +5,26 @@
 
     <section title="12 October 2014: FreeMarker 2.3.21 was released">
       <p>
-        This version comes with [FIXME], and many other improvements and fixes.
-        <a href="docs/versions_2_3_21.html">See all the changes here...</a>
+        This version comes with, among many others,
+        further improved error messages,
+        new range operators,
+        streamlined conversions between XML Schema formats and FTL types,
+        possibility of using ISO 8601 or XML Schema date/time/dateTime format as the default,
+        improved overloaded method selection (has to be explicitly enabled),
+        setting for dealing with JDBC date-only an time-only value zone issues,
+        safer and more memory-efficient way of managing object wrapper singletons,
+        more flexible configuring via string values (such as <tt>.properties</tt> file),
+        etc. <a href="docs/versions_2_3_21.html">See all the changes here...</a>
       </p>
-      
-      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-2.3.21.tar.gz/download">Download it here...</a>
-      (GAE-compatible binary <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-gae-2.3.21.jar/download">here...</a>)</p>
+
+      <p>
+        Note that with this release we have changed our proprietary BSD-style license
+        to the more familiar Apache License, Version 2.0.
+      </p>
+
+      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-2.3.21.tar.gz/download">You can download FreeMarker 2.3.21 here...</a>
+      (Binary for GAE is <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-gae-2.3.21.jar/download">here...</a>)</p>
+
     </section>
       
   </section>
