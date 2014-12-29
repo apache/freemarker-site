@@ -3,7 +3,7 @@
   <sections>
   <section title="News">
 
-    <section title="29 December 2014: FreeMarker 2.3.21 was released">
+    <section title="29 December 2014: Online FreeMarker template tester">
       <p>
         Here's a simple but useful online FreeMarker template tester page, thanks to Nir Feldman of Kneshoo:
         <a href="http://freemarker-online.kenshoo.com/">http://freemarker-online.kenshoo.com/</a>
