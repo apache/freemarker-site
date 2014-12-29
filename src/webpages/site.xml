@@ -37,6 +37,7 @@
       <item name="Twitter to keep track of events/releases" url="http://twitter.com/#!/freemarker"/>
     </group>
     <group name="Miscellaneous">
+      <item name="Online template tester" url="http://freemarker-online.kenshoo.com/"/>
       <item name="Powered by FreeMarker" url="poweredBy.html"/>
       <item name="SourceForge project page" url="http://sourceforge.net/projects/freemarker"/>
       <item name="Source code on GitHub" url="https://github.com/freemarker/freemarker"/>
