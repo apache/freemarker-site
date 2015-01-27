@@ -1,8 +1,28 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <page title="Overview">
-  <sections>
+<sections>
   <section title="News">
 
+    <section title="27 January 2015: FreeMarker 2.3.22 Release Candidate 1 was released">
+      <p>
+        Please test it, especially with the <tt>incompatible_improvements</tt> configuration setting set to 2.3.22!
+        FreeMarker 2.3.22-rc01 comes with:
+      </p>
+      <ul>
+        <li>Important <tt>DefaultObjectWrapper</tt> improvements (enabled by <tt>incompatible_improvements</tt> 2.3.22)</li>
+        <li>Improved <tt>FreemarkerServlet</tt> (mostly on the field of TLD discovery options and error message quality)</li>
+        <li>More customizable template loading (lookup) mechanism</li>
+        <li>Support for using minus sign in any identifiers after a preceding backslash (like in <tt>&lt;@myMacro data\-id=prod.id /&gt;</tt>)</li>
+        <li>A new built-in for accessing the Java API of an object behind the object wrapping façade (disabled by default). For example, <tt>myMap?api.myBusinessProperty</tt>
+        translates to <tt>myMap.getMyBusinessProperty()</tt> in Java, while <tt>myMap.myBusinessProperty</tt> would translate to <tt>myMap.get("myBusinessProperty")</tt>.</li>
+        <li>New options to control logging</li>
+        <li>Many others...</li>
+      </ul>
+      <p>Find the full list of changes and more details in the FreeMarker Manual included in the download!</p>
+      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22-rc01/freemarker-2.3.22-rc1.tar.gz/download">You can download FreeMarker 2.3.22-rc1 here (includes documentation)...</a>
+      (Binary-only for Google App Engine is <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22-rc01/freemarker-gae-2.3.22-rc01.jar/download">here...</a>)</p>
+    </section>
+  
     <section title="29 December 2014: Online FreeMarker template tester">
       <p>
         Here's a simple but useful online FreeMarker template tester page, thanks to Nir Feldman of Kenshoo:
@@ -81,6 +101,6 @@
     <p>
       Read more <a href="features.html">feature highlights</a>.
     </p>
-   </section>
-  </sections>
+  </section>
+</sections>
 </page>
