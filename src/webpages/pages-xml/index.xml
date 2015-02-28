@@ -5,7 +5,7 @@
 
     <section title="1 March 2015: FreeMarker 2.3.22 was released">
       <p>
-        See the <a href="docs/versions_2_3_22.html">change log here!</a>. A quick overview of the most important areas:
+        See the <a href="docs/versions_2_3_22.html">change log here!</a> A quick overview of the most important areas:
       </p>
       <ul>
         <li><tt>DefaultObjectWrapper</tt> improvements (mostly on the field of <tt>Map</tt> and <tt>List</tt> wrapping), enabled by <tt>incompatible_improvements</tt> 2.3.22.</li>
@@ -17,7 +17,7 @@
         <li>New options to control logging</li>
         <li><a href="docs/versions_2_3_22.html">See many more here...</a></li>
       </ul>
-      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-2.3.22.tar.gz/download">You can download FreeMarker 2.3.22 here (includes documentation)...</a>
+      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-2.3.22.tar.gz/download">You can download FreeMarker 2.3.22 here...</a>
       (Binary-only for Google App Engine is <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-gae-2.3.22.jar/download">here...</a>)</p>
     </section>
   
