@@ -3,13 +3,18 @@
   <headsection>
     <downloadWarnings />
     <p>
-      <b>About backward compatibility:</b> Before 2.3.0, releases with different
-      second version numbers (like 2.2.x and 2.3.x) aren't fully compatible.
-      The 2.3.x series is quite conservative about backward compatibility,
-      so you can upgrade FreeMarker without much risk within it.
+      <b>Dependencies:</b> FreeMarker has no required dependencies, except Java (Standard Edition) itself, with the minimum version indicated for each download below.
     </p>
     <p>
-      See the <a href="docs/app_versions.html">change logs here...</a>
+      <b>Backward compatibility:</b> Before 2.3.0, releases with different
+      second version numbers (like 2.2.x and 2.3.x) aren't fully compatible.
+      The 2.3.x series is quite conservative about backward compatibility;
+      you should be able to replace the FreeMarker binary (<tt>freemarer.jar</tt>)
+      under your application with a newer one without breaking anything (obviously,
+      assuming that only public FreeMarker API-s were used).
+    </p>
+    <p>
+      <b>Change log (version history):</b> <a href="docs/app_versions.html">See here...</a>
     </p>
     <p>
       All downloads include the binary (<tt>freemarker.jar</tt>), the source code, and the full documentation (unless said otherwise).
@@ -18,16 +23,16 @@
   
   <sections>
 
-  <section title="2.3.21">
+  <section title="2.3.22">
     <p>
-        <b>The latest stable release,</b> released on 2014-10-12. Requires J2SE 1.4 or higher.<br/>
-        <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-2.3.21.tar.gz/download">
-            Download freemarker-2.3.21.tar.gz
+        <b>The latest stable release,</b> released on 2015-03-01. Requires J2SE 1.4 or higher.<br/>
+        <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-2.3.22.tar.gz/download">
+            Download freemarker-2.3.22.tar.gz
         </a>
         (3.2 MB, includes binary, documentation and source code)
     </p>
     
-    <p>For Maven (and for other dependency managers):</p>
+    <p>For Maven:</p>
     <pre><![CDATA[<!--
 Attention: Be sure nothing pulls in an old dependency with groupId
 "freemarker" (without the "org."), because then you will end up with
@@ -36,7 +41,7 @@ two freemarker.jar-s and unpredictable behavior!
 <dependency>
   <groupId>org.freemarker</groupId>
   <artifactId>freemarker</artifactId>
-  <version>2.3.21</version>
+  <version>2.3.22</version>
 </dependency>]]></pre>
 
   <div class="warning">
@@ -58,12 +63,12 @@ two freemarker.jar-s and unpredictable behavior!
   </div>
 
     <p>If you need to use FreeMarker on Google App Engine,
-    <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.21/freemarker-gae-2.3.21.jar/download">download the GAE-compatible binary</a>
+    <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-gae-2.3.22.jar/download">download the GAE-compatible binary</a>
     too. (This is only the binary.)</p>
     <pre><![CDATA[<dependency>
   <groupId>org.freemarker</groupId>
   <artifactId>freemarker-gae</artifactId>
-  <version>2.3.21</version>
+  <version>2.3.22</version>
 </dependency>]]></pre>
   </section>
 

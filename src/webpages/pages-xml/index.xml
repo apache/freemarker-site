@@ -3,24 +3,22 @@
 <sections>
   <section title="News">
 
-    <section title="27 January 2015: FreeMarker 2.3.22 Release Candidate 1 was released">
+    <section title="1 March 2015: FreeMarker 2.3.22 was released">
       <p>
-        Please test it, especially with the <tt>incompatible_improvements</tt> configuration setting set to 2.3.22!
-        FreeMarker 2.3.22-rc01 comes with:
+        See the <a href="docs/versions_2_3_22.html">change log here!</a>. A quick overview of the most important areas:
       </p>
       <ul>
-        <li>Important <tt>DefaultObjectWrapper</tt> improvements (enabled by <tt>incompatible_improvements</tt> 2.3.22)</li>
+        <li><tt>DefaultObjectWrapper</tt> improvements (mostly on the field of <tt>Map</tt> and <tt>List</tt> wrapping), enabled by <tt>incompatible_improvements</tt> 2.3.22.</li>
         <li>Improved <tt>FreemarkerServlet</tt> (mostly on the field of TLD discovery options and error message quality)</li>
-        <li>More customizable template loading (lookup) mechanism</li>
-        <li>Support for using minus sign in any identifiers after a preceding backslash (like in <tt>&lt;@myMacro data\-id=prod.id /&gt;</tt>)</li>
+        <li>More customizable template loading (lookup) mechanism, like customizing how localized variation names look, or using a custom lookup condition</li>
+        <li>Support for using minus sign, colon and dot in any identifiers after a preceding backslash (like in <tt>&lt;@myMacro data\-id=prod.id /&gt;</tt>)</li>
         <li>A new built-in for accessing the Java API of an object behind the object wrapping façade (disabled by default). For example, <tt>myMap?api.myBusinessProperty</tt>
         translates to <tt>myMap.getMyBusinessProperty()</tt> in Java, while <tt>myMap.myBusinessProperty</tt> would translate to <tt>myMap.get("myBusinessProperty")</tt>.</li>
         <li>New options to control logging</li>
-        <li>Many others...</li>
+        <li><a href="docs/versions_2_3_22.html">See many more here...</a></li>
       </ul>
-      <p>Find the full list of changes and more details in the FreeMarker Manual included in the download!</p>
-      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22-rc01/freemarker-2.3.22-rc1.tar.gz/download">You can download FreeMarker 2.3.22-rc1 here (includes documentation)...</a>
-      (Binary-only for Google App Engine is <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22-rc01/freemarker-gae-2.3.22-rc01.jar/download">here...</a>)</p>
+      <p><a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-2.3.22.tar.gz/download">You can download FreeMarker 2.3.22 here (includes documentation)...</a>
+      (Binary-only for Google App Engine is <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.22/freemarker-gae-2.3.22.jar/download">here...</a>)</p>
     </section>
   
     <section title="29 December 2014: Online FreeMarker template tester">
