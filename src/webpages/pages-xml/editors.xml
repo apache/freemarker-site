@@ -74,7 +74,7 @@
           <td class="cell"><a href="download/editor/kwriteftl.tar.gz">kwriteftl.tar.gz</a></td>
         </tr>
         <tr valign="top" align="center">
-          <td align="left" class="cell">Netbeans (tried with 8.0.2)</td>
+          <td align="left" class="cell">NetBeans (tried with 8.0.2)</td>
           <td class="cell">
           Syntax highlight, syntax error marker, directive name auto-completion.</td>
           <td class="cell" colspan="2">
