@@ -26,7 +26,7 @@
         </tr>
         <tr valign="top" align="center">
           <td align="left" class="cell">Eclipse</td>
-          <td class="cell">Syntax highlight, syntax error indicator,
+          <td class="cell">Syntax highlight, syntax error marker,
             code completion for macro names and bean property names.
           </td>
           <td class="cell" colspan="2">Part of the JBoss Tools Project. Install like this:
@@ -74,11 +74,19 @@
           <td class="cell"><a href="download/editor/kwriteftl.tar.gz">kwriteftl.tar.gz</a></td>
         </tr>
         <tr valign="top" align="center">
-          <td align="left" class="cell">NetBeans 6.0 or later</td>
+          <td align="left" class="cell">Netbeans (tried with 8.0.2)</td>
+          <td class="cell">
+          Syntax highlight, syntax error marker, directive name auto-completion.</td>
+          <td class="cell" colspan="2">
+            Can be installed from NetBeans, under Tools/Plugins. Also manually from
+            <a href="http://plugins.netbeans.org/plugin/58284/freemarker-support-for-netbeans">its NetBeans plugin portal page...</a>
+          </td>
+        </tr>
+        <tr valign="top" align="center">
+          <td align="left" class="cell">NetBeans (6.0, maybe not 7)</td>
           <td class="cell">Syntax highlight, code completion, template navigation</td>
-          <td class="cell" colspan="2">Downloadable from the NetBeans plugins
-          site.
-          <br /><a href="http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=3755">NetBeans plugin download page...</a></td>
+          <td class="cell" colspan="2">Downloadable from
+          <a href="http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=3755">its NetBeans plugin portal page...</a></td>
         </tr>
         <tr valign="top" align="center">
           <td align="left" class="cell">TextPad 4 or later</td>
