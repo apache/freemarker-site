@@ -12,7 +12,7 @@
         <li>
           Listing-related (<tt>#list</tt>) specialized convenience features that target some of the most typical tasks in templates:
           <ul>
-            <li>New <tt>list</tt> directive child directives, <tt>else</tt> and <tt>items</tt> deal with the special cases with 0-length lists. <tt>sep</tt> makes inserting separators between items much easier than it was with <tt>if</tt> + <tt><i>var</i>_has_next</tt>.</li>
+            <li>New <tt>#list</tt> directive child directives, <tt>#else</tt> and <tt>#items</tt> deal with the special cases with 0-length lists. <tt>#sep</tt> makes inserting separators between items much easier than it was with <tt>if</tt> + <tt><i>var</i>_has_next</tt>.</li>
             <li>New built-ins that act on loop variables:
             <tt><i>var</i>?index</tt> (deprecates <tt><i>var</i>_index</tt>), <tt><i>var</i>?counter</tt> (1-based index),
             <tt><i>var</i>?has_next</tt> (deprecates <tt><i>var</i>_has_next</tt>),
@@ -23,7 +23,7 @@
         </li>
         <li>Convenience assignment operators, like in <tt>&lt;#assign counter++></tt> and <tt>&lt;#assign counter += 2></tt></li>
         <li>True ternary operator equivalent: <tt><i>someBoolean</i>?then(<i>whenTrue</i>, <i>whenFalse</i>)</tt></li>
-        <li>Switch as expression: <tt>someValue?switch(<i>case1</i>, <i>result1</i>, <i>case2</i>, <i>result2</i>, ... <i>caseN</i>, <i>resultN</i>, <i>defaultResult</i>)</tt></li>
+        <li>Switch as expression: <tt><i>someValue</i>?switch(<i>case1</i>, <i>result1</i>, <i>case2</i>, <i>result2</i>, ... <i>caseN</i>, <i>resultN</i>, <i>defaultResult</i>)</tt></li>
         <li>FTL now supports camel case for the identifiers that are part of the template language. For example, <tt>&lt;#noEscape>${x?upperCase}&lt;/#noEscape></tt> or <tt>&lt;#setting numberFormat="0.0"></tt> or <tt>&lt;#ftl stripText=true></tt> are valid. You can just start using camel case without configuring anything, however, within the same template, FreeMarker will require you to use the same naming convention for all identifiers that are part of the template language. (Also, a certain naming convention can be enforced for all templates from configuration.)</li>
         <li>More configurable template loading for <tt>FreemarkerServlet</tt>, also loading from Servlet 3.0 <tt>META-INF/resources</tt> now works as expected</li>
         <li>Various bugfixes</li>

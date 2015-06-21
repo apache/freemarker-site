@@ -72,6 +72,19 @@ two freemarker.jar-s and unpredictable behavior!
 </dependency>]]></pre>
   </section>
 
+  <section title="2.3.23 Release Candidate 1">
+    <p>
+        Upcoming release <b>for testing only</b>, released on 2015-06-21 (planned final release: 2015-07-05). Requires J2SE 1.4 or higher.<br/>
+    	<a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23-rc01/freemarker-2.3.23-rc01.tar.gz/download">
+            Download freemarker-2.3.23-rc01.tar.gz
+      </a>
+      (3.7 MB, includes binary, documentation and source code)
+    </p>
+    <p>If you need to use FreeMarker on Google App Engine,
+    <a href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23-rc01/freemarker-gae-2.3.23-rc01.jar/download">download the GAE-compatible binary</a>
+    too. (This is only the binary.)</p>
+  </section>
+  
   <section title="2.2.8">
     <p>
         The latest stable release of the 2.2 series, released on 2004-06-15. Requires J2SE 1.2 or higher.<br/>
