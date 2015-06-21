@@ -10,7 +10,7 @@
       </p>
       <ul>
         <li>
-          Listing-related (<tt>#list</tt>) specialized convenience features that target some of most typical tasks in templates:
+          Listing-related (<tt>#list</tt>) specialized convenience features that target some of the most typical tasks in templates:
           <ul>
             <li>New <tt>list</tt> directive child directives, <tt>else</tt> and <tt>items</tt> deal with the special cases with 0-length lists. <tt>sep</tt> makes inserting separators between items much easier than it was with <tt>if</tt> + <tt><i>var</i>_has_next</tt>.</li>
             <li>New built-ins that act on loop variables:
