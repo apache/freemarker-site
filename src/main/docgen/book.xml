@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book conformance="docgen" version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <title>Freemarker</title>
+
+  <chapter role="index.html">
+    <title>About</title>
+
+    <simplesect>
+      <title>News</title>
+
+      <para>Blah blah</para>
+    </simplesect>
+
+    <simplesect>
+      <title>What's FreeMarker?</title>
+
+      <para>Blah blah</para>
+
+      <para>Documentation link</para>
+    </simplesect>
+
+    <simplesect>
+      <title>Features</title>
+
+      <para>Blah blah</para>
+    </simplesect>
+
+    <simplesect>
+      <title>License</title>
+
+      <para>Blah blah</para>
+    </simplesect>
+  </chapter>
+
+  <chapter>
+    <title>Download / Maven</title>
+
+    <para>Blah</para>
+  </chapter>
+
+  <chapter>
+    <title>Documentation</title>
+
+    <section>
+      <title>Manual [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>Java API [L]</title>
+
+      <para/>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Tooling</title>
+
+    <section>
+      <title>Editor / IDE plugins</title>
+
+      <para>Blah</para>
+    </section>
+
+    <section>
+      <title>Online template tester [L]</title>
+
+      <para>Blah</para>
+    </section>
+
+    <section>
+      <title>File generator tool (FMPP) [L]</title>
+
+      <para>Blah</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Community</title>
+
+    <section>
+      <title>Report bugs [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>Ask help on Stack Overflow [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>Twitter [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>Mailing lists</title>
+
+      <para>For deeper discussion</para>
+    </section>
+
+    <section>
+      <title>Who uses Freemarker?</title>
+
+      <para>Blah</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Miscellaneous</title>
+
+    <section>
+      <title>Sourceforge.net project page [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>GitHub project page [L]</title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title>Project history</title>
+
+      <para/>
+    </section>
+  </chapter>
+</book>
