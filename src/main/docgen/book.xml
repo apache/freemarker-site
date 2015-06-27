@@ -114,7 +114,7 @@
     Freemarker API-s were used).</para>
 
     <para><emphasis role="bold">Change log (version history):</emphasis>
-    <olink targetdoc="versionHistory">See in the Manual...</olink> </para>
+    <olink targetdoc="versionHistory">See in the Manual...</olink></para>
 
     <simplesect>
       <title>Latest stable release: 2.3.23</title>
@@ -172,7 +172,7 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para><link
       xlink:href="http://prdownloads.sourceforge.net/freemarker/freemarker-2.2.8.tar.gz">Download
-      freemarker-2.2.8.tar.gz</link> (1.4 MB) </para>
+      freemarker-2.2.8.tar.gz</link> (1.4 MB)</para>
     </simplesect>
 
     <simplesect>
@@ -220,13 +220,13 @@ two freemarker.jar-s and unpredictable behavior!
     <title>Documentation</title>
 
     <section>
-      <title>Manual [L]</title>
+      <title><olink targetdoc="manual">Manual</olink></title>
 
       <para/>
     </section>
 
     <section>
-      <title>Java API [L]</title>
+      <title><olink targetdoc="javaAPI">Java API</olink></title>
 
       <para/>
     </section>
@@ -368,13 +368,15 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section>
-      <title>Online template tester [L]</title>
+      <title><olink targetdoc="onlineTemplateTester">Online template
+      tester</olink></title>
 
       <para/>
     </section>
 
     <section>
-      <title>File generator tool (FMPP) [L]</title>
+      <title><olink targetdoc="fmpp">File generator tool
+      (FMPP)</olink></title>
 
       <para/>
     </section>
@@ -384,19 +386,20 @@ two freemarker.jar-s and unpredictable behavior!
     <title>Community</title>
 
     <section>
-      <title>Report bugs [L]</title>
+      <title><olink targetdoc="newBugReport">Report bugs</olink></title>
 
       <para/>
     </section>
 
     <section>
-      <title>Ask help on Stack Overflow [L]</title>
+      <title><olink targetdoc="newStackOverflowQuestion">Ask help on Stack
+      Overflow</olink></title>
 
       <para/>
     </section>
 
     <section>
-      <title>Get news on Twitter [L]</title>
+      <title><olink targetdoc="twitter">Get news on Twitter</olink></title>
 
       <para/>
     </section>
@@ -447,13 +450,15 @@ two freemarker.jar-s and unpredictable behavior!
     <title>Miscellaneous</title>
 
     <section>
-      <title>Sourceforge.net project page [L]</title>
+      <title><olink targetdoc="sourceforgeProject">Sourceforge.net project
+      page</olink></title>
 
       <para/>
     </section>
 
     <section>
-      <title>GitHub project page [L]</title>
+      <title><olink targetdoc="githubProject">GitHub project
+      page</olink></title>
 
       <para/>
     </section>
