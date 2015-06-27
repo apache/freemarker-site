@@ -3,13 +3,30 @@
 validation: {
   programlistingsRequireLanguage
   outputFilesCanUseAutoID
-  maximumProgramlistingWidth: 48
+  maximumProgramlistingWidth: 120
 }
 
 tabs: {
   "Home": ""  // Empty => We are here
   "Manual": "http://freemarker.org/docs/index.html"
   "Java API": "../api/index.html"
+}
+
+// Put internal cross-book or internal download links here,
+// also the more critical long term external links:
+olinks: {
+  templateAuthorsGuide: "docs/dgui_quickstart_basics.html"
+  license: "docs/app_license.html"
+  versionHistory: "docs/app_versions.html"
+  // TODO: Rather move these downloads outside the "site" project (licensing)
+  emacsPluginDownload: "download/editor/ftl.el"
+  kwritePluginDownload: "download/editor/kwriteftl.tar.gz"
+  textPadPluginDownload: "download/editor/textpadftl.zip"
+  vimPluginDownload: "download/editor/ftl.vim"
+  newStackOverflowQuestion: "http://stackoverflow.com/questions/ask?tags=freemarker"
+  mailingListSubscription: "https://sourceforge.net/p/freemarker/mailman/"
+  userMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.user"
+  develMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.devel"
 }
 
 // Available icons:
