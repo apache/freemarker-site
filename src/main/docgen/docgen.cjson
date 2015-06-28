@@ -20,6 +20,7 @@ olinks: {
   templateAuthorsGuide: "docs/dgui_quickstart_basics.html"
   license: "docs/app_license.html"
   versionHistory: "docs/app_versions.html"
+  freemarkerServlet: "docs/pgui_misc_servlet.html"
   
   onlineTemplateTester: "http://freemarker-online.kenshoo.com/"
   fmpp: "http://fmpp.sourceforge.net/"
