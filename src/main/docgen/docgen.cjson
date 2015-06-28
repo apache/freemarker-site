@@ -2,8 +2,7 @@
 
 validation: {
   programlistingsRequireLanguage
-  outputFilesCanUseAutoID
-  maximumProgramlistingWidth: 120
+  maximumProgramlistingWidth: 100
 }
 
 tabs: {
