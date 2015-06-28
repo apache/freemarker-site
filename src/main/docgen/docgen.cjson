@@ -1,5 +1,9 @@
 //charset: UTF-8
 
+simpleNavigationMode
+offline: false
+showXXELogo
+timeZone: "GMT"
 validation: {
   programlistingsRequireLanguage
   maximumProgramlistingWidth: 100
@@ -46,16 +50,16 @@ olinks: {
 // .icon-bug
 // .icon-download
 // .icon-star
-secondaryTabs: [{
-  "href": "javascript:;"
+secondaryTabs: [/*{
+  "href": "contribute.html"
   "text": "Contribute",
   "class": "icon-heart"
- }, {
-   "href": "javascript:;"
+ },*/ {
+   "href": "https://sourceforge.net/p/freemarker/bugs/new/"
    "text": "Report a Bug",
    "class": "icon-bug"
 }, {
-  "href": "javascript:;"
+  "href": "freemarkerdownload.html"
   "text": "Download",
   "class": "icon-download"
 }]
@@ -63,7 +67,7 @@ secondaryTabs: [{
 logo: {
   href: "http://freemarker.org"
   src: logo.png,
-  alt: "FreeMarker"
+  alt: "Freemarker"
 }
 
 deployUrl: "http://freemarker.org/"
@@ -72,16 +76,16 @@ footerSiteMap: {
     "Overview": [
       {
         "text": "What is FreeMarker?",
-        "href": "http://freemarker.org/features.html"
+        "href": "index.html"
       },{
         "text": "Download",
-        "href": "http://freemarker.org/freemarkerdownload.html"
+        "href": "freemarkerdownload.html"
       },{
         "text": "Version history",
         "href": "docs/app_versions.html"
       },{
         "text": "About us",
-        "href": "http://freemarker.org/whoWeAre.html"
+        "href": "history.html"
       },{
         "text": "License",
         "href": "docs/app_license.html"
@@ -140,8 +144,3 @@ socialLinks: [
     "text": "Stack Overflow"
   }
 ]
-
-offline: false
-simpleNavigationMode
-showXXELogo
-timeZone: "GMT"
