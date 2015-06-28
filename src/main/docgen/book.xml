@@ -8,48 +8,43 @@
       xmlns:db="http://docbook.org/ns/docbook">
   <title>Freemarker</title>
 
-  <chapter role="index.html" xml:id="about">
-    <title>About</title>
+  <chapter role="index.html" xml:id="what-is-freemarker">
+    <title>What's Freemarker?</title>
 
-    <simplesect>
-      <title>What's Freemarker?</title>
+    <para>Freemarker is a <emphasis>template engine</emphasis>: a generic tool
+    to generate text output (HTML web pages, e-mails, configuration files,
+    source code, etc.) based on templates and changing data. It's not an
+    application for end-users in itself, but a Java library, a component that
+    programmers can embed into their products.</para>
 
-      <para>Freemarker is a <emphasis>template engine</emphasis>: a generic
-      tool to generate text output (HTML web pages, e-mails, configuration
-      files, source code, etc.) based on templates and changing data. It's not
-      an application for end-users in itself, but a Java library, a component
-      that programmers can embed into their products.</para>
+    <para>Templates are written in the Freemarker Template Language (FTL).
+    It's a simple, specialized language, <emphasis>not</emphasis> a full-blown
+    programming language like PHP. You meant to prepare the data to display in
+    a real programming language, like issue database queries and do business
+    calculations, and then the template displays that already prepared data.
+    In the template you are focusing on how to present the data, and outside
+    the template you are focusing on what data to present.</para>
 
-      <para>Templates are written in the Freemarker Template Language (FTL).
-      It's a simple, specialized language, <emphasis>not</emphasis> a
-      full-blown programming language like PHP. You meant to prepare the data
-      to display in a real programming language, like issue database queries
-      and do business calculations, and then the template displays that
-      already prepared data. In the template you are focusing on how to
-      present the data, and outside the template you are focusing on what data
-      to present.</para>
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/overview.png"/>
+      </imageobject>
+    </mediaobject>
 
-      <mediaobject>
-        <imageobject>
-          <imagedata fileref="images/overview.png"/>
-        </imageobject>
-      </mediaobject>
+    <para>This approach is often referred to as the MVC (Model View
+    Controller) pattern, and is particularly popular for dynamic Web pages. It
+    helps in separating the Web page designers (HTML authors) from the
+    developers (Java programmers usually). Designers won't face complicated
+    logic in templates, and can change the appearance of a page without
+    programmers having to change or recompile code.</para>
 
-      <para>This approach is often referred to as the MVC (Model View
-      Controller) pattern, and is particularly popular for dynamic Web pages.
-      It helps in separating the Web page designers (HTML authors) from the
-      developers (Java programmers usually). Designers won't face complicated
-      logic in templates, and can change the appearance of a page without
-      programmers having to change or recompile code.</para>
+    <para>While Freemarker was originally created for generating HTML pages in
+    MVC web application frameworks, it isn't bound to servlets or HTML or
+    anything Web-related. It's used in non-web application environments as
+    well.</para>
 
-      <para>While Freemarker was originally created for generating HTML pages
-      in MVC web application frameworks, it isn't bound to servlets or HTML or
-      anything Web-related. It's used in non-web application environments as
-      well.</para>
-
-      <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
-      details...</olink></para>
-    </simplesect>
+    <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
+    details...</olink></para>
 
     <simplesect>
       <title>Features</title>
