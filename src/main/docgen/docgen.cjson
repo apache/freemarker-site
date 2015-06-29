@@ -1,6 +1,7 @@
 //charset: UTF-8
 
 deployUrl: "http://freemarker.org/"
+// onlineTrackerHTML: "docgen-misc/googleAnalytics.html"
 offline: false
 simpleNavigationMode
 timeZone: "GMT"
