@@ -111,7 +111,7 @@
     <simplesect>
       <title>Latest stable release: 2.3.23</title>
 
-      <para>Released on 2015-03-01. Requires J2SE 1.4 or higher.</para>
+      <para>Released on 2015-07-05. Requires J2SE 1.4 or higher.</para>
 
       <para><link
       xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23/freemarker-2.3.23.tar.gz/download">Download
@@ -218,7 +218,7 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section>
-      <title><olink targetdoc="javaAPI">Java API</olink></title>
+      <title><olink targetdoc="api">Java API</olink></title>
 
       <para/>
     </section>
