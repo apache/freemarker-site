@@ -913,6 +913,142 @@ two freemarker.jar-s and unpredictable behavior!
         </informaltable>
       </simplesect>
     </section>
+
+    <section xml:id="contribute">
+      <title>Contributors wanted!</title>
+
+      <para>Usually, contributors come because they want to fix/improve a
+      certain thing. But if you just want to help in general, here are some
+      topics that are not (that) hard to jump into and are considered to be
+      important:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Tooling / desktop:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Eclipse plugin. Either help improving the JBoss Tools
+              <quote>FreeMarker IDE</quote>, or if you have serious ambitions,
+              even start your own!</para>
+            </listitem>
+
+            <listitem>
+              <para>IntelliJ plugin. Check how well it works (like support for
+              recent Freemarker features), try to find a way to contribute
+              where needed.</para>
+            </listitem>
+
+            <listitem>
+              <para>Plugin or syntax highlighter for you favorite editor
+              (Notepad++, jEdit, VIM, etc.) that actually covers FTL
+              reasonably well, and is legally properly contributed to the
+              project.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Tooling / online tools:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Improve <olink
+              targetdoc="onlineTemplateTester">freemarker-online</olink>, the
+              template tester page. For example, it should be REST service
+              with an AJAX based front-end, instead of the current full page
+              reloading one. Ultimately, we want to be able to embed the
+              tester into the Manual for trying the examples.</para>
+            </listitem>
+
+            <listitem>
+              <para>Online editor, syntax highlighter. This might means
+              Freemarker support for CodeMirror. This, among others, would be
+              useful in the online template tester (see previous point)</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Improve framework integration:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Freemarker Spring MVC integration. Someone who know both
+              well should keep an eye on this, improving it where
+              necessary.</para>
+            </listitem>
+
+            <listitem>
+              <para>Freemarker Struts integration. Same as with Spring
+              MVC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Android support. This is related to the next two points
+          too</para>
+        </listitem>
+
+        <listitem>
+          <para>Bean introspection without
+          <literal>javax.bean.Introspector</literal> (or in additionally to
+          it). Freemarker relies on this class for maximum conformance to the
+          JavaBeans specs., however, its limitations start to hurt too much:
+          It doesn't work on Android, it doesn't support Java 8 default
+          methods, and it's not lenient enough in many cases (<literal>Boolean
+          isXxx</literal> doesn't work, <literal>xFoo</literal> is not a
+          possible property name of <literal>getXFoo</literal>, etc.).</para>
+        </listitem>
+
+        <listitem>
+          <para>Migrate build from Ant to Gradle. Or for Docgen an Site, Maven
+          is certainly a good fit.</para>
+        </listitem>
+
+        <listitem>
+          <para>Performance tests, to spot performance regressions.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Continuous activities that are always welcome:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Spotting mistakes in commits; more eyes see more</para>
+        </listitem>
+
+        <listitem>
+          <para>Trying to break new features (finding bugs)</para>
+        </listitem>
+
+        <listitem>
+          <para>Improve JUnit coverage where it's due</para>
+        </listitem>
+
+        <listitem>
+          <para>Fixing typos in the documentation (includes JavaDoc!)</para>
+        </listitem>
+
+        <listitem>
+          <para>Help users. This mostly means monitoring Freemarker related
+          questions on Stack Overflow.</para>
+        </listitem>
+
+        <listitem>
+          <para>Pick a bug from the bug tracker, and squash it.</para>
+        </listitem>
+
+        <listitem>
+          <para>Recommend using Freemarker to others when there's a fitting
+          task</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Last not least, Freemarker needs long standing/returning
+      contributors who tackle deeper issues.</para>
+    </section>
   </chapter>
 
   <chapter>

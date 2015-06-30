@@ -62,7 +62,7 @@ tabs: {
 // .icon-download
 // .icon-star
 secondaryTabs: {
-  // "Contribute": { class: "icon-heart", href: "id:contribute" }
+  "Contribute": { class: "icon-heart", href: "id:contribute" }
   "Report a Bug": { class: "icon-bug", href: "olink:newBugReport" }
   "Download": { class: "icon-download", href: "id:freemarkerdownload" }
 }
