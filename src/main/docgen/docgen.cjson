@@ -14,7 +14,7 @@ showXXELogo
 logo: {
   href: "http://freemarker.org"
   src: logo.png
-  alt: "Freemarker"
+  alt: "FreeMarker"
 }
 
 olinks: {
@@ -69,7 +69,7 @@ secondaryTabs: {
 
 footerSiteMap: {
   "Overview": {
-    "What is Freemarker?": "id:what-is-freemarker"
+    "What is FreeMarker?": "id:what-is-freemarker"
     "Download": "id:freemarkerdownload"
     "Version history": "olink:versionHistory"
     "About us": "id:history"
@@ -83,7 +83,7 @@ footerSiteMap: {
     ".special_vars": "olink:specialVariables"
   }
   "Community": {
-    "Freemarker on Github": "olink:githubProject"
+    "FreeMarker on Github": "olink:githubProject"
     "Follow us on Twitter": "olink:twitter"
     "Report a bug": "olink:newBugReport"
     "Ask a question": "olink:newStackOverflowQuestion"
