@@ -1008,6 +1008,11 @@ two freemarker.jar-s and unpredictable behavior!
         </listitem>
 
         <listitem>
+          <para>Write <literal>TemplateLoader</literal> that loads from
+          database (<literal>DataSource</literal>)</para>
+        </listitem>
+
+        <listitem>
           <para>Performance tests, to spot performance regressions.</para>
         </listitem>
       </itemizedlist>
