@@ -9,7 +9,7 @@
   <title>FreeMarker</title>
 
   <chapter role="index.html" xml:id="what-is-freemarker">
-    <title>What's FreeMarker?</title>
+    <title>What is FreeMarker?</title>
 
     <para>FreeMarker is a <emphasis>template engine</emphasis>: a Java library
     to generate text output (HTML web pages, e-mails, configuration files,
