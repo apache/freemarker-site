@@ -128,7 +128,7 @@ two freemarker.jar-s and unpredictable behavior!
 &lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.22&lt;/version&gt;
+  &lt;version&gt;2.3.23&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
