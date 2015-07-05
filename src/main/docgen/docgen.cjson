@@ -11,6 +11,9 @@ validation: {
 }
 showXXELogo
 
+copyrightHolder: "The FreeMarker Project"
+copyrightStartYear: 1999
+
 logo: {
   href: "http://freemarker.org"
   src: logo.png
