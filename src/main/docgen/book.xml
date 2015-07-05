@@ -1,0 +1,1158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<book conformance="docgen" version="5.0" xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <title>FreeMarker</title>
+
+  <chapter role="index.html" xml:id="what-is-freemarker">
+    <title>What is FreeMarker?</title>
+
+    <para>FreeMarker is a <emphasis>template engine</emphasis>: a Java library
+    to generate text output (HTML web pages, e-mails, configuration files,
+    source code, etc.) based on templates and changing data. Templates are
+    written in the FreeMarker Template Language (FTL), which is a simple,
+    specialized language (not a full-blown programming language like PHP). You
+    meant to prepare the data to display in a real programming language, like
+    issue database queries and do business calculations, and then the template
+    displays that already prepared data. In the template you are focusing on
+    how to present the data, and outside the template you are focusing on what
+    data to present.</para>
+
+    <mediaobject>
+      <imageobject>
+        <imagedata fileref="images/overview.png"/>
+      </imageobject>
+    </mediaobject>
+
+    <para>This approach is often referred to as the MVC (Model View
+    Controller) pattern, and is particularly popular for dynamic Web pages. It
+    helps in separating the Web page designers (HTML authors) from the
+    developers (Java programmers usually). Designers won't face complicated
+    logic in templates, and can change the appearance of a page without
+    programmers having to change or recompile code.</para>
+
+    <para>While FreeMarker was originally created for generating HTML pages in
+    MVC web application frameworks, it isn't bound to servlets or HTML or
+    anything Web-related. It's used in non-web application environments as
+    well.</para>
+
+    <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
+    details...</olink></para>
+
+    <simplesect>
+      <title>Features</title>
+
+      <para>A few highlights of FreeMarker:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Multipurpose and lightweight: Zero dependencies, any output
+          format, can load templates from any place (pluggable), many
+          configuration options</para>
+        </listitem>
+
+        <listitem>
+          <para>Powerful template language: Conditional blocks, iterations,
+          assignments, string and arithmetic operations and formatting, macros
+          and functions, including other templates</para>
+        </listitem>
+
+        <listitem>
+          <para>Internationalization/localization-aware: Locale sensitive
+          number and date/time formatting, localized template
+          variations.</para>
+        </listitem>
+
+        <listitem>
+          <para>XML processing capabilities: Drop XML DOM-s into the
+          data-model and traverse them, or even process them
+          declaratively</para>
+        </listitem>
+
+        <listitem>
+          <para>Versatile data-model: Java objects are exposed to the template
+          as a tree of variables through pluggable object wrappers, which
+          decides how the template sees them.</para>
+        </listitem>
+      </itemizedlist>
+    </simplesect>
+
+    <simplesect>
+      <title>License</title>
+
+      <para>FreeMarker is Free software, licensed under the Apache License,
+      Version 2.0. <olink targetdoc="license">See the license
+      here...</olink></para>
+    </simplesect>
+  </chapter>
+
+  <chapter xml:id="freemarkerdownload">
+    <title>Download / Maven</title>
+
+    <para><emphasis role="bold">Dependencies:</emphasis> FreeMarker has no
+    required dependencies, except Java (Standard Edition) itself, with the
+    minimum version indicated for each download below.</para>
+
+    <para><emphasis role="bold">Backward compatibility:</emphasis> Before
+    2.3.0 (2004), releases with different second version numbers (like 2.2.x
+    and 2.3.x) aren't fully compatible. The 2.3.x series is quite conservative
+    about backward compatibility; you should be able to replace the FreeMarker
+    binary (<literal>freemarer.jar</literal>) under your application with a
+    newer one without breaking anything (obviously, assuming that only public
+    FreeMarker API-s were used).</para>
+
+    <para><emphasis role="bold">Change log (version history):</emphasis>
+    <olink targetdoc="versionHistory">See in the Manual...</olink></para>
+
+    <simplesect>
+      <title>Latest stable release: 2.3.23</title>
+
+      <para>Released on 2015-07-05. Requires J2SE 1.4 or higher.</para>
+
+      <para><link
+      xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23/freemarker-2.3.23.tar.gz/download">Download
+      freemarker-2.3.23.tar.gz</link> (3.2 MB, includes binary, documentation
+      and source code)</para>
+
+      <para>For Maven:</para>
+
+      <programlisting language="XML" role="unspecified">&lt;!--
+Attention: Be sure nothing pulls in an old dependency with groupId
+"freemarker" (without the "org."), because then you will end up with
+two freemarker.jar-s and unpredictable behavior!
+--&gt;
+&lt;dependency&gt;
+  &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
+  &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
+  &lt;version&gt;2.3.23&lt;/version&gt;
+&lt;/dependency&gt;</programlisting>
+
+      <note>
+        <para>Until about 2007 the Maven group name was
+        <quote>freemarker</quote> instead of <quote>org.freemarker</quote>,
+        and as the XML comment above says, this can cause problems, as Maven
+        will see them as two independent artifacts with no version conflict.
+        If you run into this issue, find the <literal>dependency</literal>
+        that depends on the old FreeMarker, and insert
+        <literal>&lt;exclusions&gt;&lt;exclusion&gt;&lt;groupId&gt;freemarker&lt;!--
+        Legacy org-less group
+        --&gt;&lt;/groupId&gt;&lt;artifactId&gt;freemarker&lt;/artifactId&gt;
+        &lt;/exclusion&gt;&lt;/exclusions&gt;</literal> into it.</para>
+      </note>
+
+      <para>If you need to use FreeMarker on Google App Engine, <link
+      xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23/freemarker-gae-2.3.23.jar/download">download
+      the GAE-compatible binary too</link> (no documentation included in
+      this).</para>
+
+      <programlisting language="XML" role="unspecified">&lt;dependency&gt;
+  &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
+  &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
+  &lt;version&gt;2.3.23&lt;/version&gt;
+&lt;/dependency&gt;</programlisting>
+    </simplesect>
+
+    <simplesect>
+      <title>2.2.8</title>
+
+      <para>Released on 2004-06-15. This is the latest stable release of the
+      2.2 series. Requires J2SE 1.2 or higher.</para>
+
+      <para><link
+      xlink:href="http://prdownloads.sourceforge.net/freemarker/freemarker-2.2.8.tar.gz">Download
+      freemarker-2.2.8.tar.gz</link> (1.4 MB)</para>
+    </simplesect>
+
+    <simplesect>
+      <title>2.1.5</title>
+
+      <para>Released on 2003-02-08. This is the latest stable release of the
+      2.1 series. Requires J2SE 1.3 or higher.</para>
+
+      <para><link
+      xlink:href="http://prdownloads.sourceforge.net/freemarker/freemarker-2.1.5.tar.gz">Download
+      freemarker-2.1.5.tar.gz</link> (909 KB)</para>
+    </simplesect>
+
+    <simplesect>
+      <title>2.0.3 (aka. 2.03)</title>
+
+      <para>Released on 2002-06-12. The latest stable release of the 2.0
+      series. Requires J2SE 1.2 or higher.</para>
+
+      <para><link
+      xlink:href="http://prdownloads.sourceforge.net/freemarker/freemarker2_03.tar.gz">Download
+      freemarker2_03.tar.gz</link> (617 KB)</para>
+    </simplesect>
+
+    <simplesect>
+      <title>1.x</title>
+
+      <para>The FreeMarker 1.x branch continues as separate project, called
+      FreeMarker Classic. See releases on the <link
+      xlink:href="http://fm-classic.sourceforge.net/">FreeMarker Classic
+      homepage</link>!</para>
+    </simplesect>
+
+    <simplesect>
+      <title>Other versions</title>
+
+      <para>See the project's <link
+      xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/">SourceForge
+      download page</link> for releases that are not featured on this download
+      page.</para>
+    </simplesect>
+  </chapter>
+
+  <chapter>
+    <title>Documentation</title>
+
+    <section>
+      <title><olink targetdoc="manual">Manual</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="api">Java API</olink></title>
+
+      <para/>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Tooling</title>
+
+    <section xml:id="editors">
+      <title>Editor / IDE plugins</title>
+
+      <para>Syntax highlight definitions and other plugins for text editors
+      and IDE-s. We encourage everybody to develop and send syntax highlight
+      definitions or other plugins for his/her favorite editor or IDE!</para>
+
+      <informaltable border="1">
+        <thead>
+          <tr>
+            <th>Editor or IDE</th>
+
+            <th>Features</th>
+
+            <th>Get it</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Eclipse</td>
+
+            <td>Syntax highlight, syntax error marker, code completion for
+            macro names and bean property names.</td>
+
+            <td><para>Part of the JBoss Tools Project. Install like this: In
+            Eclipse, <quote>Help</quote> / <quote>Eclipse
+            Marketplace...</quote>, search for <quote>JBoss Tools</quote>,
+            <quote>Install</quote>. A tree of checkboxes will appear, uncheck
+            all (by unchecking the root) except <quote>FreeMarker IDE</quote>.
+            (On older Eclipse you may have to use the <link
+            xlink:href="http://tools.jboss.org/downloads/">JBoss Tools
+            download page</link> instead.)</para><para>If the plugin comes
+            with a different FreeMarker version than the one your application
+            uses, it will mark the usage of too fresh language features as
+            errors, or the other way around. To fix this, find
+            <literal>freemarker*.jar</literal> inside the installed plugin,
+            under <literal>&lt;userHome&gt;/.eclipse/</literal> or under the
+            Eclipse installation directory (you may need to search inside
+            <literal>jar</literal>-s). Exit Eclipse, and overwrite it with the
+            <literal>freemarker.jar</literal> you want, but keep the file name
+            of the replaced <literal>jar</literal>. You may also need to find
+            and delete the extracted OSGi bundle under
+            <literal>configuration\org.eclipse.osgi</literal> for the changes
+            to take effect.</para><para>Report bugs found on the <link
+            xlink:href="https://issues.jboss.org/browse/JBIDE">bug tracker of
+            the JBoss Tools project</link> (Key: <literal>JBIDE</literal>;
+            Component: <literal>freemarker</literal>), and help to make it
+            better <link
+            xlink:href="https://github.com/jbosstools/jbosstools-freemarker">on
+            GitHub</link>!</para></td>
+          </tr>
+
+          <tr>
+            <td>Emacs</td>
+
+            <td>Syntax highlight, indentation, block folding, some code
+            navigation. Emacs major-mode for editing Web templates, includes
+            FreeMarker support among others.</td>
+
+            <td><link xlink:href="http://web-mode.org/">The homepage of
+            web-mode.el</link></td>
+          </tr>
+
+          <tr>
+            <td>Emacs (tried with 20.7)</td>
+
+            <td>Syntax highlighting</td>
+
+            <td><olink targetdoc="emacsPluginDownload">ftl.el
+            v0.1</olink></td>
+          </tr>
+
+          <tr>
+            <td>Kate and KWrite (tried with Kate 2.5.10 and 3.2)</td>
+
+            <td>Syntax highlighting</td>
+
+            <td><olink
+            targetdoc="kwritePluginDownload">kwriteftl.tar.gz</olink>
+            (2009-08-08)</td>
+          </tr>
+
+          <tr>
+            <td>NetBeans (tried with 8.0.2)</td>
+
+            <td>Syntax highlight, syntax error marker, directive name
+            auto-completion.</td>
+
+            <td>Can be installed from NetBeans, under Tools/Plugins. Also
+            manually from <link
+            xlink:href="http://plugins.netbeans.org/plugin/58284/freemarker-support-for-netbeans">its
+            NetBeans plugin portal page...</link></td>
+          </tr>
+
+          <tr>
+            <td>NetBeans (6.0, may doesn't work with 7+)</td>
+
+            <td>Syntax highlight, code completion, template navigation</td>
+
+            <td>Download from <link
+            xlink:href="http://plugins.netbeans.org/PluginPortal/faces/PluginDetailPage.jsp?pluginid=3755">its
+            NetBeans plugin portal page...</link></td>
+          </tr>
+
+          <tr>
+            <td>TextPad 4 or later</td>
+
+            <td>Syntax highlight</td>
+
+            <td><olink
+            targetdoc="textPadPluginDownload">textpadftl.zip</olink>
+            (2003-03-24)</td>
+          </tr>
+
+          <tr>
+            <td>Vim ("Vi IMproved")</td>
+
+            <td>Syntax highlight</td>
+
+            <td><olink targetdoc="vimPluginDownload">ftl.vim</olink>
+            (2011-10-07)</td>
+          </tr>
+        </tbody>
+      </informaltable>
+
+      <para>Note that some editors/IDEs, such as <link
+      xlink:href="https://www.jetbrains.com/idea/">IntelliJ IDEA</link> and
+      <link xlink:href="http://www.jedit.org/">jEdit</link>, supports
+      FreeMarker out-of-the-box.</para>
+    </section>
+
+    <section>
+      <title><olink targetdoc="onlineTemplateTester">Online template
+      tester</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="fmpp">File generator tool
+      (FMPP)</olink></title>
+
+      <para/>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Community</title>
+
+    <section>
+      <title><olink targetdoc="newBugReport">Report bugs</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="newStackOverflowQuestion">Ask help on Stack
+      Overflow</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="twitter">Get news on Twitter</olink></title>
+
+      <para/>
+    </section>
+
+    <section xml:id="mailing-lists">
+      <title>Discuss on mailing lists</title>
+
+      <simplesect>
+        <title>Subscription</title>
+
+        <para>If you need help, you should ask on <olink
+        targetdoc="newStackOverflowQuestion">Stack Overflow with
+        <quote>freemarker</quote> tag</olink>. Thus, the freemarker-user
+        mailing list is now practically retired. To discuss deeper issues,
+        feature requests, and other FreeMarker-related topics, subscribe to
+        the <emphasis role="bold">freemarker-devel</emphasis> mailing
+        list!</para>
+
+        <para><olink targetdoc="mailingListSubscription">You can see the lists
+        and subscribe here...</olink></para>
+      </simplesect>
+
+      <simplesect>
+        <title>Browse/search the mailing list archives</title>
+
+        <itemizedlist>
+          <listitem>
+            <para><olink
+            targetdoc="userMailingListArchive">freemarker-user@lists.sourceforge.net</olink></para>
+          </listitem>
+
+          <listitem>
+            <para><olink
+            targetdoc="develMailingListArchive">freemarker-devel@lists.sourceforge.net</olink></para>
+          </listitem>
+        </itemizedlist>
+      </simplesect>
+    </section>
+
+    <section xml:id="poweredBy">
+      <title>Who uses FreeMarker?</title>
+
+      <para>Below is a non-comprehensive list of products and sites that use
+      FreeMarker.</para>
+
+      <para>If you are a developer (or otherwise a representative) of a
+      product or site <emphasis>with substantial user base</emphasis> that
+      uses FreeMarker, <link
+      xlink:href="mailto:freemarker-devel@lists.sourceforge.net">drop us a
+      note</link> that includes a short one paragraph description (preferably
+      less than 300 characters, or 600 for complex frameworks) and an URL. The
+      description should also include what FreeMarker is used for in your
+      product.</para>
+
+      <simplesect>
+        <title>Software that incorporates FreeMarker</title>
+
+        <informaltable border="1">
+          <tbody>
+            <tr valign="top">
+              <td><link xlink:href="http://alfresco.org/">Alfresco</link></td>
+
+              <td>Alfresco offers open source enterprise content management
+              (ECM) - Document Management, Collaboration, Records Management,
+              Knowledge Management, Web Content Management and Imaging.
+              Alfresco was founded in June 2005 by John Newton, co-founder of
+              Documentum, and John Powell, former COO of Business Objects.
+              Alfresco's templating system is based on exposing their custom
+              object model to FreeMarker templates. See <link
+              xlink:href="http://www.alfresco.org/mediawiki/index.php/Template_Guide">here</link>
+              for more information.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link xlink:href="http://ofbiz.apache.org/">Apache
+              OFBiz</link></td>
+
+              <td>Apache OFBiz is a project to create a suite of open-source
+              enterprise/e-commerce applications and modules built on a common
+              framework. In 2003 the project decided to switch from JSP to
+              FreeMarker for their view component.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://apt-jelly.sourceforge.net/">APT-Jelly</link></td>
+
+              <td>APT-Jelly is an engine for generating artifacts (e.g. source
+              code, config files) from Java source code. APT-Jelly provides a
+              template-oriented approach to artifact generation by providing
+              an interface for Sun's Annotation Processing Tool (APT) to your
+              favorite templating engine.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://auctionability.co.uk">AuctionAbility</link></td>
+
+              <td>AuctionAbility is a live auction management system that uses
+              FreeMarker extensively to power our notifications (email, SMS,
+              Facebook, Twitter), newsletters (text, HTML, PDF from xHTML),
+              statements (PDF from xHTML) and eBay listing generation.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.clapper.org/software/java/curn/">Curn</link></td>
+
+              <td>Curn is an RSS reader. It scans a configured set of RSS
+              feeds, and summarizes the results in files generated with
+              FreeMarker templates. It is a command-line utility, intended to
+              be run periodically in the background.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.dbsight.net">DBSight</link></td>
+
+              <td>With DBSight you can quickly create a working scalable
+              full-text search engine based on your own database, just by
+              writing SQL and configuring via browser. DBSight provides a
+              customizable scaffolding engine to scaffold search result
+              templates.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.basilv.com/psd/software">EnvGen</link></td>
+
+              <td>EnvGen is an <link
+              xlink:href="http://ant.apache.org/">Ant</link> task for
+              generating different versions of the same file parameterized for
+              different environments (i.e. development, test, and production)
+              using FreeMarker.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://fmpp.sourceforge.net/">FMPP</link></td>
+
+              <td>FMPP is a general purpose text file preprocessor tool
+              (command-line, Ant task). It can generate complete homepages
+              (full directory structure with HTML-s, images, etc.). It is
+              extendable to display data from any data sources (as
+              database).</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://jcopist.sourceforge.net/">JCopist</link></td>
+
+              <td>JCopist is a template-based document generation server based
+              on <link
+              xlink:href="http://www.openoffice.org/">OpenOffice.org</link>.
+              JCopist templates are regular OpenDocuments, enhanced with the
+              FreeMarker scripting language.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link xlink:href="http://www.jforum.net/">JForum</link></td>
+
+              <td>JForum is an open source discussion board system. The lead
+              developer is Rafael Steil.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://jodreports.sourceforge.net/">JODReports</link></td>
+
+              <td>JODReports is an open source solution for creating office
+              documents and reports in Java, using OpenOffice.org.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.liferay.com/products/liferay-portal/overview">Liferay
+              Portal</link></td>
+
+              <td>Liferay Portal is one of the most widely adapted enterprise
+              portal solutions. It's free and open source with optional
+              enterprise subscription. It leverages existing technologies and
+              standards in its stack where reasonable. It has strong focus on
+              modularity, extensibility, and integration with other systems.
+              Core services include Enterprise Content Management, document
+              management, workflow integration, users/roles, web publishing.
+              Entire portals may be built solely using the web UI and
+              available components. It uses FreeMarker for themes, page
+              layout, fragments of structured content, email, portlet views,
+              code generation.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link xlink:href="http://www.lutece.paris.fr">Lutece
+              (2.0+)</link></td>
+
+              <td>Lutece is a portal engine which allows you to easily create
+              your websites or intranets based upon HTML, XML, etc content. It
+              provides a user friendly interface for portal management so no
+              specific technical skills are required. BSD-like license.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.magnolia-cms.com">Magnolia</link></td>
+
+              <td>Magnolia powers the websites of government as well as
+              leading Fortune 500 enterprises in more than 100 countries on
+              all continents of the world. It is a Content Management System
+              favored for its ease-of-use and availability under an Open
+              Source license. Magnolia contains best-of-breed Java technology
+              based on open standards to allow for tailor-made solutions.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://infiniteautomation.com/">Mango</link></td>
+
+              <td>Mango is browser-based, Ajax-enabled software that enables
+              users to access and control electronic sensors, devices, and
+              machines. It provides an interface with which diverse data
+              sources can be created and configured along with an intuitive
+              rules engine for setting up access, monitoring, alerts, data
+              logging, control, transformation, and communication. It uses
+              FreeMarker to dynamically generate content for notification
+              emails.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.messagegears.com/">MessageGears</link></td>
+
+              <td>MessageGears provides Email APIs and SMTP services.
+              MessageGears email templating system is powered by XML documents
+              which become the model to FreeMarker templates. Each message is
+              then merged, delivered, and tracked to optimize inbox
+              placement.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.mrc-productivity.com/">m-Power</link></td>
+
+              <td>m-Power is software which automates enterprise web
+              application development and modernizes legacy business
+              applications. m-Power offers 15 standard Web templates like
+              prompted reports, graphs, pivot tables, maintenance apps, and
+              more. m-Power reduces Web application development time, lowers
+              development costs, and increases productivity.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link xlink:href="http://netbeans.org/">NetBeans</link></td>
+
+              <td>The <link xlink:href="http://netbeans.org/">NetBeans
+              IDE</link> is a well-known open-source tool for Java, PHP, Ruby,
+              C/C++; it also uses FreeMarker for source code templates.
+              FreeMarker is also built into the <link
+              xlink:href="http://netbeans.org/features/platform/index.html">NetBeans
+              Platform</link>, allowing users to create and process FreeMarker
+              file templates as part of their RCP app.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.runmyprocess.com/">RunMyProcess</link></td>
+
+              <td>RunMyProcess is a SaaS (software as a service) Web 2.0
+              integration platform which allow to automate, without any
+              programming, the exchange between your internal information
+              system, your partners or your SaaS software. FreeMarker is used
+              to define data mappings and as a template tool for connectors'
+              design.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.superx-projekt.de">SuperX</link></td>
+
+              <td>[German language only.] A German dataware house for
+              university administrations. Uses FreeMarker to dynamically
+              create SQL queries.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.trackstudio.com/">TrackStudio</link></td>
+
+              <td>TrackStudio is a hierarchical issue tracking and bug
+              tracking system, created specifically for software development
+              companies. It uses FreeMarker to format the e-mail notification
+              messages.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.webperformanceinc.com/load_testing/">Web
+              Performance Load Tester</link></td>
+
+              <td>Web Performance Load Tester software brings ease of use,
+              automatic configuration and sophisticated analysis to
+              performance testing at an affordable price.</td>
+            </tr>
+          </tbody>
+        </informaltable>
+      </simplesect>
+
+      <simplesect>
+        <title>Web application frameworks that support FreeMarker
+        <quote>views</quote></title>
+
+        <para>Note that this list is not complete, since we only list products
+        where the framework authors explicitly state that their product
+        supports FreeMarker. For some frameworks not listed here, it is easy
+        to plug any view component, and thus FreeMarker.</para>
+
+        <para>Also, for most "Model 2" frameworks (like Maverick or Struts) it
+        is easy to use FreeMarker templates instead of the MVC-oriented JSP
+        pages. For more information <olink targetdoc="freemarkerServlet">click
+        here...</olink></para>
+
+        <informaltable border="1">
+          <tbody>
+            <tr valign="top">
+              <td><link xlink:href="http://struts.apache.org/">Apache
+              Struts</link></td>
+
+              <td>Apache Struts is a free, open-source, MVC framework for
+              creating elegant, modern Java web applications. It favors
+              convention over configuration, is extensible using a plugin
+              architecture, and ships with plugins to support REST, AJAX and
+              JSON.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.inductionframework.org">Induction</link></td>
+
+              <td>Induction is a request-based MVC web application framework
+              for Java with support for dynamic application reloading,
+              type-based dependency injection and dependency analysis between
+              models, views and controllers using popular IDEs.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.jpublish.org/">JPublish</link></td>
+
+              <td>Starting from version 2.0b1, JPublish supports FreeMarker as
+              a view layer. JPublish is a powerful web publishing system
+              designed to ensure a clean separation of developer roles.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.restlet.org">Restlet</link></td>
+
+              <td>A framework that brings the simplicity and efficiency of the
+              REST architectural style to Java developers. As an alternative
+              to Servlet and JSP technologies, it uses FreeMarker to generate
+              dynamic representations.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.springframework.org/">Spring</link></td>
+
+              <td>Spring is a complete Java/J2EE application framework based
+              around a lightweight Inversion of Control container. Spring
+              includes, among many other things, a full AOP interception
+              framework, JDBC and ORM support, declarative transaction
+              management (even without an application server) and a rich,
+              flexible MVC framework with various view technologies
+              integrated.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://tammi.sourceforge.net">Tammi</link></td>
+
+              <td>Tammi is a development framework and run-time container for
+              JMX based web applications. Tammi MBeans can implement business
+              logic themselves or act as proxies to native libraries, remote
+              programs and other manageable systems. Tammi applications can be
+              executed either as a servlet or filter chain under a J2EE
+              compatible servlet container. In addition, it contains an
+              internal HTTP(S) 1.1 capable connector with competent
+              performance.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://velocityweb.sourceforge.net/">VelocityWeb</link></td>
+
+              <td>VelocityWeb is a zero-configuration web framework for J2EE.
+              It's easy to debug/unit test without J2EE server, create view
+              with Velocity/FreeMarker, create DAO with Apache Common DBUtils,
+              SQL pagination, and transaction following
+              <literal>TRANSACTION_PER_REQUEST</literal>.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.ztemplates.org/">ztemplates</link></td>
+
+              <td>ztemplates is a web framework that uses Java 5 annotations
+              and autodiscovery for virtually everything, so there is almost
+              no configuration. It features a new and unique action processing
+              module that allows clean, technology agnostic URL-s with
+              URL-variables. It has annotation-based AJAX and JavaScript
+              support.</td>
+            </tr>
+          </tbody>
+        </informaltable>
+      </simplesect>
+
+      <simplesect>
+        <title>Websites generated by FreeMarker</title>
+
+        <informaltable border="1">
+          <tbody>
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.abclinuxu.cz">www.abclinuxu.cz</link></td>
+
+              <td>Linux portal for czech and slovak users. Articles,
+              tutorials, hardware advices, discussion forum and much
+              more...</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.chemistaustralia.com.au">www.chemistaustralia.com.au</link></td>
+
+              <td>Chemist Australia - an online pharmacy in Australia. Uses
+              the WebWork2 framework.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.chile.com">www.chile.com</link></td>
+
+              <td>This portal for everything Chilean serves way many hits
+              every day.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.drivenow.com.au">www.drivenow.com.au</link></td>
+
+              <td>DriveNow - A car rental website that allows customers to
+              book rental cars from major suppliers at discounted last minute
+              rates. Datacodex have developed a site DriveNow that utilises
+              FreeMarker for it's view layer inside it's framework,
+              WebWork2.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://freemarker.org">freemarker.org</link></td>
+
+              <td>Not surprisingly, the pages you view right now are generated
+              using FreeMarker.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.hesteinfo.dk">www.hesteinfo.dk</link></td>
+
+              <td>Denmark's largest equestrian site, where you will find
+              everything related to horses: latest world news, sales, jobs,
+              forums, studs, results, and breeding.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://dvd.indianajones.com">dvd.indianajones.com</link></td>
+
+              <td>The official site for the online content accompanying the
+              "Complete Indiana Jones DVD Set".</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.javahispano.org">www.javahispano.org</link></td>
+
+              <td>This is a popular Spanish-language portal for java
+              developers. It is built on top of the <link
+              xlink:href="http://canyamo.sourceforge.net">Canyamo</link>
+              framework which uses FreeMarker templates for its presentation
+              functionality.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://musikk.telenormobil.no">musikk.telenormobil.no</link>
+              and <link
+              xlink:href="http://mp3.platekompaniet.no">mp3.platekompaniet.no</link></td>
+
+              <td>Together form Norway's second largest MP3-download
+              shop.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.nadir.org">www.nadir.org</link></td>
+
+              <td>Nadir is a German political news portal that uses the
+              above-listed, FreeMarker based Mir CMS.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
+              xlink:href="http://www.vogella.com">www.vogella.com</link></td>
+
+              <td>Popular portal for tutorials, books and trainings on Java,
+              Eclipse, Android and Web development.</td>
+            </tr>
+          </tbody>
+        </informaltable>
+      </simplesect>
+    </section>
+
+    <section xml:id="contribute">
+      <title>Contributors wanted!</title>
+
+      <para>Usually, contributors come because they want to fix/improve a
+      certain thing. But if you just want to help in general, here are some
+      topics that are not (that) hard to jump into and are considered to be
+      important:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Tooling / desktop:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Eclipse plugin. Either help improving the JBoss Tools
+              <quote>FreeMarker IDE</quote>, or if you have serious ambitions,
+              even start your own!</para>
+            </listitem>
+
+            <listitem>
+              <para>IntelliJ plugin. Check how well it works (like support for
+              recent FreeMarker features), try to find a way to contribute
+              where needed.</para>
+            </listitem>
+
+            <listitem>
+              <para>Plugin or syntax highlighter for you favorite editor
+              (Notepad++, jEdit, VIM, etc.) that actually covers FTL
+              reasonably well, and is legally properly contributed to the
+              project.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Tooling / online tools:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>Improve <olink
+              targetdoc="onlineTemplateTester">freemarker-online</olink>, the
+              template tester page. For example, it should be REST service
+              with an AJAX based front-end, instead of the current full page
+              reloading one. Ultimately, we want to be able to embed the
+              tester into the Manual for trying the examples.</para>
+            </listitem>
+
+            <listitem>
+              <para>Online editor, syntax highlighter. This might means
+              FreeMarker support for CodeMirror. This, among others, would be
+              useful in the online template tester (see previous point)</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Improve framework integration:</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>FreeMarker Spring MVC integration. Someone who know both
+              well should keep an eye on this, improving it where
+              necessary.</para>
+            </listitem>
+
+            <listitem>
+              <para>FreeMarker Struts integration. Same as with Spring
+              MVC.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para>Android support. This is related to the next two points
+          too</para>
+        </listitem>
+
+        <listitem>
+          <para>Bean introspection without
+          <literal>javax.bean.Introspector</literal> (or in additionally to
+          it). FreeMarker relies on this class for maximum conformance to the
+          JavaBeans specs., however, its limitations start to hurt too much:
+          It doesn't work on Android, it doesn't support Java 8 default
+          methods, and it's not lenient enough in many cases (<literal>Boolean
+          isXxx</literal> doesn't work, <literal>xFoo</literal> is not a
+          possible property name of <literal>getXFoo</literal>, etc.).</para>
+        </listitem>
+
+        <listitem>
+          <para>Migrate build from Ant to Gradle. Or for Docgen an Site, Maven
+          is certainly a good fit.</para>
+        </listitem>
+
+        <listitem>
+          <para>Write <literal>TemplateLoader</literal> that loads from
+          database (<literal>DataSource</literal>)</para>
+        </listitem>
+
+        <listitem>
+          <para>Performance tests, to spot performance regressions.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Continuous activities that are always welcome:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Spotting mistakes in commits; more eyes see more</para>
+        </listitem>
+
+        <listitem>
+          <para>Trying to break new features (finding bugs)</para>
+        </listitem>
+
+        <listitem>
+          <para>Improve JUnit coverage where it's due</para>
+        </listitem>
+
+        <listitem>
+          <para>Fixing typos in the documentation (includes JavaDoc!)</para>
+        </listitem>
+
+        <listitem>
+          <para>Help users. This mostly means monitoring FreeMarker related
+          questions on Stack Overflow.</para>
+        </listitem>
+
+        <listitem>
+          <para>Pick a bug from the bug tracker, and squash it.</para>
+        </listitem>
+
+        <listitem>
+          <para>Recommend using FreeMarker to others when there's a fitting
+          task</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Last not least, FreeMarker needs long standing/returning
+      contributors who tackle deeper issues.</para>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>Miscellaneous</title>
+
+    <section>
+      <title><olink targetdoc="sourceforgeProject">Sourceforge.net project
+      page</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="githubProject">GitHub project
+      page</olink></title>
+
+      <para/>
+    </section>
+
+    <section xml:id="history">
+      <title>Project history</title>
+
+      <para>Development history, key contributors:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>Later 1999, FreeMarker 1 has appeared on SourceForge.net. It
+          was originally written by Benjamin Geer and Mike Bayer. They defined
+          the basic syntax, and more importantly, the philosophy of the tool
+          that is carried on in FreeMarker 2. Significant contributions to
+          FreeMarker 1 were made by Nicholas Cull, Holger Arendt and
+          others.</para>
+        </listitem>
+
+        <listitem>
+          <para>In early 2002, Jonathan Revusky rewrote the core
+          (parser/compiler) code using a popular parser generator tool,
+          JavaCC. This was really the basis of FreeMarker 2, which, though was
+          initially largely backward compatible with FreeMarker 1, is
+          virtually a complete rewrite. <link
+          xlink:href="http://www.szegedi.org/">Attila Szegedi</link> has made
+          significant contributions to the FreeMarker 2. Besides refactoring
+          and optimizing some of the core API's, Attila is the main author of
+          the date/time support, <literal>freemarker.ext.*</literal> packages
+          responsible for JavaBeans, Jython, and XML mappings, as well as for
+          HTTP servlet, JSP and Ant integration. Dániel Dékány is the main
+          author of the documentation, and has influenced many new features of
+          FreeMarker 2, and has helped in maintenance work. Many ideas and
+          feedback were provided by the various participants on the
+          freemarker-devel and freemarker-user mailing lists, like <link
+          xlink:href="http://sixlegs.com/">Chris Nokleberg</link>, <link
+          xlink:href="http://stephan.notatoaster.org/">Stephan Mueller</link>,
+          and many others.</para>
+        </listitem>
+
+        <listitem>
+          <para>Since 2011, Dániel Dékány does most of the maintenance work
+          and new features.</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>Legal history:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para>FreeMarker 1 was licensed under LGPL, and was copyright by
+          Benjamin Geer.</para>
+        </listitem>
+
+        <listitem>
+          <para>By community consensus, FreeMarker 2 was released under a more
+          liberal BSD-style license. Benjamin Geer remained the copyright
+          holder of FreeMarker versions 2.0.x and 2.1.x. It was decided that,
+          since we did not at that point have a juridical entity (such as the
+          Apache Foundation) to play this role, that Benjamin Geer would
+          continue to be the sole copyright holder, make any future license
+          changes or clarifications simpler.</para>
+        </listitem>
+
+        <listitem>
+          <para>As of FreeMarker 2.2, the copyright holder of the FreeMarker
+          codebase was the Visigoth Software Society (VSS), a non-profit
+          association based in Spain, and co-founded by Jonathan Revusky in
+          December of 2002. Benjamin Geer graciously agreed to cede the
+          copyright to VSS on the understanding that it would remain available
+          under a liberal open-source license. The terms of the license remain
+          the same.</para>
+        </listitem>
+
+        <listitem>
+          <para>As of FreeMarker 2.3.21 (released at 2014-10-12), the license
+          has changed to the Apache License, Version 2.0, and the owner has
+          changed from Visigoth Software Society to the three main FreeMarker
+          2 developers, Attila Szegedi, Daniel Dekany, and Jonathan Revusky.
+          The change was needed because the old BSD-style license wasn't OSI
+          approved, and because of the inactivity of the Visigoth Software
+          Society association.</para>
+        </listitem>
+      </itemizedlist>
+    </section>
+  </chapter>
+</book>

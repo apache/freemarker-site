@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 
-<project name="FreeMarker Site" default="pack" basedir="." xmlns:ivy="antlib:org.apache.ivy.ant">
+<project name="FreeMarker Site" default="pack" basedir="."
+  xmlns:ivy="antlib:org.apache.ivy.ant"
+  xmlns:docgen="http://freemarker.org/docgen"
+>
 
   <!-- Ivy project coordinates: -->
   <property name="moduleOrg" value="org.freemarker" />
@@ -21,80 +24,26 @@
     </tstamp>
   </target>
 
-  <target name="create-site-dirs" depends="init">
-    <mkdir dir="build/site/images"/>
-  </target>
-  
-  <target name="define-task" depends="init">
-    <ivy:cachepath pathid="ivy.dep" />
-    <taskdef name="freemarker" classname="freemarker.ext.ant.FreemarkerXmlTask"
-      classpathref="ivy.dep"
-    />
-  </target>
-
-  <target name="webpages-xml" depends="define-task">
-    <freemarker
-      basedir="src/webpages/pages-xml"
-      destdir="build/site"
-      includes="**/*.xml"
-      template="src/webpages/site.ftl"
-      projectfile="../site.xml"
-      encoding="utf-8"
-      incremental="no">
-      <!-- jython>
-        # We could do something interesting in here if we wanted to.
-        print "The FreeMarker main module is available: ${freemarker-src}"     
-      </jython -->
-    </freemarker>
-  </target>
-
-  <target name="eclipse-toc-xml" if="site.offline" depends="define-task">
-    <!-- Build table of content for the Eclipse plugin -->
-    <freemarker
-      basedir="src/webpages"
-      destdir="build/site/tmp"
-      includes="site.xml"
-      template="src/webpages/eclipse-toc.ftl"
-      encoding="iso-8859-1"
-      incremental="no">
-    </freemarker>
-    <!-- Rename the site.xml file into the toc.xml file and delete the site/tmp directory -->
-    <move file="build/site/tmp/site.html" tofile="build/site/eclipse-site-toc.xml"/>
-    <delete dir="build/site/tmp" />
-  </target>
-
-  <target name="webpages-literal" depends="create-site-dirs">
-    <antcall target="webpages-literal-offline" />
-    <antcall target="webpages-literal-online" />
-  </target>
-
-  <target name="webpages-literal-offline" depends="create-site-dirs" if="site.offline">
-    <echo message="1" />
-    <copy toDir="build/site">
-      <fileset dir="src/webpages/pages-literal" excludes="download/library/**" />
-    </copy>
-  </target>
-  
-  <target name="webpages-literal-online" depends="create-site-dirs" unless="site.offline">
-    <echo message="2" />
-    <copy toDir="build/site">
-      <fileset dir="src/webpages/pages-literal" />
-    </copy>
-  </target>
-  
   <target name="site">
     <!-- Ensure that we have an empty build/site directory: -->
-    <mkdir dir="build/site"/>
+    <mkdir dir="build/docgen"/>
     <delete includeEmptyDirs="true">
-      <fileset dir="build/site">
+      <fileset dir="build/docgen">
           <include name="*/**"/>
       </fileset>
     </delete>
     
     <!-- Generate the new content: -->
-    <antcall target="webpages-xml" />
-    <antcall target="webpages-literal" />
-    <antcall target="eclipse-toc-xml" />
+    <ivy:cachepath pathid="ivy.dep" />
+    <taskdef resource="org/freemarker/docgen/antlib.properties"
+      uri="http://freemarker.org/docgen"
+      classpathref="ivy.dep"
+    />
+    
+    <docgen:transform
+      srcdir="src/main/docgen" destdir="build/docgen"
+      offline="@{offline}"
+    />
   </target>
   
   <target name="clean">
@@ -104,7 +53,7 @@
   <target name="all" depends="clean, site"/>
 
   <target name="pack" depends="site">
-    <tar tarfile="build/site.tar" basedir="build/site"/>
+    <tar tarfile="build/site.tar" basedir="build/docgen"/>
     <mkdir dir="build/artifacts" />
     <gzip zipfile="build/artifacts/site.tar.gz" src="build/site.tar"/>
     <delete file="build/site.tar"/>
