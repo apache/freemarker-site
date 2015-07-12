@@ -50,15 +50,15 @@
 
       <itemizedlist>
         <listitem>
-          <para>Multipurpose and lightweight: Zero dependencies, any output
-          format, can load templates from any place (pluggable), many
-          configuration options</para>
+          <para>Powerful template language: Conditional blocks, iterations,
+          assignments, string and arithmetic operations and formatting, macros
+          and functions, including other templates, and many more</para>
         </listitem>
 
         <listitem>
-          <para>Powerful template language: Conditional blocks, iterations,
-          assignments, string and arithmetic operations and formatting, macros
-          and functions, including other templates</para>
+          <para>Multipurpose and lightweight: Zero dependencies, any output
+          format, can load templates from any place (pluggable), many
+          configuration options</para>
         </listitem>
 
         <listitem>
