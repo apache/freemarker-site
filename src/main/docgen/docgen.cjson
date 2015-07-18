@@ -22,7 +22,7 @@ logo: {
 
 olinks: {
   // Manual links:
-  manual: "docs/toc.html"
+  manual: "docs/index.html"
   api: "docs/api/index.html"
   templateAuthorsGuide: "docs/dgui_quickstart_basics.html"
   license: "docs/app_license.html"
