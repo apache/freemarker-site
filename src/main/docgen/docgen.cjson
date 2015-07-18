@@ -14,6 +14,16 @@ showXXELogo
 copyrightHolder: "The FreeMarker Project"
 copyrightStartYear: 1999
 
+seoMeta: {
+  "file:index.html": {
+    "fullTitle": "FreeMarker Java Template Engine"
+    "description": "\
+        Open source Java template engine; generates text output \
+        HTML web pages, e-mails, configuration files, source code, etc.) \
+        based on template files and the changing data provided by your application."
+  }
+}
+
 logo: {
   href: "http://freemarker.org"
   src: logo.png
