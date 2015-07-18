@@ -95,7 +95,7 @@ footerSiteMap: {
 }
 
 socialLinks: {
-  "Github": { class: "github", href: "olink:githubProject" }
+  "GitHub": { class: "github", href: "olink:githubProject" }
   "Twitter": { class: "twitter", href: "olink:twitter" }
   "Stack Overflow": { class: "stack-overflow", href: "olink:newStackOverflowQuestion" }
 }
