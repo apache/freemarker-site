@@ -17,10 +17,10 @@ copyrightStartYear: 1999
 seoMeta: {
   "file:index.html": {
     "fullTitle": "FreeMarker Java Template Engine"
+    // Keep this under 160 characters or so (so that Google doesn't truncate it):
     "description": "\
-        Open source Java template engine; generates text output \
-        HTML web pages, e-mails, configuration files, source code, etc.) \
-        based on template files and the changing data provided by your application."
+        Java template engine; generates HTML web pages, e-mails, configuration files, source code, etc. \
+        from template files and the data your application provides."
   }
 }
 
