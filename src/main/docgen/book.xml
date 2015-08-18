@@ -999,17 +999,27 @@ two freemarker.jar-s and unpredictable behavior!
           It doesn't work on Android, it doesn't support Java 8 default
           methods, and it's not lenient enough in many cases (<literal>Boolean
           isXxx</literal> doesn't work, <literal>xFoo</literal> is not a
-          possible property name of <literal>getXFoo</literal>, etc.).</para>
+          possible property name of <literal>getXFoo</literal>, etc.), it
+          doesn't work with static methods
+          (<literal>BeansWrapper.staticModels</literal>).</para>
         </listitem>
 
         <listitem>
-          <para>Migrate build from Ant to Gradle. Or for Docgen an Site, Maven
-          is certainly a good fit.</para>
+          <para>Support for Java 8 data/time API-s</para>
+        </listitem>
+
+        <listitem>
+          <para><literal>javax.script</literal> (JSR-223) support</para>
         </listitem>
 
         <listitem>
           <para>Write <literal>TemplateLoader</literal> that loads from
           database (<literal>DataSource</literal>)</para>
+        </listitem>
+
+        <listitem>
+          <para>Migrate build from Ant to Gradle. Or for Docgen an Site, Maven
+          is certainly a good fit.</para>
         </listitem>
 
         <listitem>
