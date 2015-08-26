@@ -52,7 +52,8 @@
         <listitem>
           <para>Powerful template language: Conditional blocks, iterations,
           assignments, string and arithmetic operations and formatting, macros
-          and functions, including other templates, and many more</para>
+          and functions, including other templates, automatic HTML/XML
+          escaping, and many more</para>
         </listitem>
 
         <listitem>
