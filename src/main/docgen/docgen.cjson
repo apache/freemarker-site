@@ -56,11 +56,10 @@ olinks: {
   newBugReport: "https://sourceforge.net/p/freemarker/bugs/new/"
   newStackOverflowQuestion: "http://stackoverflow.com/questions/ask?tags=freemarker"
   
-  // TODO: Rather move these downloads outside the "site" project (licensing)
-  emacsPluginDownload: "download/editor/ftl.el"
-  kwritePluginDownload: "download/editor/kwriteftl.tar.gz"
-  textPadPluginDownload: "download/editor/textpadftl.zip"
-  vimPluginDownload: "download/editor/ftl.vim"
+  emacsPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
+  kwritePluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
+  textPadPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/textpadftl.zip/download"
+  vimPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.vim/download"
 }
 
 tabs: {
