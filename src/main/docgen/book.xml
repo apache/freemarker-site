@@ -157,6 +157,29 @@ two freemarker.jar-s and unpredictable behavior!
     </simplesect>
 
     <simplesect>
+      <title>Laster development (incomplete) version: 2.3.24-pre01</title>
+
+      <para>Released on 2015-09-01. Requires J2SE 1.5 or higher.</para>
+
+      <para><link
+      xlink:href="http://freemarker.org/builds/2.3.24-pre01/_html/versions_2_3_24.html">See
+      what's new...</link></para>
+
+      <para><link
+      xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/2.3.24-preview-01/freemarker-2.3.24-pre01.tar.gz/download">Download
+      freemarker-2.3.24-pre01</link> (4 MB, includes binary, documentation and
+      source code)</para>
+
+      <para>If you need to use FreeMarker on Google App Engine, <link
+      xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.24-preview-01/freemarker-gae-2.3.24-pre01.jar/download">download
+      the GAE-compatible binary too</link> (no documentation included in
+      this).</para>
+
+      <para>Maven artifact is not available for this development
+      release.</para>
+    </simplesect>
+
+    <simplesect>
       <title>2.2.8</title>
 
       <para>Released on 2004-06-15. This is the latest stable release of the
