@@ -84,9 +84,23 @@
     <simplesect>
       <title>License</title>
 
-      <para>FreeMarker is Free software, licensed under the Apache License,
-      Version 2.0. <olink targetdoc="license">See the license
-      here...</olink></para>
+      <para>FreeMarker 2.3.23 is Free software, licensed under the Apache
+      License, Version 2.0. <olink targetdoc="license">See the license
+      here...</olink>.</para>
+
+      <para>After 2.3.24-pre01 (2012-09-02) the copyright owner in the license
+      changes to the Apache Software Foundation, as the project has started
+      <link xlink:href="http://incubator.apache.org/">Apache Incubation</link>
+      (see disclaimer below).</para>
+
+      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
+      incubation at The Apache Software Foundation (ASF). Incubation is
+      required of all newly accepted projects until a further review indicates
+      that the infrastructure, communications, and decision making process
+      have stabilized in a manner consistent with other successful ASF
+      projects. While incubation status is not necessarily a reflection of the
+      completeness or stability of the code, it does indicate that the project
+      has yet to be fully endorsed by the ASF.</emphasis> </para>
     </simplesect>
   </chapter>
 
