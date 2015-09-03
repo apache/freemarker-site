@@ -1145,11 +1145,76 @@ two freemarker.jar-s and unpredictable behavior!
       <para/>
     </section>
 
-    <section>
-      <title><olink targetdoc="githubProject">GitHub project
-      page</olink></title>
+    <section xml:id="sourcecode">
+      <title>Source code (Git)</title>
 
-      <para/>
+      <para>As of 2015-09-02, most of the project repositories have moved from
+      the <olink targetdoc="githubProject">earlier GitHub project</olink> to
+      the <link xlink:href="http://incubator.apache.org/">Apache
+      Incubation</link> repositories:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><literal>freemarker</literal>: The engine itself (i.e.,
+          <literal>freemarker.jar</literal>) and the documentation. URL: <link
+          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git</link>.
+          Relevant branches (as of 2015-09-04): </para>
+
+          <itemizedlist>
+            <listitem>
+              <para><literal>2.3-gae</literal>: FreeMarker 2.3.x Google App
+              Engine compliant variant. <emphasis role="bold">Develop here by
+              default!</emphasis> This is where most developments are
+              committed, and are then merged into the other two branches
+              below.</para>
+            </listitem>
+
+            <listitem>
+              <para><literal>2.3</literal>: FreeMarker 2.3.x,
+              <quote>normal</quote> variant (this is what most users use). We
+              hardly ever commit into this directly, instead changes are
+              coming from<literal>2.3-gae</literal> via merging.</para>
+            </listitem>
+
+            <listitem>
+              <para><literal>master</literal>: FreeMarker 2.4.x. Had no
+              release as of this writing. This is <literal>2.3-gae</literal>
+              plus the changes that aren't 100% backward compatible. We only
+              commit 2.4-exclusive changes directly here, all other changes
+              are coming from <literal>2.3-gae</literal> via merging.</para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><literal>freemarker-site</literal>: Web site (freemarker.org)
+          contents. URL: <link
+          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git</link>.
+          Relevant branches: <literal>master</literal></para>
+        </listitem>
+
+        <listitem>
+          <para><literal>freemarker-docgen</literal>: DocBook transformation
+          used for generating both the FreeMarker Manual and the web site.
+          URL: <link
+          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker-docgen.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker-docgen.git</link>.
+          Relevant branches: <literal>master</literal></para>
+        </listitem>
+      </itemizedlist>
+
+      <para>There are some other FreeMarker-related repositories, such FMPP
+      and Tutorials, which you can only find on the <olink
+      targetdoc="githubProject">GitHub project</olink> page, as they aren't
+      part of the ongoing Apache Incubation effort.</para>
+
+      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
+      incubation at The Apache Software Foundation (ASF). Incubation is
+      required of all newly accepted projects until a further review indicates
+      that the infrastructure, communications, and decision making process
+      have stabilized in a manner consistent with other successful ASF
+      projects. While incubation status is not necessarily a reflection of the
+      completeness or stability of the code, it does indicate that the project
+      has yet to be fully endorsed by the ASF.</emphasis></para>
     </section>
 
     <section xml:id="history">
