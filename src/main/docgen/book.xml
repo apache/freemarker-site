@@ -422,35 +422,66 @@ two freemarker.jar-s and unpredictable behavior!
     <section xml:id="mailing-lists">
       <title>Discuss on mailing lists</title>
 
+      <para>If you need help, you should ask on <olink
+      targetdoc="newStackOverflowQuestion">Stack Overflow with
+      <quote>freemarker</quote> tag</olink>! To discuss deeper issues, feature
+      requests, and other FreeMarker-related topics, subscribe to the
+      developer mailing list!</para>
+
+      <para>The mailing lists (since 2015-09-03):</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><emphasis role="bold">Developer list</emphasis>:
+          dev@freemarker.incubator.apache.org. <olink
+          targetdoc="devMailingListSubscribe"><link
+          xlink:href="mailto:dev-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
+          <olink targetdoc="devMailingListUnsubscribe"><link
+          xlink:href="mailto:dev-unsubscribe@freemarker.incubator.apache.org">Unsubscribe</link></olink>
+          (After clicking on these links, send the appearing empty mail as
+          is.)</para>
+        </listitem>
+
+        <listitem>
+          <para><emphasis role="bold">Commit and Jira
+          notifications</emphasis>:
+          notifications@freemarker.incubator.apache.org. <olink
+          targetdoc="notificationsMailingListSubscribe"><link
+          xlink:href="mailto:notifications-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
+          <olink targetdoc="notificationsMailingListUnsubscribe"><link
+          xlink:href="mailto:notifications-unsubscribe@freemarker.incubator.apache.org">Unsubscribe</link></olink>
+          (After clicking on these links, send the appearing empty mail as
+          is.)</para>
+        </listitem>
+      </itemizedlist>
+
+      <para>The above mailing lists are hosted by the Apache Software
+      Foundation. For more information about managing mailing lists, <link
+      xlink:href="http://apache.org/foundation/mailinglists.html">see this
+      page...</link></para>
+
       <simplesect>
-        <title>Subscription</title>
+        <title>Retired mailing lists</title>
 
-        <para>If you need help, you should ask on <olink
-        targetdoc="newStackOverflowQuestion">Stack Overflow with
-        <quote>freemarker</quote> tag</olink>. Thus, the freemarker-user
-        mailing list is now practically retired. To discuss deeper issues,
-        feature requests, and other FreeMarker-related topics, subscribe to
-        the <emphasis role="bold">freemarker-devel</emphasis> mailing
-        list!</para>
+        <para>These are the lists on sourceforge.net, which
+        <emphasis>shouldn't be used anymore</emphasis>.</para>
 
-        <para><olink targetdoc="mailingListSubscription">You can see the lists
-        and subscribe here...</olink></para>
-      </simplesect>
-
-      <simplesect>
-        <title>Browse/search the mailing list archives</title>
+        <para>Archives of <emphasis>retired</emphasis> lists:</para>
 
         <itemizedlist>
           <listitem>
             <para><olink
-            targetdoc="userMailingListArchive">freemarker-user@lists.sourceforge.net</olink></para>
+            targetdoc="oldUserMailingListArchive">freemarker-user@lists.sourceforge.net</olink></para>
           </listitem>
 
           <listitem>
             <para><olink
-            targetdoc="develMailingListArchive">freemarker-devel@lists.sourceforge.net</olink></para>
+            targetdoc="oldDevelMailingListArchive">freemarker-devel@lists.sourceforge.net</olink></para>
           </listitem>
         </itemizedlist>
+
+        <para><olink targetdoc="oldMailingListSubscription">Manage
+        <emphasis>retired</emphasis> list subscriptions...</olink></para>
       </simplesect>
     </section>
 
@@ -1185,6 +1216,18 @@ two freemarker.jar-s and unpredictable behavior!
           The change was needed because the old BSD-style license wasn't OSI
           approved, and because of the inactivity of the Visigoth Software
           Society association.</para>
+        </listitem>
+
+        <listitem>
+          <para>Around 2015-07-01, FreeMarker was voted in into the <link
+          xlink:href="http://incubator.apache.org/">Apache Incubator</link>,
+          and the project (all code from which the releases and the Web site
+          are created, along with the right for using the
+          <quote>FreeMarker</quote> product name) was granted to the Apache
+          Software Foundation by the earlier owners. The license remains
+          Apache License, Version 2.0. In 2015-09-02, the main code base was
+          imported from GitHub into the Apache Software Foundation
+          infrastructure, where development continues.</para>
         </listitem>
       </itemizedlist>
     </section>
