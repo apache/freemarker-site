@@ -100,7 +100,7 @@
       have stabilized in a manner consistent with other successful ASF
       projects. While incubation status is not necessarily a reflection of the
       completeness or stability of the code, it does indicate that the project
-      has yet to be fully endorsed by the ASF.</emphasis> </para>
+      has yet to be fully endorsed by the ASF.</emphasis></para>
     </simplesect>
   </chapter>
 
@@ -1132,6 +1132,17 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>Last not least, FreeMarker needs long standing/returning
       contributors who tackle deeper issues.</para>
+
+      <simplesect>
+        <title>What to do if I want to contribute</title>
+
+        <para>First you should <link linkend="mailing-lists">subsrcribe to the
+        developer mailing list</link> to discuss what you plant to do. If you
+        are going to contribute to the engine itself, you will need an <link
+        xlink:href="http://www.apache.org/dev/new-committers-guide.html#cla">Individual
+        Contributor License Agreement (ICLA) or Corporate CLA at the Apache
+        Software Foundation</link>.</para>
+      </simplesect>
     </section>
   </chapter>
 
@@ -1158,7 +1169,7 @@ two freemarker.jar-s and unpredictable behavior!
           <para><literal>freemarker</literal>: The engine itself (i.e.,
           <literal>freemarker.jar</literal>) and the documentation. URL: <link
           xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git</link>.
-          Relevant branches (as of 2015-09-04): </para>
+          Relevant branches (as of 2015-09-04):</para>
 
           <itemizedlist>
             <listitem>
