@@ -1,1 +1,1 @@
-Redirect 302 test-foo.html test-bar.html
+redirect 302 /test-foo.html http://freemarker.incubator.apache.org/test-bar.html
