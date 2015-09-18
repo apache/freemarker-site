@@ -34,6 +34,7 @@ olinks: {
   // Manual links:
   manual: "docs/index.html"
   api: "docs/api/index.html"
+  chienseManual: "https://sourceforge.net/projects/freemarker/files/chinese-manual/"
   templateAuthorsGuide: "docs/dgui_quickstart_basics.html"
   license: "docs/app_license.html"
   versionHistory: "docs/app_versions.html"
