@@ -1156,6 +1156,12 @@ two freemarker.jar-s and unpredictable behavior!
         xlink:href="http://www.apache.org/dev/new-committers-guide.html#cla">Individual
         Contributor License Agreement (ICLA) or Corporate CLA at the Apache
         Software Foundation</link>.</para>
+
+        <para>Of course, you will also want to check the project out from the
+        source code repository, and build it. See here <link
+        linkend="sourcecode">what to check out</link>. After checking
+        something out, see the <literal>README</literal> file in it for more
+        information about building and IDE setup.</para>
       </simplesect>
     </section>
   </chapter>
