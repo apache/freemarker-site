@@ -377,6 +377,14 @@ two freemarker.jar-s and unpredictable behavior!
           </tr>
 
           <tr>
+            <td>TextMate</td>
+
+            <td>Syntax highlight</td>
+
+            <td><link xlink:href="https://github.com/freemarker/FreeMarker.tmbundle">Install from Github Project</link></td>
+          </tr>
+
+          <tr>
             <td>TextPad 4 or later</td>
 
             <td>Syntax highlight</td>
