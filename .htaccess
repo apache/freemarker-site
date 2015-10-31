@@ -6,3 +6,9 @@ RedirectMatch permanent "^/fmpp\.html$" "http://fmpp.sourceforge.net/"
 
 # We don't have toc.html ATM, but it might will reappear:
 RedirectMatch temp "^/docs/toc\.html$" "/docs/"
+
+# Redirect www to non-www:
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
