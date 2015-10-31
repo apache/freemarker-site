@@ -1,14 +1,4 @@
-# Redirect www to non-www:
-RewriteEngine On
-RewriteBase /
-RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
-
-# Redirect old URL-s to new ones:
 redirect permanent "^/docs/preface\.html$", "/"
 redirect permanent "^/features\.html$", "/"
 redirect permanent "^/whoWeAre\.html$", "/history.html"
 redirect permanent "^/fmpp\.html$", "http://fmpp.sourceforge.net/"
-
-# We don't have toc.html ATM, but it might will reappear:
-redirect temp "^/docs/toc\.html$", "/docs/"
