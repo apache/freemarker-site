@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>http://freemarker.org/index.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/freemarkerdownload.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/index.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/api/index.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/editors.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/mailing-lists.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/poweredBy.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/contribute.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/sourcecode.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/history.html</loc>
+      </url>
+</urlset>

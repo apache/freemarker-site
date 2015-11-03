@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
+-->
+<ivy-module version="2.0">
+    <info organisation="org.freemarker" module="docgen" revision="1.0-branch-head" status="integration" publication="20141004131912"/>
+    <publications>
+        <artifact name="docgen" type="jar" ext="jar"/>
+    </publications>
+    <dependencies>
+        <dependency org="com.thaiopensource" name="jing" rev="20081028" conf="default->default"/>
+        <dependency org="org.freemarker" name="freemarker" rev="3.0-branch-head" conf="default->default" changing="true"/>
+        <dependency org="ant" name="ant" rev="1.6.5" conf="default->default"/>
+    </dependencies>
+</ivy-module>

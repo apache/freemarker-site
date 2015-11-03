@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
+-->
+<ivy-module version="2.0">
+    <info organisation="org.freemarker" module="site" revision="1.0-branch-head" status="integration" publication="20130627122859"/>
+    <publications>
+        <artifact name="site" type="tar.gz" ext="tar.gz"/>
+    </publications>
+    <dependencies>
+        <dependency org="org.freemarker" name="freemarker" rev="3.0-branch-head" conf="default->default" changing="true"/>
+        <dependency org="org.python" name="jython" rev="2.2.1" conf="default->default"/>
+    </dependencies>
+</ivy-module>
