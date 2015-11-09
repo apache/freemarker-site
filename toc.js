@@ -1,11 +1,11 @@
 
 var toc = {
-"title": "FreeMarker",
+"title": "Apache FreeMarker",
 "url": null,
 "isFile": true,
 "children": [
 {
-"title": "What is FreeMarker?",
+"title": "What is Apache FreeMarker?",
 "url": "index.html",
 "isFile": true,
 "children": [
