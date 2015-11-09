@@ -6,15 +6,15 @@
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
       xmlns:db="http://docbook.org/ns/docbook">
-  <title>FreeMarker</title>
+  <title>Apache FreeMarker</title>
 
   <chapter role="index.html" xml:id="what-is-freemarker">
-    <title>What is FreeMarker?</title>
+    <title>What is Apache FreeMarker?</title>
 
-    <para>FreeMarker is a <emphasis>template engine</emphasis>: a Java library
-    to generate text output (HTML web pages, e-mails, configuration files,
-    source code, etc.) based on templates and changing data. Templates are
-    written in the FreeMarker Template Language (FTL), which is a simple,
+    <para>Apache FreeMarker is a <emphasis>template engine</emphasis>: a Java
+    library to generate text output (HTML web pages, e-mails, configuration
+    files, source code, etc.) based on templates and changing data. Templates
+    are written in the FreeMarker Template Language (FTL), which is a simple,
     specialized language (not a full-blown programming language like PHP). You
     meant to prepare the data to display in a real programming language, like
     issue database queries and do business calculations, and then the template
@@ -42,6 +42,17 @@
 
     <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
     details...</olink></para>
+
+    <para><emphasis><emphasis><emphasis role="bold">Disclaimer: Apache
+    FreeMarker is an effort undergoing <link
+    xlink:href="http://incubator.apache.org">incubation</link> at The Apache
+    Software Foundation (ASF).</emphasis></emphasis> Incubation is required of
+    all newly accepted projects until a further review indicates that the
+    infrastructure, communications, and decision making process have
+    stabilized in a manner consistent with other successful ASF projects.
+    While incubation status is not necessarily a reflection of the
+    completeness or stability of the code, it does indicate that the project
+    has yet to be fully endorsed by the ASF.</emphasis></para>
 
     <simplesect>
       <title>Features</title>
@@ -91,16 +102,7 @@
       <para>After 2.3.24-pre01 (2012-09-02) the copyright owner in the license
       changes to the Apache Software Foundation, as the project has started
       <link xlink:href="http://incubator.apache.org/">Apache Incubation</link>
-      (see disclaimer below).</para>
-
-      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
-      incubation at The Apache Software Foundation (ASF). Incubation is
-      required of all newly accepted projects until a further review indicates
-      that the infrastructure, communications, and decision making process
-      have stabilized in a manner consistent with other successful ASF
-      projects. While incubation status is not necessarily a reflection of the
-      completeness or stability of the code, it does indicate that the project
-      has yet to be fully endorsed by the ASF.</emphasis></para>
+      (see disclaimer earlier).</para>
     </simplesect>
   </chapter>
 
@@ -381,7 +383,9 @@ two freemarker.jar-s and unpredictable behavior!
 
             <td>Syntax highlight</td>
 
-            <td><link xlink:href="https://github.com/freemarker/FreeMarker.tmbundle">Install from Github Project</link></td>
+            <td><link
+            xlink:href="https://github.com/freemarker/FreeMarker.tmbundle">Install
+            from Github Project</link></td>
           </tr>
 
           <tr>
