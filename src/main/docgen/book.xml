@@ -1200,11 +1200,10 @@ two freemarker.jar-s and unpredictable behavior!
       <itemizedlist>
         <listitem>
           <para><literal>freemarker</literal>: The engine itself (i.e.,
-          <literal>freemarker.jar</literal>) and the documentation. URL: <link
-          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git</link>.
-          GitHub mirror: <link
-          xlink:href="https://github.com/apache/incubator-freemarker">https://github.com/apache/incubator-freemarker</link>.
-          Relevant branches (as of 2015-09-04):</para>
+          <literal>freemarker.jar</literal>) and the documentation. URL:
+          <olink targetdoc="gitFreemarker"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorFreemarker"/>. Relevant branches (as of
+          2015-09-04):</para>
 
           <itemizedlist>
             <listitem>
@@ -1234,27 +1233,23 @@ two freemarker.jar-s and unpredictable behavior!
 
         <listitem>
           <para><literal>freemarker-site</literal>: Web site (freemarker.org)
-          contents. URL: <link
-          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git</link>.
-          GitHub mirror: <link
-          xlink:href="https://github.com/apache/incubator-freemarker-site">https://github.com/apache/incubator-freemarker-site</link>.
-          Relevant branches: <literal>master</literal></para>
+          contents. URL: <olink targetdoc="gitSite"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorSite"/>. Relevant branches:
+          <literal>master</literal></para>
         </listitem>
 
         <listitem>
           <para><literal>freemarker-docgen</literal>: DocBook transformation
           used for generating both the FreeMarker Manual and the Web site.
-          URL: <link
-          xlink:href="https://git-wip-us.apache.org/repos/asf/incubator-freemarker-docgen.git">https://git-wip-us.apache.org/repos/asf/incubator-freemarker-docgen.git</link>.
-          GitHub mirror: <link
-          xlink:href="https://github.com/apache/incubator-freemarker-docgen">https://github.com/apache/incubator-freemarker-docgen</link>.
-          Relevant branches: <literal>master</literal></para>
+          URL: <olink targetdoc="gitDocgen"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorDocgen"/>. Relevant branches:
+          <literal>master</literal></para>
         </listitem>
       </itemizedlist>
 
       <para>There are some other FreeMarker-related repositories, such FMPP
       and Tutorials, which you can only find on the <olink
-      targetdoc="githubProject">old GitHub project</olink> page, as they
+      targetdoc="githubProjectOld">old GitHub project</olink> page, as they
       aren't part of the ongoing Apache Incubation effort.</para>
 
       <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
