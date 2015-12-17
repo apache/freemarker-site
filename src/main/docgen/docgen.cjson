@@ -52,6 +52,7 @@ olinks: {
   sourceforgeProject: "https://sourceforge.net/projects/freemarker/"
   gitFreemarker: "https://github.com/freemarker/freemarker"
   githubProject: "https://github.com/freemarker/"
+  devMailingList: "mailto:dev@freemarker.incubator.apache.org"
   devMailingListSubscribe: "mailto:dev-subscribe@freemarker.incubator.apache.org"
   devMailingListUnsubscribe: "mailto:dev-unsubscribe@freemarker.incubator.apache.org"
   notificationsMailingListSubscribe: "mailto:notifications-subscribe@freemarker.incubator.apache.org"

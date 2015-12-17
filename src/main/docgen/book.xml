@@ -532,13 +532,12 @@ two freemarker.jar-s and unpredictable behavior!
       FreeMarker.</para>
 
       <para>If you are a developer (or otherwise a representative) of a
-      product or site <emphasis>with substantial user base</emphasis> that
-      uses FreeMarker, <link
-      xlink:href="mailto:freemarker-devel@lists.sourceforge.net">drop us a
-      note</link> that includes a short one paragraph description (preferably
-      less than 300 characters, or 600 for complex frameworks) and an URL. The
-      description should also include what FreeMarker is used for in your
-      product.</para>
+      product or site that uses FreeMarker <emphasis>and has a substantially
+      user base for at least a year or so</emphasis>, <olink
+      targetdoc="devMailingList">drop us a note</olink> that includes a short
+      one paragraph description (preferably less than 300 characters, or 600
+      for complex frameworks) and an URL. The description should also include
+      what FreeMarker is used for in your product.</para>
 
       <simplesect>
         <title>Software that incorporates FreeMarker</title>
