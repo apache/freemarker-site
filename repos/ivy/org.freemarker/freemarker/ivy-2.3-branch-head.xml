@@ -3,7 +3,7 @@
   AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
 -->
 <ivy-module version="2.0">
-  <info organisation="org.freemarker" module="freemarker" revision="2.3-branch-head" status="integration" publication="20151129010609">
+  <info organisation="org.freemarker" module="freemarker" revision="2.3-branch-head" status="integration" publication="20151217114359">
     <license name="Apache License, Version 2.0" url="http://freemarker.org/docs/app_license.html"/>
     <description homepage="http://freemarker.org/">
       FreeMarker is a &quot;template engine&quot;; a generic tool to
