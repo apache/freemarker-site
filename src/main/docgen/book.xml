@@ -1173,6 +1173,10 @@ two freemarker.jar-s and unpredictable behavior!
         linkend="sourcecode">what to check out</link>. After checking
         something out, see the <literal>README</literal> file in it for more
         information about building and IDE setup.</para>
+
+        <para>Also, for more generic guidelines, see <link
+        xlink:href="http://www.apache.org/foundation/getinvolved.html">how to
+        contribute to Apache projects</link>.</para>
       </simplesect>
     </section>
   </chapter>
