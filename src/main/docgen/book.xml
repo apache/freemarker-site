@@ -1022,8 +1022,10 @@ two freemarker.jar-s and unpredictable behavior!
           <itemizedlist>
             <listitem>
               <para>Eclipse plugin. Either help improving the JBoss Tools
-              <quote>FreeMarker IDE</quote>, or if you have serious ambitions,
-              even start your own!</para>
+              <quote>FreeMarker IDE</quote> (<link
+              xlink:href="https://issues.jboss.org/browse/JBIDE-20512?jql=project%20%3D%20JBIDE%20AND%20status%20in%20%28Open%2C%20%22Coding%20In%20Progress%22%2C%20Reopened%2C%20%22Pull%20Request%20Sent%22%29%20AND%20component%20%3D%20freemarker">see
+              open issues</link>), or if you have serious ambitions, even
+              start your own!</para>
             </listitem>
 
             <listitem>
