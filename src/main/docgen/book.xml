@@ -1017,7 +1017,7 @@ two freemarker.jar-s and unpredictable behavior!
 
       <itemizedlist>
         <listitem>
-          <para>Tooling / desktop:</para>
+          <para>Improve tooling:</para>
 
           <itemizedlist>
             <listitem>
@@ -1040,26 +1040,12 @@ two freemarker.jar-s and unpredictable behavior!
               reasonably well, and is legally properly contributed to the
               project.</para>
             </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para>Tooling / online tools:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Improve <olink
-              targetdoc="onlineTemplateTester">freemarker-online</olink>, the
-              template tester page. For example, it should be REST service
-              with an AJAX based front-end, instead of the current full page
-              reloading one. Ultimately, we want to be able to embed the
-              tester into the Manual for trying the examples.</para>
-            </listitem>
 
             <listitem>
               <para>Online editor, syntax highlighter. This might means
               FreeMarker support for CodeMirror. This, among others, would be
-              useful in the online template tester (see previous point)</para>
+              useful in the <olink targetdoc="onlineTemplateTester">online
+              template tester</olink>.</para>
             </listitem>
           </itemizedlist>
         </listitem>
@@ -1131,7 +1117,8 @@ two freemarker.jar-s and unpredictable behavior!
         </listitem>
 
         <listitem>
-          <para>Trying to break new features (finding bugs)</para>
+          <para>Trying to break new features before they are released (finding
+          bugs)</para>
         </listitem>
 
         <listitem>
