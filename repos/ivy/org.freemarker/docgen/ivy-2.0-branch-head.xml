@@ -3,7 +3,7 @@
   AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
 -->
 <ivy-module version="2.0">
-    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20160101213641"/>
+    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20160101221638"/>
     <publications>
         <artifact name="docgen" type="jar" ext="jar"/>
     </publications>
