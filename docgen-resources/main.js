@@ -1,3 +1,6 @@
+/*
+ * GENERATED FILE - DO NOT EDIT! Instead, regenerate with Gulp!
+ */
 /*eslint strict:0*/
 'use strict';
 
