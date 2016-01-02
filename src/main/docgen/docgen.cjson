@@ -11,7 +11,7 @@ validation: {
 }
 showXXELogo
 
-copyrightHolder: "The FreeMarker Project"
+copyrightHolder: "The Apache Software Foundation"
 copyrightStartYear: 1999
 
 seoMeta: {
