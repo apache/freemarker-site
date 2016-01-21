@@ -135,7 +135,7 @@
     2.3.0 (2004), releases with different second version numbers (like 2.2.x
     and 2.3.x) aren't fully compatible. The 2.3.x series is quite conservative
     about backward compatibility; you should be able to replace the FreeMarker
-    binary (<literal>freemarer.jar</literal>) under your application with a
+    binary (<literal>freemarker.jar</literal>) under your application with a
     newer one without breaking anything (obviously, assuming that only public
     FreeMarker API-s were used).</para>
 
