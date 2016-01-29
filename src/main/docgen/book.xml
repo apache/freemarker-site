@@ -240,22 +240,22 @@ two freemarker.jar-s and unpredictable behavior!
           xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
           xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -263,19 +263,19 @@ two freemarker.jar-s and unpredictable behavior!
       <link
       xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz">binary</link>
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.asc">ASC</link>],
       <link
       xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz">source</link>
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="http://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>])</para>
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>])</para>
 
       <para>The Maven artifact, because it's a non-final release, is only
       available in the Apache Staging Repository, <emphasis>not</emphasis> in
