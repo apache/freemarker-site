@@ -55,6 +55,9 @@
         <loc>http://freemarker.org/docs/dgui_misc_namespace.html</loc>
       </url>
       <url>
+        <loc>http://freemarker.org/docs/dgui_misc_autoescaping.html</loc>
+      </url>
+      <url>
         <loc>http://freemarker.org/docs/dgui_misc_whitespace.html</loc>
       </url>
       <url>
@@ -122,6 +125,15 @@
       </url>
       <url>
         <loc>http://freemarker.org/docs/pgui_config_errorhandling.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/pgui_config_templateconfigurations.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/pgui_config_outputformatsautoesc.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/pgui_config_custom_formats.html</loc>
       </url>
       <url>
         <loc>http://freemarker.org/docs/pgui_config_incompatible_improvements.html</loc>
@@ -211,6 +223,9 @@
         <loc>http://freemarker.org/docs/ref_directive_attempt.html</loc>
       </url>
       <url>
+        <loc>http://freemarker.org/docs/ref_directive_autoesc.html</loc>
+      </url>
+      <url>
         <loc>http://freemarker.org/docs/ref_directive_compress.html</loc>
       </url>
       <url>
@@ -247,10 +262,16 @@
         <loc>http://freemarker.org/docs/ref_directive_macro.html</loc>
       </url>
       <url>
+        <loc>http://freemarker.org/docs/ref_directive_noautoesc.html</loc>
+      </url>
+      <url>
         <loc>http://freemarker.org/docs/ref_directive_noparse.html</loc>
       </url>
       <url>
         <loc>http://freemarker.org/docs/ref_directive_nt.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/ref_directive_outputformat.html</loc>
       </url>
       <url>
         <loc>http://freemarker.org/docs/ref_directive_setting.html</loc>
@@ -338,6 +359,9 @@
       </url>
       <url>
         <loc>http://freemarker.org/docs/app_versions.html</loc>
+      </url>
+      <url>
+        <loc>http://freemarker.org/docs/versions_2_3_24.html</loc>
       </url>
       <url>
         <loc>http://freemarker.org/docs/versions_2_3_23.html</loc>

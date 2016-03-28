@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?NLS TYPE="org.eclipse.help.toc"?>
 
-<toc label="FreeMarker Manual">
+<toc label="Apache FreeMarker Manual">
   
 <topic
-      label="I: Template Author&#39;s Guide"
+      label="I: Template Author&apos;s Guide"
       href="dgui.html"
   >  
 <topic
@@ -72,6 +72,10 @@
       href="dgui_misc_namespace.html"
   ></topic>  
 <topic
+      label="Auto-escaping and output formats"
+      href="dgui_misc_autoescaping.html"
+  ></topic>  
+<topic
       label="White-space handling"
       href="dgui_misc_whitespace.html"
   ></topic>  
@@ -80,7 +84,7 @@
       href="dgui_misc_alternativesyntax.html"
   ></topic></topic></topic>  
 <topic
-      label="II: Programmer&#39;s Guide"
+      label="II: Programmer&apos;s Guide"
       href="pgui.html"
   >  
 <topic
@@ -162,6 +166,18 @@
 <topic
       label="Error handling"
       href="pgui_config_errorhandling.html"
+  ></topic>  
+<topic
+      label="Template configurations"
+      href="pgui_config_templateconfigurations.html"
+  ></topic>  
+<topic
+      label="Associating output formats with templates"
+      href="pgui_config_outputformatsautoesc.html"
+  ></topic>  
+<topic
+      label="Custom number and date/time formats"
+      href="pgui_config_custom_formats.html"
   ></topic>  
 <topic
       label="The &quot;incompatible improvements&quot; setting"
@@ -280,11 +296,15 @@
       href="ref_directive_attempt.html"
   ></topic>  
 <topic
+      label="autoesc"
+      href="ref_directive_autoesc.html"
+  ></topic>  
+<topic
       label="compress"
       href="ref_directive_compress.html"
   ></topic>  
 <topic
-      label="escape, noescape"
+      label="escape, noescape (deprecated)"
       href="ref_directive_escape.html"
   ></topic>  
 <topic
@@ -328,12 +348,20 @@
       href="ref_directive_macro.html"
   ></topic>  
 <topic
+      label="noautoesc"
+      href="ref_directive_noautoesc.html"
+  ></topic>  
+<topic
       label="noparse"
       href="ref_directive_noparse.html"
   ></topic>  
 <topic
       label="nt"
       href="ref_directive_nt.html"
+  ></topic>  
+<topic
+      label="outputformat"
+      href="ref_directive_outputformat.html"
   ></topic>  
 <topic
       label="setting"
@@ -451,6 +479,10 @@
       label="B: Version history"
       href="app_versions.html"
   >  
+<topic
+      label="2.3.24 (incubating)"
+      href="versions_2_3_24.html"
+  ></topic>  
 <topic
       label="2.3.23"
       href="versions_2_3_23.html"
@@ -655,5 +687,4 @@
       label="Alphabetical Index"
       href="alphaidx.html"
   ></topic></toc>
-
 
