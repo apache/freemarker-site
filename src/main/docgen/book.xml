@@ -81,7 +81,8 @@
         <listitem>
           <para>Powerful template language: Conditional blocks, iterations,
           assignments, string and arithmetic operations and formatting, macros
-          and functions, including other templates, and many more</para>
+          and functions, including other templates, escaping by default
+          (optional), and many more</para>
         </listitem>
 
         <listitem>
@@ -104,8 +105,8 @@
 
         <listitem>
           <para>Versatile data-model: Java objects are exposed to the template
-          as a tree of variables through pluggable object wrappers, which
-          decides how the template sees them.</para>
+          as a tree of variables through pluggable adapters, which decides how
+          the template sees them.</para>
         </listitem>
       </itemizedlist>
     </simplesect>
@@ -167,14 +168,48 @@
     verify releases...</link></para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.23</title>
+      <title>Latest stable release: 2.3.24-incubating</title>
 
-      <para>Released on 2015-07-05. Requires J2SE 1.4 or higher.</para>
+      <para>Released on 2016-03-28. Requires J2SE 1.5 or higher.</para>
+
+      <para>About <quote>incubating</quote> in the version number: It's
+      unrelated to stability. The <quote>incubating</quote> suffix is required
+      by the Apache Software Foundation until the project becomes a fully
+      accepted (graduated) Apache project. See <link
+      linkend="downloadApacheDisclaimer">disclaimer earlier</link> and the
+      <link xlink:href="http://incubator.apache.org">Apache Incubator web
+      site</link>.</para>
 
       <para><link
-      xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23/freemarker-2.3.23.tar.gz/download">Download
-      freemarker-2.3.23.tar.gz</link> (3.2 MB, includes binary, documentation
-      and source code)</para>
+      xlink:href="http://freemarker.org/docs/versions_2_3_24.html">See what's
+      new...</link></para>
+
+      <para>Downloads:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><link
+          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-incubating/binaries/apache-freemarker-2.3.24-incubating-bin.tar.gz">Binary
+          release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
+          and documentation) [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/binaries/apache-freemarker-2.3.24-incubating-bin.tar.gz.md5">MD5</link>]
+          [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/binaries/apache-freemarker-2.3.24-incubating-bin.tar.gz.sha512">SHA512</link>]
+          [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/binaries/apache-freemarker-2.3.24-incubating-bin.tar.gz.asc">ASC</link>]</para>
+        </listitem>
+
+        <listitem>
+          <para><link
+          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-incubating/source/apache-freemarker-2.3.24-incubating-src.tar.gz">Source
+          release (tar.gz)</link> [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/source/apache-freemarker-2.3.24-incubating-src.tar.gz.md5">MD5</link>]
+          [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/source/apache-freemarker-2.3.24-incubating-src.tar.gz.sha512">SHA512</link>]
+          [<link
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-incubating/source/apache-freemarker-2.3.24-incubating-src.tar.gz.asc">ASC</link>]</para>
+        </listitem>
+      </itemizedlist>
 
       <para>For Maven:</para>
 
@@ -186,7 +221,7 @@ two freemarker.jar-s and unpredictable behavior!
 &lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.23&lt;/version&gt;
+  &lt;version&gt;2.3.24-incubating&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
@@ -202,65 +237,8 @@ two freemarker.jar-s and unpredictable behavior!
         &lt;/exclusion&gt;&lt;/exclusions&gt;</literal> into it.</para>
       </note>
 
-      <para>If you need to use FreeMarker on Google App Engine, <link
-      xlink:href="http://sourceforge.net/projects/freemarker/files/freemarker/2.3.23/freemarker-gae-2.3.23.jar/download">download
-      the GAE-compatible binary too</link> (no documentation included in
-      this).</para>
-
-      <programlisting language="XML" role="unspecified">&lt;dependency&gt;
-  &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
-  &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.23&lt;/version&gt;
-&lt;/dependency&gt;</programlisting>
-    </simplesect>
-
-    <simplesect xml:id="v2_3_24-rc01">
-      <title>Laster development version: 2.3.24-rc01-incubating</title>
-
-      <para>Released on 2016-01-28 (final 2.3.24 release planned for early
-      March). Requires J2SE 1.5 or higher.</para>
-
-      <para><link
-      xlink:href="http://freemarker.org/builds/2.3.24-rc01/_html/versions_2_3_24.html">See
-      what's new...</link></para>
-
-      <para>About <quote>incubating</quote> in the version number: It's
-      unrelated to stability. The <quote>incubating</quote> suffix is required
-      by the Apache Software Foundation until the project becomes a fully
-      accepted (graduated) Apache project. See <link
-      linkend="downloadApacheDisclaimer">disclaimer earlier</link> and the
-      <link xlink:href="http://incubator.apache.org">Apache Incubator web
-      site</link>.</para>
-
-      <para>Downloads:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz">Binary
-          release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
-          and documentation) [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
-          [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.sha512">SHA512</link>]
-          [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-2.3.24-rc01-incubating-bin.tar.gz.asc">ASC</link>]</para>
-        </listitem>
-
-        <listitem>
-          <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz">Source
-          release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.md5">MD5</link>]
-          [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
-          [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>]</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>(There's also a separate Google App Engine compatible variation:
-      <link
+      <para>There's also a separate Google App Engine compatible
+      (<quote>gae</quote>) variation. Download: <link
       xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz">binary</link>
       [<link
       xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/binaries/apache-freemarker-gae-2.3.24-rc01-incubating-bin.tar.gz.md5">MD5</link>]
@@ -275,29 +253,13 @@ two freemarker.jar-s and unpredictable behavior!
       [<link
       xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>])</para>
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.24-rc01-incubating/source/apache-freemarker-gae-2.3.24-rc01-incubating-src.tar.gz.asc">ASC</link>].
+      Maven:</para>
 
-      <para>The Maven artifact, because it's a non-final release, is only
-      available in the Apache Staging Repository, <emphasis>not</emphasis> in
-      the Maven Central Repository. Thus, you have to add this to your
-      <literal>.m2/settings.xml</literal>:</para>
-
-      <programlisting language="XML" role="unspecified">&lt;!-- Repostiory for non-final Apache releases: --&gt;
-&lt;repository&gt;
-  &lt;id&gt;apache-staging-repository&lt;/id&gt;
-  &lt;url&gt;https://repository.apache.org/content/repositories/staging/&lt;/url&gt;
-&lt;/repository&gt;</programlisting>
-
-      <para>and then in <literal>pom.xml</literal>:</para>
-
-      <programlisting language="XML" role="unspecified">&lt;!--
-  ATTENTION: This is a non-final release, so it's only present in the
-  Apache Staging Repository, which must be added to settings.xml!
---&gt;
-&lt;dependency&gt;
+      <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
-  &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.24-rc01-incubating&lt;/version&gt;
+  &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
+  &lt;version&gt;2.3.23-incubating&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
