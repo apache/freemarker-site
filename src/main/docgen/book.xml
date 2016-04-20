@@ -629,11 +629,13 @@ two freemarker.jar-s and unpredictable behavior!
               <td><link xlink:href="http://marmotta.apache.org/">Apache
               Marmotta</link></td>
 
-              <td>Apache Marmotta is an Open Platform for Linked Data. It 
-              implements an extension of FreeMarker that allows constructing 
+              <td>Apache Marmotta is an Open Platform for Linked Data. 
+              Internally it uses FreeMarker templates for building its 
+              administration user interface. In addition Marmotta implements 
+              an extension of FreeMarker that allows constructing 
               <link xlink:href="http://marmotta.apache.org/ldpath/template.html">templates 
-              with LDPath statements</link> for inserting and iterating over values
-              of RDF data.</td>
+              with LDPath statements</link> for inserting and iterating over
+              values from RDF data.</td>
             </tr>
 
             <tr valign="top">
