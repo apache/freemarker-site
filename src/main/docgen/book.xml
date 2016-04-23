@@ -365,17 +365,29 @@ two freemarker.jar-s and unpredictable behavior!
             <td>Syntax highlight, syntax error marker, code completion for
             macro names and bean property names.</td>
 
-            <td><para>Part of the JBoss Tools Project. Install like this: In
-            Eclipse, <quote>Help</quote> / <quote>Eclipse
-            Marketplace...</quote>, search for <quote>JBoss Tools</quote>,
-            <quote>Install</quote>. A tree of checkboxes will appear, uncheck
-            all (by unchecking the root) except <quote>FreeMarker IDE</quote>.
-            (On older Eclipse you may have to use the <link
-            xlink:href="http://tools.jboss.org/downloads/">JBoss Tools
-            download page</link> instead.)</para><para>If the plugin comes
-            with a different FreeMarker version than the one your application
-            uses, it will mark the usage of too fresh language features as
-            errors, or the other way around. To fix this, find
+            <td><para>This is developed as part of the JBoss Tools
+            Project.</para><para>Currently (2016-04-23, FreeMarker 2.3.24)
+            it's highly recommended to install the nightly version instead of
+            the official stable. For that, in Eclipse, go to
+            <quote>Help</quote> / <quote>Install New Software...</quote>, and
+            copy-paste
+            http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-freemarker_master/latest/all/repo/
+            into the <quote>Work with</quote> field. Then expand the check box
+            tree appearing below, and select <quote>FreeMarker IDE</quote>
+            only, then <quote>Next</quote>, <quote>Next</quote>,
+            <quote>Finish</quote>. This version works for Eclipse Mars too
+            (probably even for Luna), despite that it's in the Neon branch of
+            JBoss IDE.</para><para>Official stable version (not recommended at
+            the moment - see above): In Eclipse, <quote>Help</quote> /
+            <quote>Eclipse Marketplace...</quote>, search for <quote>JBoss
+            Tools</quote>, <quote>Install</quote>. A tree of check boxes will
+            appear, uncheck all (by unchecking the root) except
+            <quote>FreeMarker IDE</quote>. (On older Eclipse you may have to
+            use the <link xlink:href="http://tools.jboss.org/downloads/">JBoss
+            Tools download page</link> instead.)</para><para>Note: If the
+            plugin comes with a different FreeMarker version than the one your
+            application uses, it will mark the usage of too fresh language
+            features as errors, or the other way around. To fix this, find
             <literal>freemarker*.jar</literal> inside the installed plugin,
             under <literal>&lt;userHome&gt;/.eclipse/</literal> or under the
             Eclipse installation directory (you may need to search inside
