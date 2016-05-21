@@ -97,7 +97,7 @@ var toc = {
 ,
 {
 "title": "Bugs still in the old\n tracker",
-"url": "https://sourceforge.net/p/freemarker/bugs/new/",
+"url": "https://sourceforge.net/p/freemarker/bugs/",
 "isFile": true,
 "children": [
 ]
