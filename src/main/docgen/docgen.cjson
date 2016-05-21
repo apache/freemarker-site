@@ -84,7 +84,7 @@ olinks: {
   oldUserMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.user"
   oldDevelMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.devel"
   newBugReport: "https://issues.apache.org/jira/browse/FREEMARKER/"
-  oldBugTracker: "https://sourceforge.net/p/freemarker/bugs/new/"
+  oldBugTracker: "https://sourceforge.net/p/freemarker/bugs/"
   newStackOverflowQuestion: "http://stackoverflow.com/questions/ask?tags=freemarker"
   
   emacsPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
