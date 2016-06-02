@@ -397,10 +397,10 @@ two freemarker.jar-s and unpredictable behavior!
             and delete the extracted OSGi bundle under
             <literal>configuration\org.eclipse.osgi</literal> for the changes
             to take effect.</para><para>Report bugs found on the <link
-            xlink:href="https://issues.jboss.org/browse/JBIDE">bug tracker of
-            the JBoss Tools project</link> (Key: <literal>JBIDE</literal>;
-            Component: <literal>freemarker</literal>), and help to make it
-            better <link
+            xlink:href="https://issues.jboss.org/issues/?jql=project%20%3D%20JBIDE%20AND%20component%20%3D%20freemarker">bug
+            tracker of the JBoss Tools project</link> (Key:
+            <literal>JBIDE</literal>; Component:
+            <literal>freemarker</literal>), and help to make it better <link
             xlink:href="https://github.com/jbosstools/jbosstools-freemarker">on
             GitHub</link>!</para></td>
           </tr>
