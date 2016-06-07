@@ -114,14 +114,14 @@
     <simplesect>
       <title>License</title>
 
-      <para>FreeMarker 2.3.23 is Free software, licensed under the Apache
-      License, Version 2.0. <olink targetdoc="license">See the license
+      <para>FreeMarker is Free software, licensed under the Apache License,
+      Version 2.0. <olink targetdoc="license">See the license
       here...</olink>.</para>
 
-      <para>After 2.3.24-pre01 (2012-09-02) the copyright owner in the license
-      changes to the Apache Software Foundation, as the project has started
-      <link xlink:href="http://incubator.apache.org/">Apache Incubation</link>
-      (see disclaimer earlier).</para>
+      <para>As of 2.3.24-pre01 (2015-09-02) the copyright owner in the license
+      has changed to the Apache Software Foundation, as the project has
+      started <link xlink:href="http://incubator.apache.org/">Apache
+      Incubation</link> (see disclaimer earlier).</para>
     </simplesect>
   </chapter>
 
