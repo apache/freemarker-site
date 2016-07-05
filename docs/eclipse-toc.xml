@@ -480,7 +480,11 @@
       href="app_versions.html"
   >  
 <topic
-      label="2.3.24 (incubating)"
+      label="2.3.25 (incubating at Apache)"
+      href="versions_2_3_25.html"
+  ></topic>  
+<topic
+      label="2.3.24 (incubating at Apache)"
       href="versions_2_3_24.html"
   ></topic>  
 <topic

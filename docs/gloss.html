@@ -41,7 +41,7 @@ ga('send', 'pageview');
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="app_eccn.html"><span>Previous</span></a><a class="paging-arrow next" href="alphaidx.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-part" id="gloss" itemprop="headline">Glossary</h1>
 </div></div>  <p>
-<a href="#gloss.attribute">A</a>&nbsp;| <a href="#gloss.boolean">B</a>&nbsp;| <a href="#gloss.character">C</a>&nbsp;| <a href="#gloss.dataModel">D</a>&nbsp;| <a href="#gloss.element">E</a>&nbsp;| <a href="#gloss.FTL">F</a>&nbsp;| <a href="#gloss.hashVariable">H</a>&nbsp;| <a href="#gloss.lineBreak">L</a>&nbsp;| <a href="#gloss.macroDefinitionBody">M</a>&nbsp;| <a href="#gloss.outputEncoding">O</a>&nbsp;| <a href="#gloss.parseTimeError">P</a>&nbsp;| <a href="#gloss.regularExpression">R</a>&nbsp;| <a href="#gloss.scalarVariable">S</a>&nbsp;| <a href="#gloss.tag">T</a>&nbsp;| <a href="#gloss.UCS">U</a>&nbsp;| <a href="#gloss.whiteSpace">W</a>&nbsp;| <a href="#autoid_290">X</a>  </p>
+<a href="#gloss.attribute">A</a>&nbsp;| <a href="#gloss.boolean">B</a>&nbsp;| <a href="#gloss.character">C</a>&nbsp;| <a href="#gloss.dataModel">D</a>&nbsp;| <a href="#gloss.element">E</a>&nbsp;| <a href="#gloss.FTL">F</a>&nbsp;| <a href="#gloss.hashVariable">H</a>&nbsp;| <a href="#gloss.lineBreak">L</a>&nbsp;| <a href="#gloss.macroDefinitionBody">M</a>&nbsp;| <a href="#gloss.outputEncoding">O</a>&nbsp;| <a href="#gloss.parseTimeError">P</a>&nbsp;| <a href="#gloss.regularExpression">R</a>&nbsp;| <a href="#gloss.scalarVariable">S</a>&nbsp;| <a href="#gloss.tag">T</a>&nbsp;| <a href="#gloss.UCS">U</a>&nbsp;| <a href="#gloss.whiteSpace">W</a>&nbsp;| <a href="#autoid_292">X</a>  </p>
 
   <dl>
 
@@ -241,7 +241,7 @@ ga('send', 'pageview');
    </dd>
 
     
-        <dt><a name="autoid_288"></a>FTL</dt>
+        <dt><a name="autoid_290"></a>FTL</dt>
 
 
           <dd>See
@@ -302,6 +302,19 @@ ga('send', 'pageview');
         of the context. An example of full-qualifed class name:
         <code class="inline-code">java.util.Map</code> (as opposed to
         <code class="inline-code">Map</code>).</p>
+      
+   </dd>
+
+    
+        <dt><a name="gloss.functionDefinitionBody"></a>Function definition body</dt>
+
+
+         <dd>
+        <p>The template fragment between the <code class="inline-code">&lt;#function
+        <em class="code-color">...</em>&gt;</code> and
+        <code class="inline-code">&lt;/#function&gt;</code>. This template fragment will be
+        executed when you call the function (for example as
+        <code class="inline-code">myFuction(1, 2)</code>).</p>
       
    </dd>
 
@@ -521,7 +534,7 @@ ga('send', 'pageview');
    </dd>
 
     
-        <dt><a name="autoid_289"></a>SGML</dt>
+        <dt><a name="autoid_291"></a>SGML</dt>
 
 
           <dd>See
@@ -618,17 +631,17 @@ ga('send', 'pageview');
 
 
          <dd>
-        <p>A template processing job is the act when FreeMarker merges a
-        template with a data-model to produce the output for a visitor. Note
-        that this may includes the execution of multiple template files
-        because the template file used for the Web page may invokes other
-        templates with <code class="inline-code">include</code> and
-        <code class="inline-code">import</code> directives. Each template-processing job is
-        a separated cosmos that exists only for the short period of time while
-        the given page is being rendered for the visitor, and then it vanishes
-        with all the variables created in the templates (for example,
-        variables created with <code class="inline-code">assign</code>,
-        <code class="inline-code">macro</code> or <code class="inline-code">global</code>
+        <p>A template processing job is the process during which FreeMarker
+        merges the main (top-level) template with a data-model to produce the
+        output. Because templates can <code class="inline-code">include</code> and
+        <code class="inline-code">import</code> other templates, this may involves the
+        processing of multiple templates, but those will all belong to the
+        same template processing job, which was started with the processing of
+        the main template. A template-processing job only exists for the short
+        time period until the processing of the main template is finished, and
+        then it vanishes with all the variables created during the process
+        (variables created with <code class="inline-code">assign</code>,
+        <code class="inline-code">macro</code>, <code class="inline-code">global</code>, etc.
         directives).</p>
       
    </dd>
@@ -732,7 +745,7 @@ ga('send', 'pageview');
    </dd>
 
     
-        <dt><a name="autoid_290"></a>XML</dt>
+        <dt><a name="autoid_292"></a>XML</dt>
 
 
           <dd>See
@@ -742,8 +755,8 @@ ga('send', 'pageview');
       </dl>
 <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="app_eccn.html"><span>Previous</span></a><a class="paging-arrow next" href="alphaidx.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
-<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://sourceforge.net/p/freemarker/bugs/new/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"><p><span class="generated-for-product">Generated for: Freemarker 2.3.24</span><span class="last-updated"> Last generated:
-<time itemprop="dateModified" datetime="2016-03-28T15:17:13Z" title="Monday, March 28, 2016 3:17:13 PM GMT">2016-03-28 15:17:13 GMT</time></span></p> <p class="copyright">
+<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://sourceforge.net/p/freemarker/bugs/new/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"><p><span class="generated-for-product">Generated for: Freemarker 2.3.25</span><span class="last-updated"> Last generated:
+<time itemprop="dateModified" datetime="2016-07-05T19:17:27Z" title="Tuesday, July 5, 2016 7:17:27 PM GMT">2016-07-05 19:17:27 GMT</time></span></p> <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2016
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://freemarker.org">The Apache Software Foundation</a>. All rights reserved. </p>
 </div></div></div></body>
