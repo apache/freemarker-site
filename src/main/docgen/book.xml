@@ -144,17 +144,16 @@
     <para><emphasis role="bold">Change log (version history):</emphasis>
     <olink targetdoc="versionHistory">See in the Manual...</olink></para>
 
-    <para
-    xml:id="downloadApacheDisclaimer"><emphasis><emphasis><emphasis><emphasis
-    role="bold">Disclaimer:</emphasis></emphasis> </emphasis>Apache FreeMarker
-    is an effort undergoing <link
-    xlink:href="http://incubator.apache.org">incubation</link> at The Apache
-    Software Foundation (ASF). Incubation is required of all newly accepted
-    projects until a further review indicates that the infrastructure,
-    communications, and decision making process have stabilized in a manner
-    consistent with other successful ASF projects. While incubation status is
-    not necessarily a reflection of the completeness or stability of the code,
-    it does indicate that the project has yet to be fully endorsed by the
+    <para xml:id="downloadApacheDisclaimer"><emphasis role="bold">Disclaimer:
+    </emphasis><emphasis>Apache FreeMarker is an effort undergoing incubation
+    at The Apache Software Foundation (ASF), sponsored by the <link
+    xlink:href="http://incubator.apache.org">Apache Incubator</link>.
+    Incubation is required of all newly accepted projects until a further
+    review indicates that the infrastructure, communications, and decision
+    making process have stabilized in a manner consistent with other
+    successful ASF projects. While incubation status is not necessarily a
+    reflection of the completeness or stability of the code, it does indicate
+    that the project has yet to be fully endorsed by the
     ASF.</emphasis></para>
 
     <para>Verifying downloads (since 2.3.24 only): When downloading from a
