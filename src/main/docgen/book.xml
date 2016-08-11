@@ -47,15 +47,15 @@
     </mediaobject>
 
     <para>This approach is often referred to as the MVC (Model View
-    Controller) pattern, and is particularly popular for dynamic Web pages. It
-    helps in separating the Web page designers (HTML authors) from the
-    developers (Java programmers usually). Designers won't face complicated
-    logic in templates, and can change the appearance of a page without
-    programmers having to change or recompile code.</para>
+    Controller) pattern, and is particularly popular for dynamic web pages. It
+    helps in separating web page designers (HTML authors) from developers
+    (Java programmers usually). Designers won't face complicated logic in
+    templates, and can change the appearance of a page without programmers
+    having to change or recompile code.</para>
 
     <para>While FreeMarker was originally created for generating HTML pages in
     MVC web application frameworks, it isn't bound to servlets or HTML or
-    anything Web-related. It's used in non-web application environments as
+    anything web-related. It's used in non-web application environments as
     well.</para>
 
     <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
