@@ -212,13 +212,6 @@
 
       <para>For Maven:</para>
 
-      <warning>
-        <para>Due to temporary infrastructure problems currently only the
-        2.3.2<emphasis role="bold">4</emphasis>-incubating version is
-        available on the Maven Central Repository. Sorry for the
-        inconvenience.</para>
-      </warning>
-
       <programlisting language="XML" role="unspecified">&lt;!--
 Attention: Be sure nothing pulls in an old dependency with groupId
 "freemarker" (without the "org."), because then you will end up with
