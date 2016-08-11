@@ -150,11 +150,11 @@ public class HexTemplateNumberFormatFactory extends TemplateNumberFormatFactory 
 
     public static final HexTemplateNumberFormatFactory INSTANCE
             = new HexTemplateNumberFormatFactory();
-    
+
     private HexTemplateNumberFormatFactory() {
         // Defined to decrease visibility
     }
-    
+
     @Override
     public TemplateNumberFormat get(String params, Locale locale, Environment env)
             throws InvalidFormatParametersException {
@@ -165,9 +165,9 @@ public class HexTemplateNumberFormatFactory extends TemplateNumberFormatFactory 
     private static class HexTemplateNumberFormat extends TemplateNumberFormat {
 
         private static final HexTemplateNumberFormat INSTANCE = new HexTemplateNumberFormat();
-        
+
         private HexTemplateNumberFormat() { }
-        
+
         @Override
         public String formatToPlainText(TemplateNumberModel numberModel)
                 throws UnformattableValueException, TemplateModelException {
@@ -188,7 +188,7 @@ public class HexTemplateNumberFormatFactory extends TemplateNumberFormatFactory 
         public String getDescription() {
             return &quot;hexadecimal int&quot;;
         }
-        
+
     }
 
 }</pre></div>
@@ -250,11 +250,11 @@ public class BaseNTemplateNumberFormatFactory extends TemplateNumberFormatFactor
 
     public static final BaseNTemplateNumberFormatFactory INSTANCE
             = new BaseNTemplateNumberFormatFactory();
-    
+
     private BaseNTemplateNumberFormatFactory() {
         // Defined to decrease visibility
     }
-    
+
     @Override
     public TemplateNumberFormat get(String params, Locale locale, Environment env)
             throws InvalidFormatParametersException {
@@ -276,7 +276,7 @@ public class BaseNTemplateNumberFormatFactory extends TemplateNumberFormatFactor
                 fallbackFormat = null;
             }
         }
-        
+
         int base;
         try {
             base = Integer.parseInt(params);
@@ -299,12 +299,12 @@ public class BaseNTemplateNumberFormatFactory extends TemplateNumberFormatFactor
 
         private final int base;
         private final TemplateNumberFormat fallbackFormat;
-        
+
         private BaseNTemplateNumberFormat(int base, TemplateNumberFormat fallbackFormat) {
             this.base = base;
             this.fallbackFormat = fallbackFormat;
         }
-        
+
         @Override
         public String formatToPlainText(TemplateNumberModel numberModel)
                 throws TemplateModelException, TemplateValueFormatException {
@@ -331,7 +331,7 @@ public class BaseNTemplateNumberFormatFactory extends TemplateNumberFormatFactor
         public String getDescription() {
             return &quot;base &quot; + base;
         }
-        
+
     }
 
 }</pre></div>
@@ -406,11 +406,11 @@ public class EpochMillisTemplateDateFormatFactory extends TemplateDateFormatFact
 
     public static final EpochMillisTemplateDateFormatFactory INSTANCE
             = new EpochMillisTemplateDateFormatFactory();
-    
+
     private EpochMillisTemplateDateFormatFactory() {
         // Defined to decrease visibility
     }
-    
+
     @Override
     public TemplateDateFormat get(String params, int dateType,
             Locale locale, TimeZone timeZone, boolean zonelessInput,
@@ -424,9 +424,9 @@ public class EpochMillisTemplateDateFormatFactory extends TemplateDateFormatFact
 
         private static final EpochMillisTemplateDateFormat INSTANCE
                 = new EpochMillisTemplateDateFormat();
-        
+
         private EpochMillisTemplateDateFormat() { }
-        
+
         @Override
         public String formatToPlainText(TemplateDateModel dateModel)
                 throws UnformattableValueException, TemplateModelException {
@@ -456,7 +456,7 @@ public class EpochMillisTemplateDateFormatFactory extends TemplateDateFormatFact
         public String getDescription() {
             return &quot;millis since the epoch&quot;;
         }
-        
+
     }
 
 }</pre></div>
@@ -569,7 +569,7 @@ public class UnitAwareTemplateNumberModel implements TemplateNumberModel {
 
     private final Number value;
     private final String unit;
-    
+
     public UnitAwareTemplateNumberModel(Number value, String unit) {
         this.value = value;
         this.unit = unit;
@@ -691,7 +691,7 @@ cfg.setNumberFormat(&quot;@ua 0.####;; roundingMode=halfUp&quot;);</pre></div>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="pgui_config_outputformatsautoesc.html"><span>Previous</span></a><a class="paging-arrow next" href="pgui_config_incompatible_improvements.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://sourceforge.net/p/freemarker/bugs/new/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"><p><span class="generated-for-product">Generated for: Freemarker 2.3.25</span><span class="last-updated"> Last generated:
-<time itemprop="dateModified" datetime="2016-07-05T19:17:27Z" title="Tuesday, July 5, 2016 7:17:27 PM GMT">2016-07-05 19:17:27 GMT</time></span></p> <p class="copyright">
+<time itemprop="dateModified" datetime="2016-08-11T18:57:24Z" title="Thursday, August 11, 2016 6:57:24 PM GMT">2016-08-11 18:57:24 GMT</time></span></p> <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2016
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://freemarker.org">The Apache Software Foundation</a>. All rights reserved. </p>
 </div></div></div></body>
