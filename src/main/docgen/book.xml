@@ -172,11 +172,12 @@
 
       <para>Released on 2016-06-26. Requires J2SE 1.5 or higher.</para>
 
-      <para>This is a stable, final release. The <quote>incubating</quote>
-      suffix is required by the Apache Software Foundation until the project
-      becomes a fully accepted (graduated) Apache project. See <link
-      linkend="downloadApacheDisclaimer">disclaimer earlier</link> and the
-      <link xlink:href="http://incubator.apache.org">Apache Incubator web
+      <para><emphasis role="bold">This is a stable, final release.</emphasis>
+      The <quote>incubating</quote> suffix is required by the Apache Software
+      Foundation until the project becomes a fully accepted (graduated) Apache
+      project. See <link linkend="downloadApacheDisclaimer">disclaimer
+      earlier</link> and the <link
+      xlink:href="http://incubator.apache.org">Apache Incubator web
       site</link>.</para>
 
       <para><link
