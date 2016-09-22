@@ -378,7 +378,7 @@ two freemarker.jar-s and unpredictable behavior!
             Luna</emphasis>, you should still install the <quote>FreeMarker
             IDE</quote> plugin from JBoss Tool 4.<emphasis
             role="bold">4</emphasis>.1 or later, but the Eclipse Marketplace
-            won't show it it. So in Eclipse, go to <quote>Help</quote> /
+            won't show it. So in Eclipse, go to <quote>Help</quote> /
             <quote>Install New Software...</quote>, and copy-paste
             http://download.jboss.org/jbosstools/neon/stable/updates/ into the
             <quote>Work with</quote> field. While this URL is for Eclipse
