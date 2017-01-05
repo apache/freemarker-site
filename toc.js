@@ -140,6 +140,21 @@ var toc = {
 "url": "contribute.html",
 "isFile": true,
 "children": [
+{
+"title": "How do I contribute?",
+"url": "contribute.html#how-to-contribute",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "What should I contribute?",
+"url": "contribute.html#what-to-contribute",
+"isFile": false,
+"children": [
+]
+}
 ]
 }
 ,
@@ -148,6 +163,45 @@ var toc = {
 "url": "committer-howto.html",
 "isFile": true,
 "children": [
+{
+"title": "Git commit policies",
+"url": "committer-howto.html#git-commit-policy",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Merging in pull requests from Github",
+"url": "committer-howto.html#merging-pull-request",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Making releases",
+"url": "committer-howto.html#making-releases",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Updating the FreeMarker home page",
+"url": "committer-howto.html#updating-homepage",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Regarding editing the Manual and the Site DocBook",
+"url": "committer-howto.html#edit-docbook",
+"isFile": false,
+"children": [
+]
+}
 ]
 }
 ]
