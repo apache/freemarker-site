@@ -1711,6 +1711,64 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
         </orderedlist>
       </simplesect>
+
+      <simplesect>
+        <title>Updating the FreeMarker home page</title>
+
+        <para>The content of the home page can be changed by committing it
+        into the <literal>asf-site</literal> branch of the
+        <literal>freemarker-site</literal> repository. However, you shouldn't
+        directly edit the content of most HTML files there, as pretty much all
+        of them are generated, and then is just manually copied over there.
+        The generated pieces are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The contents of the <literal>docs/api</literal> is generated
+            from the <literal>freemarker</literal> project, by issuing
+            <literal>ant javadoc</literal> there (not in the
+            <literal>site</literal> project). So to change the content, you
+            should edit the documentation comments in the java files.</para>
+          </listitem>
+
+          <listitem>
+            <para>The contents of <literal>docs/</literal> is generated from
+            the <literal>freemarker</literal> project, by issuing <literal>ant
+            manualFreemarkerOrg</literal>. So to change the content, you
+            should edit
+            <literal><replaceable>&lt;freemarker-project&gt;</replaceable>/src/manual/en_US/book.xml</literal>.</para>
+          </listitem>
+
+          <listitem>
+            <para>Most other content is generated from the
+            <literal>site</literal> project, by issuing
+            <literal>ant</literal>. So to change the content, you should edit
+            <literal><replaceable>&lt;site-project&gt;</replaceable>/src/docgen/book.xml</literal>.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>After you commit into the <literal>asf-site</literal> branch of
+        the <literal>freemarker-site</literal> repository, it will
+        automatically appear on the web site, with some small delay (a few
+        seconds usually). If it doesn't, that's probably because of a known
+        infrastructural glitch, where for too big commits this synchronization
+        doesn't happen. In such case, commit some small change to trigger
+        synchronization again.</para>
+      </simplesect>
+
+      <simplesect>
+        <title>Regarding editing the Manual and the Site DocBook</title>
+
+        <para>Both the site and the Manual is generated from the XML files
+        (DocBook format) by the custom Ant task defined in the
+        <literal>docgen</literal> project
+        (<literal>freemarker-docgen</literal> repository). That project also
+        provides an XMLMind XML Editor (XXE for short) addon for editing these
+        files. For more guide lines see
+        <literal>src/manual/en_US/docgen-help/editors-readme.txt</literal> in
+        the <literal>freemarker</literal> repository. About the same guide
+        lines apply to the site DocBook as well.</para>
+      </simplesect>
     </section>
   </chapter>
 
