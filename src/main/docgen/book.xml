@@ -1119,7 +1119,7 @@ two freemarker.jar-s and unpredictable behavior!
         <title>How do I contribute?</title>
 
         <para>First you should <link linkend="mailing-lists">subsrcribe to the
-        developer mailing list</link> to discuss what you plant to do.</para>
+        developer mailing list</link> to discuss what you plan to do.</para>
 
         <para>Then, fork the project on Github, and start working on the
         appropriate branch (see <link linkend="sourcecode">the repositories
@@ -1277,7 +1277,7 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
         </itemizedlist>
 
-        <para>Last not least, FreeMarker needs long standing/returning
+        <para>Last but not least, FreeMarker needs long standing/returning
         contributors who tackle deeper issues.</para>
       </section>
     </section>
