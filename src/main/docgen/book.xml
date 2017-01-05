@@ -1336,7 +1336,8 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para><literal><replaceable>&lt;PR_NUMBER&gt;</replaceable></literal>
-            is the pull request number that Github shows prominently</para>
+            is the pull request number that Github shows prominently after a
+            <quote>#</quote></para>
           </listitem>
         </itemizedlist>
 
@@ -1391,9 +1392,9 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>The official release is provided as source code to build the
             project (src tar.gz). For the convenience of users the release is
-            also accompanied by compiled binaries (bin tar.gz). Both artifacts
-            are downloadable from the Apache Software Foundation, as
-            usual</para>
+            also accompanied by compiled binaries (bin tar.gz, which also
+            contains the documentation). Both artifacts are downloadable from
+            the Apache Software Foundation, as usual</para>
           </listitem>
 
           <listitem>
