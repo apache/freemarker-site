@@ -1292,13 +1292,13 @@ two freemarker.jar-s and unpredictable behavior!
         into the <quote>main</quote> branch (or branches), and (s)he is
         expected to use that wisely. Depending on the complexity of the
         feature, the number of active Committers in the time period, and
-        whether the feature is expected to be disputed by the community, (s)he
+        whether the feature is expected to be discussed by the community, (s)he
         may should work in a feature branch instead. If the feature is
-        finished and disputes were resolved (on some way described by Apache
+        finished and discussions were resolved (on some way described by Apache
         policies), it can be merged back into the <quote>main</quote>
         branch.</para>
 
-        <para>All commits should have helpful comments; don't afraid of
+        <para>All commits should have helpful comments; don't be afraid of
         writing long descriptions. If the commit is related to a Jira issue,
         the comment should start with the Jira issue identifier, like
         <quote>FREEMARKER-16: ...</quote></para>
@@ -1355,8 +1355,8 @@ two freemarker.jar-s and unpredictable behavior!
       <simplesect>
         <title>Making releases</title>
 
-        <para>For each release, a release engineer is appointed among the
-        Committers. The release engineer should follow the procedure here, and
+        <para>For each release, one of the Committers plays the role of Release
+        Manager. The Release Manager should follow the procedure here, and
         (s)he should update this page where (s)he has to deviate from
         it.</para>
 
@@ -1389,9 +1389,11 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Releases should have both an src and bin tar.gz
-            (downloadable from the Apache Software Foundation, as
-            usual)</para>
+            <para>The official release is provided as source code to build
+            the project (src tar.gz). For the convenience of users the release
+            is also accompanied by compiled binaries (bin tar.gz).
+            Both artifacts are downloadable from the Apache Software Foundation,
+            as usual</para>
           </listitem>
 
           <listitem>
