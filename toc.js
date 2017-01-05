@@ -142,6 +142,14 @@ var toc = {
 "children": [
 ]
 }
+,
+{
+"title": "Committer how-to",
+"url": "committer-howto.html",
+"isFile": true,
+"children": [
+]
+}
 ]
 }
 ,
@@ -150,14 +158,6 @@ var toc = {
 "url": null,
 "isFile": true,
 "children": [
-{
-"title": "Sourceforge.net project\n page",
-"url": "https://sourceforge.net/projects/freemarker/",
-"isFile": true,
-"children": [
-]
-}
-,
 {
 "title": "Source code (Git)",
 "url": "sourcecode.html",
@@ -169,6 +169,14 @@ var toc = {
 {
 "title": "Project history",
 "url": "history.html",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Sourceforge.net (old)\n project page",
+"url": "https://sourceforge.net/projects/freemarker/",
 "isFile": true,
 "children": [
 ]
