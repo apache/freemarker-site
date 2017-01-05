@@ -1292,9 +1292,9 @@ two freemarker.jar-s and unpredictable behavior!
         into the <quote>main</quote> branch (or branches), and (s)he is
         expected to use that wisely. Depending on the complexity of the
         feature, the number of active Committers in the time period, and
-        whether the feature is expected to be disputed by the community, (s)he
+        whether the feature is expected to be discussed by the community, (s)he
         may should work in a feature branch instead. If the feature is
-        finished and disputes were resolved (on some way described by Apache
+        finished and discussions were resolved (on some way described by Apache
         policies), it can be merged back into the <quote>main</quote>
         branch.</para>
 
