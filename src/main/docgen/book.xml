@@ -1250,34 +1250,469 @@ two freemarker.jar-s and unpredictable behavior!
         <title>What to do if I want to contribute</title>
 
         <para>First you should <link linkend="mailing-lists">subsrcribe to the
-        developer mailing list</link> to discuss what you plant to do. If you
-        are going to contribute to the engine itself, you will need an <link
+        developer mailing list</link> to discuss what you plant to do.</para>
+
+        <para>Then, fork the project on Github, and start working on the
+        appropriate branch (see <link linkend="sourcecode">the repositories
+        and branches here</link>). See the <literal>README</literal> file in
+        it for more information about building and IDE setup. When your
+        contribution is ready, send a pull request on Github. Then we can
+        still iterate over it until it becomes good enough for merging.</para>
+
+        <para>Note that you will need an <link
         xlink:href="http://www.apache.org/dev/new-committers-guide.html#cla">Individual
         Contributor License Agreement (ICLA) or Corporate CLA at the Apache
-        Software Foundation</link>.</para>
+        Software Foundation</link>, or else we can't merge in your
+        contribution.</para>
 
-        <para>Of course, you will also want to check the project out from the
-        source code repository, and build it. See here <link
-        linkend="sourcecode">what to check out</link>. After checking
-        something out, see the <literal>README</literal> file in it for more
-        information about building and IDE setup.</para>
-
-        <para>Also, for more generic guidelines, see <link
+        <para>For more generic guidelines, see <link
         xlink:href="http://www.apache.org/foundation/getinvolved.html">how to
         contribute to Apache projects</link>.</para>
+      </simplesect>
+    </section>
+
+    <section xml:id="committer-howto">
+      <title>Committer how-to</title>
+
+      <para><emphasis>This page applies to Committers only, not to usual
+      contributors.</emphasis> A Committer is a person with extra rights who
+      receives his status via invitation. You don't need to be a Committer to
+      contribute, anyone can fork and send pull requests on Github; see more
+      on <link linkend="contribute">the page for contributors</link>.</para>
+
+      <simplesect>
+        <title>Git commit policies</title>
+
+        <para>A Committer can commit directly into the Apache Git repository
+        of FreeMarker, and so preferably doesn't use Github pull requests.
+        (See <link linkend="sourcecode">the repositories and branches
+        here</link>.)</para>
+
+        <para>A Committer has the technical permissions to commit directly
+        into the <quote>main</quote> branch (or branches), and (s)he is
+        expected to use that wisely. Depending on the complexity of the
+        feature, the number of active Committers in the time period, and
+        whether the feature is expected to be disputed by the community, (s)he
+        may should work in a feature branch instead. If the feature is
+        finished and disputes were resolved (on some way described by Apache
+        policies), it can be merged back into the <quote>main</quote>
+        branch.</para>
+
+        <para>All commits should have helpful comments; don't afraid of
+        writing long descriptions. If the commit is related to a Jira issue,
+        the comment should start with the Jira issue identifier, like
+        <quote>FREEMARKER-16: ...</quote></para>
+      </simplesect>
+
+      <simplesect>
+        <title>Merging in pull requests from Github</title>
+
+        <para>Pull requests from Github are merged in by Committers. Before
+        accepting a pull request, ensure that:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>The contributor has a CLA at Apache (see on <link
+            xlink:href="http://people.apache.org/">http://people.apache.org/</link>)</para>
+          </listitem>
+
+          <listitem>
+            <para>The contributor has used the proper branch of the project
+            (it's sometimes looked over)</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>To merge the pull request:</para>
+
+        <programlisting language="unknown">git pull --no-ff https://github.com/apache/&lt;PROJECT&gt; refs/pull/&lt;PR_NUMBER&gt;/head</programlisting>
+
+        <para>Where:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><literal><replaceable>&lt;PROJECT&gt;</replaceable></literal>
+            is usually <literal>incubator-freemarker</literal></para>
+          </listitem>
+
+          <listitem>
+            <para><literal><replaceable>&lt;PR_NUMBER&gt;</replaceable></literal>
+            is the pull request number that Github shows prominently</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The commit comment should automatically describe that it's a
+        merge and if from where. After that you may also want to add a summary
+        of what the merged branch does.</para>
+
+        <para>In general, pull request merge commits should adhere to the same
+        policies as if the Committer who commits directly into the Apache git
+        repository.</para>
+
+        <para>Pushing the merge commit to the ASF repo will automatically
+        close the pull request on Github.</para>
+      </simplesect>
+
+      <simplesect>
+        <title>Making releases</title>
+
+        <para>For each release, a release engineer is appointed among the
+        Committers. The release engineer should follow the procedure here, and
+        (s)he should update this page where (s)he has to deviate from
+        it.</para>
+
+        <para>For general info about making releases, please read <link
+        xlink:href="http://www.apache.org/legal/release-policy#archived">http://www.apache.org/legal/release-policy</link>
+        and <link
+        xlink:href="http://incubator.apache.org/guides/releasemanagement.html">http://incubator.apache.org/guides/releasemanagement.html</link>.
+        The FreeMarker-specific additions to those are:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Releases with non-trivial changes should have at least one
+            Release Candidate (RC01) release, which is legally a normal
+            release (not just a internal/developer one), and is promoted for
+            at least 1 month on our web page. These are there differences to a
+            final release:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>RC-s aren't released to the Maven Central
+                Repository</para>
+              </listitem>
+
+              <listitem>
+                <para>RC documentation (Manual + JavaDoc) is only published
+                under
+                http://freemarker.org/builds/<replaceable>X.X.X</replaceable>-rc<replaceable>X</replaceable>/</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Releases should have both an src and bin tar.gz
+            (downloadable from the Apache Software Foundation, as
+            usual)</para>
+          </listitem>
+
+          <listitem>
+            <para>The same two artifacts should also be released (uploaded for
+            download) on <link
+            xlink:href="https://sourceforge.net/projects/freemarker/">https://sourceforge.net/projects/freemarker/</link>.
+            We add a note there to the indicate that the canonical download is
+            the one from Apache.</para>
+          </listitem>
+
+          <listitem>
+            <para>Releases should have a usual jar artifact, an src artifact
+            and javadoc artifact either in the Apache Maven staging reposotory
+            (for RC-s), or in the Maven Central Repository (for
+            finals).</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>The steps of making a release:</para>
+
+        <orderedlist>
+          <listitem>
+            <para>Check that <literal>version.properties</literal> is up to
+            date. Also that the version number in the title and version
+            history of the Manual are up to date.</para>
+          </listitem>
+
+          <listitem>
+            <para><literal>ant dist</literal></para>
+          </listitem>
+
+          <listitem>
+            <para><literal>ant rat</literal>, check output</para>
+          </listitem>
+
+          <listitem>
+            <para>Ensure this is up to date:
+            https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/incubator/freemarker/KEY</para>
+          </listitem>
+
+          <listitem>
+            <para>SVN commit the release files into the proper subdirectory of
+            https://dist.apache.org/repos/<emphasis
+            role="bold">dist</emphasis>/dev/incubator/freemarker. Note that
+            this is <quote>dev/</quote>, not <quote>release/</quote>!</para>
+          </listitem>
+
+          <listitem>
+            <para>Upload to ASF Nexus staging</para>
+
+            <orderedlist>
+              <listitem>
+                <para>If your Maven <literal>settings-security.xml</literal>
+                is relocated to an encrypted storage (recommended), mount it,
+                otherwise you will get 401 error when uploading.</para>
+              </listitem>
+
+              <listitem>
+                <para><literal>ant maven-dist</literal></para>
+              </listitem>
+
+              <listitem>
+                <para>Go to <link
+                xlink:href="http://repository.apache.org/">http://repository.apache.org/</link>,
+                log in, chose <quote>Staging Repositories</quote>, find and
+                click the repository just created. Check the upload files
+                manually (on the <quote>Content</quote> tab). Then
+                <quote>Close</quote> the repository. Press
+                <quote>Refresh</quote> until it's successfully
+                <quote>closed</quote>.</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+
+          <listitem>
+            <para>Upload the release documentation under
+            http://freemarker.org/builds/<replaceable>X.X.X</replaceable>-voting/documentation/
+            (see
+            https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git,
+            <quote>asf-site</quote> branch). The change log will be a link
+            pointing to a page inside this.</para>
+          </listitem>
+
+          <listitem>
+            <para>Voting on the FreeMarker developer list (the podling project
+            list)</para>
+
+            <orderedlist>
+              <listitem>
+                <para>Start a thread on the FreeMarker developer mailing list
+                with subject <quote>[VOTE] Release Apache FreeMarker
+                <replaceable>X.X.X</replaceable> (incubating)</quote>. You
+                should use an earlier release vote mail as a template.</para>
+              </listitem>
+
+              <listitem>
+                <para>Needs at least 3 binding +1, majority win, and minimum
+                72 hours (but see Apache policies)</para>
+              </listitem>
+
+              <listitem>
+                <para>Post <quote>[RESULT][VOTE]</quote> mail to the
+                FreeMarker developer list. Again, you should use an earlier
+                release vote result mail as a template.</para>
+              </listitem>
+
+              <listitem>
+                <para>If it was a failed vote, after fixing the issues, the
+                release process restarts with a different dist.apache.org
+                URL-s (add an attempt number to the directory for
+                example)</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+
+          <listitem>
+            <para>If the voting on the the FreeMarker developer list has
+            passed, start similar <quote>[VOTE]</quote> thread on
+            general@incubator</para>
+
+            <orderedlist>
+              <listitem>
+                <para>Use an earlier FreeMarker release vote mail as the
+                template. Some notes:</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Use your apache.org e-mail address as the
+                    sender</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Include short project description</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Link the FreeMarker developer mailing list
+                    <quote>[RESULT][VOTE]</quote> mail</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Link artifacts. The src artifact is the release
+                    that's voted upon. The bin is for convenience only.</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Include and link via the Git commit
+                    <emphasis>hash</emphasis></para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Link the change log (page under
+                    http://freemarker.org/builds/<replaceable>X.X.X</replaceable>/)</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Specify Maven staging coordinates</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>Needs at least 3 binding +1, majority wins, at least 72
+                hours has passed</para>
+              </listitem>
+
+              <listitem>
+                <para>Post <quote>[RESULT][VOTE]</quote> to general@incubator.
+                Use an earlier such mail as template. Some notes:</para>
+
+                <itemizedlist>
+                  <listitem>
+                    <para>Use your apache.org e-mail address as the
+                    sender</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Include short project description</para>
+                  </listitem>
+                </itemizedlist>
+              </listitem>
+
+              <listitem>
+                <para>If it was a failed vote, after fixing the issues, the
+                release process restarts with a different dist.apache.org
+                URL-s (add an attempt number to the directory for
+                example)</para>
+              </listitem>
+            </orderedlist>
+          </listitem>
+
+          <listitem>
+            <para>Copy the release files over from
+            https://dist.apache.org/repos/dist/<emphasis
+            role="bold">dev</emphasis>/incubator/freemarker into the proper
+            subdirectory of https://dist.apache.org/repos/dist/<emphasis
+            role="bold">release</emphasis>/incubator/freemarker and commit
+            them. (Of course get rid of any voting attempt numbers in the
+            directory names.) Now they should appear under <link
+            xlink:href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</link>.</para>
+          </listitem>
+
+          <listitem>
+            <para>Go to <link
+            xlink:href="https://repository.apache.org/">https://repository.apache.org/</link>
+            and find the staging repository that belongs to the voted version.
+            Select it, press <quote>Release</quote> at the top. Now the
+            repository should appear under <link
+            xlink:href="https://repository.apache.org/content/repositories/releases/org/freemarker/">https://repository.apache.org/content/repositories/releases/org/freemarker/</link>
+            Later (like hours later) it will appear in the Maven Central
+            Repository too.</para>
+          </listitem>
+
+          <listitem>
+            <para>Wait 24 hours so that the mirrors get synced. Check <link
+            xlink:href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</link>
+            and <link
+            xlink:href="http://archive.apache.org/dist/">http://archive.apache.org/dist/</link>.
+            Check Maven Central repository too (in the case of non-RC
+            releases).</para>
+          </listitem>
+
+          <listitem>
+            <para>Delete the non-latest release of each maintained branch from
+            http://www.apache.org/dist/incubator/freemarker/ (Old ones are
+            automatically available on http://archive.apache.org/dist/)</para>
+          </listitem>
+
+          <listitem>
+            <para>Tag the release on Git (see earlier tags for the tag name
+            format). Be careful not to tag a commit made since the voting has
+            succeeded.</para>
+          </listitem>
+
+          <listitem>
+            <para>Update http://freemarker.org:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Add the release to the download section.</para>
+              </listitem>
+
+              <listitem>
+                <para>Upload latest JavaDoc</para>
+              </listitem>
+
+              <listitem>
+                <para>Update release date in the Manual, regenerate it.</para>
+              </listitem>
+
+              <listitem>
+                <para>Upload the new Manual</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Update other web pages:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Release on sourceforge.net. The README.md should note
+                that it's for convenience only, and point to the official
+                download page.</para>
+              </listitem>
+
+              <listitem>
+                <para>Update Apache project status page:</para>
+
+                <orderedlist>
+                  <listitem>
+                    <para>Update and commit:
+                    https://svn.apache.org/repos/asf/incubator/public/trunk/content/projects/freemarker.xml</para>
+                  </listitem>
+
+                  <listitem>
+                    <para>Republish:
+                    https://cms.apache.org/incubator/publish</para>
+                  </listitem>
+                </orderedlist>
+              </listitem>
+
+              <listitem>
+                <para>Update <link
+                xlink:href="https://en.wikipedia.org/wiki/FreeMarker">https://en.wikipedia.org/wiki/FreeMarker</link></para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Announce:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>On the FreeMarker developer list</para>
+              </listitem>
+
+              <listitem>
+                <para>On announce@apache.org (see <link
+                xlink:href="https://lists.apache.org/list.html?announce@apache.org">https://lists.apache.org/list.html?announce@apache.org</link>
+                for examples).</para>
+              </listitem>
+
+              <listitem>
+                <para>On <link
+                xlink:href="https://twitter.com/freemarker">https://twitter.com/freemarker</link></para>
+              </listitem>
+
+              <listitem>
+                <para>On the old FreeMarker mailing lists: freemarker-user,
+                freemarker-devel, freemarker-announce</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+        </orderedlist>
       </simplesect>
     </section>
   </chapter>
 
   <chapter>
     <title>Miscellaneous</title>
-
-    <section>
-      <title><olink targetdoc="sourceforgeProject">Sourceforge.net project
-      page</olink></title>
-
-      <para/>
-    </section>
 
     <section xml:id="sourcecode">
       <title>Source code (Git)</title>
@@ -1456,6 +1891,13 @@ two freemarker.jar-s and unpredictable behavior!
           by the ASF.</emphasis></para>
         </listitem>
       </itemizedlist>
+    </section>
+
+    <section>
+      <title><olink targetdoc="sourceforgeProject">Sourceforge.net (old)
+      project page</olink></title>
+
+      <para/>
     </section>
   </chapter>
 </book>
