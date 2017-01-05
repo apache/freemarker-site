@@ -1389,9 +1389,11 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Releases should have both an src and bin tar.gz
-            (downloadable from the Apache Software Foundation, as
-            usual)</para>
+            <para>The official release is provided as source code to build
+            the project (src tar.gz). For the convenience of users the release
+            is also accompanied by compiled binaries (bin tar.gz).
+            Both artifacts are downloadable from the Apache Software Foundation,
+            as usual</para>
           </listitem>
 
           <listitem>
