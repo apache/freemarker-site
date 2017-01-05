@@ -1355,8 +1355,8 @@ two freemarker.jar-s and unpredictable behavior!
       <simplesect>
         <title>Making releases</title>
 
-        <para>For each release, a release engineer is appointed among the
-        Committers. The release engineer should follow the procedure here, and
+        <para>For each release, one of the Committers plays the role of Release
+        Manager. The Release Manager should follow the procedure here, and
         (s)he should update this page where (s)he has to deviate from
         it.</para>
 
