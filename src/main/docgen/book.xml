@@ -1109,145 +1109,14 @@ two freemarker.jar-s and unpredictable behavior!
     <section xml:id="contribute">
       <title>Contributors wanted!</title>
 
-      <para>Usually, contributors come because they want to fix/improve a
-      certain thing. But if you just want to help in general, here are some
-      topics that are not (that) hard to jump into and are considered to be
-      important:</para>
+      <para>As it's the case with many opens source projects, FreeMarker
+      doesn't have and never had a payed staff, nor a backing corporate entity
+      who finances it otherwise. It's ran by volunteers since it started in
+      1999. So we are always looking for people to help FreeMarker to
+      advance!</para>
 
-      <itemizedlist>
-        <listitem>
-          <para>Improve tooling:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>Eclipse plugin. Either help improving the JBoss Tools
-              <quote>FreeMarker IDE</quote> (<link
-              xlink:href="https://issues.jboss.org/browse/JBIDE-20512?jql=project%20%3D%20JBIDE%20AND%20status%20in%20%28Open%2C%20%22Coding%20In%20Progress%22%2C%20Reopened%2C%20%22Pull%20Request%20Sent%22%29%20AND%20component%20%3D%20freemarker">see
-              open issues</link>), or if you have serious ambitions, even
-              start your own!</para>
-            </listitem>
-
-            <listitem>
-              <para>IntelliJ plugin. Check how well it works (like support for
-              recent FreeMarker features), try to find a way to contribute
-              where needed.</para>
-            </listitem>
-
-            <listitem>
-              <para>Plugin or syntax highlighter for you favorite editor
-              (Notepad++, jEdit, VIM, etc.) that actually covers FTL
-              reasonably well, and is legally properly contributed to the
-              project.</para>
-            </listitem>
-
-            <listitem>
-              <para>Online editor, syntax highlighter. This might means
-              FreeMarker support for CodeMirror. This, among others, would be
-              useful in the <olink targetdoc="onlineTemplateTester">online
-              template tester</olink>.</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para>Improve framework integration:</para>
-
-          <itemizedlist>
-            <listitem>
-              <para>FreeMarker Spring MVC integration. Someone who know both
-              well should keep an eye on this, improving it where
-              necessary.</para>
-            </listitem>
-
-            <listitem>
-              <para>FreeMarker Struts integration. Same as with Spring
-              MVC.</para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para>Android support. This is related to the next two points
-          too</para>
-        </listitem>
-
-        <listitem>
-          <para>Bean introspection without
-          <literal>javax.bean.Introspector</literal> (or in additionally to
-          it). FreeMarker relies on this class for maximum conformance to the
-          JavaBeans specs., however, its limitations start to hurt too much:
-          It doesn't work on Android, it doesn't support Java 8 default
-          methods, and it's not lenient enough in many cases (<literal>Boolean
-          isXxx</literal> doesn't work, <literal>xFoo</literal> is not a
-          possible property name of <literal>getXFoo</literal>, etc.), it
-          doesn't work with static methods
-          (<literal>BeansWrapper.staticModels</literal>).</para>
-        </listitem>
-
-        <listitem>
-          <para>Support for Java 8 date/time API-s (this is actually certainly
-          a difficult one)</para>
-        </listitem>
-
-        <listitem>
-          <para><literal>javax.script</literal> (JSR-223) support</para>
-        </listitem>
-
-        <listitem>
-          <para>Write <literal>TemplateLoader</literal> that loads from
-          database (<literal>DataSource</literal>)</para>
-        </listitem>
-
-        <listitem>
-          <para>Migrate build from Ant to Gradle. Or for Docgen an Site, Maven
-          is certainly a good fit.</para>
-        </listitem>
-
-        <listitem>
-          <para>Performance tests, to spot performance regressions.</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Continuous activities that are always welcome:</para>
-
-      <itemizedlist>
-        <listitem>
-          <para>Spotting mistakes in commits; more eyes see more</para>
-        </listitem>
-
-        <listitem>
-          <para>Trying to break new features before they are released (finding
-          bugs)</para>
-        </listitem>
-
-        <listitem>
-          <para>Improve JUnit coverage where it's due</para>
-        </listitem>
-
-        <listitem>
-          <para>Fixing typos in the documentation (includes JavaDoc!)</para>
-        </listitem>
-
-        <listitem>
-          <para>Help users. This mostly means monitoring FreeMarker related
-          questions on Stack Overflow.</para>
-        </listitem>
-
-        <listitem>
-          <para>Pick a bug from the bug tracker, and squash it.</para>
-        </listitem>
-
-        <listitem>
-          <para>Recommend using FreeMarker to others when there's a fitting
-          task</para>
-        </listitem>
-      </itemizedlist>
-
-      <para>Last not least, FreeMarker needs long standing/returning
-      contributors who tackle deeper issues.</para>
-
-      <simplesect>
-        <title>What to do if I want to contribute</title>
+      <section xml:id="how-to-contribute">
+        <title>How do I contribute?</title>
 
         <para>First you should <link linkend="mailing-lists">subsrcribe to the
         developer mailing list</link> to discuss what you plant to do.</para>
@@ -1268,7 +1137,149 @@ two freemarker.jar-s and unpredictable behavior!
         <para>For more generic guidelines, see <link
         xlink:href="http://www.apache.org/foundation/getinvolved.html">how to
         contribute to Apache projects</link>.</para>
-      </simplesect>
+      </section>
+
+      <section xml:id="what-to-contribute">
+        <title>What should I contribute?</title>
+
+        <para>Usually, contributors come because they want to fix/improve a
+        certain thing. But if you just want to help in general, here are some
+        topics that are not (that) hard to jump into and are considered to be
+        important:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Improve tooling:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>Eclipse plugin. Either help improving the JBoss Tools
+                <quote>FreeMarker IDE</quote> (<link
+                xlink:href="https://issues.jboss.org/browse/JBIDE-20512?jql=project%20%3D%20JBIDE%20AND%20status%20in%20%28Open%2C%20%22Coding%20In%20Progress%22%2C%20Reopened%2C%20%22Pull%20Request%20Sent%22%29%20AND%20component%20%3D%20freemarker">see
+                open issues</link>), or if you have serious ambitions, even
+                start your own!</para>
+              </listitem>
+
+              <listitem>
+                <para>IntelliJ plugin. Check how well it works (like support
+                for recent FreeMarker features), try to find a way to
+                contribute where needed.</para>
+              </listitem>
+
+              <listitem>
+                <para>Plugin or syntax highlighter for you favorite editor
+                (Notepad++, jEdit, VIM, etc.) that actually covers FTL
+                reasonably well, and is legally properly contributed to the
+                project.</para>
+              </listitem>
+
+              <listitem>
+                <para>Online editor, syntax highlighter. This might means
+                FreeMarker support for CodeMirror. This, among others, would
+                be useful in the <olink
+                targetdoc="onlineTemplateTester">online template
+                tester</olink>.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Improve framework integration:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>FreeMarker Spring MVC integration. Someone who know both
+                well should keep an eye on this, improving it where
+                necessary.</para>
+              </listitem>
+
+              <listitem>
+                <para>FreeMarker Struts integration. Same as with Spring
+                MVC.</para>
+              </listitem>
+            </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Android support. This is related to the next two points
+            too</para>
+          </listitem>
+
+          <listitem>
+            <para>Bean introspection without
+            <literal>javax.bean.Introspector</literal> (or in additionally to
+            it). FreeMarker relies on this class for maximum conformance to
+            the JavaBeans specs., however, its limitations start to hurt too
+            much: It doesn't work on Android, it doesn't support Java 8
+            default methods, and it's not lenient enough in many cases
+            (<literal>Boolean isXxx</literal> doesn't work,
+            <literal>xFoo</literal> is not a possible property name of
+            <literal>getXFoo</literal>, etc.), it doesn't work with static
+            methods (<literal>BeansWrapper.staticModels</literal>).</para>
+          </listitem>
+
+          <listitem>
+            <para>Support for Java 8 date/time API-s (this is actually
+            certainly a difficult one)</para>
+          </listitem>
+
+          <listitem>
+            <para><literal>javax.script</literal> (JSR-223) support</para>
+          </listitem>
+
+          <listitem>
+            <para>Write <literal>TemplateLoader</literal> that loads from
+            database (<literal>DataSource</literal>)</para>
+          </listitem>
+
+          <listitem>
+            <para>Migrate build from Ant to Gradle. Or for Docgen an Site,
+            Maven is certainly a good fit.</para>
+          </listitem>
+
+          <listitem>
+            <para>Performance tests, to spot performance regressions.</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Continuous activities that are always welcome:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para>Spotting mistakes in commits; more eyes see more</para>
+          </listitem>
+
+          <listitem>
+            <para>Trying to break new features before they are released
+            (finding bugs)</para>
+          </listitem>
+
+          <listitem>
+            <para>Improve JUnit coverage where it's due</para>
+          </listitem>
+
+          <listitem>
+            <para>Fixing typos in the documentation (includes JavaDoc!)</para>
+          </listitem>
+
+          <listitem>
+            <para>Help users. This mostly means monitoring FreeMarker related
+            questions on Stack Overflow.</para>
+          </listitem>
+
+          <listitem>
+            <para>Pick a bug from the bug tracker, and squash it.</para>
+          </listitem>
+
+          <listitem>
+            <para>Recommend using FreeMarker to others when there's a fitting
+            task</para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Last not least, FreeMarker needs long standing/returning
+        contributors who tackle deeper issues.</para>
+      </section>
     </section>
 
     <section xml:id="committer-howto">
@@ -1280,7 +1291,7 @@ two freemarker.jar-s and unpredictable behavior!
       contribute, anyone can fork and send pull requests on Github; see more
       on <link linkend="contribute">the page for contributors</link>.</para>
 
-      <simplesect>
+      <section xml:id="git-commit-policy">
         <title>Git commit policies</title>
 
         <para>A Committer can commit directly into the Apache Git repository
@@ -1302,9 +1313,9 @@ two freemarker.jar-s and unpredictable behavior!
         writing long descriptions. If the commit is related to a Jira issue,
         the comment should start with the Jira issue identifier, like
         <quote>FREEMARKER-16: ...</quote></para>
-      </simplesect>
+      </section>
 
-      <simplesect>
+      <section xml:id="merging-pull-request">
         <title>Merging in pull requests from Github</title>
 
         <para>Pull requests from Github are merged in by Committers. Before
@@ -1330,14 +1341,15 @@ two freemarker.jar-s and unpredictable behavior!
 
         <itemizedlist>
           <listitem>
-            <para><literal><replaceable>&lt;PROJECT&gt;</replaceable></literal>
-            is usually <literal>incubator-freemarker</literal></para>
+            <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
+            </literal> is usually
+            <literal>incubator-freemarker</literal></para>
           </listitem>
 
           <listitem>
-            <para><literal><replaceable>&lt;PR_NUMBER&gt;</replaceable></literal>
-            is the pull request number that Github shows prominently after a
-            <quote>#</quote></para>
+            <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
+            </literal> is the pull request number that Github shows
+            prominently after a <quote>#</quote></para>
           </listitem>
         </itemizedlist>
 
@@ -1351,9 +1363,9 @@ two freemarker.jar-s and unpredictable behavior!
 
         <para>Pushing the merge commit to the ASF repo will automatically
         close the pull request on Github.</para>
-      </simplesect>
+      </section>
 
-      <simplesect>
+      <section xml:id="making-releases">
         <title>Making releases</title>
 
         <para>For each release, one of the Committers plays the role of
@@ -1710,9 +1722,9 @@ two freemarker.jar-s and unpredictable behavior!
             </itemizedlist>
           </listitem>
         </orderedlist>
-      </simplesect>
+      </section>
 
-      <simplesect>
+      <section xml:id="updating-homepage">
         <title>Updating the FreeMarker home page</title>
 
         <para>The content of the home page can be changed by committing it
@@ -1754,9 +1766,9 @@ two freemarker.jar-s and unpredictable behavior!
         infrastructural glitch, where for too big commits this synchronization
         doesn't happen. In such case, commit some small change to trigger
         synchronization again.</para>
-      </simplesect>
+      </section>
 
-      <simplesect>
+      <section xml:id="edit-docbook">
         <title>Regarding editing the Manual and the Site DocBook</title>
 
         <para>Both the site and the Manual is generated from the XML files
@@ -1768,7 +1780,7 @@ two freemarker.jar-s and unpredictable behavior!
         <literal>src/manual/en_US/docgen-help/editors-readme.txt</literal> in
         the <literal>freemarker</literal> repository. About the same guide
         lines apply to the site DocBook as well.</para>
-      </simplesect>
+      </section>
     </section>
   </chapter>
 
