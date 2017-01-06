@@ -1,5 +1,5 @@
-These "icomoon" fonts were generated with https://icomoon.io/app/, from a
-selection from these fronts:
+The "icomoon" fonts in this directory were generated with
+https://icomoon.io/app/, from a selection of icons from these fonts:
 
 * Entypo pictograms, version 2.0, by Daniel Bruce (www.entypo.com).
   Each included pictogram is either licensed under Creative
@@ -15,5 +15,6 @@ selection from these fronts:
   Creative Common Attribution 4.0 International License (CC-BY 4.0)
   (https://creativecommons.org/licenses/by/4.0/).
   
-"selection.json" stores the IcoMoon App selection, and is only stored here
-for reproducibility. It's not used for anything.
+If "selection.json" is present in this directory, it stores the
+IcoMoon App selection, and is only stored here for reproducibility.
+It's not used for anything.
