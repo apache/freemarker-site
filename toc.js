@@ -172,8 +172,16 @@ var toc = {
 }
 ,
 {
-"title": "Merging in pull requests from Github",
+"title": "Merging in pull requests from GitHub",
 "url": "committer-howto.html#merging-pull-request",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Closing GitHub pull requests without merging",
+"url": "committer-howto.html#close-pull-request-without-merging",
 "isFile": false,
 "children": [
 ]
