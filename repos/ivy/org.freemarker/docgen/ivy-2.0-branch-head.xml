@@ -3,13 +3,13 @@
   AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
 -->
 <ivy-module version="2.0">
-    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20160114002330"/>
+    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20170106204134"/>
     <publications>
         <artifact name="docgen" type="jar" ext="jar"/>
     </publications>
     <dependencies>
         <dependency org="com.thaiopensource" name="jing" rev="20091111" conf="default->default"/>
-        <dependency org="org.freemarker" name="freemarker" rev="2.3-branch-head" conf="default->default" changing="true"/>
+        <dependency org="org.freemarker" name="freemarker" rev="2.3.25-incubating" conf="default->default" changing="true"/>
         <dependency org="org.apache.ant" name="ant" rev="1.9.3" conf="default->default"/>
     </dependencies>
 </ivy-module>
