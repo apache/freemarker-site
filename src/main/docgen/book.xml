@@ -471,7 +471,7 @@ two freemarker.jar-s and unpredictable behavior!
 
             <td><link
             xlink:href="https://github.com/freemarker/FreeMarker.tmbundle">Install
-            from Github Project</link></td>
+            from GitHub Project</link></td>
           </tr>
 
           <tr>
@@ -1295,7 +1295,7 @@ two freemarker.jar-s and unpredictable behavior!
         <title>Git commit policies</title>
 
         <para>A Committer can commit directly into the Apache Git repository
-        of FreeMarker, and so preferably doesn't use Github pull requests.
+        of FreeMarker, and so preferably doesn't use GitHub pull requests.
         (See <link linkend="sourcecode">the repositories and branches
         here</link>.)</para>
 
@@ -1316,9 +1316,9 @@ two freemarker.jar-s and unpredictable behavior!
       </section>
 
       <section xml:id="merging-pull-request">
-        <title>Merging in pull requests from Github</title>
+        <title>Merging in pull requests from GitHub</title>
 
-        <para>Pull requests from Github are merged in by Committers. Before
+        <para>Pull requests from GitHub are merged in by Committers. Before
         accepting a pull request, ensure that:</para>
 
         <itemizedlist>
@@ -1348,7 +1348,7 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
-            </literal> is the pull request number that Github shows
+            </literal> is the pull request number that GitHub shows
             prominently after a <quote>#</quote></para>
           </listitem>
         </itemizedlist>
