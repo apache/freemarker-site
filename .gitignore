@@ -3,7 +3,32 @@
 /build/
 /build.properties
 /archive/
+/ide-dependencies/
 
-src/manual/book.xml~
+/out/
+/bin/
+/target/
 
-src/main/docgen/book.xml~
+.classpath
+.project
+.settings
+
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+
+*.tmp
+*.bak
+*.swp
+*~
+
+.gradle
+
+.DS_Store*
+.AppleDouble
+.LSOverride
+
+.directory
+.Trash*
