@@ -1342,14 +1342,14 @@ two freemarker.jar-s and unpredictable behavior!
         <itemizedlist>
           <listitem>
             <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
-            </literal> is usually
+            </literal>is usually
             <literal>incubator-freemarker</literal></para>
           </listitem>
 
           <listitem>
             <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
-            </literal> is the pull request number that GitHub shows
-            prominently after a <quote>#</quote></para>
+            </literal>is the pull request number that GitHub shows prominently
+            after a <quote>#</quote></para>
           </listitem>
         </itemizedlist>
 
@@ -1363,6 +1363,35 @@ two freemarker.jar-s and unpredictable behavior!
 
         <para>Pushing the merge commit to the ASF repo will automatically
         close the pull request on Github.</para>
+      </section>
+
+      <section xml:id="close-pull-request-without-merging">
+        <title>Closing GitHub pull requests without merging</title>
+
+        <programlisting language="unknown">git commit --allow-empty -m "closes apache/&lt;PROJECT&gt;#&lt;PR_NUMBER&gt;: &lt;WHY&gt;"</programlisting>
+
+        <para>Where:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
+            </literal>is usually
+            <literal>incubator-freemarker</literal></para>
+          </listitem>
+
+          <listitem>
+            <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
+            </literal>is the pull request number that GitHub shows prominently
+            after a <quote>#</quote></para>
+          </listitem>
+
+          <listitem>
+            <para><literal> <replaceable>&lt;WHY&gt;</replaceable>
+            </literal>is the reason of the closing. For clarity, you may want
+            to end it with <quote>Closed PR without merging.</quote> or
+            something similar.</para>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section xml:id="making-releases">
