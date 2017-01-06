@@ -229,7 +229,7 @@ var toc = {
 }
 ,
 {
-"title": "Sourceforge.net (old)\n project page",
+"title": "Sourceforge.net project\n page",
 "url": "https://sourceforge.net/projects/freemarker/",
 "isFile": true,
 "children": [
