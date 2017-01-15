@@ -1464,6 +1464,10 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
+            <para><literal>ant update-deps</literal></para>
+          </listitem>
+
+          <listitem>
             <para><literal>ant dist</literal></para>
           </listitem>
 
@@ -1784,7 +1788,9 @@ two freemarker.jar-s and unpredictable behavior!
             <para>Most other content is generated from the
             <literal>site</literal> project, by issuing
             <literal>ant</literal>. So to change the content, you should edit
-            <literal><replaceable>&lt;site-project&gt;</replaceable>/src/docgen/book.xml</literal>.</para>
+            <literal><replaceable>&lt;site-project&gt;</replaceable>/src/docgen/book.xml</literal>.
+            To ensure that you are using the latest Docgen, you may want to
+            issue <literal>ant update-deps</literal> before generating.</para>
           </listitem>
         </itemizedlist>
 
@@ -1795,6 +1801,44 @@ two freemarker.jar-s and unpredictable behavior!
         infrastructural glitch, where for too big commits this synchronization
         doesn't happen. In such case, commit some small change to trigger
         synchronization again.</para>
+      </section>
+
+      <section xml:id="updating-docgen">
+        <title>Updating Docgen</title>
+
+        <para>Docgen (<literal>freemarker-docgen</literal> Git repository)
+        generates HTML from a DocBook XML. It's a dependency of FreeMarker
+        binary release building (as that contains the Manual in HTML format)
+        and of <literal>freemarker-site</literal>.</para>
+
+        <para>Docgen is not published to the Maven Central Repository, as it's
+        only used as an internal build dependency. Currently, it's published
+        manually to the internal Ivy repository of the project, which is under
+        http://freemarker.org/repos/ivy/. If you modify Docgen, don't forget
+        to publish there, or else the next site update or FreeMarker release
+        will use an outdated version. For that:</para>
+
+        <orderedlist>
+          <listitem>
+            <para><literal>ant server-publish-last-build</literal></para>
+          </listitem>
+
+          <listitem>
+            <para>Upload the content of the resulting
+            <literal>build\dummy-server-ivy-repo</literal> directory to
+            <literal>http://freemarker.org/repos/ivy/</literal>. See how to
+            update the contents of freemarker.org <link
+            linkend="updating-homepage">here...</link></para>
+          </listitem>
+
+          <listitem>
+            <para>If you want to use the published version in the
+            <literal>freemarker</literal> or
+            <literal>freemarker-site</literal> projects, don't forget to issue
+            <literal>ant update-deps</literal> there, or else they will keep
+            using their local copy of the last obtained version.</para>
+          </listitem>
+        </orderedlist>
       </section>
 
       <section xml:id="edit-docbook">
