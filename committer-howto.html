@@ -42,7 +42,7 @@ ga('send', 'pageview');
 <h1 class="content-header header-section1" id="committer-howto" itemprop="headline">Committer how-to</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#git-commit-policy" data-menu-target="git-commit-policy">Git commit policies</a></li><li><a class="page-menu-link" href="#merging-pull-request" data-menu-target="merging-pull-request">Merging in pull requests from GitHub</a></li><li><a class="page-menu-link" href="#close-pull-request-without-merging" data-menu-target="close-pull-request-without-merging">Closing GitHub pull requests without merging</a></li><li><a class="page-menu-link" href="#making-releases" data-menu-target="making-releases">Making releases</a></li><li><a class="page-menu-link" href="#updating-homepage" data-menu-target="updating-homepage">Updating the FreeMarker home page</a></li><li><a class="page-menu-link" href="#edit-docbook" data-menu-target="edit-docbook">Regarding editing the Manual and the Site DocBook</a></li></ul> </div><p><em>This page applies to Committers only, not to usual
+<ul><li><a class="page-menu-link" href="#git-commit-policy" data-menu-target="git-commit-policy">Git commit policies</a></li><li><a class="page-menu-link" href="#merging-pull-request" data-menu-target="merging-pull-request">Merging in pull requests from GitHub</a></li><li><a class="page-menu-link" href="#close-pull-request-without-merging" data-menu-target="close-pull-request-without-merging">Closing GitHub pull requests without merging</a></li><li><a class="page-menu-link" href="#making-releases" data-menu-target="making-releases">Making releases</a></li><li><a class="page-menu-link" href="#updating-homepage" data-menu-target="updating-homepage">Updating the FreeMarker home page</a></li><li><a class="page-menu-link" href="#updating-docgen" data-menu-target="updating-docgen">Updating Docgen</a></li><li><a class="page-menu-link" href="#edit-docbook" data-menu-target="edit-docbook">Regarding editing the Manual and the Site DocBook</a></li></ul> </div><p><em>This page applies to Committers only, not to usual
       contributors.</em> A Committer is a person with extra rights who
       receives his status via invitation. You don&#39;t need to be a Committer to
       contribute, anyone can fork and send pull requests on Github; see more
@@ -230,6 +230,10 @@ ga('send', 'pageview');
             <p>Check that <code class="inline-code">version.properties</code> is up to
             date. Also that the version number in the title and version
             history of the Manual are up to date.</p>
+          </li>
+
+          <li>
+            <p><code class="inline-code">ant update-deps</code></p>
           </li>
 
           <li>
@@ -544,7 +548,9 @@ ga('send', 'pageview');
             <p>Most other content is generated from the
             <code class="inline-code">site</code> project, by issuing
             <code class="inline-code">ant</code>. So to change the content, you should edit
-            <code class="inline-code"><em class="code-color">&lt;site-project&gt;</em>/src/docgen/book.xml</code>.</p>
+            <code class="inline-code"><em class="code-color">&lt;site-project&gt;</em>/src/docgen/book.xml</code>.
+            To ensure that you are using the latest Docgen, you may want to
+            issue <code class="inline-code">ant update-deps</code> before generating.</p>
           </li>
         </ul>
 
@@ -555,6 +561,46 @@ ga('send', 'pageview');
         infrastructural glitch, where for too big commits this synchronization
         doesn&#39;t happen. In such case, commit some small change to trigger
         synchronization again.</p>
+      
+        
+
+
+
+<h2 class="content-header header-section2" id="updating-docgen">Updating Docgen</h2>
+
+
+        <p>Docgen (<code class="inline-code">freemarker-docgen</code> Git repository)
+        generates HTML from a DocBook XML. It&#39;s a dependency of FreeMarker
+        binary release building (as that contains the Manual in HTML format)
+        and of <code class="inline-code">freemarker-site</code>.</p>
+
+        <p>Docgen is not published to the Maven Central Repository, as it&#39;s
+        only used as an internal build dependency. Currently, it&#39;s published
+        manually to the internal Ivy repository of the project, which is under
+        http://freemarker.org/repos/ivy/. If you modify Docgen, don&#39;t forget
+        to publish there, or else the next site update or FreeMarker release
+        will use an outdated version. For that:</p>
+
+        <div class="orderedlist"><ol type="1">
+          <li>
+            <p><code class="inline-code">ant server-publish-last-build</code></p>
+          </li>
+
+          <li>
+            <p>Upload the content of the resulting
+            <code class="inline-code">build\dummy-server-ivy-repo</code> directory to
+            <code class="inline-code">http://freemarker.org/repos/ivy/</code>. See how to
+            update the contents of freemarker.org <a href="#updating-homepage">here...</a></p>
+          </li>
+
+          <li>
+            <p>If you want to use the published version in the
+            <code class="inline-code">freemarker</code> or
+            <code class="inline-code">freemarker-site</code> projects, don&#39;t forget to issue
+            <code class="inline-code">ant update-deps</code> there, or else they will keep
+            using their local copy of the last obtained version.</p>
+          </li>
+        </ol></div>
       
         
 
@@ -576,7 +622,7 @@ ga('send', 'pageview');
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="index.html">What is FreeMarker?</a></li><li><a href="freemarkerdownload.html">Download</a></li><li><a href="docs/app_versions.html">Version history</a></li><li><a href="history.html">About us</a></li><li><a itemprop="license" href="docs/app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="docs/dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="docs/ref_directive_alphaidx.html">#directives</a></li><li><a href="docs/ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="docs/ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/incubator-freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/incubator-freemarker">GitHub</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2017-01-06T22:13:20Z" title="Friday, January 6, 2017 10:13:20 PM GMT">2017-01-06 22:13:20 GMT</time> </p>
+<time itemprop="dateModified" datetime="2017-01-15T16:34:51Z" title="Sunday, January 15, 2017 4:34:51 PM GMT">2017-01-15 16:34:51 GMT</time> </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2017
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://freemarker.org">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. </p>
