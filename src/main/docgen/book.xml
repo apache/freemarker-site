@@ -129,6 +129,10 @@
   <chapter xml:id="freemarkerdownload">
     <title>Download / Maven</title>
 
+    <para>Apache FreeMarker is a template engine: a Java library to generate
+    text output (HTML web pages, e-mails, configuration files, source code,
+    etc.) based on templates and changing data.</para>
+
     <para><emphasis role="bold">Dependencies:</emphasis> FreeMarker has no
     required dependencies, except Java (Standard Edition) itself, with the
     minimum version indicated for each download below.</para>
