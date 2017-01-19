@@ -133,6 +133,18 @@
     text output (HTML web pages, e-mails, configuration files, source code,
     etc.) based on templates and changing data.</para>
 
+    <para xml:id="downloadApacheDisclaimer"><emphasis role="bold">Disclaimer:
+    </emphasis><emphasis>Apache FreeMarker is an effort undergoing incubation
+    at The Apache Software Foundation (ASF), sponsored by the <link
+    xlink:href="http://incubator.apache.org">Apache Incubator</link>.
+    Incubation is required of all newly accepted projects until a further
+    review indicates that the infrastructure, communications, and decision
+    making process have stabilized in a manner consistent with other
+    successful ASF projects. While incubation status is not necessarily a
+    reflection of the completeness or stability of the code, it does indicate
+    that the project has yet to be fully endorsed by the
+    ASF.</emphasis></para>
+
     <para><emphasis role="bold">Dependencies:</emphasis> FreeMarker has no
     required dependencies, except Java (Standard Edition) itself, with the
     minimum version indicated for each download below.</para>
@@ -148,28 +160,17 @@
     <para><emphasis role="bold">Change log (version history):</emphasis>
     <olink targetdoc="versionHistory">See in the Manual...</olink></para>
 
-    <para xml:id="downloadApacheDisclaimer"><emphasis role="bold">Disclaimer:
-    </emphasis><emphasis>Apache FreeMarker is an effort undergoing incubation
-    at The Apache Software Foundation (ASF), sponsored by the <link
-    xlink:href="http://incubator.apache.org">Apache Incubator</link>.
-    Incubation is required of all newly accepted projects until a further
-    review indicates that the infrastructure, communications, and decision
-    making process have stabilized in a manner consistent with other
-    successful ASF projects. While incubation status is not necessarily a
-    reflection of the completeness or stability of the code, it does indicate
-    that the project has yet to be fully endorsed by the
-    ASF.</emphasis></para>
-
-    <para>Verifying downloads (since 2.3.24 only): When downloading from a
-    mirror please check the checksum and verify the OpenPGP compatible
-    signature specified next to the download link (MD5, SHA256 and ASC files,
-    all must come from the <link
+    <para><emphasis role="bold">Verifying downloads:</emphasis> When
+    downloading from a mirror please check the checksum and verify the OpenPGP
+    compatible signature specified next to the download link (MD5, SHA256 and
+    ASC files, all must come from the <link
     xlink:href="http://www.apache.org/">www.apache.org</link> domain). The
     public keys used for signing are here: <link
     xlink:href="http://www.apache.org/dist/incubator/freemarker/KEYS">KEYS</link>
     (also must come from www.apache.org). <link
     xlink:href="http://www.apache.org/dyn/closer.cgi#verify">More about how to
-    verify releases...</link></para>
+    verify releases...</link> Note that such verification is only possible
+    since 2.3.24.</para>
 
     <simplesect>
       <title>Latest stable release: 2.3.25-incubating</title>
