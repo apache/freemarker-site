@@ -537,25 +537,22 @@ two freemarker.jar-s and unpredictable behavior!
       <para/>
     </section>
 
-    <section xml:id="security"> <title>Security reports</title>
+    <section xml:id="report-security-vulnerabilities">
+      <title>Report security vulnerabilities</title>
+
       <para>We strongly encourage to report security vulnerabilities to our
       private mailing list first, rather than disclosing them in a public
-      forum. The private security mailing address is:
-      <olink targetdoc="privateMailingList">
-        <link xlink:href="mailto:private@freemarker.incubator.apache.org">
-          private@freemarker.incubator.apache.org
-        </link>
-      </olink>
-      </para>
+      forum. The private security mailing address is: <olink
+      targetdoc="privateMailingList"/></para>
 
       <para>Please note that this mailing list should only be used for
       reporting undisclosed security vulnerabilities in Apache FreeMarker and
       managing the process of fixing such vulnerabilities. We cannot accept
       regular bug reports or other queries at this address.</para>
 
-      <para>If you need to report a bug that isn't an undisclosed security
-      vulnerability, please use
-      <olink targetdoc="newBugReport">Report bugs</olink>.</para>
+      <para>If you want to report a bug that isn't an undisclosed security
+      vulnerability, please use <olink targetdoc="newBugReport">our regular
+      bug tracker</olink>.</para>
     </section>
 
     <section>
