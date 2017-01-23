@@ -76,6 +76,7 @@ olinks: {
   githubMirrorSite: "https://github.com/apache/incubator-freemarker-site"
   githubProject: "olink:githubMirrorFreemarker"
   githubProjectOld: "https://github.com/freemarker/"
+  privateMailingList: "mailto:private@freemarker.incubator.apache.org"
   devMailingList: "mailto:dev@freemarker.incubator.apache.org"
   devMailingListSubscribe: "mailto:dev-subscribe@freemarker.incubator.apache.org"
   devMailingListUnsubscribe: "mailto:dev-unsubscribe@freemarker.incubator.apache.org"
