@@ -538,7 +538,7 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section xml:id="report-security-vulnerabilities">
-      <title>Report security vulnerabilities</title>
+      <title>Report security vulnerability</title>
 
       <para>We strongly encourage to report security vulnerabilities to our
       private mailing list first, rather than disclosing them in a public
@@ -553,6 +553,10 @@ two freemarker.jar-s and unpredictable behavior!
       <para>If you want to report a bug that isn't an undisclosed security
       vulnerability, please use <olink targetdoc="newBugReport">our regular
       bug tracker</olink>.</para>
+
+      <para>Committers should <link
+      linkend="handle-security-vulnerabilities">see here</link> how to handle
+      reported security vulnerabilities.</para>
     </section>
 
     <section>
@@ -1876,6 +1880,24 @@ two freemarker.jar-s and unpredictable behavior!
         <literal>src/manual/en_US/docgen-help/editors-readme.txt</literal> in
         the <literal>freemarker</literal> repository. About the same guide
         lines apply to the site DocBook as well.</para>
+      </section>
+
+      <section xml:id="handle-security-vulnerabilities">
+        <title>Dealing with security vulnerabilities</title>
+
+        <para>If someone reports a security vulnerability, normally he
+        shouldn't do it on a public forum (<link
+        linkend="report-security-vulnerabilities">see how to report it
+        here</link>), and similarly we shouldn't discuss it on a public forum
+        (such as on the developer mailing list), but on the private mailing
+        list of the project. Thus the vulnerability can be fixed and released
+        before it's openly discussed. As a developer, you must not forget that
+        commits are also publicly visible. How to commit, release, and
+        communicate a concrete vulnerability should be discussed on the
+        private mailing lists of the project before doing publicly visible
+        moves. See <link
+        xlink:href="https://www.apache.org/security/committers.html">this
+        page</link> for further guidelines.</para>
       </section>
     </section>
   </chapter>
