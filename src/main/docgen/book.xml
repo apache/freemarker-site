@@ -347,7 +347,7 @@ two freemarker.jar-s and unpredictable behavior!
     <title>Tooling</title>
 
     <section xml:id="editors">
-      <title>Editor / IDE plugins</title>
+      <title>Editor and IDE plugins</title>
 
       <para>Syntax highlight definitions and other plugins for text editors
       and IDE-s. We encourage everybody to develop and send syntax highlight
