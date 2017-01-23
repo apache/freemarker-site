@@ -104,7 +104,7 @@ var toc = {
 }
 ,
 {
-"title": "Report security vulnerabilities",
+"title": "Report security vulnerability",
 "url": "report-security-vulnerabilities.html",
 "isFile": true,
 "children": [
@@ -222,6 +222,14 @@ var toc = {
 {
 "title": "Regarding editing the Manual and the Site DocBook",
 "url": "committer-howto.html#edit-docbook",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Dealing with security vulnerabilities",
+"url": "committer-howto.html#handle-security-vulnerabilities",
 "isFile": false,
 "children": [
 ]
