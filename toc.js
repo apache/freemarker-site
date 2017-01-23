@@ -57,7 +57,7 @@ var toc = {
 "isFile": true,
 "children": [
 {
-"title": "Editor / IDE plugins",
+"title": "Editor and IDE plugins",
 "url": "editors.html",
 "isFile": true,
 "children": [
