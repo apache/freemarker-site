@@ -104,6 +104,14 @@ var toc = {
 }
 ,
 {
+"title": "Report security vulnerabilities",
+"url": "report-security-vulnerabilities.html",
+"isFile": true,
+"children": [
+]
+}
+,
+{
 "title": "Ask help on Stack\n Overflow",
 "url": "http://stackoverflow.com/questions/ask?tags=freemarker",
 "isFile": true,
@@ -198,6 +206,14 @@ var toc = {
 {
 "title": "Updating the FreeMarker home page",
 "url": "committer-howto.html#updating-homepage",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Updating Docgen",
+"url": "committer-howto.html#updating-docgen",
 "isFile": false,
 "children": [
 ]
