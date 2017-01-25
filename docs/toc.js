@@ -1357,7 +1357,7 @@ var toc = {
 "isFile": true,
 "children": [
 {
-"title": "Using FreeMarker for ``Model 2''",
+"title": "“Model 2”",
 "url": "pgui_misc_servlet.html#pgui_misc_servlet_model2",
 "isFile": false,
 "children": [

@@ -14,7 +14,7 @@
 <link rel="canonical" href="http://freemarker.org/docs/dgui_template_exp.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1485386406820">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,8 +35,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","The Template","Expressions"];</script>
-      <script src="toc.js"></script>
-      <script src="docgen-resources/main.min.js"></script>
+      <script src="toc.js?1485386406820"></script>
+      <script src="docgen-resources/main.min.js?1485386406820"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_template_directives.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_template_valueinsertion.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_template_exp" itemprop="headline">Expressions</h1>
@@ -52,9 +52,9 @@ ga('send', 'pageview');
             interpolations is
             <code class="inline-code">${<em class="code-color">expression</em>}</code> where
             expression gives the value you want to insert into the output as
-            text. So <code class="inline-code">${(5 + 8)/2}</code> prints ``6.5&#39;&#39; to the
-            output (or possibly ``6,5&#39;&#39; if the language of your output is not
-            US English).</p>
+            text. So <code class="inline-code">${(5 + 8)/2}</code> prints "6.5"
+            to the output (or possibly "6,5" if the language of
+            your output is not US English).</p>
           </li>
 
           <li>
@@ -1552,7 +1552,7 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
           (or <code class="inline-code">=</code> as a <em>deprecated</em>
           alternative) To test two values for inequality you use
           <code class="inline-code">!=</code>. For example, assume that
-          <code class="inline-code">user</code> is ``Big Joe&#39;&#39;:</p>
+          <code class="inline-code">user</code> is "Big Joe":</p>
 
           
 
@@ -1565,8 +1565,8 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 
           <p>The <code class="inline-code">user == &quot;Big Joe&quot;</code> expression in the
           <code class="inline-code">&lt;#if ...&gt;</code> will evaluate to the boolean
-          <code class="inline-code">true</code>, so the above will say ``It is Big
-          Joe&#39;&#39;.</p>
+          <code class="inline-code">true</code>, so the above will say "It is Big
+          Joe".</p>
 
           <p>The expressions on both sides of the <code class="inline-code">==</code> or
           <code class="inline-code">!=</code> must evaluate to a scalar (not a sequence or
@@ -1732,7 +1732,7 @@ ${testSequence?size}
 ${testSequence?join(&quot;, &quot;)}</pre></div>
 
           <p>Assuming that <code class="inline-code">testString</code> stores the string
-          ``Tom &amp; Jerry&#39;&#39;, and testSequnce stores the strings
+          "Tom &amp; Jerry", and testSequnce stores the strings
           "foo", "bar" and "baz", the
           output will be:</p>
 
@@ -2190,7 +2190,7 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
           precedence. Operators with higher precedence are evaluated before
           operators with a relatively lower precedence. Operators on the same
           line have equal precedence. When binary operators (operators with
-          two ``parameters&#39;&#39;, as <code class="inline-code">+</code> and
+          two "parameters", as <code class="inline-code">+</code> and
           <code class="inline-code">-</code>) of equal precedence appear next to each other,
           they are evaluated in left-to-right order.</p>
 
@@ -2321,9 +2321,11 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
           1</code>.</p>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="dgui_template_directives.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_template_valueinsertion.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
-<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"><p><span class="generated-for-product">Generated for: Freemarker 2.3.25</span><span class="last-updated"> Last generated:
-<time itemprop="dateModified" datetime="2016-11-11T19:51:37Z" title="Friday, November 11, 2016 7:51:37 PM GMT">2016-11-11 19:51:37 GMT</time></span></p> <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2016
-<a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://freemarker.org">The Apache Software Foundation</a>. All rights reserved. </p>
+<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
+Last generated:
+<time itemprop="dateModified" datetime="2017-01-25T23:20:06Z" title="Wednesday, January 25, 2017 11:20:06 PM GMT">2017-01-25 23:20:06 GMT</time>, for Freemarker 2.3.25 </p>
+<p class="copyright">
+© <span itemprop="copyrightYear">1999</span>–2017
+<a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. </p>
 </div></div></div></body>
 </html>

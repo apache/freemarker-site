@@ -14,7 +14,7 @@
 <link rel="canonical" href="http://freemarker.org/docs/ref_builtins_node.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1485386406820">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,8 +35,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Built-ins for nodes (for XML)"];</script>
-      <script src="toc.js"></script>
-      <script src="docgen-resources/main.min.js"></script>
+      <script src="toc.js?1485386406820"></script>
+      <script src="docgen-resources/main.min.js?1485386406820"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_hash.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_loop_var.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_node" itemprop="headline">Built-ins for nodes (for XML)</h1>
@@ -95,8 +95,8 @@ ga('send', 'pageview');
           
 
           <p>Returns the string that is used to determine what user-defined
-          directive to invoke to handle this node when it is ``visited&#39;&#39;. See:
-          the <a href="ref_directive_visit.html#ref.directive.visit">visit</a> and <a href="ref_directive_visit.html#ref.directive.recurse">recurse</a> directives.</p>
+          directive to invoke to handle this node when it is
+          "visited". See: the <a href="ref_directive_visit.html#ref.directive.visit">visit</a> and <a href="ref_directive_visit.html#ref.directive.recurse">recurse</a> directives.</p>
 
           <p>XML: If the node is an element or attribute, then the string
           will be the local (prefix free) name of the element or attribute.
@@ -140,10 +140,10 @@ ga('send', 'pageview');
 
           
 
-          <p>A string that describes the type of node this is. FreeMarker
-          does not define the exact meaning of node type; it depends on what
-          your variables are modeling. It&#39;s possible that a node doesn&#39;t
-          support node type at all. In this case, the built-in evaluates to an
+          <p>A string that describes the type of the node. FreeMarker does
+          not define the exact meaning of node type; it depends on what your
+          variables are modeling. It&#39;s possible that a node doesn&#39;t support
+          node type at all. In this case, the built-in evaluates to an
           undefined value, so you can&#39;t use the returned value. (You can still
           check if a node supports the type property with
           <code class="inline-code"><em class="code-color">node</em>?node_type??</code>.)</p>
@@ -167,18 +167,20 @@ ga('send', 'pageview');
 
           
 
-          <p>The node that is this node&#39;s immediate parent in the node
-          tree. The root node has no parent node, so for the root node, the
-          expression
+          <p>Returns the node that is this node&#39;s immediate parent in the
+          node tree. The root node has no parent node, so for the root node,
+          the expression
           <code class="inline-code"><em class="code-color">node</em>?parent??</code>
           evaluates to <code class="inline-code">false</code>.</p>
 
           <p>XML: Note that the value returned by this built-in is also a
           sequence (same as the result of XPath expression
           <code class="inline-code">..</code>, when you write
-          <code class="inline-code">someNode[&quot;..&quot;]</code>). Also note that for attribute
-          nodes, it returns the element the attribute belongs to, despite that
-          attribute nodes are not counted as children of the element.</p>
+          <code class="inline-code">someNode[&quot;..&quot;]</code>), however if there&#39;s no parent,
+          the result is a missing value (null) instead of an empty sequence.
+          Also note that for attribute nodes, it returns the element the
+          attribute belongs to, despite that attribute nodes are not counted
+          as children of the element.</p>
         
           
 
@@ -195,17 +197,19 @@ ga('send', 'pageview');
           <p>XML: According to W3C, the root of an XML document is not the
           topmost element node, but the document itself, which is the parent
           of the topmost element. For example, if you want to get the topmost
-          <em>element</em> of the XML (the so called ``document
-          element&#39;&#39;; do not mix it with the ``document&#39;&#39;), which is called
-          <code class="inline-code">foo</code>, then you have to write
-          <code class="inline-code">someNode?root.foo</code>. If you write just
-          <code class="inline-code">someNode?root</code>, then you get the document itself,
-          and not the document element.</p>
+          <em>element</em> of the XML (the so called
+          "document element"; do not mix it with the
+          "document"), which is called <code class="inline-code">foo</code>,
+          then you have to write <code class="inline-code">someNode?root.foo</code>. If you
+          write just <code class="inline-code">someNode?root</code>, then you get the
+          document itself, and not the document element.</p>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="ref_builtins_hash.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_loop_var.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
-<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"><p><span class="generated-for-product">Generated for: Freemarker 2.3.25</span><span class="last-updated"> Last generated:
-<time itemprop="dateModified" datetime="2016-11-11T19:51:37Z" title="Friday, November 11, 2016 7:51:37 PM GMT">2016-11-11 19:51:37 GMT</time></span></p> <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2016
-<a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://freemarker.org">The Apache Software Foundation</a>. All rights reserved. </p>
+<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
+Last generated:
+<time itemprop="dateModified" datetime="2017-01-25T23:20:06Z" title="Wednesday, January 25, 2017 11:20:06 PM GMT">2017-01-25 23:20:06 GMT</time>, for Freemarker 2.3.25 </p>
+<p class="copyright">
+© <span itemprop="copyrightYear">1999</span>–2017
+<a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. </p>
 </div></div></div></body>
 </html>
