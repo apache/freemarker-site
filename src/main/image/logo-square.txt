@@ -1,0 +1,2 @@
+As of 2017-02-01, the logo-square-* logo is only used on https://twitter.com/freemarker
+According the author, they don't use any font, the letters are just shapes made by him.
