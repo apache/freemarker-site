@@ -512,13 +512,6 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para/>
     </section>
-
-    <section>
-      <title><olink targetdoc="fmpp">File generator tool
-      (FMPP)</olink></title>
-
-      <para/>
-    </section>
   </chapter>
 
   <chapter>
