@@ -1933,11 +1933,8 @@ two freemarker.jar-s and unpredictable behavior!
             </listitem>
 
             <listitem>
-              <para><literal>master</literal>: FreeMarker 2.4.x. Had no
-              release as of this writing. This is <literal>2.3-gae</literal>
-              plus the changes that aren't 100% backward compatible. We only
-              commit 2.4-exclusive changes directly here, all other changes
-              are coming from <literal>2.3-gae</literal> via merging.</para>
+              <para><literal>3</literal>: FreeMarker 3.x.x. Had no release as
+              of this writing.</para>
             </listitem>
           </itemizedlist>
         </listitem>
