@@ -1468,9 +1468,15 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Releases should have a usual jar artifact, an src artifact
-            and javadoc artifact either in the Apache Maven staging reposotory
+            and javadoc artifact either in the Apache Maven staging repository
             (for RC-s), or in the Maven Central Repository (for
             finals).</para>
+          </listitem>
+
+          <listitem>
+            <para>In the 2.3.x branch, we release two products, the normal and
+            the GAE (Google App Engine) version. Hence when executing the
+            release steps, you do many of them twice.</para>
           </listitem>
         </itemizedlist>
 
