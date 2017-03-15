@@ -1433,8 +1433,8 @@ two freemarker.jar-s and unpredictable behavior!
             <para>Releases with non-trivial changes should have at least one
             Release Candidate (RC01) release, which is legally a normal
             release (not just a internal/developer one), and is promoted for
-            at least 1 month on our web page. These are there differences to a
-            final release:</para>
+            at least 1 month on our web page. The differences to a final
+            release are these:</para>
 
             <itemizedlist>
               <listitem>
@@ -1455,15 +1455,15 @@ two freemarker.jar-s and unpredictable behavior!
             project (src tar.gz). For the convenience of users the release is
             also accompanied by compiled binaries (bin tar.gz, which also
             contains the documentation). Both artifacts are downloadable from
-            the Apache Software Foundation, as usual</para>
+            the Apache Software Foundation, as usual.</para>
           </listitem>
 
           <listitem>
             <para>The same two artifacts should also be released (uploaded for
             download) on <link
             xlink:href="https://sourceforge.net/projects/freemarker/">https://sourceforge.net/projects/freemarker/</link>.
-            We add a note there to the indicate that the canonical download is
-            the one from Apache.</para>
+            We add a note there to indicate that the canonical download is the
+            one from Apache.</para>
           </listitem>
 
           <listitem>
@@ -1496,7 +1496,20 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Ensure this is up to date:
+            <para>Compare the jar to the earlier stable release for API
+            compatibility issues (both source and binary level). So far we
+            have used <link
+            xlink:href="https://lvc.github.io/japi-compliance-checker/"><quote>Java
+            API Compliance Checker</quote> (JAPICC)</link> with these
+            arguments: <literal>-keep-internal -skip-internal-types \._ -l
+            FreeMarker <replaceable>old</replaceable>.jar
+            <replaceable>new</replaceable>.jar</literal>. Note that it's prone
+            to generate false alarms, so simply review each problems and
+            decide which is real.</para>
+          </listitem>
+
+          <listitem>
+            <para>Ensure that this is up to date:
             https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/incubator/freemarker/KEY</para>
           </listitem>
 
