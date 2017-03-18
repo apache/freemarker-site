@@ -1314,20 +1314,19 @@ two freemarker.jar-s and unpredictable behavior!
       <section xml:id="git-commit-policy">
         <title>Git commit policies</title>
 
-        <para>A Committer can commit directly into the Apache Git repository
-        of FreeMarker, and so preferably doesn't use GitHub pull requests.
-        (See <link linkend="sourcecode">the repositories and branches
+        <para>Committers can commit directly into the Apache Git repository of
+        FreeMarker, and so preferably don't use GitHub pull requests. (See
+        <link linkend="sourcecode">the repositories and branches
         here</link>.)</para>
 
-        <para>A Committer has the technical permissions to commit directly
-        into the <quote>main</quote> branch (or branches), and (s)he is
+        <para>Committers have the technical permissions to commit directly
+        into the <quote>main</quote> branch (or branches), and they are
         expected to use that wisely. Depending on the complexity of the
         feature, the number of active Committers in the time period, and
-        whether the feature is expected to be discussed by the community,
-        (s)he may should work in a feature branch instead. If the feature is
-        finished and discussions were resolved (on some way described by
-        Apache policies), it can be merged back into the <quote>main</quote>
-        branch.</para>
+        whether the feature is experimental, they may should work in a feature
+        branch instead. If the feature is finished and discussions were
+        resolved (on some way described by Apache policies), it can be merged
+        back into the <quote>main</quote> branch.</para>
 
         <para>All commits should have helpful comments; don't be afraid of
         writing long descriptions. If the commit is related to a Jira issue,
@@ -1343,13 +1342,13 @@ two freemarker.jar-s and unpredictable behavior!
 
         <itemizedlist>
           <listitem>
-            <para>The contributor has a CLA at Apache (see on <link
+            <para>The contributor has an ICLA or CCLA at Apache (see on <link
             xlink:href="http://people.apache.org/">http://people.apache.org/</link>)</para>
           </listitem>
 
           <listitem>
             <para>The contributor has used the proper branch of the project
-            (it's sometimes looked over)</para>
+            (it's sometimes overlooked)</para>
           </listitem>
         </itemizedlist>
 
@@ -1374,11 +1373,11 @@ two freemarker.jar-s and unpredictable behavior!
         </itemizedlist>
 
         <para>The commit comment should automatically describe that it's a
-        merge and if from where. After that you may also want to add a summary
-        of what the merged branch does.</para>
+        merge and where it was merged from. After that you may also want to
+        add a summary of what the merged branch does.</para>
 
         <para>In general, pull request merge commits should adhere to the same
-        policies as if the Committer who commits directly into the Apache git
+        policies that Committers use to commit directly into the Apache git
         repository.</para>
 
         <para>Pushing the merge commit to the ASF repo will automatically
@@ -1417,10 +1416,9 @@ two freemarker.jar-s and unpredictable behavior!
       <section xml:id="making-releases">
         <title>Making releases</title>
 
-        <para>For each release, one of the Committers plays the role of
+        <para>For each release, one of the Committers takes on the role of
         Release Manager. The Release Manager should follow the procedure here,
-        and (s)he should update this page where (s)he has to deviate from
-        it.</para>
+        and should update this page where they has to deviate from it.</para>
 
         <para>For general info about making releases, please read <link
         xlink:href="http://www.apache.org/legal/release-policy#archived">http://www.apache.org/legal/release-policy</link>
@@ -1897,7 +1895,7 @@ two freemarker.jar-s and unpredictable behavior!
       <section xml:id="handle-security-vulnerabilities">
         <title>Dealing with security vulnerabilities</title>
 
-        <para>If someone reports a security vulnerability, normally he
+        <para>If someone reports a security vulnerability, normally they
         shouldn't do it on a public forum (<link
         linkend="report-security-vulnerabilities">see how to report it
         here</link>), and similarly we shouldn't discuss it on a public forum
