@@ -173,9 +173,9 @@
     since 2.3.24.</para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.25-incubating</title>
+      <title>Latest stable release: 2.3.26-incubating</title>
 
-      <para>Released on 2016-06-26. Requires J2SE 1.5 or higher.</para>
+      <para>Released on 2017-03-25. Requires J2SE 1.5 or higher.</para>
 
       <para><emphasis role="bold">This is a stable, final release.</emphasis>
       The <quote>incubating</quote> suffix is required by the Apache Software
@@ -186,7 +186,7 @@
       site</link>.</para>
 
       <para><link
-      xlink:href="http://freemarker.org/docs/versions_2_3_25.html">See what's
+      xlink:href="http://freemarker.org/docs/versions_2_3_26.html">See what's
       new...</link></para>
 
       <para>Downloads:</para>
@@ -194,25 +194,25 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-2.3.25-incubating-bin.tar.gz">Binary
+          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-2.3.26-incubating-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-2.3.25-incubating-bin.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-2.3.26-incubating-bin.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-2.3.25-incubating-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-2.3.26-incubating-bin.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-2.3.25-incubating-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-2.3.26-incubating-bin.tar.gz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-2.3.25-incubating-src.tar.gz">Source
+          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-2.3.26-incubating-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-2.3.25-incubating-src.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-2.3.26-incubating-src.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-2.3.25-incubating-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-2.3.26-incubating-src.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-2.3.25-incubating-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-2.3.26-incubating-src.tar.gz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -226,7 +226,7 @@ two freemarker.jar-s and unpredictable behavior!
 &lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.25-incubating&lt;/version&gt;
+  &lt;version&gt;2.3.26-incubating&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
@@ -244,27 +244,27 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-gae-2.3.25-incubating-bin.tar.gz">binary</link>
+      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-gae-2.3.26-incubating-bin.tar.gz">binary</link>
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-gae-2.3.25-incubating-bin.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-gae-2.3.26-incubating-bin.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-gae-2.3.25-incubating-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-gae-2.3.26-incubating-bin.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/binaries/apache-freemarker-gae-2.3.25-incubating-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/binaries/apache-freemarker-gae-2.3.26-incubating-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-gae-2.3.25-incubating-src.tar.gz">source</link>
+      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-gae-2.3.26-incubating-src.tar.gz">source</link>
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-gae-2.3.25-incubating-src.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-gae-2.3.26-incubating-src.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-gae-2.3.25-incubating-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-gae-2.3.26-incubating-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.25-incubating/source/apache-freemarker-gae-2.3.25-incubating-src.tar.gz.asc">ASC</link>].
+      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.26-incubating/source/apache-freemarker-gae-2.3.26-incubating-src.tar.gz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.25-incubating&lt;/version&gt;
+  &lt;version&gt;2.3.26-incubating&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
@@ -313,10 +313,12 @@ two freemarker.jar-s and unpredictable behavior!
     <simplesect>
       <title>Other versions</title>
 
-      <para>See the project's <link
+      <para>Outdated versions starting from 2.3.24 RC01 are available from the
+      Apache archive: <link
+      xlink:href="http://archive.apache.org/dist/incubator/freemarker/engine/">http://archive.apache.org/dist/incubator/freemarker/engine/</link>.
+      Even older releases are available from the <link
       xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/">SourceForge
-      download page</link> for releases that are not featured on this download
-      page.</para>
+      download page</link>.</para>
     </simplesect>
   </chapter>
 
