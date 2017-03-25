@@ -1573,8 +1573,9 @@ two freemarker.jar-s and unpredictable behavior!
               </listitem>
 
               <listitem>
-                <para>Needs at least 3 binding +1, majority win, and minimum
-                72 hours (but see Apache policies)</para>
+                <para>Needs at least 3 +1 from PPMC (Podling PMC) members,
+                majority win, and minimum 72 hours (but see Apache
+                policies)</para>
               </listitem>
 
               <listitem>
