@@ -1804,7 +1804,7 @@ two freemarker.jar-s and unpredictable behavior!
         branch, you may want to publish that version to <link
         xlink:href="https://repository.apache.org/content/repositories/snapshots">https://repository.apache.org/content/repositories/snapshots</link>.
         Users or fellow developers can use this Maven repository to try
-        snapshot version.</para>
+        snapshot versions.</para>
 
         <para>To publish the snapshot version, fist check that
         <literal>version.properties</literal> contains the proper version,
@@ -1812,7 +1812,7 @@ two freemarker.jar-s and unpredictable behavior!
         <literal>-SNAPSHOT</literal>. (If not, it will deploy to the release
         staging repository.) Then issue <literal>ant dist
         maven-dist</literal>. (Note that just as with a real release, the
-        artifacts with be signed with PGP.)</para>
+        artifacts will be signed with PGP.)</para>
       </section>
 
       <section xml:id="updating-homepage">
