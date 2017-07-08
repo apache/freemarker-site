@@ -1797,6 +1797,24 @@ two freemarker.jar-s and unpredictable behavior!
         </orderedlist>
       </section>
 
+      <section xml:id="deploy-snapshot">
+        <title>Deploying Maven SNAPSHOT versions</title>
+
+        <para>After you have merged/committed your changes to the respectable
+        branch, you may want to publish that version to <link
+        xlink:href="https://repository.apache.org/content/repositories/snapshots">https://repository.apache.org/content/repositories/snapshots</link>.
+        Users or fellow developers can use this Maven repository to try
+        snapshot version.</para>
+
+        <para>To publish the snapshot version, fist check that
+        <literal>version.properties</literal> contains the proper version,
+        most importantly, that <literal>mavenVersion</literal> ends with
+        <literal>-SNAPSHOT</literal>. (If not, it will deploy to the release
+        staging repository.) Then issue <literal>ant dist
+        maven-dist</literal>. (Note that just as with a real release, the
+        artifacts with be signed with PGP.)</para>
+      </section>
+
       <section xml:id="updating-homepage">
         <title>Updating the FreeMarker home page</title>
 
