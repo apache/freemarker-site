@@ -1243,9 +1243,9 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>Support for Java 8 date/time API-s (this is actually
             certainly a difficult one). Note that there's a 3rd party solution
-            for it, <link
+            for this, <link
             xlink:href="https://github.com/amedia/freemarker-java-8">https://github.com/amedia/freemarker-java-8</link>,
-            but its not as seamless as a native solution could be.</para>
+            but it's not as seamless as a native solution could be.</para>
           </listitem>
 
           <listitem>
