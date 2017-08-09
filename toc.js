@@ -196,6 +196,14 @@ var toc = {
 }
 ,
 {
+"title": "Deploying Maven SNAPSHOT versions",
+"url": "committer-howto.html#deploy-snapshot",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "Updating the FreeMarker home page",
 "url": "committer-howto.html#updating-homepage",
 "isFile": false,
