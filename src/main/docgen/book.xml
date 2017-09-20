@@ -1974,8 +1974,10 @@ two freemarker.jar-s and unpredictable behavior!
             </listitem>
 
             <listitem>
-              <para><literal>3</literal>: FreeMarker 3.x.x. Had no release as
-              of this writing.</para>
+              <para><literal>3</literal>: FreeMarker 3.x.x. The next
+              generation of FreeMarker, heavily under development. <link
+              xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/FreeMarker+3">More
+              about FreeMarker 3...</link></para>
             </listitem>
           </itemizedlist>
         </listitem>
