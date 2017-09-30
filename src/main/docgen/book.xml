@@ -1479,7 +1479,9 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>In the 2.3.x branch, we release two products, the normal and
             the GAE (Google App Engine) version. Hence when executing the
-            release steps, you do many of them twice.</para>
+            release steps, you do many of them twice. Changes are made into
+            the 2.3-gae branch, and then they are merged into the 2.3 branch
+            (unless a change only applies to 2.3).</para>
           </listitem>
         </itemizedlist>
 
@@ -1488,8 +1490,23 @@ two freemarker.jar-s and unpredictable behavior!
         <orderedlist>
           <listitem>
             <para>Check that <literal>version.properties</literal> is up to
-            date. Also that the version number in the title and version
-            history of the Manual are up to date.</para>
+            date.</para>
+          </listitem>
+
+          <listitem>
+            <para>Ensure that the version number in the title and version
+            history of the Manual is up to date. Also the release date in the
+            Manual in the version history has to be updated. That's tricky as
+            you can't know it exactly, yet you can't change it when the actual
+            release is about to be done, as that would change the release
+            artifacts that were voted upon. So write the current date and
+            <quote>+ release process</quote> after it; that's how it will be
+            in the released artifacts.</para>
+          </listitem>
+
+          <listitem>
+            <para>Ensure that all changes in the 2.3-gae branch were merged
+            into the 2.3 branch.</para>
           </listitem>
 
           <listitem>
@@ -1734,7 +1751,9 @@ two freemarker.jar-s and unpredictable behavior!
               </listitem>
 
               <listitem>
-                <para>Upload the new Manual</para>
+                <para>Upload the new Manual (the online version, that is, the
+                one made with <literal>ant
+                manualFreemarkerOrg</literal>)</para>
               </listitem>
             </itemizedlist>
           </listitem>
