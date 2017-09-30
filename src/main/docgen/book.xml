@@ -1479,9 +1479,9 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>In the 2.3.x branch, we release two products, the normal and
             the GAE (Google App Engine) version. Hence when executing the
-            release steps, you do many of them twice. Changes are made into
-            the 2.3-gae branch, and then they are merged into the 2.3 branch
-            (unless a change only applies to 2.3).</para>
+            release steps, you do many of them twice. Note that source code
+            changes should be made in the 2.3-gae branch, and then merged into
+            the 2.3 branch (unless a change only applies to 2.3).</para>
           </listitem>
         </itemizedlist>
 
