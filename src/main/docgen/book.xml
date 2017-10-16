@@ -1574,7 +1574,8 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Upload the release documentation under
+            <para>Upload the <literal>documentation</literal> folder of the
+            binary release to
             http://freemarker.org/builds/<replaceable>X.X.X</replaceable>-voting/documentation/
             (see
             https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git,
