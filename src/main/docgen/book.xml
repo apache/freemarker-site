@@ -1574,13 +1574,13 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Upload the <literal>documentation</literal> folder of the
-            binary release to
-            http://freemarker.org/builds/<replaceable>X.X.X</replaceable>-voting/documentation/
-            (see
-            https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git,
-            <quote>asf-site</quote> branch). The change log will be a link
-            pointing to a page inside this.</para>
+            <para>Upload the content of <literal>documentation/_html</literal>
+            from the binary release to http://freemarker.org/<emphasis
+            role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/documentation/
+            (by committing it into the <quote>asf-site</quote> branch of
+            https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git).
+            The change log will be a link pointing to a page inside
+            this.</para>
           </listitem>
 
           <listitem>
