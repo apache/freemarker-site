@@ -1869,9 +1869,11 @@ two freemarker.jar-s and unpredictable behavior!
             <para>Most other content is generated from the
             <literal>site</literal> project, by issuing
             <literal>ant</literal>. So to change the content, you should edit
-            <literal><replaceable>&lt;site-project&gt;</replaceable>/src/docgen/book.xml</literal>.
-            To ensure that you are using the latest Docgen, you may want to
-            issue <literal>ant update-deps</literal> before generating.</para>
+            <literal><replaceable>&lt;site-project&gt;</replaceable>/src/main/docgen/book.xml</literal>
+            (in the <literal>master</literal> branch, not in the
+            <literal>asf-site</literal> branch). To ensure that you are using
+            the latest Docgen, you may want to issue <literal>ant
+            update-deps</literal> before generating.</para>
           </listitem>
         </itemizedlist>
 
