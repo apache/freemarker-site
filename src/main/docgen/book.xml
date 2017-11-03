@@ -1770,19 +1770,10 @@ two freemarker.jar-s and unpredictable behavior!
               </listitem>
 
               <listitem>
-                <para>Update Apache project status page:</para>
-
-                <orderedlist>
-                  <listitem>
-                    <para>Update and commit:
-                    https://svn.apache.org/repos/asf/incubator/public/trunk/content/projects/freemarker.xml</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>Republish:
-                    https://cms.apache.org/incubator/publish</para>
-                  </listitem>
-                </orderedlist>
+                <para>Update Apache project status page:
+                https://svn.apache.org/repos/asf/incubator/public/trunk/content/projects/freemarker.xml.
+                (The actual status web page will be automatically updated
+                daily.)</para>
               </listitem>
 
               <listitem>
