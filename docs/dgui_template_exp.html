@@ -14,7 +14,7 @@
 <link rel="canonical" href="http://freemarker.org/docs/dgui_template_exp.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1491668137263">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1509672811897">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,14 +35,14 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","The Template","Expressions"];</script>
-      <script src="toc.js?1491668137263"></script>
-      <script src="docgen-resources/main.min.js?1491668137263"></script>
+      <script src="toc.js?1509672811897"></script>
+      <script src="docgen-resources/main.min.js?1509672811897"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_template_directives.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_template_valueinsertion.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_template_exp" itemprop="headline">Expressions</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#exp_cheatsheet" data-menu-target="exp_cheatsheet">Quick overview (cheat sheet)</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct" data-menu-target="dgui_template_exp_direct">Specify values directly</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_direct_string" data-menu-target="dgui_template_exp_direct_string">Strings</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_number" data-menu-target="dgui_template_exp_direct_number">Numbers</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_boolean" data-menu-target="dgui_template_exp_direct_boolean">Booleans</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_seuqence" data-menu-target="dgui_template_exp_direct_seuqence">Sequences</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_ranges" data-menu-target="dgui_template_exp_direct_ranges">Ranges</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_hash" data-menu-target="dgui_template_exp_direct_hash">Hashes</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_var" data-menu-target="dgui_template_exp_var">Retrieving variables</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_var_toplevel" data-menu-target="dgui_template_exp_var_toplevel">Top-level variables</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_hash" data-menu-target="dgui_template_exp_var_hash">Retrieving data from a hash</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_sequence" data-menu-target="dgui_template_exp_var_sequence">Retrieving data from a sequence</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_special" data-menu-target="dgui_template_exp_var_special">Special variables</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_stringop" data-menu-target="dgui_template_exp_stringop">String operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_stringop_interpolation" data-menu-target="dgui_template_exp_stringop_interpolation">Interpolation and concatenation</a></li><li><a class="page-menu-link" href="#dgui_template_exp_get_character" data-menu-target="dgui_template_exp_get_character">Getting a character</a></li><li><a class="page-menu-link" href="#dgui_template_exp_stringop_slice" data-menu-target="dgui_template_exp_stringop_slice">String slicing (substrings)</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_sequenceop" data-menu-target="dgui_template_exp_sequenceop">Sequence operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_sequenceop_cat" data-menu-target="dgui_template_exp_sequenceop_cat">Concatenation</a></li><li><a class="page-menu-link" href="#dgui_template_exp_seqenceop_slice" data-menu-target="dgui_template_exp_seqenceop_slice">Sequence slicing</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_hashop" data-menu-target="dgui_template_exp_hashop">Hash operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_hashop_cat" data-menu-target="dgui_template_exp_hashop_cat">Concatenation</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_arit" data-menu-target="dgui_template_exp_arit">Arithmetical calculations</a></li><li><a class="page-menu-link" href="#dgui_template_exp_comparison" data-menu-target="dgui_template_exp_comparison">Comparison</a></li><li><a class="page-menu-link" href="#dgui_template_exp_logicalop" data-menu-target="dgui_template_exp_logicalop">Logical operations</a></li><li><a class="page-menu-link" href="#dgui_template_exp_builtin" data-menu-target="dgui_template_exp_builtin">Built-ins</a></li><li><a class="page-menu-link" href="#dgui_template_exp_methodcall" data-menu-target="dgui_template_exp_methodcall">Method call</a></li><li><a class="page-menu-link" href="#dgui_template_exp_missing" data-menu-target="dgui_template_exp_missing">Handling missing values</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_missing_default" data-menu-target="dgui_template_exp_missing_default">Default value operator</a></li><li><a class="page-menu-link" href="#dgui_template_exp_missing_test" data-menu-target="dgui_template_exp_missing_test">Missing value test operator</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_assignment" data-menu-target="dgui_template_exp_assignment">Assignment Operators</a></li><li><a class="page-menu-link" href="#dgui_template_exp_parentheses" data-menu-target="dgui_template_exp_parentheses">Parentheses</a></li><li><a class="page-menu-link" href="#dgui_template_exp_whitespace" data-menu-target="dgui_template_exp_whitespace">White-space in expressions</a></li><li><a class="page-menu-link" href="#dgui_template_exp_precedence" data-menu-target="dgui_template_exp_precedence">Operator precedence</a></li></ul> </div><p>When you supply values for interpolations or directive
+<ul><li><a class="page-menu-link" href="#exp_cheatsheet" data-menu-target="exp_cheatsheet">Quick overview (cheat sheet)</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct" data-menu-target="dgui_template_exp_direct">Specify values directly</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_direct_string" data-menu-target="dgui_template_exp_direct_string">Strings</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_number" data-menu-target="dgui_template_exp_direct_number">Numbers</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_boolean" data-menu-target="dgui_template_exp_direct_boolean">Booleans</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_seuqence" data-menu-target="dgui_template_exp_direct_seuqence">Sequences</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_ranges" data-menu-target="dgui_template_exp_direct_ranges">Ranges</a></li><li><a class="page-menu-link" href="#dgui_template_exp_direct_hash" data-menu-target="dgui_template_exp_direct_hash">Hashes</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_var" data-menu-target="dgui_template_exp_var">Retrieving variables</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_var_toplevel" data-menu-target="dgui_template_exp_var_toplevel">Top-level variables</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_hash" data-menu-target="dgui_template_exp_var_hash">Retrieving data from a hash</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_sequence" data-menu-target="dgui_template_exp_var_sequence">Retrieving data from a sequence</a></li><li><a class="page-menu-link" href="#dgui_template_exp_var_special" data-menu-target="dgui_template_exp_var_special">Special variables</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_stringop" data-menu-target="dgui_template_exp_stringop">String operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_stringop_interpolation" data-menu-target="dgui_template_exp_stringop_interpolation">Interpolation and concatenation</a></li><li><a class="page-menu-link" href="#dgui_template_exp_get_character" data-menu-target="dgui_template_exp_get_character">Getting a character</a></li><li><a class="page-menu-link" href="#dgui_template_exp_stringop_slice" data-menu-target="dgui_template_exp_stringop_slice">String slicing (substrings)</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_sequenceop" data-menu-target="dgui_template_exp_sequenceop">Sequence operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_sequenceop_cat" data-menu-target="dgui_template_exp_sequenceop_cat">Concatenation</a></li><li><a class="page-menu-link" href="#dgui_template_exp_seqenceop_slice" data-menu-target="dgui_template_exp_seqenceop_slice">Sequence slicing</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_hashop" data-menu-target="dgui_template_exp_hashop">Hash operations</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_hashop_cat" data-menu-target="dgui_template_exp_hashop_cat">Concatenation</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_arit" data-menu-target="dgui_template_exp_arit">Arithmetical calculations</a></li><li><a class="page-menu-link" href="#dgui_template_exp_comparison" data-menu-target="dgui_template_exp_comparison">Comparison</a></li><li><a class="page-menu-link" href="#dgui_template_exp_logicalop" data-menu-target="dgui_template_exp_logicalop">Logical operations</a></li><li><a class="page-menu-link" href="#dgui_template_exp_builtin" data-menu-target="dgui_template_exp_builtin">Built-ins</a></li><li><a class="page-menu-link" href="#dgui_template_exp_methodcall" data-menu-target="dgui_template_exp_methodcall">Method call</a></li><li><a class="page-menu-link" href="#dgui_template_exp_missing" data-menu-target="dgui_template_exp_missing">Handling missing values</a><ul><li><a class="page-menu-link" href="#dgui_template_exp_missing_default" data-menu-target="dgui_template_exp_missing_default">Default value operator</a></li><li><a class="page-menu-link" href="#dgui_template_exp_missing_test" data-menu-target="dgui_template_exp_missing_test">Missing value test operator</a></li></ul></li><li><a class="page-menu-link" href="#dgui_template_exp_assignment" data-menu-target="dgui_template_exp_assignment">Assignment Operators</a></li><li><a class="page-menu-link" href="#dgui_template_exp_parentheses" data-menu-target="dgui_template_exp_parentheses">Parentheses</a></li><li><a class="page-menu-link" href="#dgui_template_exp_whitespace" data-menu-target="dgui_template_exp_whitespace">White-space in expressions</a></li><li><a class="page-menu-link" href="#dgui_template_exp_comment" data-menu-target="dgui_template_exp_comment">Comments in expressions</a></li><li><a class="page-menu-link" href="#dgui_template_exp_precedence" data-menu-target="dgui_template_exp_precedence">Operator precedence</a></li></ul> </div><p>When you supply values for interpolations or directive
         parameters you can use variables or more complex expressions. For
         example, if x is the number 8 and y is 5, the value of <code class="inline-code">(x +
         y)/2</code> resolves to the numerical value 6.5.</p><p>Before we go into details, let&#39;s see some concrete
@@ -874,7 +874,7 @@ baz
             <code class="inline-code">book[test]</code>. More examples; these are all
             equivalent: <code class="inline-code">book.author.name</code>,
             <code class="inline-code">book[&quot;author&quot;].name</code>,
-            <code class="inline-code">book.author.[&quot;name&quot;]</code>,
+            <code class="inline-code">book.author[&quot;name&quot;]</code>,
             <code class="inline-code">book[&quot;author&quot;][&quot;name&quot;]</code>.</p>
 
             <p>When you use the dot syntax, the same restrictions apply
@@ -1112,7 +1112,7 @@ J</pre></div>
 
             
 
-            <p>You can a slice a string in the same way as you <a href="#dgui_template_exp_seqenceop_slice">slice a
+            <p>You can slice a string in the same way as you <a href="#dgui_template_exp_seqenceop_slice">slice a
             sequence</a> (see there), only here instead of sequence items
             you work with characters. Some differences are:</p>
 
@@ -1129,7 +1129,8 @@ J</pre></div>
                 multi-typed value), then slicing will slice the sequence
                 instead of the string. When you are processing XML, such
                 values are common. In such cases you can use
-                <code class="inline-code"><em class="code-color">someXMLnode</em>?string[<em class="code-color">range</em>]</code>.</p>
+                <code class="inline-code"><em class="code-color">someXMLnode</em>?string[<em class="code-color">range</em>]</code>
+                to fore string slicing.</p>
               </li>
 
               <li>
@@ -1437,8 +1438,6 @@ Slicing with right-unlimited ranges:
             </li>
           </ul>
 
-          
-
           <p>Example:</p>
 
           
@@ -1529,6 +1528,22 @@ ${12 % 6.9} &lt;#-- Prints 0 --&gt;</pre></div>
 <div class="code-wrapper"><pre class="code-block code-template">${-12 % -5} &lt;#-- Prints -2 --&gt;
 ${-12 % 5} &lt;#-- Prints -2 --&gt;
 ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
+
+          <p class="programmers-note">About the precision of the operations:
+          By default FreeMarker uses <code class="inline-code">BigDecimal</code>-s for all
+          arithmetical calculations, to avoid rounding and overflow/underflow
+          artifacts, and also keeps the result as
+          <code class="inline-code">BigDecimal</code>-s. So <code class="inline-code">+</code> (addition),
+          <code class="inline-code">-</code> (subtraction) and <code class="inline-code">*</code>
+          (multiplication) are "lossless". Again by default,
+          <code class="inline-code">/</code> (division) results are calculated to 12
+          decimals with half-up rounding (unless some operands have even more
+          decimals, in which case it&#39;s calculated with that much decimals).
+          All this behavior depends on the
+          <code class="inline-code">arithmetic_engine</code> configuration setting
+          (<code class="inline-code">Configurable.setArithmericEngine(ArithmericEngine)</code>)
+          though, and some application might use a different value than the
+          default, although that&#39;s highly uncommon.</p>
         
           
 
@@ -1606,33 +1621,29 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
           <code class="inline-code">&lt;#if (x &gt; y)&gt;</code>, although it&#39;s considered
           to be less elegant.</p>
 
-            <div class="callout note">
-    <strong class="callout-label">Note:</strong>
+          <p>FreeMarker supports some more syntactical alternatives:</p>
 
-            <p>FreeMarker supports some other alternatives too, but these
-            are deprecated:</p>
+          <ul>
+            <li>
+              <p><code class="inline-code">&amp;gt;</code> and
+              <code class="inline-code">&amp;lt;</code> can also be used, like in:
+              <code class="inline-code">&lt;#if x &amp;gt; y&gt;</code> or <code class="inline-code">&lt;#if
+              x &amp;gt;= y&gt;</code>. This isn&#39;t meant to be entered
+              manually; it&#39;s to work around cases where the template gets
+              XML/HTML escaped and the user can&#39;t easily prevent that
+              happening. Note that in general FTL does not support entity
+              references (the
+              <code class="inline-code">&amp;<em class="code-color">...</em>;</code> things)
+              in FTL tags; it&#39;s just an exception with these operators.</p>
+            </li>
 
-            <ul>
-              <li>
-                <p>Writing <code class="inline-code">&amp;gt;</code> and
-                <code class="inline-code">&amp;lt;</code> on the place of the problematic
-                relation marks, like in: <code class="inline-code">&lt;#if x &amp;gt;
-                y&gt;</code> or <code class="inline-code">&lt;#if x &amp;gt;=
-                y&gt;</code> . Note that in general FTL does not support
-                entity references (the
-                <code class="inline-code">&amp;<em class="code-color">...</em>;</code>
-                things) in FTL tags; it&#39;s just an exception with the
-                arithmetical comparisons.</p>
-              </li>
-
-              <li>
-                <p><code class="inline-code">\lt</code>, <code class="inline-code">\lte</code>,
-                <code class="inline-code">\gt</code> and <code class="inline-code">\gte</code> which are
-                the same as the ones without the backslash</p>
-              </li>
-            </ul>
-            </div>
-
+            <li>
+              <p>Deprecated forms: <code class="inline-code">\lt</code>,
+              <code class="inline-code">\lte</code>, <code class="inline-code">\gt</code> and
+              <code class="inline-code">\gte</code>. These are the same as the ones without
+              the backslash.</p>
+            </li>
+          </ul>
         
           
 
@@ -1680,6 +1691,38 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 &lt;#if <strong>!</strong>hot&gt; &lt;#-- here hot must be a boolean --&gt;
   It&#39;s not hot.
 &lt;/#if&gt;</pre></div>
+
+          <p>FreeMarker supports some more syntactical alternatives:</p>
+
+          <ul>
+            <li>
+              <p><code class="inline-code">\and</code> (since FreeMarker 2.3.27): In some
+              applications using <code class="inline-code">&amp;&amp;</code> causes problems
+              as it&#39;s not valid in XML or HTML. While FreeMarker templates was
+              never intended to be valid XML/HTML, only their output should be
+              that, in reality there are some applications that expect the
+              template itself to be valid XML/HTML regardless. This syntax is
+              a workaround for such cases. Also note that unlike with the
+              comparison operators, <code class="inline-code">and</code> without
+              <code class="inline-code">\</code> is not supported due to backward
+              compatibility restrictions.</p>
+            </li>
+
+            <li>
+              <p><code class="inline-code">&amp;amp;&amp;amp;</code> (since FreeMarker
+              2.3.27): This isn&#39;t meant to be entered manually; it&#39;s to work
+              around cases where the template gets XML/HTML escaped and the
+              user can&#39;t easily prevent that happening. Note that in general
+              FTL does not support entity references (the
+              <code class="inline-code">&amp;<em class="code-color">...</em>;</code> things)
+              in FTL tags; it&#39;s just an exception with these operators.</p>
+            </li>
+
+            <li>
+              <p>Deprecated forms: <code class="inline-code">&amp;</code> and
+              <code class="inline-code">|</code>. Don&#39;t use them anymore.</p>
+            </li>
+          </ul>
         
           
 
@@ -2181,6 +2224,33 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
 
 
 
+<h2 class="content-header header-section2" id="dgui_template_exp_comment">Comments in expressions</h2>
+
+
+          
+
+          <p>Expression may contain comments anywhere where they can
+          contain ignored white-space (<a href="#dgui_template_exp_whitespace">see above</a>). Comments
+          look like <code class="inline-code">&lt;#-- ... --&gt;</code> or as <code class="inline-code">[#--
+          ... --]</code>. Example:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign x &lt;#-- A comment --&gt; = 123 &lt;#-- A comment --&gt;&gt;
+&lt;#function f(x &lt;#-- A comment --&gt;, y &lt;#-- A comment --&gt;)&gt;
+  &lt;#return &lt;#-- A comment --&gt; 1 &lt;#-- A comment --&gt;&gt;
+&lt;/#function&gt;
+&lt;#assign someHash = {
+    &quot;foo&quot;: 123, &lt;#-- A comment --&gt;
+    &quot;bar&quot;: x &lt;#-- A comment --&gt; + 1,
+    &lt;#-- A comment --&gt;
+    &quot;baaz&quot;: f(1 &lt;#-- A comment --&gt;, 2 &lt;#-- A comment --&gt;)
+} &lt;#-- A comment --&gt;&gt;</pre></div>
+        
+          
+
+
+
 <h2 class="content-header header-section2" id="dgui_template_exp_precedence">Operator precedence</h2>
 
 
@@ -2327,7 +2397,7 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="http://freemarker.org/">What is FreeMarker?</a></li><li><a href="http://freemarker.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="http://freemarker.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://freemarker-online.kenshoo.com/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="http://freemarker.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2017-04-08T16:15:37Z" title="Saturday, April 8, 2017 4:15:37 PM GMT">2017-04-08 16:15:37 GMT</time>, for Freemarker 2.3.26 </p>
+<time itemprop="dateModified" datetime="2017-11-03T01:33:31Z" title="Friday, November 3, 2017 1:33:31 AM GMT">2017-11-03 01:33:31 GMT</time>, for Freemarker 2.3.27 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2017
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. </p>

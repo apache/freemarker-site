@@ -336,7 +336,7 @@
       href="ref_directive_include.html"
   ></topic>  
 <topic
-      label="list, else, items, sep, break"
+      label="list, else, items, sep, break, continue"
       href="ref_directive_list.html"
   ></topic>  
 <topic
@@ -479,6 +479,10 @@
       label="B: Version history"
       href="app_versions.html"
   >  
+<topic
+      label="2.3.27 (incubating at Apache)"
+      href="versions_2_3_27.html"
+  ></topic>  
 <topic
       label="2.3.26 (incubating at Apache)"
       href="versions_2_3_26.html"
