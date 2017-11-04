@@ -1748,13 +1748,14 @@ two freemarker.jar-s and unpredictable behavior!
               </listitem>
 
               <listitem>
-                <para>Update release date in the Manual, regenerate it.</para>
+                <para>Update release date in the Manual in the Version history
+                (now that we know it), then generate the Manual with
+                <literal>ant manualOnline</literal>.</para>
               </listitem>
 
               <listitem>
-                <para>Upload the new Manual (the online version, that is, the
-                one made with <literal>ant
-                manualFreemarkerOrg</literal>)</para>
+                <para>Upload the new Manual (the online version you have
+                generated in the last step, not the offline one)</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -1805,6 +1806,12 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>On the old FreeMarker mailing lists: freemarker-user,
                 freemarker-devel, freemarker-announce</para>
+              </listitem>
+
+              <listitem>
+                <para>Close issues on Jira that were resolved by this release
+                (the Version history in the Manual should contain links to
+                them)</para>
               </listitem>
             </itemizedlist>
           </listitem>
