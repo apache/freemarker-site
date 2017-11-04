@@ -11,7 +11,6 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect to the canonical domain: 
-RewriteCond %{HTTP_HOST} ^www\.freemarker\.org$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^freemarker\.incubator\. [NC,OR]
-RewriteCond %{HTTP_HOST} ^freemarker\.apache\. [NC]
-RewriteRule ^(.*)$ http://freemarker.org/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^(www\.)?freemarker\.org$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^freemarker\.incubator\. [NC]
+RewriteRule ^(.*)$ http://freemarker.apache.org/$1 [R=301,L]
