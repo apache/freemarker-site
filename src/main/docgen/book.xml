@@ -1807,13 +1807,12 @@ two freemarker.jar-s and unpredictable behavior!
                 <para>On the old FreeMarker mailing lists: freemarker-user,
                 freemarker-devel, freemarker-announce</para>
               </listitem>
-
-              <listitem>
-                <para>Close issues on Jira that were resolved by this release
-                (the Version history in the Manual should contain links to
-                them)</para>
-              </listitem>
             </itemizedlist>
+          </listitem>
+
+          <listitem>
+            <para>Close issues on Jira that were resolved by this release (the
+            Version history in the Manual should contain links to them)</para>
           </listitem>
         </orderedlist>
       </section>
