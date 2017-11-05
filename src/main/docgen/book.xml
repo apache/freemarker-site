@@ -1536,7 +1536,7 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Ensure that this is up to date:
-            https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/incubator/freemarker/KEY</para>
+            https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/incubator/freemarker/KEYS</para>
           </listitem>
 
           <listitem>
