@@ -1826,6 +1826,27 @@ two freemarker.jar-s and unpredictable behavior!
             <para>Close issues on Jira that were resolved by this release (the
             Version history in the Manual should contain links to them)</para>
           </listitem>
+
+          <listitem>
+            <para>Update try.freemarker.org to use the latest FreeMarker
+            version. About the deployment, see more <link
+            xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/try.freemarker.org+maintenance+and+installation">here...</link></para>
+          </listitem>
+
+          <listitem>
+            <para>If the release has introduced new syntax or built-ins or
+            directives, the FreeMarker dependency of JBoss Tools must be
+            updated. For that, you need to create a Jira issue at JBoss <link
+            xlink:href="https://issues.jboss.org/browse/JBIDE-25384">like
+            this</link> (so now you know the issue number), and then a commit
+            <link
+            xlink:href="https://github.com/jbosstools/jbosstools-freemarker/pull/84/commits/f112389e03269643729214af6a2b0c1596198008">like
+            this</link> (so now you can include the issue number in the commit
+            message), and a pull request that's then linked to the Jira issue
+            (Jira used to have a button for that). See also the README on
+            <link
+            xlink:href="https://github.com/jbosstools/jbosstools-freemarker">https://github.com/jbosstools/jbosstools-freemarker</link></para>
+          </listitem>
         </orderedlist>
       </section>
 
