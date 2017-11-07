@@ -2048,6 +2048,14 @@ two freemarker.jar-s and unpredictable behavior!
           targetdoc="githubMirrorDocgen"/>. Relevant branches:
           <literal>master</literal></para>
         </listitem>
+
+        <listitem>
+          <para><literal>freemarker-online-tester</literal>: The service
+          behind <olink targetdoc="onlineTemplateTester"/>. URL: <olink
+          targetdoc="gitOnlineTester"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorOnlineTester"/>. Relevant branches:
+          <literal>master</literal></para>
+        </listitem>
       </itemizedlist>
 
       <para>There are some other FreeMarker-related repositories, such FMPP

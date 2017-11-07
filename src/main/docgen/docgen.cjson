@@ -74,6 +74,8 @@ olinks: {
   githubMirrorDocgen: "https://github.com/apache/incubator-freemarker-docgen"
   gitSite: "https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git"
   githubMirrorSite: "https://github.com/apache/incubator-freemarker-site"
+  gitOnlineTester: "https://git-wip-us.apache.org/repos/asf/incubator-freemarker-online-tester.git"
+  githubMirrorOnlineTester: "https://github.com/apache/incubator-freemarker-online-tester"
   githubProject: "olink:githubMirrorFreemarker"
   githubProjectOld: "https://github.com/freemarker/"
   privateMailingList: "mailto:private@freemarker.incubator.apache.org"
