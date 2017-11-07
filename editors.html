@@ -70,39 +70,51 @@ ga('send', 'pageview');
 
 
             <td><p>This is developed as part of <a href="http://tools.jboss.org/">JBoss
-            Tools</a>.</p><p>On Eclipse <em>Neon</em> or
-            later, go to "Help" / "Eclipse
-            Marketplace...", search for "JBoss Tools"
-            (should give version 4.<strong>4</strong>.1 or
-            later), "Install". A tree of check boxes will appear,
-            uncheck all (by unchecking the root) except "FreeMarker
-            IDE".</p><p>On Eclipse <em>Mars or
-            Luna</em>, you should still install the "FreeMarker
-            IDE" plugin from JBoss Tool 4.<strong>4</strong>.1 or later, but the Eclipse Marketplace
-            won&#39;t show it. So in Eclipse, go to "Help" /
-            "Install New Software...", and copy-paste
-            http://download.jboss.org/jbosstools/neon/stable/updates/ into the
-            "Work with" field. While this URL is for Eclipse
-            Neon, the "FreeMarker IDE" component under it works
-            on Eclipse Mars too (maybe even on Luna). So expand the check box
-            tree appearing below, and select "FreeMarker IDE"
-            only. Don&#39;t left any other components checked. Then
-            "Next", "Next",
-            "Finish".</p><p>Report bugs found on the <a href="https://issues.jboss.org/issues/?jql=project%20%3D%20JBIDE%20AND%20component%20%3D%20freemarker">bug
+            Tools</a>.</p><p>On <em>Eclipse Oxygen</em>
+            (starting from JBoss Tools 4.5.1): Go to "Help" /
+            "Eclipse Marketplace...", search for "JBoss
+            Tools", "Install". A tree of check boxes will
+            appear, uncheck all (by unchecking the root) except "JBoss
+            Central Community". After installing that, in the Red Hat
+            Central tab (if it&#39;s not already open, click the Red Hat icon on
+            the toolbar), on that click the "Add Tools" icon (it
+            looks like a bunch of tools), and there check out
+            "Freemarker IDE", and press
+            "Install/Update" at the bottom.</p><p>On
+            <em>Eclipse Neon</em>, go to "Help" /
+            "Eclipse Marketplace...", search for "JBoss
+            Tools" (should give version 4.<strong>4</strong>.x), "Install". A tree of
+            check boxes will appear, uncheck all (by unchecking the root)
+            except "FreeMarker IDE".</p><p><em>On
+            older Eclipse versions</em> such as <em>Mars and
+            Luna</em>, the Marketplace only offers JBoss Tools versions
+            in which the FreeMarker support is way too old. But you can
+            install a newer "FreeMarker IDE" manually, and try if
+            it works on your older Eclipse version. The versions made for
+            Eclipse Neon has worked fine on Mars. In Eclipse, go to
+            "Help" / "Install New Software...", and
+            copy-paste
+            http://download.jboss.org/jbosstools/neon/stable/updates/ (or even
+            http://download.jboss.org/jbosstools/oxygen/stable/updates/) into
+            the "Work with" field. In the text filter field below
+            start to type "freemarker" (or expand the check box
+            tree appearing below), and select "FreeMarker IDE".
+            Be sure no other components was checked. Then "Next",
+            "Next", "Finish".</p><p>Report
+            bugs found on the <a href="https://issues.jboss.org/issues/?jql=project%20%3D%20JBIDE%20AND%20component%20%3D%20freemarker">bug
             tracker of the JBoss Tools project</a> (Key:
             <code class="inline-code">JBIDE</code>; Component:
             <code class="inline-code">freemarker</code>), and help to make the plugin better
             <a href="https://github.com/jbosstools/jbosstools-freemarker">on
             GitHub</a>!</p><p>To install the nightly development
             version, use this Eclipse update site:
-            http://download.jboss.org/jbosstools/neon/snapshots/builds/jbosstools-freemarker_master/latest/all/repo/
+            http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-freemarker_master/latest/all/repo/
             </p><p>Note: If the plugin comes with an older FreeMarker
             version than the one your application uses, it will mark the usage
-            of too fresh language features as errors, or the other way around.
-            To fix this, find <code class="inline-code">freemarker*.jar</code> inside the
-            installed plugin, under
-            <code class="inline-code">&lt;userHome&gt;/.eclipse/</code> or under the Eclipse
-            installation directory (you may need to search inside
+            of too fresh language features as errors. To fix this, find
+            <code class="inline-code">freemarker*.jar</code> inside the installed plugin,
+            under <code class="inline-code">&lt;userHome&gt;/.eclipse/</code> or under the
+            Eclipse installation directory (you may need to search inside
             <code class="inline-code">jar</code>-s). Exit Eclipse, and overwrite it with the
             <code class="inline-code">freemarker.jar</code> you want, but keep the file name
             of the replaced <code class="inline-code">jar</code>. You may also need to find
