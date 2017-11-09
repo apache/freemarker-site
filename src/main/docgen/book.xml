@@ -164,11 +164,11 @@
     downloading from a mirror please check the checksum and verify the OpenPGP
     compatible signature specified next to the download link (MD5, SHA256 and
     ASC files, all must come from the <link
-    xlink:href="http://www.apache.org/">www.apache.org</link> domain). The
+    xlink:href="https://www.apache.org/">www.apache.org</link> domain). The
     public keys used for signing are here: <link
-    xlink:href="http://www.apache.org/dist/incubator/freemarker/KEYS">KEYS</link>
+    xlink:href="https://www.apache.org/dist/incubator/freemarker/KEYS">KEYS</link>
     (also must come from www.apache.org). <link
-    xlink:href="http://www.apache.org/dyn/closer.cgi#verify">More about how to
+    xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about how to
     verify releases...</link> Note that such verification is only possible
     since 2.3.24.</para>
 
@@ -194,7 +194,7 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz">Binary
+          xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
           xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
@@ -206,7 +206,7 @@
 
         <listitem>
           <para><link
-          xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz">Source
+          xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz">Source
           release (tar.gz)</link> [<link
           xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
           [<link
@@ -244,7 +244,7 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz">binary</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz">binary</link>
       [<link
       xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
       [<link
@@ -252,7 +252,7 @@ two freemarker.jar-s and unpredictable behavior!
       [<link
       xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="http://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz">source</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz">source</link>
       [<link
       xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
       [<link
@@ -1163,13 +1163,13 @@ two freemarker.jar-s and unpredictable behavior!
         still iterate over it until it becomes good enough for merging.</para>
 
         <para>Note that you will need an <link
-        xlink:href="http://www.apache.org/dev/new-committers-guide.html#cla">Individual
+        xlink:href="https://www.apache.org/dev/new-committers-guide.html#cla">Individual
         Contributor License Agreement (ICLA) or Corporate CLA at the Apache
         Software Foundation</link>, or else we can't merge in your
         contribution.</para>
 
         <para>For more generic guidelines, see <link
-        xlink:href="http://www.apache.org/foundation/getinvolved.html">how to
+        xlink:href="https://www.apache.org/foundation/getinvolved.html">how to
         contribute to Apache projects</link>.</para>
       </section>
 
@@ -1438,7 +1438,7 @@ two freemarker.jar-s and unpredictable behavior!
         and should update this page where they has to deviate from it.</para>
 
         <para>For general info about making releases, please read <link
-        xlink:href="http://www.apache.org/legal/release-policy#archived">http://www.apache.org/legal/release-policy</link>
+        xlink:href="https://www.apache.org/legal/release-policy#archived">https://www.apache.org/legal/release-policy</link>
         and <link
         xlink:href="http://incubator.apache.org/guides/releasemanagement.html">http://incubator.apache.org/guides/releasemanagement.html</link>.
         The FreeMarker-specific additions to those are:</para>
@@ -1712,7 +1712,7 @@ two freemarker.jar-s and unpredictable behavior!
             role="bold">release</emphasis>/incubator/freemarker and commit
             them. (Of course get rid of any voting attempt numbers in the
             directory names.) Now they should appear under <link
-            xlink:href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</link>.</para>
+            xlink:href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</link>.</para>
           </listitem>
 
           <listitem>
@@ -1728,7 +1728,7 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Wait 24 hours so that the mirrors get synced. Check <link
-            xlink:href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</link>
+            xlink:href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</link>
             and <link
             xlink:href="http://archive.apache.org/dist/">http://archive.apache.org/dist/</link>.
             Check Maven Central repository too (in the case of non-RC
@@ -1737,7 +1737,7 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Delete the non-latest release of each maintained branch from
-            http://www.apache.org/dist/incubator/freemarker/ (Old ones are
+            https://www.apache.org/dist/incubator/freemarker/ (Old ones are
             automatically available on http://archive.apache.org/dist/)</para>
           </listitem>
 
