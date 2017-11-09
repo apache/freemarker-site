@@ -44,7 +44,7 @@ seoMeta: {
 }
 
 logo: {
-  href: "http://freemarker.apache.org/"
+  href: "https://freemarker.apache.org/"
   src: logo.png
   alt: "FreeMarker"
 }
