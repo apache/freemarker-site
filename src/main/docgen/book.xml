@@ -186,7 +186,7 @@
       site</link>.</para>
 
       <para><link
-      xlink:href="http://freemarker.org/docs/versions_2_3_27.html">See what's
+      xlink:href="http://freemarker.apache.org/docs/versions_2_3_27.html">See what's
       new...</link></para>
 
       <para>Downloads:</para>
@@ -1076,7 +1076,7 @@ two freemarker.jar-s and unpredictable behavior!
 
             <tr valign="top">
               <td><link
-              xlink:href="http://freemarker.org">freemarker.org</link></td>
+              xlink:href="http://freemarker.apache.org">freemarker.apache.org</link></td>
 
               <td>Not surprisingly, the pages you view right now are generated
               using FreeMarker.</td>
@@ -1460,7 +1460,7 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>RC documentation (Manual + JavaDoc) is only published
                 under
-                http://freemarker.org/builds/<replaceable>X.X.X</replaceable>-rc<replaceable>X</replaceable>/</para>
+                http://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>-rc<replaceable>X</replaceable>/</para>
               </listitem>
             </itemizedlist>
           </listitem>
@@ -1587,7 +1587,7 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Upload the content of <literal>documentation/_html</literal>
-            from the binary release to http://freemarker.org/<emphasis
+            from the binary release to http://freemarker.apache.org/<emphasis
             role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/documentation/
             (by committing it into the <quote>asf-site</quote> branch of
             https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git).
@@ -1665,7 +1665,7 @@ two freemarker.jar-s and unpredictable behavior!
 
                   <listitem>
                     <para>Link the change log (page under
-                    http://freemarker.org/builds/<replaceable>X.X.X</replaceable>/)</para>
+                    http://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>/)</para>
                   </listitem>
 
                   <listitem>
@@ -1748,7 +1748,7 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Update http://freemarker.org:</para>
+            <para>Update http://freemarker.apache.org:</para>
 
             <itemizedlist>
               <listitem>
@@ -1927,7 +1927,7 @@ two freemarker.jar-s and unpredictable behavior!
         <para>Docgen is not published to the Maven Central Repository, as it's
         only used as an internal build dependency. Currently, it's published
         manually to the internal Ivy repository of the project, which is under
-        http://freemarker.org/repos/ivy/. If you modify Docgen, don't forget
+        http://freemarker.apache.org/repos/ivy/. If you modify Docgen, don't forget
         to publish there, or else the next site update or FreeMarker release
         will use an outdated version. For that:</para>
 
@@ -1939,8 +1939,8 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>Upload the content of the resulting
             <literal>build\dummy-server-ivy-repo</literal> directory to
-            <literal>http://freemarker.org/repos/ivy/</literal>. See how to
-            update the contents of freemarker.org <link
+            <literal>http://freemarker.apache.org/repos/ivy/</literal>. See how to
+            update the contents of freemarker.apache.org <link
             linkend="updating-homepage">here...</link></para>
           </listitem>
 
@@ -2035,7 +2035,7 @@ two freemarker.jar-s and unpredictable behavior!
         </listitem>
 
         <listitem>
-          <para><literal>freemarker-site</literal>: Web site (freemarker.org)
+          <para><literal>freemarker-site</literal>: Web site (freemarker.apache.org)
           contents. URL: <olink targetdoc="gitSite"/>. GitHub mirror: <olink
           targetdoc="githubMirrorSite"/>. Relevant branches:
           <literal>master</literal></para>

@@ -95,7 +95,7 @@
   >
     <echo>Getting dependencies...</echo>
     <echo>-------------------------------------------------------</echo>
-    <ivy:settings id="remote" url="http://freemarker.org/repos/ivy/ivysettings-remote.xml" />
+    <ivy:settings id="remote" url="http://freemarker.apache.org/repos/ivy/ivysettings-remote.xml" />
     <!-- Build an own repository that will serve us even offline: -->
     <ivy:retrieve settingsRef="remote" sync="true"
       ivypattern=".ivy.part/repo/[organisation]/[module]/ivy-[revision].xml"
@@ -174,7 +174,7 @@
   
   <!--
     This meant to be called on the Continuous Integration server, so the
-    integration builds appear in the freemarker.org public Ivy repository.
+    integration builds appear in the freemarker.apache.org public Ivy repository.
     The artifacts must be already built.
   -->
   <target name="server-publish-last-build"
