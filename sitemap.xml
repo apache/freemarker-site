@@ -19,6 +19,9 @@
         <loc>https://freemarker.apache.org/report-security-vulnerabilities.html</loc>
       </url>
       <url>
+        <loc>https://freemarker.apache.org/sourcecode.html</loc>
+      </url>
+      <url>
         <loc>https://freemarker.apache.org/mailing-lists.html</loc>
       </url>
       <url>
@@ -29,9 +32,6 @@
       </url>
       <url>
         <loc>https://freemarker.apache.org/committer-howto.html</loc>
-      </url>
-      <url>
-        <loc>https://freemarker.apache.org/sourcecode.html</loc>
       </url>
       <url>
         <loc>https://freemarker.apache.org/history.html</loc>

@@ -88,14 +88,6 @@ var toc = {
 }
 ,
 {
-"title": "Bugs still in the old\n tracker",
-"url": "https://sourceforge.net/p/freemarker/bugs/",
-"isFile": true,
-"children": [
-]
-}
-,
-{
 "title": "Report security vulnerability",
 "url": "report-security-vulnerabilities.html",
 "isFile": true,
@@ -104,8 +96,24 @@ var toc = {
 }
 ,
 {
+"title": "Bugs still in the old\n tracker",
+"url": "https://sourceforge.net/p/freemarker/bugs/",
+"isFile": true,
+"children": [
+]
+}
+,
+{
 "title": "Ask help on Stack\n Overflow",
 "url": "https://stackoverflow.com/questions/ask?tags=freemarker",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Source code (Git)",
+"url": "sourcecode.html",
 "isFile": true,
 "children": [
 ]
@@ -240,13 +248,29 @@ var toc = {
 }
 ,
 {
-"title": "Miscellaneous",
+"title": "Foundation",
 "url": null,
 "isFile": true,
 "children": [
 {
-"title": "Source code (Git)",
-"url": "sourcecode.html",
+"title": "Apache Software\n Foundation",
+"url": "http://www.apache.org/",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Sponsorship",
+"url": "http://www.apache.org/foundation/sponsorship.html",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Thanks",
+"url": "http://www.apache.org/foundation/thanks.html",
 "isFile": true,
 "children": [
 ]
@@ -255,14 +279,6 @@ var toc = {
 {
 "title": "Project history",
 "url": "history.html",
-"isFile": true,
-"children": [
-]
-}
-,
-{
-"title": "Sourceforge.net project\n page",
-"url": "https://sourceforge.net/projects/freemarker/",
 "isFile": true,
 "children": [
 ]
