@@ -67,7 +67,6 @@ olinks: {
   // External URL-s:
   onlineTemplateTester: "http://try.freemarker.org/"
   twitter: "https://twitter.com/freemarker"
-  sourceforgeProject: "https://sourceforge.net/projects/freemarker/"
   gitFreemarker: "https://git-wip-us.apache.org/repos/asf/incubator-freemarker.git"
   githubMirrorFreemarker: "https://github.com/apache/incubator-freemarker"
   gitDocgen: "https://git-wip-us.apache.org/repos/asf/incubator-freemarker-docgen.git"

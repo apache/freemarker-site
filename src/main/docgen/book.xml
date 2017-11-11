@@ -168,8 +168,8 @@
     public keys used for signing are here: <link
     xlink:href="https://www.apache.org/dist/incubator/freemarker/KEYS">KEYS</link>
     (also must come from www.apache.org). <link
-    xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about how to
-    verify releases...</link> Note that such verification is only possible
+    xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about how
+    to verify releases...</link> Note that such verification is only possible
     since 2.3.24.</para>
 
     <simplesect>
@@ -186,8 +186,8 @@
       site</link>.</para>
 
       <para><link
-      xlink:href="https://freemarker.apache.org/docs/versions_2_3_27.html">See what's
-      new...</link></para>
+      xlink:href="https://freemarker.apache.org/docs/versions_2_3_27.html">See
+      what's new...</link></para>
 
       <para>Downloads:</para>
 
@@ -537,13 +537,6 @@ two freemarker.jar-s and unpredictable behavior!
       <para/>
     </section>
 
-    <section>
-      <title><olink targetdoc="oldBugTracker">Bugs still in the old
-      tracker</olink></title>
-
-      <para/>
-    </section>
-
     <section xml:id="report-security-vulnerabilities">
       <title>Report security vulnerability</title>
 
@@ -564,6 +557,13 @@ two freemarker.jar-s and unpredictable behavior!
       <para>Committers should <link
       linkend="handle-security-vulnerabilities">see here</link> how to handle
       reported security vulnerabilities.</para>
+    </section>
+
+    <section>
+      <title><olink targetdoc="oldBugTracker">Bugs still in the old
+      tracker</olink></title>
+
+      <para/>
     </section>
 
     <section>
@@ -1938,9 +1938,9 @@ two freemarker.jar-s and unpredictable behavior!
         <para>Docgen is not published to the Maven Central Repository, as it's
         only used as an internal build dependency. Currently, it's published
         manually to the internal Ivy repository of the project, which is under
-        https://freemarker.apache.org/repos/ivy/. If you modify Docgen, don't forget
-        to publish there, or else the next site update or FreeMarker release
-        will use an outdated version. For that:</para>
+        https://freemarker.apache.org/repos/ivy/. If you modify Docgen, don't
+        forget to publish there, or else the next site update or FreeMarker
+        release will use an outdated version. For that:</para>
 
         <orderedlist>
           <listitem>
@@ -1950,8 +1950,8 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>Upload the content of the resulting
             <literal>build\dummy-server-ivy-repo</literal> directory to
-            <literal>https://freemarker.apache.org/repos/ivy/</literal>. See how to
-            update the contents of freemarker.apache.org <link
+            <literal>https://freemarker.apache.org/repos/ivy/</literal>. See
+            how to update the contents of freemarker.apache.org <link
             linkend="updating-homepage">here...</link></para>
           </listitem>
 
@@ -2046,10 +2046,10 @@ two freemarker.jar-s and unpredictable behavior!
         </listitem>
 
         <listitem>
-          <para><literal>freemarker-site</literal>: Web site (freemarker.apache.org)
-          contents. URL: <olink targetdoc="gitSite"/>. GitHub mirror: <olink
-          targetdoc="githubMirrorSite"/>. Relevant branches:
-          <literal>master</literal></para>
+          <para><literal>freemarker-site</literal>: Web site
+          (freemarker.apache.org) contents. URL: <olink targetdoc="gitSite"/>.
+          GitHub mirror: <olink targetdoc="githubMirrorSite"/>. Relevant
+          branches: <literal>master</literal></para>
         </listitem>
 
         <listitem>
@@ -2186,13 +2186,6 @@ two freemarker.jar-s and unpredictable behavior!
           by the ASF.</emphasis></para>
         </listitem>
       </itemizedlist>
-    </section>
-
-    <section>
-      <title><olink targetdoc="sourceforgeProject">Sourceforge.net project
-      page</olink></title>
-
-      <para/>
     </section>
   </chapter>
 </book>
