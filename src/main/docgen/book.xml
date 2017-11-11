@@ -1359,8 +1359,19 @@ two freemarker.jar-s and unpredictable behavior!
 
         <itemizedlist>
           <listitem>
+            <para>You have checked all the changes. In particular, the files
+            (with a few exceptions like the <literal>README.md</literal>) must
+            have the standard Apache copyright headers, and must not state
+            that they have a different license.</para>
+          </listitem>
+
+          <listitem>
             <para>The contributor has an ICLA or CCLA at Apache (see on <link
-            xlink:href="http://people.apache.org/">http://people.apache.org/</link>)</para>
+            xlink:href="http://people.apache.org/">http://people.apache.org/</link>).
+            If not, the pull request can be merged only if the commit only did
+            trivial changes (like fixing typos) that would be easy to
+            replicate in case legal issues are raised later. In particular,
+            new files added is a sign that ICLA/CCLA will be needed.</para>
           </listitem>
 
           <listitem>
