@@ -92,6 +92,7 @@ olinks: {
   asfSponsorship: "http://www.apache.org/foundation/sponsorship.html"
   asfThanks: "http://www.apache.org/foundation/thanks.html"
   asfHome: "http://www.apache.org/"
+  asfIncubator: "http://incubator.apache.org/"
   
   emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
   kwritePluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
@@ -145,3 +146,7 @@ socialLinks: {
   "Twitter": { class: "twitter", href: "olink:twitter" }
   "Stack Overflow": { class: "stack-overflow", href: "olink:newStackOverflowQuestion" }
 }
+
+sideTOCLogos: [
+  { src: "images/apache-incubator.png", alt: "Apache Incubator", href: "olink:asfIncubator" }
+]
