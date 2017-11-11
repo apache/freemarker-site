@@ -105,7 +105,7 @@ var toc = {
 ,
 {
 "title": "Ask help on Stack\n Overflow",
-"url": "http://stackoverflow.com/questions/ask?tags=freemarker",
+"url": "https://stackoverflow.com/questions/ask?tags=freemarker",
 "isFile": true,
 "children": [
 ]

@@ -1,39 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url>
-        <loc>http://freemarker.apache.org/index.html</loc>
+        <loc>https://freemarker.apache.org/index.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/freemarkerdownload.html</loc>
+        <loc>https://freemarker.apache.org/freemarkerdownload.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/docs/index.html</loc>
+        <loc>https://freemarker.apache.org/docs/index.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/docs/api/index.html</loc>
+        <loc>https://freemarker.apache.org/docs/api/index.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/editors.html</loc>
+        <loc>https://freemarker.apache.org/editors.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/report-security-vulnerabilities.html</loc>
+        <loc>https://freemarker.apache.org/report-security-vulnerabilities.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/mailing-lists.html</loc>
+        <loc>https://freemarker.apache.org/mailing-lists.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/poweredBy.html</loc>
+        <loc>https://freemarker.apache.org/poweredBy.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/contribute.html</loc>
+        <loc>https://freemarker.apache.org/contribute.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/committer-howto.html</loc>
+        <loc>https://freemarker.apache.org/committer-howto.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/sourcecode.html</loc>
+        <loc>https://freemarker.apache.org/sourcecode.html</loc>
       </url>
       <url>
-        <loc>http://freemarker.apache.org/history.html</loc>
+        <loc>https://freemarker.apache.org/history.html</loc>
       </url>
 </urlset>

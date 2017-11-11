@@ -10,11 +10,11 @@
 <meta property="og:site_name" content="Apache FreeMarker">
 <meta property="og:title" content="Committer how-to">
 <meta property="og:locale" content="en_US">
-<meta property="og:url" content="http://freemarker.apache.org/committer-howto.html">
-<link rel="canonical" href="http://freemarker.apache.org/committer-howto.html">
+<meta property="og:url" content="https://freemarker.apache.org/committer-howto.html">
+<link rel="canonical" href="https://freemarker.apache.org/committer-howto.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1510096505462">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1510424020538">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -25,18 +25,18 @@ ga('send', 'pageview');
 </script>
 </head>
 <body itemscope itemtype="https://schema.org/Code">
-    <meta itemprop="url" content="http://freemarker.apache.org/">
+    <meta itemprop="url" content="https://freemarker.apache.org/">
     <meta itemprop="name" content="Apache FreeMarker">
 
   <!--[if lte IE 9]>
   <div style="background-color: #C00; color: #fff; padding: 12px 24px;">Please use a modern browser to view this website.</div>
-  <![endif]--><div class="header-top-bg"><div class="site-width header-top"><a class="logo" href="http://freemarker.apache.org/" role="banner">            <img itemprop="image" src="logo.png" alt="FreeMarker">
+  <![endif]--><div class="header-top-bg"><div class="site-width header-top"><a class="logo" href="https://freemarker.apache.org/" role="banner">            <img itemprop="image" src="logo.png" alt="FreeMarker">
 </a><ul class="tabs"><li class="current"><a href="index.html">Home</a></li><li><a href="docs/index.html">Manual</a></li><li><a class="external" href="docs/api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div>    <div class="main-content site-width">
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker","Community","Committer how-to"];</script>
-      <script src="toc.js?1510096505462"></script>
-      <script src="docgen-resources/main.min.js?1510096505462"></script>
+      <script src="toc.js?1510424020538"></script>
+      <script src="docgen-resources/main.min.js?1510424020538"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="title-wrapper">
 <h1 class="content-header header-section1" id="committer-howto" itemprop="headline">Committer how-to</h1>
@@ -85,7 +85,18 @@ ga('send', 'pageview');
 
         <ul>
           <li>
-            <p>The contributor has an ICLA or CCLA at Apache (see on <a href="http://people.apache.org/">http://people.apache.org/</a>)</p>
+            <p>You have checked all the changes. In particular, the files
+            (with a few exceptions like the <code class="inline-code">README.md</code>) must
+            have the standard Apache copyright headers, and must not state
+            that they have a different license.</p>
+          </li>
+
+          <li>
+            <p>The contributor has an ICLA or CCLA at Apache (see on <a href="http://people.apache.org/">http://people.apache.org/</a>).
+            If not, the pull request can be merged only if the commit only did
+            trivial changes (like fixing typos) that would be easy to
+            replicate in case legal issues are raised later. In particular,
+            new files added is a sign that ICLA/CCLA will be needed.</p>
           </li>
 
           <li>
@@ -172,7 +183,7 @@ ga('send', 'pageview');
         Release Manager. The Release Manager should follow the procedure here,
         and should update this page where they has to deviate from it.</p>
 
-        <p>For general info about making releases, please read <a href="http://www.apache.org/legal/release-policy#archived">http://www.apache.org/legal/release-policy</a>
+        <p>For general info about making releases, please read <a href="https://www.apache.org/legal/release-policy#archived">https://www.apache.org/legal/release-policy</a>
         and <a href="http://incubator.apache.org/guides/releasemanagement.html">http://incubator.apache.org/guides/releasemanagement.html</a>.
         The FreeMarker-specific additions to those are:</p>
 
@@ -193,7 +204,7 @@ ga('send', 'pageview');
               <li>
                 <p>RC documentation (Manual + JavaDoc) is only published
                 under
-                http://freemarker.org/builds/<em>X.X.X</em>-rc<em>X</em>/</p>
+                https://freemarker.apache.org/builds/<em>X.X.X</em>-rc<em>X</em>/</p>
               </li>
             </ul>
           </li>
@@ -316,7 +327,7 @@ ga('send', 'pageview');
 
           <li>
             <p>Upload the content of <code class="inline-code">documentation/_html</code>
-            from the binary release to http://freemarker.org/<strong>builds/<em>X.X.X</em>-voting</strong>/documentation/
+            from the binary release to https://freemarker.apache.org/<strong>builds/<em>X.X.X</em>-voting</strong>/documentation/
             (by committing it into the "asf-site" branch of
             https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git).
             The change log will be a link pointing to a page inside
@@ -393,7 +404,7 @@ ga('send', 'pageview');
 
                   <li>
                     <p>Link the change log (page under
-                    http://freemarker.org/builds/<em>X.X.X</em>/)</p>
+                    https://freemarker.apache.org/builds/<em>X.X.X</em>/)</p>
                   </li>
 
                   <li>
@@ -437,7 +448,7 @@ ga('send', 'pageview');
             https://dist.apache.org/repos/dist/<strong>dev</strong>/incubator/freemarker into the proper
             subdirectory of https://dist.apache.org/repos/dist/<strong>release</strong>/incubator/freemarker and commit
             them. (Of course get rid of any voting attempt numbers in the
-            directory names.) Now they should appear under <a href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</a>.</p>
+            directory names.) Now they should appear under <a href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</a>.</p>
           </li>
 
           <li>
@@ -450,7 +461,7 @@ ga('send', 'pageview');
           </li>
 
           <li>
-            <p>Wait 24 hours so that the mirrors get synced. Check <a href="http://www.apache.org/dist/incubator/freemarker/">http://www.apache.org/dist/incubator/freemarker/</a>
+            <p>Wait 24 hours so that the mirrors get synced. Check <a href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</a>
             and <a href="http://archive.apache.org/dist/">http://archive.apache.org/dist/</a>.
             Check Maven Central repository too (in the case of non-RC
             releases).</p>
@@ -458,7 +469,7 @@ ga('send', 'pageview');
 
           <li>
             <p>Delete the non-latest release of each maintained branch from
-            http://www.apache.org/dist/incubator/freemarker/ (Old ones are
+            https://www.apache.org/dist/incubator/freemarker/ (Old ones are
             automatically available on http://archive.apache.org/dist/)</p>
           </li>
 
@@ -469,7 +480,7 @@ ga('send', 'pageview');
           </li>
 
           <li>
-            <p>Update http://freemarker.org:</p>
+            <p>Update https://freemarker.apache.org:</p>
 
             <ul>
               <li>
@@ -649,7 +660,7 @@ ga('send', 'pageview');
         <p>Docgen is not published to the Maven Central Repository, as it&#39;s
         only used as an internal build dependency. Currently, it&#39;s published
         manually to the internal Ivy repository of the project, which is under
-        http://freemarker.org/repos/ivy/. If you modify Docgen, don&#39;t forget
+        https://freemarker.apache.org/repos/ivy/. If you modify Docgen, don&#39;t forget
         to publish there, or else the next site update or FreeMarker release
         will use an outdated version. For that:</p>
 
@@ -661,8 +672,8 @@ ga('send', 'pageview');
           <li>
             <p>Upload the content of the resulting
             <code class="inline-code">build\dummy-server-ivy-repo</code> directory to
-            <code class="inline-code">http://freemarker.org/repos/ivy/</code>. See how to
-            update the contents of freemarker.org <a href="#updating-homepage">here...</a></p>
+            <code class="inline-code">https://freemarker.apache.org/repos/ivy/</code>. See how to
+            update the contents of freemarker.apache.org <a href="#updating-homepage">here...</a></p>
           </li>
 
           <li>
@@ -711,9 +722,9 @@ ga('send', 'pageview');
         page</a> for further guidelines.</p>
       </div></div>      </div>
     </div>
-<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="index.html">What is FreeMarker?</a></li><li><a href="freemarkerdownload.html">Download</a></li><li><a href="docs/app_versions.html">Version history</a></li><li><a href="history.html">About us</a></li><li><a itemprop="license" href="docs/app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="docs/dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="docs/ref_directive_alphaidx.html">#directives</a></li><li><a href="docs/ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="docs/ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/incubator-freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="http://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/incubator-freemarker">GitHub</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="http://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
+<div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="index.html">What is FreeMarker?</a></li><li><a href="freemarkerdownload.html">Download</a></li><li><a href="docs/app_versions.html">Version history</a></li><li><a href="history.html">About us</a></li><li><a itemprop="license" href="docs/app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="docs/dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="docs/ref_directive_alphaidx.html">#directives</a></li><li><a href="docs/ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="docs/ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/incubator-freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/incubator-freemarker">GitHub</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2017-11-07T23:15:05Z" title="Tuesday, November 7, 2017 11:15:05 PM GMT">2017-11-07 23:15:05 GMT</time> </p>
+<time itemprop="dateModified" datetime="2017-11-11T18:13:40Z" title="Saturday, November 11, 2017 6:13:40 PM GMT">2017-11-11 18:13:40 GMT</time> </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2017
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="http://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. </p>
