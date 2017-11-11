@@ -17,7 +17,7 @@
 // specific language governing permissions and limitations
 // under the License.
 
-deployUrl: "http://freemarker.apache.org/"
+deployUrl: "https://freemarker.apache.org/"
 onlineTrackerHTML: "docgen-misc/googleAnalytics.html"
 offline: false
 simpleNavigationMode
@@ -44,7 +44,7 @@ seoMeta: {
 }
 
 logo: {
-  href: "http://freemarker.apache.org/"
+  href: "https://freemarker.apache.org/"
   src: logo.png
   alt: "FreeMarker"
 }
