@@ -11,7 +11,7 @@ RewriteEngine On
 RewriteBase /
 
 # Redirect to the canonical domain: 
-RewriteCond %{REQUEST_URI} !^/repos/ivy/
+#RewriteCond %{REQUEST_URI} !^/repos/ivy/
 RewriteCond %{HTTP_HOST} ^(www\.)?freemarker\.org$ [NC,OR]
 RewriteCond %{HTTP_HOST} ^freemarker\.incubator\. [NC,OR]
 RewriteCond %{HTTPS} ^off$ [NC]

@@ -17,8 +17,8 @@
   
   <resolvers>
     <url name="freemarker-devel-webserver" cache="freemarker-devel-cache">
-      <ivy pattern="http://freemarker.org/repos/ivy/[organisation]/[module]/ivy-[revision].xml" />
-      <artifact pattern="http://freemarker.org/repos/ivy/[organisation]/[module]/[artifact]-[revision].[ext]" />
+      <ivy pattern="https://freemarker.apache.org/repos/ivy/[organisation]/[module]/ivy-[revision].xml" />
+      <artifact pattern="https://freemarker.apache.org/repos/ivy/[organisation]/[module]/[artifact]-[revision].[ext]" />
     </url>
   </resolvers>
   <modules>
