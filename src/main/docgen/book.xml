@@ -573,6 +573,88 @@ two freemarker.jar-s and unpredictable behavior!
       <para/>
     </section>
 
+    <section xml:id="sourcecode">
+      <title>Source code (Git)</title>
+
+      <para>The key project repositories are at the Apache Software
+      Foundation, as part of the <link
+      xlink:href="http://incubator.apache.org/">Apache Incubation</link>
+      effort. These Apache repositories are mirrored back to GitHub
+      (read-only), which is practical for sending patches via usual GitHub
+      forking and pull requests. The key repositories are:</para>
+
+      <itemizedlist>
+        <listitem>
+          <para><literal>freemarker</literal>: The engine itself (i.e.,
+          <literal>freemarker.jar</literal>) and the documentation. URL:
+          <olink targetdoc="gitFreemarker"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorFreemarker"/>. Relevant branches (as of
+          2015-09-04):</para>
+
+          <itemizedlist>
+            <listitem>
+              <para><literal>2.3-gae</literal>: FreeMarker 2.3.x Google App
+              Engine compliant variant. <emphasis role="bold">Develop here by
+              default!</emphasis> This is where most developments are
+              committed, and are then merged into the other two branches
+              below.</para>
+            </listitem>
+
+            <listitem>
+              <para><literal>2.3</literal>: FreeMarker 2.3.x,
+              <quote>normal</quote> variant (this is what most users use). We
+              hardly ever commit into this directly, instead changes are
+              coming from<literal>2.3-gae</literal> via merging.</para>
+            </listitem>
+
+            <listitem>
+              <para><literal>3</literal>: FreeMarker 3.x.x. The next
+              generation of FreeMarker, heavily under development. <link
+              xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/FreeMarker+3">More
+              about FreeMarker 3...</link></para>
+            </listitem>
+          </itemizedlist>
+        </listitem>
+
+        <listitem>
+          <para><literal>freemarker-site</literal>: Web site
+          (freemarker.apache.org) contents. URL: <olink targetdoc="gitSite"/>.
+          GitHub mirror: <olink targetdoc="githubMirrorSite"/>. Relevant
+          branches: <literal>master</literal></para>
+        </listitem>
+
+        <listitem>
+          <para><literal>freemarker-docgen</literal>: DocBook transformation
+          used for generating both the FreeMarker Manual and the Web site.
+          URL: <olink targetdoc="gitDocgen"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorDocgen"/>. Relevant branches:
+          <literal>master</literal></para>
+        </listitem>
+
+        <listitem>
+          <para><literal>freemarker-online-tester</literal>: The service
+          behind <olink targetdoc="onlineTemplateTester"/>. URL: <olink
+          targetdoc="gitOnlineTester"/>. GitHub mirror: <olink
+          targetdoc="githubMirrorOnlineTester"/>. Relevant branches:
+          <literal>master</literal></para>
+        </listitem>
+      </itemizedlist>
+
+      <para>There are some other FreeMarker-related repositories, such FMPP
+      and Tutorials, which you can only find on the <olink
+      targetdoc="githubProjectOld">old GitHub project</olink> page, as they
+      aren't part of the ongoing Apache Incubation effort.</para>
+
+      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
+      incubation at The Apache Software Foundation (ASF). Incubation is
+      required of all newly accepted projects until a further review indicates
+      that the infrastructure, communications, and decision making process
+      have stabilized in a manner consistent with other successful ASF
+      projects. While incubation status is not necessarily a reflection of the
+      completeness or stability of the code, it does indicate that the project
+      has yet to be fully endorsed by the ASF.</emphasis></para>
+    </section>
+
     <section>
       <title><olink targetdoc="twitter">Get news on Twitter</olink></title>
 
@@ -2000,88 +2082,25 @@ two freemarker.jar-s and unpredictable behavior!
   </chapter>
 
   <chapter>
-    <title>Miscellaneous</title>
+    <title>Foundation</title>
 
-    <section xml:id="sourcecode">
-      <title>Source code (Git)</title>
+    <section>
+      <title><olink targetdoc="asfHome">Apache Software
+      Foundation</olink></title>
 
-      <para>The key project repositories are at the Apache Software
-      Foundation, as part of the <link
-      xlink:href="http://incubator.apache.org/">Apache Incubation</link>
-      effort. These Apache repositories are mirrored back to GitHub
-      (read-only), which is practical for sending patches via usual GitHub
-      forking and pull requests. The key repositories are:</para>
+      <para/>
+    </section>
 
-      <itemizedlist>
-        <listitem>
-          <para><literal>freemarker</literal>: The engine itself (i.e.,
-          <literal>freemarker.jar</literal>) and the documentation. URL:
-          <olink targetdoc="gitFreemarker"/>. GitHub mirror: <olink
-          targetdoc="githubMirrorFreemarker"/>. Relevant branches (as of
-          2015-09-04):</para>
+    <section>
+      <title><olink targetdoc="asfSponsorship">Sponsorship</olink></title>
 
-          <itemizedlist>
-            <listitem>
-              <para><literal>2.3-gae</literal>: FreeMarker 2.3.x Google App
-              Engine compliant variant. <emphasis role="bold">Develop here by
-              default!</emphasis> This is where most developments are
-              committed, and are then merged into the other two branches
-              below.</para>
-            </listitem>
+      <para/>
+    </section>
 
-            <listitem>
-              <para><literal>2.3</literal>: FreeMarker 2.3.x,
-              <quote>normal</quote> variant (this is what most users use). We
-              hardly ever commit into this directly, instead changes are
-              coming from<literal>2.3-gae</literal> via merging.</para>
-            </listitem>
+    <section>
+      <title><olink targetdoc="asfThanks">Thanks</olink></title>
 
-            <listitem>
-              <para><literal>3</literal>: FreeMarker 3.x.x. The next
-              generation of FreeMarker, heavily under development. <link
-              xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/FreeMarker+3">More
-              about FreeMarker 3...</link></para>
-            </listitem>
-          </itemizedlist>
-        </listitem>
-
-        <listitem>
-          <para><literal>freemarker-site</literal>: Web site
-          (freemarker.apache.org) contents. URL: <olink targetdoc="gitSite"/>.
-          GitHub mirror: <olink targetdoc="githubMirrorSite"/>. Relevant
-          branches: <literal>master</literal></para>
-        </listitem>
-
-        <listitem>
-          <para><literal>freemarker-docgen</literal>: DocBook transformation
-          used for generating both the FreeMarker Manual and the Web site.
-          URL: <olink targetdoc="gitDocgen"/>. GitHub mirror: <olink
-          targetdoc="githubMirrorDocgen"/>. Relevant branches:
-          <literal>master</literal></para>
-        </listitem>
-
-        <listitem>
-          <para><literal>freemarker-online-tester</literal>: The service
-          behind <olink targetdoc="onlineTemplateTester"/>. URL: <olink
-          targetdoc="gitOnlineTester"/>. GitHub mirror: <olink
-          targetdoc="githubMirrorOnlineTester"/>. Relevant branches:
-          <literal>master</literal></para>
-        </listitem>
-      </itemizedlist>
-
-      <para>There are some other FreeMarker-related repositories, such FMPP
-      and Tutorials, which you can only find on the <olink
-      targetdoc="githubProjectOld">old GitHub project</olink> page, as they
-      aren't part of the ongoing Apache Incubation effort.</para>
-
-      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
-      incubation at The Apache Software Foundation (ASF). Incubation is
-      required of all newly accepted projects until a further review indicates
-      that the infrastructure, communications, and decision making process
-      have stabilized in a manner consistent with other successful ASF
-      projects. While incubation status is not necessarily a reflection of the
-      completeness or stability of the code, it does indicate that the project
-      has yet to be fully endorsed by the ASF.</emphasis></para>
+      <para/>
     </section>
 
     <section xml:id="history">

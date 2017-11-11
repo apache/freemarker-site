@@ -89,6 +89,9 @@ olinks: {
   newBugReport: "https://issues.apache.org/jira/browse/FREEMARKER/"
   oldBugTracker: "https://sourceforge.net/p/freemarker/bugs/"
   newStackOverflowQuestion: "https://stackoverflow.com/questions/ask?tags=freemarker"
+  asfSponsorship: "http://www.apache.org/foundation/sponsorship.html"
+  asfThanks: "http://www.apache.org/foundation/thanks.html"
+  asfHome: "http://www.apache.org/"
   
   emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
   kwritePluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
