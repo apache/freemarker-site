@@ -89,12 +89,12 @@ olinks: {
   oldDevelMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.devel"
   newBugReport: "https://issues.apache.org/jira/browse/FREEMARKER/"
   oldBugTracker: "https://sourceforge.net/p/freemarker/bugs/"
-  newStackOverflowQuestion: "http://stackoverflow.com/questions/ask?tags=freemarker"
+  newStackOverflowQuestion: "https://stackoverflow.com/questions/ask?tags=freemarker"
   
-  emacsPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
-  kwritePluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
-  textPadPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/textpadftl.zip/download"
-  vimPluginDownload: "http://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.vim/download"
+  emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
+  kwritePluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
+  textPadPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/textpadftl.zip/download"
+  vimPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.vim/download"
 }
 
 tabs: {
