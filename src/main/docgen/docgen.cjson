@@ -93,6 +93,7 @@ olinks: {
   asfThanks: "http://www.apache.org/foundation/thanks.html"
   asfHome: "http://www.apache.org/"
   asfIncubator: "http://incubator.apache.org/"
+  asfLicense: "http://www.apache.org/licenses/"
   
   emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
   kwritePluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
