@@ -2079,35 +2079,6 @@ two freemarker.jar-s and unpredictable behavior!
         page</link> for further guidelines.</para>
       </section>
     </section>
-  </chapter>
-
-  <chapter>
-    <title>Foundation</title>
-
-    <section>
-      <title><olink targetdoc="asfHome">Apache Software
-      Foundation</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
-      <title><olink targetdoc="asfSponsorship">Sponsorship</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
-      <title><olink targetdoc="asfThanks">Thanks</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
-      <title><olink targetdoc="asfLicense">License</olink></title>
-
-      <para/>
-    </section>
 
     <section xml:id="history">
       <title>Project history</title>
@@ -2212,6 +2183,35 @@ two freemarker.jar-s and unpredictable behavior!
           and new features.</para>
         </listitem>
       </itemizedlist>
+    </section>
+  </chapter>
+
+  <chapter>
+    <title>ASF</title>
+
+    <section>
+      <title><olink targetdoc="asfHome">Apache Software
+      Foundation</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="asfSponsorship">Sponsorship</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="asfThanks">Thanks</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="asfLicense">License</olink></title>
+
+      <para/>
     </section>
   </chapter>
 </book>
