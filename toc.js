@@ -244,11 +244,19 @@ var toc = {
 }
 ]
 }
+,
+{
+"title": "Project history",
+"url": "history.html",
+"isFile": true,
+"children": [
+]
+}
 ]
 }
 ,
 {
-"title": "Foundation",
+"title": "ASF",
 "url": null,
 "isFile": true,
 "children": [
@@ -279,14 +287,6 @@ var toc = {
 {
 "title": "License",
 "url": "http://www.apache.org/licenses/",
-"isFile": true,
-"children": [
-]
-}
-,
-{
-"title": "Project history",
-"url": "history.html",
 "isFile": true,
 "children": [
 ]
