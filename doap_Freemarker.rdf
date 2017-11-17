@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl"?>
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+<!--
+  =======================================================================
+
+   Copyright (c) 2017-2017 The Apache Software Foundation. <=== The date needs to be changed when "TLPised"
+   All rights reserved.                                                                 <=== Not sure this is even needed, exists in OFBiz
+
+  =======================================================================
+-->
+  <Project rdf:about="https://freemarker.apache.org/">
+    <created>2015-09-02</created><!-- When Freemaker entered ASF, this must be later changed to real data of "TLPisation" -->
+    <name>Apache Freemarker</name><!-- I guess it's OK even if not TLP yet, else "Freemarker" will do -->
+    <shortdesc xml:lang="en">FreeMarker is a template engine, i.e. a generic tool to generate text output based on templates. FreeMarker is implemented in Java as a class library for programmers.</shortdesc>
+    <description>
+          Apache FreeMarker is a template engine: a Java library to generate text output (HTML web pages, e-mails, configuration files, sourcecode, etc.) based on templates and changing data.
+          Templates are written in the FreeMarker Template Language (FTL), which is a simple, specialized language (not a full-blown programminglanguage).
+          You meant to prepare the data to display in a real programming language, like issue database queries and do business calculations, and then the template displays that already prepareddata.
+          In the template you are focusing on how to present the data, and outside the template you are focusing on what data to present
+    </description>
+        <programming-language>Java</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/Java" /><!-- Categories are possibly to be modified -->
+    <category rdf:resource="http://projects.apache.org/category/html" />
+    <category rdf:resource="http://projects.apache.org/category/templating" />
+    <category rdf:resource="http://projects.apache.org/category/content" />
+    <homepage rdf:resource="http://freemarker.apache.org" />
+    <license rdf:resource="http://www.apache.org/licenses/" />
+    <asfext:pmc rdf:resource="http://freemarker.apache.org/pmc/freemarker.rdf" /><!-- Er... I'm a pPMC member but I don't even know where the list is and if there is even one :D Maybe normal for a pPMC? -->
+    <bug-database rdf:resource="https://issues.apache.org/jira/browse/FREEMARKER" />
+    <mailing-list rdf:resource="http://freemarker.apache.org/mailing-lists.html" />
+    <download-page rdf:resource="https://freemarker.apache.org/freemarkerdownload.html" />
+    <repository>
+      <GitRepository><!-- not sure about the GitRepository tag -->
+        <location rdf:resource="git://git.apache.org/incubator-freemarker.git"/><!-- be changed when "TLPised" -->
+        <browse rdf:resource="https://github.com/apache/incubator-freemarker"/><!-- be changed when "TLPised" -->
+      </GitRepository>
+    </repository>
+    <maintainer>
+    <maintainer>
+      <foaf:Person>
+        <foaf:name>Jacques Le Roux</foaf:name>
+        <foaf:mbox rdf:resource="mailto:jleroux@apache.org"/>
+      </foaf:Person>
+    </maintainer>
+    <release>
+        <Version>
+            <name>Apache Freemarker  2.3.27-incubating</name>
+            <created>2017-11-03</created>
+            <revision>2.3.27-incubating</revision>
+        </Version>
+        <Version><!-- I stopped there and I think we should not continue, so to be removed
+            <name>Pre Apache Freemarker  2.2.8</name>
+            <created>2004-06-15</created>
+            <revision>2.2.8</revision>
+        </Version>-->
+    </release>
+  </Project>
+</rdf:RDF>
