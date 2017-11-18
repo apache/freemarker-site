@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl"?>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+   
+         http://www.apache.org/licenses/LICENSE-2.0
+   
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<rdf:RDF xml:lang="en"
+         xmlns="http://usefulinc.com/ns/doap#"
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:asfext="http://projects.apache.org/ns/asfext#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <Project rdf:about="https://freemarker.apache.org/">
+    <created>2015-09-02</created><!-- When FreeMaker entered ASF, this must be later changed to real data of "TLPisation" -->
+    <name>Apache FreeMarker</name><!-- I guess it's OK even if not TLP yet, else "Freemarker" will do -->
+    <shortdesc xml:lang="en">FreeMarker is a template engine, i.e. a generic tool to generate text output based on templates. FreeMarker is implemented in Java as a class library for programmers.</shortdesc>
+    <description>
+          Apache FreeMarker is a template engine: a Java library to generate text output (HTML web pages, e-mails, configuration files, source code, etc.) based on templates and changing data.
+          Templates are written in the FreeMarker Template Language (FTL), which is a simple, specialized language (not a full-blown programming language).
+          You meant to prepare the data to display in a real programming language, like issue database queries and do business calculations, and then the template displays that already prepared data.
+          In the template you are focusing on how to present the data, and outside the template you are focusing on what data to present.
+    </description>
+    <programming-language>Java</programming-language>
+    <category rdf:resource="http://projects.apache.org/category/Java" /><!-- Categories are possibly to be modified -->
+    <category rdf:resource="http://projects.apache.org/category/html" />
+    <category rdf:resource="http://projects.apache.org/category/templating" />
+    <category rdf:resource="http://projects.apache.org/category/content" />
+    <homepage rdf:resource="https://freemarker.apache.org" />
+    <license rdf:resource="http://www.apache.org/licenses/" />
+    <asfext:pmc rdf:resource="http://people.apache.org/committers-by-project.html#freemarker" />
+    <bug-database rdf:resource="https://issues.apache.org/jira/browse/FREEMARKER" />
+    <mailing-list rdf:resource="https://freemarker.apache.org/mailing-lists.html" />
+    <download-page rdf:resource="https://freemarker.apache.org/freemarkerdownload.html" />
+
+    <repository>
+      <GitRepository><!-- not sure about the GitRepository tag -->
+        <location rdf:resource="git://git.apache.org/incubator-freemarker.git"/><!-- be changed when "TLPised" -->
+        <browse rdf:resource="https://github.com/apache/incubator-freemarker"/><!-- be changed when "TLPised" -->
+      </GitRepository>
+    </repository>
+
+    <developer>
+      <foaf:Person>
+        <foaf:name>Dániel Dékány</foaf:name>
+        <foaf:nick>ddekany</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:ddekany@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Evangelia Dendramis</foaf:name>
+        <foaf:nick>edendramis</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:edendramis@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Nan Lei</foaf:name>
+        <foaf:nick>nanlei</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:nanlei@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Woonsan Ko</foaf:name>
+        <foaf:nick>woonsan</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:woonsan@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Jacopo Cappellato</foaf:name>
+        <foaf:nick>jacopoc</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:jacopoc@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Jean-Frederic Clere</foaf:name>
+        <foaf:nick>jfclere</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:jfclere@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>David E. Jones</foaf:name>
+        <foaf:nick>jonesde</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:jonesde@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Ralph Goers</foaf:name>
+        <foaf:nick>rgoers</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:rgoers@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Sergio Fernández</foaf:name>
+        <foaf:nick>wikier</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:wikier@apache.org"/>
+        <foaf:homepage rdf:resource="https://www.wikier.org"/>
+        <owl:sameAs rdf:resource="http://www.wikier.org/foaf#wikier" />
+      </foaf:Person>
+    </developer>
+
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
+            <created>2017-11-03</created>
+            <revision>2.3.27-incubating</revision>
+        </Version>
+    </release>
+
+  </Project>
+
+</rdf:RDF>
