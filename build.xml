@@ -64,11 +64,16 @@
     />
   </target>
   
+  <target name="doap">
+    <copy file="doap.rdf" todir="build" />
+  </target>
+  
+  
   <target name="clean">
     <delete dir="build"/>
   </target>
   
-  <target name="all" depends="clean, site"/>
+  <target name="all" depends="clean, site, doap"/>
 
   <target name="pack" depends="site">
     <tar tarfile="build/site.tar" basedir="build/docgen"/>
