@@ -68,7 +68,6 @@
     <copy file="doap.rdf" todir="build" />
   </target>
   
-  
   <target name="clean">
     <delete dir="build"/>
   </target>
