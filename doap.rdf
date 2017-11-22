@@ -135,6 +135,27 @@
             <revision>2.3.27-incubating</revision>
         </Version>
     </release>
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
+            <created>2017-03-25</created>
+            <revision>2.3.26-incubating</revision>
+        </Version>
+    </release>
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
+            <created>2016-06-26</created>
+            <revision>2.3.25-incubating</revision>
+        </Version>
+    </release>
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
+            <created>2016-03-28</created>
+            <revision>2.3.24-incubating</revision>
+        </Version>
+    </release>
 
   </Project>
 
