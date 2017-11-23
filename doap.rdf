@@ -23,7 +23,7 @@
          xmlns:asfext="http://projects.apache.org/ns/asfext#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
-  <Project rdf:about="https://freemarker.apache.org/">
+  <Project rdf:about="https://freemarker.incubator.apache.org/">
     <name>Apache FreeMarker</name>
     <homepage rdf:resource="https://freemarker.apache.org" />
     <created>2015-09-02</created><!-- When FreeMaker entered ASF, this must be later changed to real data of "TLPisation" -->
