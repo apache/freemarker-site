@@ -1234,7 +1234,7 @@ two freemarker.jar-s and unpredictable behavior!
       <section xml:id="how-to-contribute">
         <title>How do I contribute?</title>
 
-        <para>First you should <link linkend="mailing-lists">subsrcribe to the
+        <para>First you should <link linkend="mailing-lists">subscribe to the
         developer mailing list</link> to discuss what you plan to do.</para>
 
         <para>Then, fork the project on Github, and start working on the
