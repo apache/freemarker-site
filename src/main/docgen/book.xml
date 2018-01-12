@@ -1234,21 +1234,27 @@ two freemarker.jar-s and unpredictable behavior!
       <section xml:id="how-to-contribute">
         <title>How do I contribute?</title>
 
-        <para>First you should <link linkend="mailing-lists">subscribe to the
-        developer mailing list</link> to discuss what you plan to do.</para>
+        <para>Contributions are preferably done with pull requests on GitHub.
+        Be sure that you are working on the correct branch! <link
+        linkend="sourcecode">See the repositories and branches
+        here!</link></para>
 
-        <para>Then, fork the project on Github, and start working on the
-        appropriate branch (see <link linkend="sourcecode">the repositories
-        and branches here</link>). See the <literal>README</literal> file in
-        it for more information about building and IDE setup. When your
-        contribution is ready, send a pull request on Github. Then we can
-        still iterate over it until it becomes good enough for merging.</para>
+        <para>Note that by sending a pull request you grant the Apache
+        Software Foundation sufficient rights to use and release the submitted
+        work under the Apache license. You grant the same rights (copyright
+        license, patent license, etc.) to the Apache Software Foundation as if
+        you have signed a <link
+        xlink:href="https://www.apache.org/dev/new-committers-guide.html#cla">Contributor
+        License Agreement</link>. For contributions that are judged to be
+        non-trivial, you will be asked to actually signing a Contributor
+        License Agreement.</para>
 
-        <para>Note that you will need an <link
-        xlink:href="https://www.apache.org/dev/new-committers-guide.html#cla">Individual
-        Contributor License Agreement (ICLA) or Corporate CLA at the Apache
-        Software Foundation</link>, or else we can't merge in your
-        contribution.</para>
+        <para>For substantial new features or deeper changes, first you should
+        <link linkend="mailing-lists">subscribe to the developer mailing
+        list</link> to discuss your plans.</para>
+
+        <para>See the <literal>README</literal> file in the project root for
+        more information about building and IDE setup.</para>
 
         <para>For more generic guidelines, see <link
         xlink:href="https://www.apache.org/foundation/getinvolved.html">how to
