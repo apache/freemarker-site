@@ -702,6 +702,9 @@ two freemarker.jar-s and unpredictable behavior!
       xlink:href="http://apache.org/foundation/mailinglists.html">see this
       page...</link></para>
 
+      <para>The mailing list archive can be found <olink
+      targetdoc="devMailingListArchive">here...</olink></para>
+
       <simplesect>
         <title>Retired mailing lists</title>
 

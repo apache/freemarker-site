@@ -81,6 +81,7 @@ olinks: {
   devMailingList: "mailto:dev@freemarker.incubator.apache.org"
   devMailingListSubscribe: "mailto:dev-subscribe@freemarker.incubator.apache.org"
   devMailingListUnsubscribe: "mailto:dev-unsubscribe@freemarker.incubator.apache.org"
+  devMailingListArchive: "https://lists.apache.org/list.html?dev@freemarker.apache.org"
   notificationsMailingListSubscribe: "mailto:notifications-subscribe@freemarker.incubator.apache.org"
   notificationsMailingListUnsubscribe: "mailto:notifications-unsubscribe@freemarker.incubator.apache.org"
   oldMailingListSubscription: "https://sourceforge.net/p/freemarker/mailman/"
