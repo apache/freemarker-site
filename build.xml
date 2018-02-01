@@ -21,6 +21,7 @@
 <project name="FreeMarker Site" default="site" basedir="."
   xmlns:ivy="antlib:org.apache.ivy.ant"
   xmlns:docgen="http://freemarker.org/docgen"
+  xmlns:rat="antlib:org.apache.rat.anttasks"
 >
 
   <!-- Ivy project coordinates: -->
@@ -123,5 +124,26 @@
     <ivy:resolve />
     <ivy:report todir="build/deps-report" />
   </target>
-  
+
+  <target name="rat" description="Generates Apache RAT report">
+    <ivy:cachepath pathid="ivy.dep" />
+    <taskdef
+      uri="antlib:org.apache.rat.anttasks"
+      resource="org/apache/rat/anttasks/antlib.xml"
+      classpathref="ivy.dep"
+    />  
+    
+    <rat:report reportFile="build/rat-report.txt">
+      <fileset dir="">
+        <exclude name="build/**"/>
+        <exclude name="ide-dependencies/**"/>
+        <exclude name=".*"/>
+        <exclude name=".*/**"/>
+      </fileset>
+    </rat:report>
+    <echo level="info"><!--
+    -->Rat reports were written into build/rat-report.txt<!--
+    --></echo>
+  </target>
+
 </project>

@@ -200,3 +200,33 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+=========================================================================
+
+The Apache FreeMarker (incubating) source code contains the following
+files without copyright header for technical reasons, which were created
+at the Apache FreeMarker (incubating) project, and hence are covered by
+the same license as the other source files of it:
+
+    src/main/image/logo-square-rounded.png
+    src/main/image/logo-square-rounded.svg
+    src/main/image/logo-square.png
+    src/main/image/logo-square.svg
+    src/main/docgen/favicon.png
+    src/main/docgen/images/overview.png
+    src/main/docgen/images/poweredby_big_ffffff.png
+    src/main/docgen/images/poweredby_ffffff.png
+    src/main/docgen/images/poweredby_sq_bluespot.png
+    src/main/docgen/images/poweredby_sq_simple.png
+    src/main/docgen/images/poweredby_sq_sunset.png
+    src/main/docgen/logo.png
+    
+=========================================================================
+
+The Apache FreeMarker (incubating) source code contains the following
+binaries, which were created at the Apache Incubator project, and hence
+are covered by the same license as Apache FreeMarker (incubating):
+    
+    src/main/docgen/images/apache-incubator.png
+    
+=========================================================================
