@@ -1,0 +1,76 @@
+# Licensed to the Apache Software Foundation (ASF) under one
+# or more contributor license agreements.  See the NOTICE file
+# distributed with this work for additional information
+# regarding copyright ownership.  The ASF licenses this file
+# to you under the Apache License, Version 2.0 (the
+# "License"); you may not use this file except in compliance
+# with the License.  You may obtain a copy of the License at
+# 
+#   http://www.apache.org/licenses/LICENSE-2.0
+# 
+# Unless required by applicable law or agreed to in writing,
+# software distributed under the License is distributed on an
+# "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+# KIND, either express or implied.  See the License for the
+# specific language governing permissions and limitations
+# under the License.
+
+# In src/:
+# --------
+
+# Generated files basically; see details in the files:
+src/main/docgen/docgen-misc/googleAnalytics.html
+
+# Binaries/archives created in the FreeMarker project:
+src/main/image/logo-square-rounded.png
+src/main/image/logo-square-rounded.svg
+src/main/image/logo-square.png
+src/main/image/logo-square.svg
+src/main/docgen/favicon.png
+src/main/docgen/images/overview.png
+src/main/docgen/images/poweredby_big_ffffff.png
+src/main/docgen/images/poweredby_ffffff.png
+src/main/docgen/images/poweredby_sq_bluespot.png
+src/main/docgen/images/poweredby_sq_simple.png
+src/main/docgen/images/poweredby_sq_sunset.png
+src/main/docgen/logo.png
+    
+# Binaries/archives created in the Incubatir project:
+src/main/docgen/images/apache-incubator.png
+
+# Tooling/IDE generated files:
+# ----------------------------
+
+ide-dependencies/**
+archive
+.git/**
+.ivy/**
+.bin/**
+bin/**
+build/**
+.build/**
+out/**
+.out/**
+target/**
+.settings/**
+.classpath
+.project
+.settings
+.idea/**
+*.iml
+*.iws
+*.ipr
+.idea_modules/**
+.out/**
+.gradle/**
+gradle/**
+.DS_Store*
+.AppleDouble
+.LSOverride
+.directory
+.Trash*
+
+# Well known files that need no license note:
+# -------------------------------------------
+
+README.md

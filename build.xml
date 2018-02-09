@@ -134,12 +134,7 @@
     />  
     
     <rat:report reportFile="build/rat-report.txt">
-      <fileset dir="">
-        <exclude name="build/**"/>
-        <exclude name="ide-dependencies/**"/>
-        <exclude name=".*"/>
-        <exclude name=".*/**"/>
-      </fileset>
+      <fileset dir="" excludesfile="rat-excludes" />
     </rat:report>
     <echo level="info"><!--
     -->Rat reports were written into build/rat-report.txt<!--
