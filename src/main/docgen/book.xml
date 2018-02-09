@@ -1637,10 +1637,10 @@ two freemarker.jar-s and unpredictable behavior!
             licenses. Skip to the next point if there were none! Otherwise,
             first you have to describe them in the related
             <literal>LICENSE</literal> files (there are several of them,
-            depending on if it's for the source, the binary distrobution, the
+            depending on if it's for the source, the binary distribution, the
             Maven jar artifact, or the Maven javadoc artifact), and then you
-            have to add them to related <literal>rat-excludes</literal> file
-            (there's one in the project root for the source release, and
+            have to add them to the related <literal>rat-excludes</literal>
+            file (there's one in the project root for the source release, and
             another in <literal>src/dist/bin</literal> for the binary release)
             so that the files won't be reported next time. Finally restart the
             process from rebuilding the distribution.</para>
