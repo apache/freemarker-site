@@ -378,7 +378,7 @@ two freemarker.jar-s and unpredictable behavior!
             for a long time, but as of JBoss Tools 4.5.3.AM2 they have removed
             it from the product. So it's likely that it will be maintained
             elsewhere in the future. Until that, you can <link
-            xlink:href="http://download.jboss.org/jbosstools/oxygen/snapshots/builds/jbosstools-freemarker_master/latest/all/repo/">install
+            xlink:href="http://download.jboss.org/jbosstools/oxygen/stable/updates/core/freemarker/1.5.302.v20171212-1534/">install
             the latest version from here</link>. Follow the instructions shown
             there (<quote>Help</quote> / <quote>Install New
             Software...</quote> etc.) While it's officially for Eclipse
