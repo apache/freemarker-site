@@ -96,6 +96,44 @@ under the License.
             </li>
 
             <li>
+              <p>Added new built-ins: <code class="inline-code">sequence?min</code> and
+              <code class="inline-code">sequence?max</code> (<a href="https://issues.apache.org/jira/browse/FREEMARKER-86">FREEMARKER-86</a>),
+              which return the smallest and greatest item from a list of
+              numbers or date/time/date-times. <a href="ref_builtins_sequence.html#ref_builtin_min_max">See more here...</a></p>
+            </li>
+
+            <li>
+              <p>The template language can now be configured to use
+              <code class="inline-code">[=<em class="code-color">expression</em>]</code>
+              instead of
+              <code class="inline-code">${<em class="code-color">expression</em>}</code> and
+              <code class="inline-code">#{<em class="code-color">expression</em>}</code>,
+              which is very useful if you have a lot of
+              <code class="inline-code">${<em class="code-color">...</em>}</code> or
+              <code class="inline-code">#{<em class="code-color">...</em>}</code> in the text
+              that you are generating, and so they should be static text. See
+              <a href="dgui_misc_alternativesyntax.html#dgui_misc_alternativesyntax_interpolation">more
+              about the square bracket interpolation syntax here.</a> The
+              template language can also be configured to only use
+              <code class="inline-code">${<em class="code-color">expression</em>}</code>, and
+              treat
+              <code class="inline-code">#{<em class="code-color">expression</em>}</code> as
+              static text. (See the <code class="inline-code">interpolation_syntax</code>
+              configuration setting, or the
+              <code class="inline-code">Configuration.setInterpolationSyntax(int)</code>
+              method.)</p>
+            </li>
+
+            <li>
+              <p>In string literals, <code class="inline-code">\=</code> is now a valid
+              escape sequence, resulting in a <code class="inline-code">=</code>. This is
+              useful when you are using the new
+              <code class="inline-code">[=<em class="code-color">exp</em>]</code>
+              interpolation syntax, which can be escaped in a string literal
+              like <code class="inline-code">&quot;Literal [\=x]&quot;</code>.</p>
+            </li>
+
+            <li>
               <p>Bug fixed (<a href="https://issues.apache.org/jira/browse/FREEMARKER-83">FREEMARKER-83</a>);
               this fix is only active when <a href="pgui_config_incompatible_improvements.html#pgui_config_incompatible_improvements_how_to_set"><code>incomplatible_improvements</code></a>
               is set to 2.3.28 (or higher). When calling a macro or function
@@ -108,6 +146,15 @@ under the License.
               evaluated in the context of the called macro or
               function.)</p>
             </li>
+
+            <li>
+              <p>Bug fixed: When
+              <code class="inline-code"><em class="code-color">string</em>?split(<em class="code-color">separator</em>)</code>
+              is called with <code class="inline-code">&quot;&quot;</code> as the argument, the string
+              will be split to characters now. Earlier it has thrown an
+              <code class="inline-code">IllegalArgumentException</code> (unless the
+              <code class="inline-code">r</code> flag was specified).</p>
+            </li>
           </ul>
         
           
@@ -118,6 +165,69 @@ under the License.
 
 
           <ul>
+            <li>
+              <p>Added new <code class="inline-code">ParserConfiguration</code> (such as
+              <code class="inline-code">Configuration</code> and
+              <code class="inline-code">TemplateConfiguration</code>) setting,
+              <code class="inline-code">interpolation_syntax</code>. It has 3 possible
+              values:</p>
+
+              <ul>
+                <li>
+                  <p><code class="inline-code">legacy</code> (the default):
+                  Interpolations look like
+                  <code class="inline-code">${<em class="code-color">...</em>}</code> or
+                  <code class="inline-code">#{<em class="code-color">...</em>}</code>. Note
+                  that <code class="inline-code">#{<em class="code-color">...</em>}</code> is
+                  deprecated for a long time now.</p>
+                </li>
+
+                <li>
+                  <p><code class="inline-code">dollar</code>: Interpolations look like
+                  <code class="inline-code">${<em class="code-color">...</em>}</code>. With
+                  this syntax,
+                  <code class="inline-code">#{<em class="code-color">...</em>}</code> will be
+                  just static text.</p>
+                </li>
+
+                <li>
+                  <p><code class="inline-code">square_bracket</code>: Interpolations look
+                  like <code class="inline-code">[=<em class="code-color">...</em>]</code>.
+                  With this syntax
+                  <code class="inline-code">${<em class="code-color">...</em>}</code> and
+                  <code class="inline-code">#{<em class="code-color">...</em>}</code> will be
+                  just static text. So it&#39;s useful if you generate output in a
+                  format where those (typically
+                  <code class="inline-code">${<em class="code-color">...</em>}</code>) are
+                  already used, such as to generate JSP pages, or to generate
+                  FreeMarker templates that use the default syntax.</p>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <p>When specifying the <code class="inline-code">output_format</code>
+              configuration settings with
+              <code class="inline-code">String</code>-<code class="inline-code">String</code> key-value
+              pairs (like with <code class="inline-code">Configuration.setSetting(String,
+              String)</code> or in a <code class="inline-code">.properties</code> file),
+              it&#39;s now possible to specify the standard output formats by name
+              rather than by class name (like
+              <code class="inline-code">output_format=HTML</code>). (Custom formats still
+              has to be referred by class name, as FreeMarker can&#39;t discover
+              what their names are, since it&#39;s not aware of the custom
+              classes.)</p>
+            </li>
+
+            <li>
+              <p>Added a new
+              <code class="inline-code">Configuration.removeTemplateFromCache</code>
+              overload that has a <code class="inline-code">Object
+              customLookupCondition</code> parameter. This is useful to
+              manually evacuate a template from the cache that was get via a
+              non-<code class="inline-code">null</code> custom lookup condition.</p>
+            </li>
+
             <li>
               <p>Added new property to
               <code class="inline-code">BeansWrapper.MethodAppearanceDecision</code>:
@@ -189,6 +299,24 @@ under the License.
             </li>
 
             <li>
+              <p>The default arithmetic engine
+              (<code class="inline-code">ArithmeticEngine.BIGDECIMAL_ENGINE</code>) can now
+              compare infinite (both positive and negative) to any other
+              standard type. Earlier, since <code class="inline-code">BigDecimal</code>
+              can&#39;t represent infinite, it was only working in certain special
+              cases. Also did some performance optimizations to slightly
+              decrease the impact and number of conversions to
+              <code class="inline-code">BigDecimal</code>.</p>
+            </li>
+
+            <li>
+              <p>Avoided possible performance bottleneck when executing
+              templates on many threads, caused be that
+              <code class="inline-code">java.beans.PropertyDescriptor.getReadMethod()</code>
+              is synchronized (<a href="https://issues.apache.org/jira/browse/FREEMARKER-80">FREEMARKER-80</a>).</p>
+            </li>
+
+            <li>
               <p>Added
               <code class="inline-code">TemplateModelUtils.getKeyValuePairIterator(TemplateHashModelEx)</code>
               static utility class, which can be used to get a
@@ -207,6 +335,43 @@ under the License.
               keys. Also, it nows keeps the iteration order of the hashes, as
               it unwraps into a <code class="inline-code">LinkedHashMap</code> instead of
               into a plain <code class="inline-code">HashMap</code>.</p>
+            </li>
+
+            <li>
+              <p><code class="inline-code">freemarker.ext.beans.HashAdapter.size()</code>
+              was overridden for better performance.</p>
+            </li>
+
+            <li>
+              <p>When the <a href="pgui_config_incompatible_improvements.html#pgui_config_incompatible_improvements_how_to_set"><code>incompatible_improvements</code>
+              setting</a> is set to 2.3.28 (or greater), fixed legacy
+              parser glitch where a tag can be closed with an illegal
+              <code class="inline-code">]</code> (when it&#39;s not part of an expression)
+              despite that the tag syntax is set to angle brackets. For
+              example <code class="inline-code">&lt;#if x]</code> worked just like
+              <code class="inline-code">&lt;#if x&gt;</code>. Note that it doesn&#39;t affect
+              the legal usage of <code class="inline-code">]</code>, like <code class="inline-code">&lt;#if
+              x[0]&gt;</code> works correctly without this fix as
+              well.</p>
+            </li>
+
+            <li>
+              <p>Fixed parser bug that disallowed using
+              <code class="inline-code">&gt;</code> at the top-level inside an interpolation
+              (<code class="inline-code">${...}</code>). It had the same reason why
+              <code class="inline-code">&lt;#if x &gt; y&gt;</code> doesn&#39;t work as naively
+              expected, but there&#39;s no real ambiguity in <code class="inline-code">${x &gt;
+              y}</code>, so now it&#39;s allowed. Note that <code class="inline-code">${(x &gt;
+              y)?c}</code> and <code class="inline-code">${(x &gt; y)?string(&#39;y&#39;,
+              &#39;n&#39;)}</code>, which are how booleans are commonly printed,
+              have always worked, as the <code class="inline-code">&gt;</code> operation is
+              not on the top-level inside the interpolation.</p>
+            </li>
+
+            <li>
+              <p>Fixed incorrect listing of valid
+              <code class="inline-code">roundingMode</code>-s in <a href="ref_builtins_number.html#topic.extendedJavaDecimalFormat">extended Java decimal
+              format</a> parsing error message</p>
             </li>
           </ul>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="app_versions.html"><span>Previous</span></a><a class="paging-arrow next" href="versions_2_3_27.html"><span>Next</span></a></div></div></div></div>      </div>

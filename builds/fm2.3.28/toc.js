@@ -823,6 +823,21 @@ var toc = {
 "url": "dgui_misc_alternativesyntax.html",
 "isFile": true,
 "children": [
+{
+"title": "Square bracket tag syntax",
+"url": "dgui_misc_alternativesyntax.html#dgui_misc_alternativesyntax_tag",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Square bracket interpolation syntax",
+"url": "dgui_misc_alternativesyntax.html#dgui_misc_alternativesyntax_interpolation",
+"isFile": false,
+"children": [
+]
+}
 ]
 }
 ]
@@ -2104,6 +2119,14 @@ var toc = {
 {
 "title": "last",
 "url": "ref_builtins_sequence.html#ref_builtin_last",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "min, max",
+"url": "ref_builtins_sequence.html#ref_builtin_min_max",
 "isFile": false,
 "children": [
 ]

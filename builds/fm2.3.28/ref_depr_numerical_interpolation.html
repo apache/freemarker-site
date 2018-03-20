@@ -60,7 +60,16 @@ under the License.
         setting</a> and <a href="ref_builtins_number.html#ref_builtin_string_for_number">the
         <code>string</code> built-in</a> instead. For formatting for
         computer audience (i.e., no localized formatting) use the <a href="ref_builtins_number.html#ref_builtin_c"><code>c</code> built-in</a> (like
-        <code class="inline-code"><em class="code-color">number</em>?c</code>).</p>
+        <code class="inline-code"><em class="code-color">number</em>?c</code>).</p><p>While by default
+        <code class="inline-code">#{<em class="code-color">...</em>}</code> is interpreted,
+        that can be disabled by setting the
+        <code class="inline-code">interpolation_syntax</code> configuration setting
+        (<code class="inline-code">Configuration.setInterpolationSyntax</code> in the Java
+        API) to <code class="inline-code">dollar</code>. Then
+        <code class="inline-code">#{<em class="code-color">...</em>}</code> will be just
+        static text, and only
+        <code class="inline-code">${<em class="code-color">...</em>}</code> will operate as
+        interpolation.</p>
           
 
 

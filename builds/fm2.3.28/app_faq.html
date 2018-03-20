@@ -121,6 +121,15 @@ under the License.
                 </a>
     </li>
     <li>
+      <a href="#faq_alternative_syntax_interpolation">
+
+            <code class="inline-code">${<em class="code-color">...</em>}</code> and/or
+            <code class="inline-code">#{<em class="code-color">...</em>}</code> is used in
+            the output I have to generate a lot, and FreeMarker tries to
+            resolve them. What to do?
+                </a>
+    </li>
+    <li>
       <a href="#faq_legal_variable_names">
 
             What are the legal variable names?
@@ -341,6 +350,25 @@ under the License.
               </li>
 
               <li>
+                <p><a href="dgui_misc_autoescaping.html">Auto-escaping
+                option</a> to escape HTML and XML special characters
+                printed with
+                <code class="inline-code">${<em class="code-color">...</em>}</code>. So you
+                can just write <code class="inline-code">${x}</code> instead of
+                <code class="inline-code">&lt;c:out value=&quot;${x}&quot;/&gt;</code>, and most
+                importantly, you can&#39;t accidentally forget to do
+                escaping.</p>
+              </li>
+
+              <li>
+                <p>Locale-sensitive number and date formatting by default.
+                When you output for a human audience, all you need to do is
+                just write <code class="inline-code">${x}</code> rather than
+                <code class="inline-code">&lt;fmt:formatNumber value=&quot;${x}&quot;
+                /&gt;</code>.</p>
+              </li>
+
+              <li>
                 <p>No servlet specific scopes and other highly technical
                 things in templates (unless, of course, you expose them into
                 the data-model deliberately). It was made for MVC from the
@@ -350,14 +378,6 @@ under the License.
               <li>
                 <p>You can load the templates from anywhere; from the class
                 path, from a data-base, etc.</p>
-              </li>
-
-              <li>
-                <p>Locale-sensitive number and date formatting by default.
-                When you output for a human audience, all you need to do is
-                just write <code class="inline-code">${x}</code> rather than
-                <code class="inline-code">&lt;fmt:formatNumber value=&quot;${x}&quot;
-                /&gt;</code>.</p>
               </li>
 
               <li>
@@ -829,11 +849,42 @@ under the License.
 
           <dd class="answer">
 
-            <p>Starting from FreeMarker 2.3.4 you can use
-            <code class="inline-code">[</code> and <code class="inline-code">]</code> instead of
-            <code class="inline-code">&lt;</code> and <code class="inline-code">&gt;</code>. For more
-            details <a href="dgui_misc_alternativesyntax.html">read
-            this...</a></p>
+            <p>You can use <code class="inline-code">[</code> and <code class="inline-code">]</code>
+            instead of <code class="inline-code">&lt;</code> and <code class="inline-code">&gt;</code>;
+            see more about square bracket tag syntax <a href="dgui_misc_alternativesyntax.html">here.</a> The comparison
+            operators, like <code class="inline-code">&lt;</code>, also have an alternative
+            syntax (<code class="inline-code">lt</code> and <code class="inline-code">&amp;lt;</code> in
+            this case); see more about them <a href="dgui_template_exp.html#dgui_template_exp_comparison">here</a>. Also, the
+            <code class="inline-code">&amp;&amp;</code> operator (which is not well-format
+            HTML/XML) can be written as <code class="inline-code">\and</code> or
+            <code class="inline-code">&amp;amp;&amp;amp;</code> since 2.3.27.</p>
+          </dd>
+
+        
+
+        
+          
+  <dt class="question" id="faq_alternative_syntax_interpolation">
+    9.&nbsp; 
+            <code class="inline-code">${<em class="code-color">...</em>}</code> and/or
+            <code class="inline-code">#{<em class="code-color">...</em>}</code> is used in
+            the output I have to generate a lot, and FreeMarker tries to
+            resolve them. What to do?
+          
+  </dt>
+
+
+          <dd class="answer">
+
+            <p>You can escape them like
+            <code class="inline-code">${&#39;$&#39;}{<em class="code-color">...</em>}</code>, however
+            that&#39;s impractical if you have to do that often. So starting from
+            FreeMarker 2.3.28 you can use
+            <code class="inline-code">[=<em class="code-color">...</em></code><code class="inline-code">]</code>
+            instead; see more about the square bracket interpolation syntax
+            <a href="dgui_misc_alternativesyntax.html">here.</a> If you
+            are going to generate JSP files or even FreeMarker templates, this
+            is very useful.</p>
           </dd>
 
         
@@ -841,7 +892,7 @@ under the License.
         
           
   <dt class="question" id="faq_legal_variable_names">
-    9.&nbsp; 
+    10.&nbsp; 
             What are the legal variable names?
 
             
@@ -865,7 +916,7 @@ under the License.
         
           
   <dt class="question" id="faq_strange_variable_name">
-    10.&nbsp; 
+    11.&nbsp; 
             How can I use variable names (macro name, parameter name)
             that contain minus sign (<code class="inline-code">-</code>), colon
             (<code class="inline-code">:</code>), dot (<code class="inline-code">.</code>), or or other
@@ -946,7 +997,7 @@ under the License.
         
           
   <dt class="question" id="faq_jsp_custom_tag_syntax">
-    11.&nbsp; 
+    12.&nbsp; 
             Why do I get &quot;java.lang.IllegalArgumentException: argument
             type mismatch&quot; when I try to use <em>X</em> JSP
             custom tag?
@@ -1007,7 +1058,7 @@ under the License.
         
           
   <dt class="question" id="faq_servlet_include">
-    12.&nbsp; 
+    13.&nbsp; 
             How to include other resources in a way as
             <code class="inline-code">jsp:include</code> does it?
           
@@ -1052,7 +1103,7 @@ under the License.
         
           
   <dt class="question" id="faq_parameter_unwrapping">
-    13.&nbsp; 
+    14.&nbsp; 
             How can I get the parameters to my
             plain-Java-method/<code class="inline-code">TemplateMethodModelEx</code>/<code class="inline-code">TemplateTransformModel</code>/<code class="inline-code">TemplateDirectiveModel</code>
             implementation as plain
@@ -1118,7 +1169,7 @@ under the License.
         
           
   <dt class="question" id="faq_nonstring_keys">
-    14.&nbsp; 
+    15.&nbsp; 
             Why I can&#39;t use non-string key in the
             <code class="inline-code">myMap[myKey]</code> expression? And what to do
             now?
@@ -1178,7 +1229,7 @@ under the License.
         
           
   <dt class="question" id="faq_simple_map">
-    15.&nbsp; 
+    16.&nbsp; 
             When I list the contents of a map (a hash) with
             <code class="inline-code">?keys</code>/<code class="inline-code">?values</code>, I get the
             <code class="inline-code">java.util.Map</code> methods mixed with the real map
@@ -1210,7 +1261,7 @@ under the License.
         
           
   <dt class="question" id="faq_modify_seq_and_map">
-    16.&nbsp; 
+    17.&nbsp; 
             How can I modify sequences (lists) and hashes (maps) in
             FreeMarker templates?
 
@@ -1361,7 +1412,7 @@ under the License.
         
           
   <dt class="question" id="faq_null">
-    17.&nbsp; 
+    18.&nbsp; 
             What about <code class="inline-code">null</code> and the FreeMarker
             template language? 
           
@@ -1421,7 +1472,7 @@ under the License.
         
           
   <dt class="question" id="faq_capture">
-    18.&nbsp; 
+    19.&nbsp; 
             How can I use the output of a directive (macro) in
             expressions (as a parameter to another directive)?
           
@@ -1445,7 +1496,7 @@ under the License.
         
           
   <dt class="question" id="faq_questionmark">
-    19.&nbsp; 
+    20.&nbsp; 
             Why do I have "?"-s in the output instead of
             character <em>X</em>?
           
@@ -1494,7 +1545,7 @@ t.process(root, out);
         
           
   <dt class="question" id="faq_retrieve_calculated_values">
-    20.&nbsp; 
+    21.&nbsp; 
             How to retrieve values calculated in templates after
             template execution done?
           
@@ -1537,7 +1588,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_assign_to_dynamic_variable_name">
-    21.&nbsp; 
+    22.&nbsp; 
             How to assign to (or <code class="inline-code">#import</code> into) a
             dynamically constructed variable name (like to name that&#39;s stored
             in another variable)?
@@ -1564,7 +1615,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_template_uploading_security">
-    22.&nbsp; 
+    23.&nbsp; 
             
 
             Can I allow users to upload templates and what are the
@@ -1665,7 +1716,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_implement_function_or_macro_in_java">
-    23.&nbsp; 
+    24.&nbsp; 
             How to implement a function or macro in Java Language
             instead of in the template language?
           
@@ -1702,7 +1753,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_nice_error_page">
-    24.&nbsp; 
+    25.&nbsp; 
             <a name="misc.faq.niceErrorPage"></a> In my Servlet
             based application, how do I show a nice error page instead of a
             stack trace when error occurs during template processing?
@@ -1771,7 +1822,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_html_editor_mangles">
-    25.&nbsp; 
+    26.&nbsp; 
             I&#39;m using a visual HTML editor that mangles template tags.
             Will you change the template language syntax to accommodate my
             editor?

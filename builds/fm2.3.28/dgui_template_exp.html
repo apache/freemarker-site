@@ -402,6 +402,16 @@ this is a backslash: \</pre></div>
 
 
                 <tr>
+                  <td><code class="inline-code">\=</code></td>
+
+
+                  <td>Equals character: <code class="inline-code">=</code> (Supported since
+                  FreeMarker 2.3.28.)</td>
+
+                </tr>
+
+
+                <tr>
                   <td><code class="inline-code">\\</code></td>
 
 
@@ -506,14 +516,19 @@ this is a backslash: \</pre></div>
             digit, you must use all 4 digits or else FreeMarker will
             misunderstand you.</p>
 
-            <p>Note that the character sequence <code class="inline-code">${</code> (and
-            <code class="inline-code">#{</code>) has special meaning. It&#39;s used to insert
-            the value of expressions (typically: the value of variables, as in
-            <code class="inline-code">&quot;Hello ${user}!&quot;</code>). This will be explained <a href="#dgui_template_exp_stringop_interpolation">later</a>.
+            <p>Note that the character sequence <code class="inline-code">${</code> and
+            <code class="inline-code">#{</code> (and rarely <code class="inline-code">[=</code> instead,
+            depending on <a href="dgui_misc_alternativesyntax.html">the
+            configured syntax</a>) has special meaning. They are used to
+            insert the value of expressions (typically: the value of
+            variables, as in <code class="inline-code">&quot;Hello ${user}!&quot;</code>). This will
+            be explained <a href="#dgui_template_exp_stringop_interpolation">later</a>.
             If you want to print <code class="inline-code">${</code> or
-            <code class="inline-code">#{</code>, you should either use raw string literals
-            as explained below, or escape the <code class="inline-code">{</code> like in
-            <code class="inline-code">&quot;foo $\{bar}&quot;</code>.</p>
+            <code class="inline-code">#{</code> (or <code class="inline-code">[=</code>), you should
+            either use raw string literals as explained below, or escape the
+            <code class="inline-code">{</code> like in <code class="inline-code">&quot;foo $\{bar}&quot;</code> (or
+            the <code class="inline-code">=</code> like in <code class="inline-code">&quot;foo
+            [\=bar]&quot;</code>).</p>
 
             
 
@@ -989,6 +1004,17 @@ baz
             similarly as in <span class="marked-text">text</span>
             sections</a> (so it goes through the same <em>locale
             sensitive</em> number and date/time formatting).</p>
+
+              <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+              <p>It&#39;s possible to configure FreeMarker&#39;s interpolation
+              syntax to use
+              <code class="inline-code">[=<em class="code-color">...</em>]</code> instead;
+              <a href="dgui_misc_alternativesyntax.html#dgui_misc_alternativesyntax_interpolation">see
+              here</a>.</p>
+              </div>
+
 
             <p>Example (assume that user is "Big Joe"):</p>
 

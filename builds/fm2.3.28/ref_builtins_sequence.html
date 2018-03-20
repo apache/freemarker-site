@@ -56,7 +56,7 @@ under the License.
 <h1 class="content-header header-section1" id="ref_builtins_sequence" itemprop="headline">Built-ins for sequences</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#ref_builtin_chunk" data-menu-target="ref_builtin_chunk">chunk</a></li><li><a class="page-menu-link" href="#ref_builtin_first" data-menu-target="ref_builtin_first">first</a></li><li><a class="page-menu-link" href="#ref_builtin_join" data-menu-target="ref_builtin_join">join</a></li><li><a class="page-menu-link" href="#ref_builtin_last" data-menu-target="ref_builtin_last">last</a></li><li><a class="page-menu-link" href="#ref_builtin_reverse" data-menu-target="ref_builtin_reverse">reverse</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_contains" data-menu-target="ref_builtin_seq_contains">seq_contains</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_index_of" data-menu-target="ref_builtin_seq_index_of">seq_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_last_index_of" data-menu-target="ref_builtin_seq_last_index_of">seq_last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_size" data-menu-target="ref_builtin_size">size</a></li><li><a class="page-menu-link" href="#ref_builtin_sort" data-menu-target="ref_builtin_sort">sort</a></li><li><a class="page-menu-link" href="#ref_builtin_sort_by" data-menu-target="ref_builtin_sort_by">sort_by</a></li></ul> </div>
+<ul><li><a class="page-menu-link" href="#ref_builtin_chunk" data-menu-target="ref_builtin_chunk">chunk</a></li><li><a class="page-menu-link" href="#ref_builtin_first" data-menu-target="ref_builtin_first">first</a></li><li><a class="page-menu-link" href="#ref_builtin_join" data-menu-target="ref_builtin_join">join</a></li><li><a class="page-menu-link" href="#ref_builtin_last" data-menu-target="ref_builtin_last">last</a></li><li><a class="page-menu-link" href="#ref_builtin_min_max" data-menu-target="ref_builtin_min_max">min, max</a></li><li><a class="page-menu-link" href="#ref_builtin_reverse" data-menu-target="ref_builtin_reverse">reverse</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_contains" data-menu-target="ref_builtin_seq_contains">seq_contains</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_index_of" data-menu-target="ref_builtin_seq_index_of">seq_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_seq_last_index_of" data-menu-target="ref_builtin_seq_last_index_of">seq_last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_size" data-menu-target="ref_builtin_size">size</a></li><li><a class="page-menu-link" href="#ref_builtin_sort" data-menu-target="ref_builtin_sort">sort</a></li><li><a class="page-menu-link" href="#ref_builtin_sort_by" data-menu-target="ref_builtin_sort_by">sort_by</a></li></ul> </div>
           
 
 
@@ -232,6 +232,43 @@ red, green, blue.
 
           <p>The last subvariable of the sequence. Template processing will
           die with error if the sequence is empty.</p>
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_min_max">min, max</h2>
+
+
+          
+
+          
+
+          <p>Returns the smaller (<code class="inline-code">min</code>) or greatest
+          (<code class="inline-code">max</code>) item of the sequence (or collection). The
+          items must be either all numbers, or all date/time values of the
+          same kind (date-only, time-only, date-time), or else a comparison
+          error will occur. These are the same restrictions as for the <a href="dgui_template_exp.html#dgui_template_exp_comparison"><code>&lt;</code> and
+          <code>&gt;</code> operators</a>.</p>
+
+          <p>Missing items (i.e., Java <code class="inline-code">null</code>-s) will be
+          silently ignored. If the sequence is empty or it only contains
+          missing (Java <code class="inline-code">null</code>) items, the result itself will
+          be missing.</p>
+
+          <p>Example:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">${[1, 2, 3]?min}
+${[1, 2, 3]?max}
+${[]?min!&#39;-&#39;}</pre></div>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-output">1
+3
+-</pre></div>
         
           
 

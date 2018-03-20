@@ -1532,6 +1532,10 @@ foobar</pre></div>
           <code class="inline-code">?split(&quot;,&quot;, &quot;r&quot;)</code> in the last example the last
           <code class="inline-code">&quot;&quot;</code> would be missing from the output.</p>
 
+          <p>If the 1st parameter is an empty string, the string will be
+          split to characters (since FreeMarker 2.3.28 - earlier this has only
+          worked with the <code class="inline-code">r</code> flag).</p>
+
             <div class="callout note">
     <strong class="callout-label">Note:</strong>
 

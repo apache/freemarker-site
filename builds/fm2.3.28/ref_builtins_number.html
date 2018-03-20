@@ -523,6 +523,16 @@ German people write: 12.345.678,00</pre></div>
 
             
 
+              <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+              <p>You need at least FreeMarker 2.3.24 for these to work.
+              Before that, extended Java decimal format parts are just
+              silently ignored by
+              <code class="inline-code">java.text.DecimalFormat</code>.</p>
+              </div>
+
+
             <p>FreeMarker extends the Java decimal format patterns with
             extra options. These options are name-value pairs, specified after
             two semicolons (<code class="inline-code">;;</code>) at the end of the format
@@ -539,6 +549,17 @@ Extended decimal format: ${10002.5?string[&quot;,000<strong>;; roundingMode=half
 
 <div class="code-wrapper"><pre class="code-block code-output">Standard decimal format: 10,002
 Extended decimal format: 10<strong>_</strong>00<strong>3</strong></pre></div>
+
+              <div class="callout warning">
+    <strong class="callout-label">Warning!</strong>
+
+              <p>A very easy mistake to make is just using a single
+              semicolon instead of two. It won&#39;t even result in an error, as
+              <code class="inline-code">java.text.DecimalFormat</code> thinks you have just
+              specified some weird format for negative numbers. So remember to
+              use two semicolons.</p>
+              </div>
+
 
             <p>Above, in the extended decimal format, we have specified
             half-up rounding mode and group separator <code class="inline-code">&quot;_&quot;</code>.
