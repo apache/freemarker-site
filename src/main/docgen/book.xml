@@ -61,18 +61,6 @@
     <para>See the <olink targetdoc="templateAuthorsGuide">Manual for more
     details...</olink></para>
 
-    <para><emphasis role="bold">Disclaimer: </emphasis><emphasis>Apache
-    FreeMarker is an effort undergoing incubation at The Apache Software
-    Foundation (ASF), sponsored by the <link
-    xlink:href="http://incubator.apache.org">Apache Incubator</link>.
-    Incubation is required of all newly accepted projects until a further
-    review indicates that the infrastructure, communications, and decision
-    making process have stabilized in a manner consistent with other
-    successful ASF projects. While incubation status is not necessarily a
-    reflection of the completeness or stability of the code, it does indicate
-    that the project has yet to be fully endorsed by the
-    ASF.</emphasis></para>
-
     <simplesect>
       <title>Features</title>
 
@@ -115,14 +103,13 @@
     <simplesect>
       <title>License</title>
 
-      <para>FreeMarker is Free software, licensed under the Apache License,
-      Version 2.0. <olink targetdoc="license">See the license
+      <para>Apache FreeMarker is Free software, licensed under the Apache
+      License, Version 2.0. <olink targetdoc="license">See the license
       here...</olink>.</para>
 
-      <para>As of 2.3.24-pre01 (2015-09-02) the copyright owner in the license
-      has changed to the Apache Software Foundation, as the project has
-      started <link xlink:href="http://incubator.apache.org/">Apache
-      Incubation</link> (see disclaimer earlier).</para>
+      <para>Note that the project is owned by the Apache Software Foundation
+      since 2.3.24-pre01 (2015-09-02). Earlier releases, such as 2.3.23, has a
+      different copyright owner.</para>
     </simplesect>
   </chapter>
 
@@ -132,18 +119,6 @@
     <para>Apache FreeMarker is a template engine: a Java library to generate
     text output (HTML web pages, e-mails, configuration files, source code,
     etc.) based on templates and changing data.</para>
-
-    <para xml:id="downloadApacheDisclaimer"><emphasis role="bold">Disclaimer:
-    </emphasis><emphasis>Apache FreeMarker is an effort undergoing incubation
-    at The Apache Software Foundation (ASF), sponsored by the <link
-    xlink:href="http://incubator.apache.org">Apache Incubator</link>.
-    Incubation is required of all newly accepted projects until a further
-    review indicates that the infrastructure, communications, and decision
-    making process have stabilized in a manner consistent with other
-    successful ASF projects. While incubation status is not necessarily a
-    reflection of the completeness or stability of the code, it does indicate
-    that the project has yet to be fully endorsed by the
-    ASF.</emphasis></para>
 
     <para><emphasis role="bold">Dependencies:</emphasis> FreeMarker has no
     required dependencies, except Java (Standard Edition) itself, with the
@@ -178,12 +153,10 @@
       <para>Released on 2017-11-03. Requires J2SE 1.5 or higher.</para>
 
       <para><emphasis role="bold">This is a stable, final release.</emphasis>
-      The <quote>incubating</quote> suffix is required by the Apache Software
-      Foundation until the project becomes a fully accepted (graduated) Apache
-      project. See <link linkend="downloadApacheDisclaimer">disclaimer
-      earlier</link> and the <link
-      xlink:href="http://incubator.apache.org">Apache Incubator web
-      site</link>.</para>
+      The <quote>incubating</quote> suffix was required by the Apache Software
+      Foundation as the project wasn't yet a fully accepted (graduated) Apache
+      project at the time of the release (it was in the <olink
+      targetdoc="asfIncubator">Apache Incubator</olink>).</para>
 
       <para><link
       xlink:href="https://freemarker.apache.org/docs/versions_2_3_27.html">See
@@ -549,12 +522,19 @@ two freemarker.jar-s and unpredictable behavior!
     <section xml:id="sourcecode">
       <title>Source code (Git)</title>
 
-      <para>The key project repositories are at the Apache Software
-      Foundation, as part of the <link
-      xlink:href="http://incubator.apache.org/">Apache Incubation</link>
-      effort. These Apache repositories are mirrored back to GitHub
-      (read-only), which is practical for sending patches via usual GitHub
-      forking and pull requests. The key repositories are:</para>
+      <para>The project repositories are at the Apache Software Foundation.
+      These Apache repositories are mirrored back to GitHub (read-only), which
+      is practical for sending patches via usual GitHub forking and pull
+      requests.</para>
+
+      <note>
+        <para>The project has graduated from the <link
+        xlink:href="http://incubator.apache.org/">Apache Incubation</link>
+        only recently (2018-03-21), and so you still need to add
+        <literal>incubator-</literal> before the repository names.</para>
+      </note>
+
+      <para>The key repositories are:</para>
 
       <itemizedlist>
         <listitem>
@@ -617,15 +597,6 @@ two freemarker.jar-s and unpredictable behavior!
       and Tutorials, which you can only find on the <olink
       targetdoc="githubProjectOld">old GitHub project</olink> page, as they
       aren't part of the ongoing Apache Incubation effort.</para>
-
-      <para><emphasis>Disclaimer: Apache FreeMarker is an effort undergoing
-      incubation at The Apache Software Foundation (ASF). Incubation is
-      required of all newly accepted projects until a further review indicates
-      that the infrastructure, communications, and decision making process
-      have stabilized in a manner consistent with other successful ASF
-      projects. While incubation status is not necessarily a reflection of the
-      completeness or stability of the code, it does indicate that the project
-      has yet to be fully endorsed by the ASF.</emphasis></para>
     </section>
 
     <section>
@@ -2128,16 +2099,12 @@ two freemarker.jar-s and unpredictable behavior!
           Apache License, Version 2.0. In 2015-09-02, the main code base was
           imported from GitHub into the Apache Software Foundation
           infrastructure, where development continues.</para>
+        </listitem>
 
-          <para><emphasis>Disclaimer: Apache FreeMarker is an effort
-          undergoing incubation at The Apache Software Foundation (ASF).
-          Incubation is required of all newly accepted projects until a
-          further review indicates that the infrastructure, communications,
-          and decision making process have stabilized in a manner consistent
-          with other successful ASF projects. While incubation status is not
-          necessarily a reflection of the completeness or stability of the
-          code, it does indicate that the project has yet to be fully endorsed
-          by the ASF.</emphasis></para>
+        <listitem>
+          <para>On 2018-03-21 FreeMarker has graduated from the <link
+          xlink:href="http://incubator.apache.org/">Apache Incubator</link> to
+          a top level project.</para>
         </listitem>
       </itemizedlist>
 

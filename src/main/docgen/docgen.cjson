@@ -149,6 +149,6 @@ socialLinks: {
   "Stack Overflow": { class: "stack-overflow", href: "olink:newStackOverflowQuestion" }
 }
 
-sideTOCLogos: [
-  { src: "images/apache-incubator.png", alt: "Apache Incubator", href: "olink:asfIncubator" }
-]
+// sideTOCLogos: [
+//  { src: "images/apache-incubator.png", alt: "Apache Incubator", href: "olink:asfIncubator" }
+// ]
