@@ -64,13 +64,6 @@
     </developer>
     <developer>
       <foaf:Person>
-        <foaf:name>Evangelia Dendramis</foaf:name>
-        <foaf:nick>edendramis</foaf:nick>
-        <foaf:mbox rdf:resource="mailto:edendramis@apache.org"/>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
         <foaf:name>Nan Lei</foaf:name>
         <foaf:nick>nanlei</foaf:nick>
         <foaf:mbox rdf:resource="mailto:nanlei@apache.org"/>
@@ -92,23 +85,9 @@
     </developer>
     <developer>
       <foaf:Person>
-        <foaf:name>Jean-Frederic Clere</foaf:name>
-        <foaf:nick>jfclere</foaf:nick>
-        <foaf:mbox rdf:resource="mailto:jfclere@apache.org"/>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
         <foaf:name>David E. Jones</foaf:name>
         <foaf:nick>jonesde</foaf:nick>
         <foaf:mbox rdf:resource="mailto:jonesde@apache.org"/>
-      </foaf:Person>
-    </developer>
-    <developer>
-      <foaf:Person>
-        <foaf:name>Ralph Goers</foaf:name>
-        <foaf:nick>rgoers</foaf:nick>
-        <foaf:mbox rdf:resource="mailto:rgoers@apache.org"/>
       </foaf:Person>
     </developer>
     <developer>
