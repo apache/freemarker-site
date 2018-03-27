@@ -405,6 +405,25 @@ under the License.
         error if it does exist but still can&#39;t be loaded due to syntactical
         errors in it, or due to some I/O error.</p>
 
+          <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+          <p>If the template fails with "I/O error when trying to
+          load optional template" when the template is missing, that&#39;s
+          often because your application uses a custom
+          <code class="inline-code">freemarker.cache.TemplateLoader</code> implementation,
+          which incorrectly (against the API documentation) throws an
+          <code class="inline-code">IOException</code> instead of returning
+          <code class="inline-code">null</code> if a template is not found. If it&#39;s so, the
+          Java programmers need to fix that. Another possibility is of course
+          that it was indeed not possible to tell if the template exists or
+          not due to some technical issues, in which case stopping with error
+          is the correct behavior. See the cause
+          <code class="inline-code">IOException</code> in the Java stack trace to figure out
+          which case it is.</p>
+          </div>
+
+
         <p>Example, in which depending on if <code class="inline-code">some.ftl</code>
         exists, we either print "Template was found:" and the
         include the template as <code class="inline-code">&lt;#include &#39;some.ftl&#39;&gt;</code>

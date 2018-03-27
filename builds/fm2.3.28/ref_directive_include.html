@@ -230,7 +230,31 @@ All rights reserved.</strong></pre></div>
               ...&gt;</code> will print nothing. When
               <code class="inline-code">false</code>, the template processing will stop with
               error if the template is missing. If you omit this option, then
-              it defaults to <code class="inline-code">false</code>.</p>
+              it defaults to <code class="inline-code">false</code>. A more flexible
+              approach to handle missing templates (such as if you need to do
+              something when the template is missing) is using the <a href="ref_specvar.html#ref_specvar_get_optional_template"><code>get_optional_template</code>
+              special variable</a>.</p>
+
+                <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+                <p>If <code class="inline-code">ignore_missing</code> is
+                <code class="inline-code">true</code>, yet the <code class="inline-code">include</code>
+                directive fails with "Template inclusion failed"
+                error when the template is missing, that&#39;s often because your
+                application uses a custom
+                <code class="inline-code">freemarker.cache.TemplateLoader</code>
+                implementation, which incorrectly (against the API
+                documentation) throws an <code class="inline-code">IOException</code>
+                instead of returning <code class="inline-code">null</code> if a template is
+                not found. If it&#39;s so, the Java programmers need to fix that.
+                Another possibility is of course that it was indeed not
+                possible to tell if the template exists or not due to some
+                technical issues, in which case stopping with error is the
+                correct behavior. See the cause <code class="inline-code">IOException</code>
+                in the Java stack trace to figure out which case it is.</p>
+                </div>
+
             </li>
           </ul>
 
