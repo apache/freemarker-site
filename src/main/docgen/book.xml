@@ -613,21 +613,19 @@ two freemarker.jar-s and unpredictable behavior!
         <listitem>
           <para><emphasis role="bold">Developer list</emphasis>:
           dev@freemarker.apache.org. <olink
-          targetdoc="devMailingListSubscribe"><link
-          xlink:href="mailto:dev-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
-          <olink targetdoc="devMailingListUnsubscribe"><link
-          xlink:href="mailto:dev-unsubscribe@freemarker.incubator.apache.org">Unsubscribe</link></olink>
-          (After clicking on these links, send the appearing empty mail as
+          targetdoc="devMailingListSubscribe">Subscribe</olink>, <olink
+          targetdoc="devMailingListUnsubscribe">Unsubscribe</olink> (After
+          clicking on these links, send the appearing empty mail as
           is.)</para>
         </listitem>
 
         <listitem>
           <para><emphasis role="bold">Commit and Jira
           notifications</emphasis>: notifications@freemarker.apache.org.
-          <olink targetdoc="notificationsMailingListSubscribe"><link
-          xlink:href="mailto:notifications-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
-          <olink targetdoc="notificationsMailingListUnsubscribe"><link
-          xlink:href="mailto:notifications-unsubscribe@freemarker.incubator.apache.org">Unsubscribe</link></olink>
+          <olink
+          targetdoc="notificationsMailingListSubscribe">Subscribe</olink>,
+          <olink
+          targetdoc="notificationsMailingListUnsubscribe">Unsubscribe</olink>
           (After clicking on these links, send the appearing empty mail as
           is.)</para>
         </listitem>
