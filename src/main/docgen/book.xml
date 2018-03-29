@@ -527,13 +527,6 @@ two freemarker.jar-s and unpredictable behavior!
       is practical for sending patches via usual GitHub forking and pull
       requests.</para>
 
-      <note>
-        <para>The project has graduated from the <link
-        xlink:href="http://incubator.apache.org/">Apache Incubation</link>
-        only recently (2018-03-21), and so you still need to add
-        <literal>incubator-</literal> before the repository names.</para>
-      </note>
-
       <para>The key repositories are:</para>
 
       <itemizedlist>
