@@ -286,8 +286,8 @@ two freemarker.jar-s and unpredictable behavior!
     <simplesect>
       <title>Other versions</title>
 
-      <para>Outdated versions starting from 2.3.24 RC01 are available from the
-      Apache archive: <link
+      <para>Outdated versions starting from 2.3.24 RC01 up to
+      2.3.27-incubating are available from the Apache archive: <link
       xlink:href="https://archive.apache.org/dist/incubator/freemarker/engine/">https://archive.apache.org/dist/incubator/freemarker/engine/</link>.
       Even older releases are available from the <link
       xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/">SourceForge
@@ -612,7 +612,7 @@ two freemarker.jar-s and unpredictable behavior!
       <itemizedlist>
         <listitem>
           <para><emphasis role="bold">Developer list</emphasis>:
-          dev@freemarker.incubator.apache.org. <olink
+          dev@freemarker.apache.org. <olink
           targetdoc="devMailingListSubscribe"><link
           xlink:href="mailto:dev-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
           <olink targetdoc="devMailingListUnsubscribe"><link
@@ -623,9 +623,8 @@ two freemarker.jar-s and unpredictable behavior!
 
         <listitem>
           <para><emphasis role="bold">Commit and Jira
-          notifications</emphasis>:
-          notifications@freemarker.incubator.apache.org. <olink
-          targetdoc="notificationsMailingListSubscribe"><link
+          notifications</emphasis>: notifications@freemarker.apache.org.
+          <olink targetdoc="notificationsMailingListSubscribe"><link
           xlink:href="mailto:notifications-subscribe@freemarker.incubator.apache.org">Subscribe</link></olink>,
           <olink targetdoc="notificationsMailingListUnsubscribe"><link
           xlink:href="mailto:notifications-unsubscribe@freemarker.incubator.apache.org">Unsubscribe</link></olink>
@@ -1417,8 +1416,7 @@ two freemarker.jar-s and unpredictable behavior!
         <itemizedlist>
           <listitem>
             <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
-            </literal>is usually
-            <literal>incubator-freemarker</literal></para>
+            </literal>is usually <literal>freemarker</literal></para>
           </listitem>
 
           <listitem>
@@ -1450,8 +1448,7 @@ two freemarker.jar-s and unpredictable behavior!
         <itemizedlist>
           <listitem>
             <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
-            </literal>is usually
-            <literal>incubator-freemarker</literal></para>
+            </literal>is usually <literal>freemarker</literal></para>
           </listitem>
 
           <listitem>
@@ -1477,9 +1474,7 @@ two freemarker.jar-s and unpredictable behavior!
         and should update this page where they has to deviate from it.</para>
 
         <para>For general info about making releases, please read <link
-        xlink:href="https://www.apache.org/legal/release-policy#archived">https://www.apache.org/legal/release-policy</link>
-        and <link
-        xlink:href="http://incubator.apache.org/guides/releasemanagement.html">http://incubator.apache.org/guides/releasemanagement.html</link>.
+        xlink:href="https://www.apache.org/legal/release-policy#archived">https://www.apache.org/legal/release-policy</link>.
         The FreeMarker-specific additions to those are:</para>
 
         <itemizedlist>
@@ -1601,14 +1596,14 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Ensure that this is up to date:
-            https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/incubator/freemarker/KEYS</para>
+            https://dist.apache.org/repos/dist/<replaceable>{dev,release}</replaceable>/freemarker/KEYS</para>
           </listitem>
 
           <listitem>
             <para>SVN commit the release files into the proper subdirectory of
             https://dist.apache.org/repos/<emphasis
-            role="bold">dist</emphasis>/dev/incubator/freemarker. Note that
-            this is <quote>dev/</quote>, not <quote>release/</quote>!</para>
+            role="bold">dist</emphasis>/dev/freemarker. Note that this is
+            <quote>dev/</quote>, not <quote>release/</quote>!</para>
           </listitem>
 
           <listitem>
@@ -1643,9 +1638,8 @@ two freemarker.jar-s and unpredictable behavior!
             from the binary release to https://freemarker.apache.org/<emphasis
             role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/documentation/
             (by committing it into the <quote>asf-site</quote> branch of
-            https://git-wip-us.apache.org/repos/asf/incubator-freemarker-site.git).
-            The change log will be a link pointing to a page inside
-            this.</para>
+            https://git-wip-us.apache.org/repos/asf/freemarker-site.git). The
+            change log will be a link pointing to a page inside this.</para>
           </listitem>
 
           <listitem>
@@ -1657,53 +1651,13 @@ two freemarker.jar-s and unpredictable behavior!
                 <para>Start a thread on the FreeMarker developer mailing list
                 with subject <quote>[VOTE] Release Apache FreeMarker
                 <replaceable>X.X.X</replaceable> (incubating)</quote>. You
-                should use an earlier release vote mail as a template.</para>
-              </listitem>
-
-              <listitem>
-                <para>Needs at least 3 +1 from PPMC (Podling PMC) members,
-                majority win, and minimum 72 hours (but see Apache
-                policies)</para>
-              </listitem>
-
-              <listitem>
-                <para>Post <quote>[RESULT][VOTE]</quote> mail to the
-                FreeMarker developer list. Again, you should use an earlier
-                release vote result mail as a template.</para>
-              </listitem>
-
-              <listitem>
-                <para>If it was a failed vote, after fixing the issues, the
-                release process restarts with a different dist.apache.org
-                URL-s (add an attempt number to the directory for
-                example)</para>
-              </listitem>
-            </orderedlist>
-          </listitem>
-
-          <listitem>
-            <para>If the voting on the the FreeMarker developer list has
-            passed, start similar <quote>[VOTE]</quote> thread on
-            general@incubator</para>
-
-            <orderedlist>
-              <listitem>
-                <para>Use an earlier FreeMarker release vote mail as the
-                template. Some notes:</para>
+                should use an earlier release vote mail as a template. Some
+                notes:</para>
 
                 <itemizedlist>
                   <listitem>
                     <para>Use your apache.org e-mail address as the
                     sender</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>Include short project description</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>Link the FreeMarker developer mailing list
-                    <quote>[RESULT][VOTE]</quote> mail</para>
                   </listitem>
 
                   <listitem>
@@ -1728,24 +1682,15 @@ two freemarker.jar-s and unpredictable behavior!
               </listitem>
 
               <listitem>
-                <para>Needs at least 3 binding +1, majority wins, at least 72
-                hours has passed</para>
+                <para>Needs at least 3 <quote>+1</quote> votes from FreeMarker
+                PMC members, majority win, and minimum 72 hours (but see
+                Apache policies)</para>
               </listitem>
 
               <listitem>
-                <para>Post <quote>[RESULT][VOTE]</quote> to general@incubator.
-                Use an earlier such mail as template. Some notes:</para>
-
-                <itemizedlist>
-                  <listitem>
-                    <para>Use your apache.org e-mail address as the
-                    sender</para>
-                  </listitem>
-
-                  <listitem>
-                    <para>Include short project description</para>
-                  </listitem>
-                </itemizedlist>
+                <para>Post <quote>[RESULT][VOTE]</quote> mail to the
+                FreeMarker developer list. Again, you should use an earlier
+                release vote result mail as a template.</para>
               </listitem>
 
               <listitem>
@@ -1760,12 +1705,12 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>Copy the release files over from
             https://dist.apache.org/repos/dist/<emphasis
-            role="bold">dev</emphasis>/incubator/freemarker into the proper
-            subdirectory of https://dist.apache.org/repos/dist/<emphasis
-            role="bold">release</emphasis>/incubator/freemarker and commit
-            them. (Of course get rid of any voting attempt numbers in the
-            directory names.) Now they should appear under <link
-            xlink:href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</link>.</para>
+            role="bold">dev</emphasis>/freemarker into the proper subdirectory
+            of https://dist.apache.org/repos/dist/<emphasis
+            role="bold">release</emphasis>/freemarker and commit them. (Of
+            course get rid of any voting attempt numbers in the directory
+            names.) Now they should appear under <link
+            xlink:href="https://www.apache.org/dist/freemarker/">https://www.apache.org/dist/freemarker/</link>.</para>
           </listitem>
 
           <listitem>
@@ -1781,16 +1726,16 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Wait 24 hours so that the mirrors get synced. Check <link
-            xlink:href="https://www.apache.org/dist/incubator/freemarker/">https://www.apache.org/dist/incubator/freemarker/</link>
+            xlink:href="https://www.apache.org/dist/freemarker/">https://www.apache.org/dist/freemarker/</link>
             and <link
-            xlink:href="http://archive.apache.org/dist/">http://archive.apache.org/dist/</link>.
+            xlink:href="http://archive.apache.org/dist/freemarker/">http://archive.apache.org/dist/freemarker/</link>.
             Check Maven Central repository too (in the case of non-RC
             releases).</para>
           </listitem>
 
           <listitem>
             <para>Delete the non-latest release of each maintained branch from
-            https://www.apache.org/dist/incubator/freemarker/ (Old ones are
+            https://www.apache.org/dist/freemarker/ (Old ones are
             automatically available on http://archive.apache.org/dist/)</para>
           </listitem>
 
@@ -1830,16 +1775,10 @@ two freemarker.jar-s and unpredictable behavior!
 
             <itemizedlist>
               <listitem>
-                <para>Release on sourceforge.net. The README.md should note
-                that it's for convenience only, and point to the official
-                download page.</para>
-              </listitem>
-
-              <listitem>
-                <para>Update Apache project status page:
-                https://svn.apache.org/repos/asf/incubator/public/trunk/content/projects/freemarker.xml.
-                (The actual status web page will be automatically updated
-                daily.)</para>
+                <para>Release on sourceforge.net. The
+                <literal>README.md</literal> should note that it's for
+                convenience only, and point to the official download
+                page.</para>
               </listitem>
 
               <listitem>
