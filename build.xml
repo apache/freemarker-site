@@ -43,7 +43,7 @@
     </tstamp>
   </target>
 
-  <target name="site">
+  <target name="site" depends="init">
     <!-- Ensure that we have an empty build/site directory: -->
     <mkdir dir="build/site"/>
     <delete includeEmptyDirs="true">
