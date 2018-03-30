@@ -141,8 +141,8 @@
     ASC files, all must come from the <link
     xlink:href="https://www.apache.org/">www.apache.org</link> domain). The
     public keys used for signing are here: <link
-    xlink:href="https://www.apache.org/dist/incubator/freemarker/KEYS">KEYS</link>
-    (also must come from www.apache.org). <link
+    xlink:href="https://www.apache.org/dist/freemarker/KEYS">KEYS</link> (also
+    must come from www.apache.org). <link
     xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about how
     to verify releases...</link> Note that such verification is only possible
     since 2.3.24.</para>
@@ -167,25 +167,25 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz">Binary
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz">Source
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -217,21 +217,21 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz">binary</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz">binary</link>
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz">source</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz">source</link>
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/incubator/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.asc">ASC</link>].
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
