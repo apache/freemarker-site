@@ -1539,10 +1539,10 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Ensure that the version number in the title and version
-            history of the Manual is up to date. Also the release date in the
-            Manual in the version history has to be updated. That's tricky as
+            history of the Manual is up to date. Also the release date Version
+            history section of the Manual has to be updated. That's tricky as
             you can't know it exactly, yet you can't change it when the actual
-            release is about to be done, as that would change the release
+            release is about to hapen, as that would change the release
             artifacts that were voted upon. So write the current date and
             <quote>+ release process</quote> after it; that's how it will be
             in the released artifacts.</para>
@@ -1599,8 +1599,8 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>SVN commit the release files into the proper subdirectory of
-            https://dist.apache.org/repos/<emphasis
-            role="bold">dist</emphasis>/dev/freemarker. Note that this is
+            https://dist.apache.org/repos/dist/<emphasis
+            role="bold">dev</emphasis>/freemarker. Note that this is
             <quote>dev/</quote>, not <quote>release/</quote>!</para>
           </listitem>
 
@@ -1626,7 +1626,8 @@ two freemarker.jar-s and unpredictable behavior!
                 manually (on the <quote>Content</quote> tab). Then
                 <quote>Close</quote> the repository. Press
                 <quote>Refresh</quote> until it's successfully
-                <quote>closed</quote>.</para>
+                <quote>closed</quote>. (Be careful, do NOT
+                <quote>Release</quote>!)</para>
               </listitem>
             </orderedlist>
           </listitem>
@@ -1648,9 +1649,8 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>Start a thread on the FreeMarker developer mailing list
                 with subject <quote>[VOTE] Release Apache FreeMarker
-                <replaceable>X.X.X</replaceable> (incubating)</quote>. You
-                should use an earlier release vote mail as a template. Some
-                notes:</para>
+                <replaceable>X.X.X</replaceable></quote>. You should use an
+                earlier release vote mail as a template. Some notes:</para>
 
                 <itemizedlist>
                   <listitem>
@@ -1660,17 +1660,18 @@ two freemarker.jar-s and unpredictable behavior!
 
                   <listitem>
                     <para>Link artifacts. The src artifact is the release
-                    that's voted upon. The bin is for convenience only.</para>
+                    that's voted upon. The bin is for convenience only, though
+                    of course still need to be checked.</para>
                   </listitem>
 
                   <listitem>
                     <para>Include and link via the Git commit
-                    <emphasis>hash</emphasis></para>
+                    <emphasis>hash</emphasis> (not a tag)</para>
                   </listitem>
 
                   <listitem>
                     <para>Link the change log (page under
-                    https://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>/)</para>
+                    https://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>-voting/)</para>
                   </listitem>
 
                   <listitem>
@@ -1682,7 +1683,8 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>Needs at least 3 <quote>+1</quote> votes from FreeMarker
                 PMC members, majority win, and minimum 72 hours (but see
-                Apache policies)</para>
+                Apache policies). Generally, we wait more, so that more people
+                can test there release.</para>
               </listitem>
 
               <listitem>
@@ -1825,17 +1827,11 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>If the release has introduced new syntax or built-ins or
-            directives, the FreeMarker dependency of JBoss Tools must be
-            updated. For that, you need to create a Jira issue at JBoss <link
-            xlink:href="https://issues.jboss.org/browse/JBIDE-25384">like
-            this</link> (so now you know the issue number), and then a commit
-            <link
-            xlink:href="https://github.com/jbosstools/jbosstools-freemarker/pull/84/commits/f112389e03269643729214af6a2b0c1596198008">like
-            this</link> (so now you can include the issue number in the commit
-            message), and a pull request that's then linked to the Jira issue
-            (Jira used to have a button for that). See also the README on
-            <link
-            xlink:href="https://github.com/jbosstools/jbosstools-freemarker">https://github.com/jbosstools/jbosstools-freemarker</link></para>
+            directives, the FreeMarker dependency of JBoss Tools FreeMarker
+            IDE must be updated. As JBoss has stopped maintaining that plugin,
+            currently we are maintaining a <link
+            xlink:href="https://github.com/jbosstools/jbosstools-freemarker">https://github.com/jbosstools/jbosstools-freemarker</link>
+            fork for this.</para>
           </listitem>
         </orderedlist>
       </section>
