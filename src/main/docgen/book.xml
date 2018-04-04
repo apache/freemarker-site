@@ -1550,7 +1550,8 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Ensure that all changes in the 2.3-gae branch were merged
-            into the 2.3 branch.</para>
+            into the 2.3 branch. (Also that both branches where <literal>git
+            push</literal>-ed.)</para>
           </listitem>
 
           <listitem>
@@ -1635,7 +1636,7 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>Upload the content of <literal>documentation/_html</literal>
             from the binary release to https://freemarker.apache.org/<emphasis
-            role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/documentation/
+            role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/
             (by committing it into the <quote>asf-site</quote> branch of
             https://git-wip-us.apache.org/repos/asf/freemarker-site.git). The
             change log will be a link pointing to a page inside this.</para>
@@ -1675,7 +1676,9 @@ two freemarker.jar-s and unpredictable behavior!
                   </listitem>
 
                   <listitem>
-                    <para>Specify Maven staging coordinates</para>
+                    <para>Specify Maven staging repository URL and artifact
+                    coordinates, also the URL of the repository directory that
+                    contains this release for easier reviewing</para>
                   </listitem>
                 </itemizedlist>
               </listitem>
@@ -1725,6 +1728,26 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
+            <para>Tag the release on Git (tags are like
+            <literal>v2.3.45-gae</literal> and <literal>v2.3.45</literal>). Be
+            careful not to tag a commit made since the voting has
+            succeeded.</para>
+          </listitem>
+
+          <listitem>
+            <para>Add the release on: <link
+            xlink:href="https://reporter.apache.org/addrelease.html?freemarker">https://reporter.apache.org/addrelease.html?freemarker</link></para>
+          </listitem>
+
+          <listitem>
+            <para>Update <literal>doap.rdf</literal> in the
+            <literal>freemarker-site</literal> repository (don't forget to
+            commit it into the <literal>asf-site</literal> branch as well, not
+            just into <literal>master</literal>, or else it's not
+            published)</para>
+          </listitem>
+
+          <listitem>
             <para>Wait 24 hours so that the mirrors get synced. Check <link
             xlink:href="https://www.apache.org/dist/freemarker/">https://www.apache.org/dist/freemarker/</link>
             and <link
@@ -1737,12 +1760,6 @@ two freemarker.jar-s and unpredictable behavior!
             <para>Delete the non-latest release of each maintained branch from
             https://www.apache.org/dist/freemarker/ (Old ones are
             automatically available on http://archive.apache.org/dist/)</para>
-          </listitem>
-
-          <listitem>
-            <para>Tag the release on Git (see earlier tags for the tag name
-            format). Be careful not to tag a commit made since the voting has
-            succeeded.</para>
           </listitem>
 
           <listitem>
