@@ -110,6 +110,13 @@
     <release>
         <Version>
             <name>Apache FreeMarker</name>
+            <created>2018-04-04</created>
+            <revision>2.3.28</revision>
+        </Version>
+    </release>
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
             <created>2017-11-03</created>
             <revision>2.3.27-incubating</revision>
         </Version>

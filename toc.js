@@ -242,6 +242,14 @@ var toc = {
 "children": [
 ]
 }
+,
+{
+"title": "PMC member resources",
+"url": "committer-howto.html#pmc-resources",
+"isFile": false,
+"children": [
+]
+}
 ]
 }
 ,
