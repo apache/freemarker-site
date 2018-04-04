@@ -1988,6 +1988,19 @@ two freemarker.jar-s and unpredictable behavior!
         xlink:href="https://www.apache.org/security/committers.html">this
         page</link> for further guidelines.</para>
       </section>
+
+      <section xml:id="pmc-resources">
+        <title>PMC member resources</title>
+
+        <para>This section is for PMC (Project Management Committee) members
+        only, and meant to contain information that is specific to the
+        FreeMarker project.</para>
+
+        <para>To share files among PMC members (such as Board report drafts),
+        use this SVN repository: <link
+        xlink:href="https://svn.apache.org/repos/private/pmc/freemarker/">https://svn.apache.org/repos/private/pmc/freemarker/</link>.
+        It can be read by PMC members only.</para>
+      </section>
     </section>
 
     <section xml:id="history">
