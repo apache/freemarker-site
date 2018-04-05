@@ -280,13 +280,10 @@ two freemarker.jar-s and unpredictable behavior!
     <simplesect>
       <title>Other versions</title>
 
-      <para>Old versions starting from 2.3.27-incubating (and higher) are
+      <para>Old 2.x versions starting from 2.3.24 RC01 (and higher) are
       available from the Apache archive: <link
       xlink:href="https://archive.apache.org/dist/incubator/freemarker/engine/">https://archive.apache.org/dist/freemarker/engine/</link>.
-      Versions between 2.3.24 RC01 and 2.3.27-incubating are available here:
-      <link
-      xlink:href="https://archive.apache.org/dist/incubator/freemarker/engine/">https://archive.apache.org/dist/incubator/freemarker/engine/</link>.
-      Versions before 2.3.24 RC01 are available from the <link
+      2.x versions before 2.3.24 RC01 are available from the <link
       xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/">SourceForge
       download page</link>.</para>
     </simplesect>
