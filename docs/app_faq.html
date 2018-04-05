@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/app_faq.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1510568240191">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1522915944172">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,13 +35,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Appendixes","FAQ"];</script>
-      <script src="toc.js?1510568240191"></script>
-      <script src="docgen-resources/main.min.js?1510568240191"></script>
-      <div class="side-toc-logos">
-          <div class="side-toc-logo">
-            <a href="http://incubator.apache.org/" target="_blank"><img src="apache-incubator.png" alt="Apache Incubator" /></a>
-          </div>
-      </div>
+      <script src="toc.js?1522915944172"></script>
+      <script src="docgen-resources/main.min.js?1522915944172"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="app.html"><span>Previous</span></a><a class="paging-arrow next" href="app_versions.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-chapter" id="app_faq" itemprop="headline">FAQ</h1>
@@ -109,6 +104,15 @@ ga('send', 'pageview');
             The <code class="inline-code">&lt;</code> and <code class="inline-code">&gt;</code> of
             FreeMarker tags confuses my editor or the XML parser. What to
             do?
+                </a>
+    </li>
+    <li>
+      <a href="#faq_alternative_syntax_interpolation">
+
+            <code class="inline-code">${<em class="code-color">...</em>}</code> and/or
+            <code class="inline-code">#{<em class="code-color">...</em>}</code> is used in
+            the output I have to generate a lot, and FreeMarker tries to
+            resolve them. What to do?
                 </a>
     </li>
     <li>
@@ -332,6 +336,25 @@ ga('send', 'pageview');
               </li>
 
               <li>
+                <p><a href="dgui_misc_autoescaping.html">Auto-escaping
+                option</a> to escape HTML and XML special characters
+                printed with
+                <code class="inline-code">${<em class="code-color">...</em>}</code>. So you
+                can just write <code class="inline-code">${x}</code> instead of
+                <code class="inline-code">&lt;c:out value=&quot;${x}&quot;/&gt;</code>, and most
+                importantly, you can&#39;t accidentally forget to do
+                escaping.</p>
+              </li>
+
+              <li>
+                <p>Locale-sensitive number and date formatting by default.
+                When you output for a human audience, all you need to do is
+                just write <code class="inline-code">${x}</code> rather than
+                <code class="inline-code">&lt;fmt:formatNumber value=&quot;${x}&quot;
+                /&gt;</code>.</p>
+              </li>
+
+              <li>
                 <p>No servlet specific scopes and other highly technical
                 things in templates (unless, of course, you expose them into
                 the data-model deliberately). It was made for MVC from the
@@ -341,14 +364,6 @@ ga('send', 'pageview');
               <li>
                 <p>You can load the templates from anywhere; from the class
                 path, from a data-base, etc.</p>
-              </li>
-
-              <li>
-                <p>Locale-sensitive number and date formatting by default.
-                When you output for a human audience, all you need to do is
-                just write <code class="inline-code">${x}</code> rather than
-                <code class="inline-code">&lt;fmt:formatNumber value=&quot;${x}&quot;
-                /&gt;</code>.</p>
               </li>
 
               <li>
@@ -820,11 +835,42 @@ ga('send', 'pageview');
 
           <dd class="answer">
 
-            <p>Starting from FreeMarker 2.3.4 you can use
-            <code class="inline-code">[</code> and <code class="inline-code">]</code> instead of
-            <code class="inline-code">&lt;</code> and <code class="inline-code">&gt;</code>. For more
-            details <a href="dgui_misc_alternativesyntax.html">read
-            this...</a></p>
+            <p>You can use <code class="inline-code">[</code> and <code class="inline-code">]</code>
+            instead of <code class="inline-code">&lt;</code> and <code class="inline-code">&gt;</code>;
+            see more about square bracket tag syntax <a href="dgui_misc_alternativesyntax.html">here.</a> The comparison
+            operators, like <code class="inline-code">&lt;</code>, also have an alternative
+            syntax (<code class="inline-code">lt</code> and <code class="inline-code">&amp;lt;</code> in
+            this case); see more about them <a href="dgui_template_exp.html#dgui_template_exp_comparison">here</a>. Also, the
+            <code class="inline-code">&amp;&amp;</code> operator (which is not well-format
+            HTML/XML) can be written as <code class="inline-code">\and</code> or
+            <code class="inline-code">&amp;amp;&amp;amp;</code> since 2.3.27.</p>
+          </dd>
+
+        
+
+        
+          
+  <dt class="question" id="faq_alternative_syntax_interpolation">
+    9.&nbsp; 
+            <code class="inline-code">${<em class="code-color">...</em>}</code> and/or
+            <code class="inline-code">#{<em class="code-color">...</em>}</code> is used in
+            the output I have to generate a lot, and FreeMarker tries to
+            resolve them. What to do?
+          
+  </dt>
+
+
+          <dd class="answer">
+
+            <p>You can escape them like
+            <code class="inline-code">${&#39;$&#39;}{<em class="code-color">...</em>}</code>, however
+            that&#39;s impractical if you have to do that often. So starting from
+            FreeMarker 2.3.28 you can use
+            <code class="inline-code">[=<em class="code-color">...</em></code><code class="inline-code">]</code>
+            instead; see more about the square bracket interpolation syntax
+            <a href="dgui_misc_alternativesyntax.html">here.</a> If you
+            are going to generate JSP files or even FreeMarker templates, this
+            is very useful.</p>
           </dd>
 
         
@@ -832,7 +878,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_legal_variable_names">
-    9.&nbsp; 
+    10.&nbsp; 
             What are the legal variable names?
 
             
@@ -856,7 +902,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_strange_variable_name">
-    10.&nbsp; 
+    11.&nbsp; 
             How can I use variable names (macro name, parameter name)
             that contain minus sign (<code class="inline-code">-</code>), colon
             (<code class="inline-code">:</code>), dot (<code class="inline-code">.</code>), or or other
@@ -937,7 +983,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_jsp_custom_tag_syntax">
-    11.&nbsp; 
+    12.&nbsp; 
             Why do I get &quot;java.lang.IllegalArgumentException: argument
             type mismatch&quot; when I try to use <em>X</em> JSP
             custom tag?
@@ -998,7 +1044,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_servlet_include">
-    12.&nbsp; 
+    13.&nbsp; 
             How to include other resources in a way as
             <code class="inline-code">jsp:include</code> does it?
           
@@ -1043,7 +1089,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_parameter_unwrapping">
-    13.&nbsp; 
+    14.&nbsp; 
             How can I get the parameters to my
             plain-Java-method/<code class="inline-code">TemplateMethodModelEx</code>/<code class="inline-code">TemplateTransformModel</code>/<code class="inline-code">TemplateDirectiveModel</code>
             implementation as plain
@@ -1109,7 +1155,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_nonstring_keys">
-    14.&nbsp; 
+    15.&nbsp; 
             Why I can&#39;t use non-string key in the
             <code class="inline-code">myMap[myKey]</code> expression? And what to do
             now?
@@ -1169,7 +1215,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_simple_map">
-    15.&nbsp; 
+    16.&nbsp; 
             When I list the contents of a map (a hash) with
             <code class="inline-code">?keys</code>/<code class="inline-code">?values</code>, I get the
             <code class="inline-code">java.util.Map</code> methods mixed with the real map
@@ -1201,7 +1247,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_modify_seq_and_map">
-    16.&nbsp; 
+    17.&nbsp; 
             How can I modify sequences (lists) and hashes (maps) in
             FreeMarker templates?
 
@@ -1352,7 +1398,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_null">
-    17.&nbsp; 
+    18.&nbsp; 
             What about <code class="inline-code">null</code> and the FreeMarker
             template language? 
           
@@ -1412,7 +1458,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_capture">
-    18.&nbsp; 
+    19.&nbsp; 
             How can I use the output of a directive (macro) in
             expressions (as a parameter to another directive)?
           
@@ -1436,7 +1482,7 @@ ga('send', 'pageview');
         
           
   <dt class="question" id="faq_questionmark">
-    19.&nbsp; 
+    20.&nbsp; 
             Why do I have "?"-s in the output instead of
             character <em>X</em>?
           
@@ -1485,7 +1531,7 @@ t.process(root, out);
         
           
   <dt class="question" id="faq_retrieve_calculated_values">
-    20.&nbsp; 
+    21.&nbsp; 
             How to retrieve values calculated in templates after
             template execution done?
           
@@ -1528,7 +1574,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_assign_to_dynamic_variable_name">
-    21.&nbsp; 
+    22.&nbsp; 
             How to assign to (or <code class="inline-code">#import</code> into) a
             dynamically constructed variable name (like to name that&#39;s stored
             in another variable)?
@@ -1555,7 +1601,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_template_uploading_security">
-    22.&nbsp; 
+    23.&nbsp; 
             
 
             Can I allow users to upload templates and what are the
@@ -1656,7 +1702,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_implement_function_or_macro_in_java">
-    23.&nbsp; 
+    24.&nbsp; 
             How to implement a function or macro in Java Language
             instead of in the template language?
           
@@ -1693,7 +1739,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_nice_error_page">
-    24.&nbsp; 
+    25.&nbsp; 
             <a name="misc.faq.niceErrorPage"></a> In my Servlet
             based application, how do I show a nice error page instead of a
             stack trace when error occurs during template processing?
@@ -1762,7 +1808,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
         
           
   <dt class="question" id="faq_html_editor_mangles">
-    25.&nbsp; 
+    26.&nbsp; 
             I&#39;m using a visual HTML editor that mangles template tags.
             Will you change the template language syntax to accommodate my
             editor?
@@ -1794,9 +1840,9 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2017-11-13T10:17:20Z" title="Monday, November 13, 2017 10:17:20 AM GMT">2017-11-13 10:17:20 GMT</time>, for Freemarker 2.3.27 </p>
+<time itemprop="dateModified" datetime="2018-04-05T08:12:24Z" title="Thursday, April 5, 2018 8:12:24 AM GMT">2018-04-05 08:12:24 GMT</time>, for Freemarker 2.3.28 </p>
 <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2017
+© <span itemprop="copyrightYear">1999</span>–2018
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
 </div></div></div></body>
 </html>

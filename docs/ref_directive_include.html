@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_directive_include.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1510568240191">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1522915944172">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -35,13 +35,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Directive Reference","include"];</script>
-      <script src="toc.js?1510568240191"></script>
-      <script src="docgen-resources/main.min.js?1510568240191"></script>
-      <div class="side-toc-logos">
-          <div class="side-toc-logo">
-            <a href="http://incubator.apache.org/" target="_blank"><img src="apache-incubator.png" alt="Apache Incubator" /></a>
-          </div>
-      </div>
+      <script src="toc.js?1522915944172"></script>
+      <script src="docgen-resources/main.min.js?1522915944172"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_directive_import.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directive_list.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_directive_include" itemprop="headline">include</h1>
@@ -221,7 +216,32 @@ All rights reserved.</strong></pre></div>
               ...&gt;</code> will print nothing. When
               <code class="inline-code">false</code>, the template processing will stop with
               error if the template is missing. If you omit this option, then
-              it defaults to <code class="inline-code">false</code>.</p>
+              it defaults to <code class="inline-code">false</code>. A more flexible
+              approach to handle missing templates (such as if you need to do
+              something when the template is missing) is using the <a href="ref_specvar.html#ref_specvar_get_optional_template"><code>get_optional_template</code>
+              special variable</a>.</p>
+
+                <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+                <p>If <code class="inline-code">ignore_missing</code> is
+                <code class="inline-code">true</code>, yet the <code class="inline-code">include</code>
+                directive fails with "Template inclusion failed"
+                error when the template is missing, that&#39;s often because your
+                application uses a custom
+                <code class="inline-code">freemarker.cache.TemplateLoader</code>
+                implementation, which incorrectly (against the API
+                documentation) throws an <code class="inline-code">IOException</code> in the
+                <code class="inline-code">findTemplateSource</code> method instead of
+                returning <code class="inline-code">null</code> if a template is not found.
+                If it&#39;s so, the Java programmers need to fix that. Another
+                possibility is of course that it was indeed not possible to
+                tell if the template exists or not due to some technical
+                issues, in which case stopping with error is the correct
+                behavior. See the cause <code class="inline-code">IOException</code> in the
+                Java stack trace to figure out which case it is.</p>
+                </div>
+
             </li>
           </ul>
 
@@ -446,9 +466,9 @@ All rights reserved.</strong></pre></div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2017-11-13T10:17:20Z" title="Monday, November 13, 2017 10:17:20 AM GMT">2017-11-13 10:17:20 GMT</time>, for Freemarker 2.3.27 </p>
+<time itemprop="dateModified" datetime="2018-04-05T08:12:24Z" title="Thursday, April 5, 2018 8:12:24 AM GMT">2018-04-05 08:12:24 GMT</time>, for Freemarker 2.3.28 </p>
 <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2017
+© <span itemprop="copyrightYear">1999</span>–2018
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
 </div></div></div></body>
 </html>
