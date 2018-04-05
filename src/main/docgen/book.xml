@@ -164,8 +164,6 @@
           xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.md5">MD5</link>]
-          [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.sha512">SHA512</link>]
           [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.asc">ASC</link>]</para>
@@ -175,8 +173,6 @@
           <para><link
           xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.md5">MD5</link>]
-          [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.sha512">SHA512</link>]
           [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.asc">ASC</link>]</para>
@@ -213,15 +209,11 @@ two freemarker.jar-s and unpredictable behavior!
       (<quote>gae</quote>) variation. Download: <link
       xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz">binary</link>
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.md5">MD5</link>]
-      [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.sha512">SHA512</link>]
       [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.asc">ASC</link>],
       <link
       xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz">source</link>
-      [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz.md5">MD5</link>]
       [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz.sha512">SHA512</link>]
       [<link
