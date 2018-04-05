@@ -148,18 +148,12 @@
     since 2.3.24.</para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.27-incubating</title>
+      <title>Latest stable release: 2.3.28</title>
 
-      <para>Released on 2017-11-03. Requires J2SE 1.5 or higher.</para>
-
-      <para><emphasis role="bold">This is a stable, final release.</emphasis>
-      The <quote>incubating</quote> suffix was required by the Apache Software
-      Foundation as the project wasn't yet a fully accepted (graduated) Apache
-      project at the time of the release (it was in the <olink
-      targetdoc="asfIncubator">Apache Incubator</olink>).</para>
+      <para>Released on 2018-04-04. Requires J2SE 1.5 or higher.</para>
 
       <para><link
-      xlink:href="https://freemarker.apache.org/docs/versions_2_3_27.html">See
+      xlink:href="https://freemarker.apache.org/docs/versions_2_3_28.html">See
       what's new...</link></para>
 
       <para>Downloads:</para>
@@ -167,25 +161,25 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz">Binary
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-2.3.27-incubating-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-2.3.28-bin.tar.gz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz">Source
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.md5">MD5</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-2.3.27-incubating-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-2.3.28-src.tar.gz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -199,7 +193,7 @@ two freemarker.jar-s and unpredictable behavior!
 &lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.27-incubating&lt;/version&gt;
+  &lt;version&gt;2.3.28&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
@@ -217,27 +211,27 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz">binary</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz">binary</link>
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/binaries/apache-freemarker-gae-2.3.27-incubating-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/binaries/apache-freemarker-gae-2.3.28-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz">source</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz">source</link>
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.md5">MD5</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz.md5">MD5</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.27-incubating/source/apache-freemarker-gae-2.3.27-incubating-src.tar.gz.asc">ASC</link>].
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.28/source/apache-freemarker-gae-2.3.28-src.tar.gz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.27-incubating&lt;/version&gt;
+  &lt;version&gt;2.3.28&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
@@ -286,10 +280,13 @@ two freemarker.jar-s and unpredictable behavior!
     <simplesect>
       <title>Other versions</title>
 
-      <para>Outdated versions starting from 2.3.24 RC01 up to
-      2.3.27-incubating are available from the Apache archive: <link
+      <para>Old versions starting from 2.3.27-incubating (and higher) are
+      available from the Apache archive: <link
+      xlink:href="https://archive.apache.org/dist/incubator/freemarker/engine/">https://archive.apache.org/dist/freemarker/engine/</link>.
+      Versions between 2.3.24 RC01 and 2.3.27-incubating are available here:
+      <link
       xlink:href="https://archive.apache.org/dist/incubator/freemarker/engine/">https://archive.apache.org/dist/incubator/freemarker/engine/</link>.
-      Even older releases are available from the <link
+      Versions before 2.3.24 RC01 are available from the <link
       xlink:href="https://sourceforge.net/projects/freemarker/files/freemarker/">SourceForge
       download page</link>.</para>
     </simplesect>
@@ -1767,10 +1764,6 @@ two freemarker.jar-s and unpredictable behavior!
 
             <itemizedlist>
               <listitem>
-                <para>Add the release to the download section.</para>
-              </listitem>
-
-              <listitem>
                 <para>Upload latest JavaDoc</para>
               </listitem>
 
@@ -1783,6 +1776,10 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>Upload the new Manual (the online version you have
                 generated in the last step, not the offline one)</para>
+              </listitem>
+
+              <listitem>
+                <para>Update to latest release in the download section</para>
               </listitem>
             </itemizedlist>
           </listitem>
