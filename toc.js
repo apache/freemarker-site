@@ -66,7 +66,7 @@ var toc = {
 ,
 {
 "title": "Online template\n tester",
-"url": "https://try.apache.freemarker.org/",
+"url": "https://try.freemarker.apache.org/",
 "isFile": true,
 "children": [
 ]
