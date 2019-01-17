@@ -772,6 +772,16 @@ two freemarker.jar-s and unpredictable behavior!
 
             <tr valign="top">
               <td><link
+              xlink:href="https://github.com/sgoeschl/freemarker-cli">freemarker-cli</link></td>
+
+              <td>freemarker-cli is a command line tool that transform data
+              files (JSON, CSV, XML, Excel, .properties, ) to output files (of
+              any textual type, like HTML) with FreeMarker templates. Requires
+              Groovy.</td>
+            </tr>
+
+            <tr valign="top">
+              <td><link
               xlink:href="http://jcopist.sourceforge.net/">JCopist</link></td>
 
               <td>JCopist is a template-based document generation server based
