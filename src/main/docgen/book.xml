@@ -458,6 +458,39 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para/>
     </section>
+
+    <section xml:id="file-to-file-transformer-tools">
+      <title>File-to-file transformers</title>
+
+      <para>This is a list of some tools made by the user community, which
+      transform one or more files to another set of files using FreeMarker.
+      They are typically called with command line interface, or as part of the
+      Ant/Maven/Gradle build process.</para>
+
+      <informaltable border="1">
+        <tbody>
+          <tr valign="top">
+            <td><link
+            xlink:href="http://fmpp.sourceforge.net/">FMPP</link></td>
+
+            <td>FMPP is a general purpose text file preprocessor tool
+            (command-line, Ant task). It can generate complete homepages (full
+            directory structure with HTML-s, images, etc.). It is extendable
+            to display data from any data sources (as database).</td>
+          </tr>
+
+          <tr valign="top">
+            <td><link
+            xlink:href="https://github.com/sgoeschl/freemarker-cli">freemarker-cli</link></td>
+
+            <td>freemarker-cli is a command line tool that transform data
+            files (JSON, CSV, XML, Excel, Java properties) to output files (of
+            any type, like HTML) with FreeMarker templates. Requires
+            Groovy.</td>
+          </tr>
+        </tbody>
+      </informaltable>
+    </section>
   </chapter>
 
   <chapter>
