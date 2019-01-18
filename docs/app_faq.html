@@ -1621,37 +1621,56 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
 
             <ul>
               <li>
-                <p>Denial-of-Service (DoS) attacks: It&#39;s trivial to create
-                templates that run practically forever (with a loop), or
-                exhaust memory (by concatenating to a string in a loop).
-                FreeMarker can&#39;t enforce CPU or memory usage limits, so this
-                is something that has no solution on the
-                FreeMarker-level.</p>
-              </li>
-
-              <li>
                 <p>Data-model and wrapping
                 (<code class="inline-code">Configuration.setObjectWrapper</code>): The
                 data-model might gives access to the public Java API of some
                 objects that you have put into the data-model. By default, for
                 objects that aren&#39;t instances of a the bunch of specially
-                handler types (<code class="inline-code">String</code>,
+                handled types (<code class="inline-code">String</code>,
                 <code class="inline-code">Number</code>, <code class="inline-code">Boolean</code>,
                 <code class="inline-code">Date</code>, <code class="inline-code">Map</code>,
                 <code class="inline-code">List</code>, array, and a few others), their
-                public Java API will be exposed. To avoid that, you have to
-                construct the data-model so that it only exposes the things
-                that are really necessary for the template. For that, you may
-                want to use <code class="inline-code">SimpleObjectWrapper</code> (via
-                <code class="inline-code">Configuration.setObjectWrapper</code> or the
+                public Java API will be exposed, including most methods
+                inherited from standard Java classes
+                (<code class="inline-code">getClass()</code>, etc.). To avoid that, you have
+                to construct the data-model so that it only exposes the
+                members that are really necessary for the template. One
+                possibility is using <code class="inline-code">SimpleObjectWrapper</code>
+                (via <code class="inline-code">Configuration.setObjectWrapper</code> or the
                 <code class="inline-code">object_wrapper</code> setting) and then create the
                 data-model purely from <code class="inline-code">Map</code>-s,
                 <code class="inline-code">List</code>-s, <code class="inline-code">Array</code>-s,
                 <code class="inline-code">String</code>-s, <code class="inline-code">Number</code>-s,
                 <code class="inline-code">Boolean</code>-s and <code class="inline-code">Date</code>-s.
-                Or, you can implement your own extremely restrictive
-                <code class="inline-code">ObjectWrapper</code>, which for example could
-                expose your POJO-s safely.</p>
+                For many application though that&#39;s too restrictive, and
+                instead you need to implement your own extremely restrictive
+                <code class="inline-code">ObjectWrapper</code>, which, for example, only
+                exposes those members of POJO-s that were explicitly marked to
+                be safe (opt-in approach).</p>
+
+                <p>Also, don&#39;t forget about the <a href="ref_builtins_expert.html#ref_buitin_api_and_has_api"><code>?api</code>
+                built-in</a>, if you have enabled it (it&#39;s disabled by
+                default). While the Java API of <code class="inline-code">Map</code>-s,
+                <code class="inline-code">List</code>-s and similar container-like objects
+                is not directly exposed by most
+                <code class="inline-code">ObjectWrapper</code>-s, so
+                <code class="inline-code">someMap.someJavaMethod()</code> won&#39;t work, using
+                <code class="inline-code">?api</code> the template author can still get to
+                the Java API-s of these objects, like
+                <code class="inline-code">someMap?api.someJavaMethod()</code>. But note that
+                the <code class="inline-code">ObjectWrapper</code> is still in control, as
+                it decides what objects support <code class="inline-code">?api</code>, and
+                what will <code class="inline-code">?api</code> expose for them (it usually
+                exposes the same as for a generic POJO).</p>
+
+                <p>Last not least, some maybe aware of that the standard
+                object wrappers filters out some well known
+                "unsafe" methods, like
+                <code class="inline-code">System.exit</code>. Do not ever rely on this as
+                your only line of defense, since it only blocks the methods
+                that&#39;s in a predefined list. Thus, for example, if a new Java
+                version adds a new problematic method, it won&#39;t be filtered
+                out.</p>
               </li>
 
               <li>
@@ -1694,6 +1713,15 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
                 accessible classes (possibly based on which template asks for
                 them), such as
                 <code class="inline-code">TemplateClassResolver.ALLOWS_NOTHING_RESOLVER</code>.</p>
+              </li>
+
+              <li>
+                <p>Denial-of-Service (DoS) attacks: It&#39;s trivial to create
+                templates that run practically forever (with a loop), or
+                exhaust memory (by concatenating to a string in a loop).
+                FreeMarker can&#39;t enforce CPU or memory usage limits, so this
+                is something that has no solution on the
+                FreeMarker-level.</p>
               </li>
             </ul>
           </dd>
@@ -1841,9 +1869,9 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2018-04-05T08:12:24Z" title="Thursday, April 5, 2018 8:12:24 AM GMT">2018-04-05 08:12:24 GMT</time>, for Freemarker 2.3.28 </p>
+<time itemprop="dateModified" datetime="2019-01-18T09:59:53Z" title="Friday, January 18, 2019 9:59:53 AM GMT">2019-01-18 09:59:53 GMT</time>, for Freemarker 2.3.28 </p>
 <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2018
+© <span itemprop="copyrightYear">1999</span>–2019
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
 </div></div></div></body>
 </html>
