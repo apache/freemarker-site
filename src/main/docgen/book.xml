@@ -1118,7 +1118,7 @@ two freemarker.jar-s and unpredictable behavior!
               <td>DriveNow - A car rental website that allows customers to
               book rental cars from major suppliers at discounted last minute
               rates. Datacodex have developed a site DriveNow that utilises
-              FreeMarker for it's view layer inside it's framework,
+              FreeMarker for its view layer inside its framework,
               WebWork2.</td>
             </tr>
 
@@ -1191,7 +1191,7 @@ two freemarker.jar-s and unpredictable behavior!
     <section xml:id="contribute">
       <title>Contributors wanted!</title>
 
-      <para>As it's the case with many opens source projects, FreeMarker
+      <para>As it's the case with many open source projects, FreeMarker
       doesn't have and never had a payed staff, nor a backing corporate entity
       who finances it otherwise. It's ran by volunteers since it started in
       1999. So we are always looking for people to help FreeMarker to
@@ -1276,7 +1276,7 @@ two freemarker.jar-s and unpredictable behavior!
 
             <itemizedlist>
               <listitem>
-                <para>FreeMarker Spring MVC integration. Someone who know both
+                <para>FreeMarker Spring MVC integration. Someone who knows both
                 well should keep an eye on this, improving it where
                 necessary.</para>
               </listitem>
@@ -1378,7 +1378,7 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para><emphasis>This page applies to Committers only, not to usual
       contributors.</emphasis> A Committer is a person with extra rights who
-      receives his status via invitation. You don't need to be a Committer to
+      receives his or her status via invitation. You don't need to be a Committer to
       contribute, anyone can fork and send pull requests on Github; see more
       on <link linkend="contribute">the page for contributors</link>.</para>
 
