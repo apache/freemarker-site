@@ -541,10 +541,13 @@ two freemarker.jar-s and unpredictable behavior!
     <section xml:id="sourcecode">
       <title>Source code (Git)</title>
 
-      <para>The project repositories are at the Apache Software Foundation.
-      These Apache repositories are also accessible through GitHub, which is
-      practical for sending patches via usual GitHub forking and pull
-      requests.</para>
+      <para>The project repositories are at the Apache Software Foundation
+      (see <link xlink:href="https://gitbox.apache.org/">ASF Writable Git
+      Services homepage</link>), and are also mirrored on Github. Using the
+      Github repo is certainly the easiest for most. For those with direct
+      write access to source code, note that the Github repo is writable (not
+      just a read-only mirror anymore), as far as your Apache account and
+      Github accounts are linked.</para>
 
       <para>The key repositories are:</para>
 
@@ -1434,24 +1437,79 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
         </itemizedlist>
 
-        <para>To merge the pull request, the merge button on Github should
-        work (since we have migrated to gitbox - earlier it was more
-        complicated).</para>
-
         <para>The commit comment should automatically describe that it's a
         merge and where it was merged from. After that you may also want to
-        add a summary of what the merged branch does.</para>
+        add a summary of what the merged branch does. In general, pull request
+        merge commits should adhere to the same policies that Committers use
+        to commit directly into the Apache git repository.</para>
 
-        <para>In general, pull request merge commits should adhere to the same
-        policies that Committers use to commit directly into the Apache git
-        repository.</para>
+        <para>To do the actual merging, if your Apache and Github accounts are
+        linked (see how on the <link
+        xlink:href="https://gitbox.apache.org/">ASF Writable Git Services
+        homepage</link>), the Merge (and Close) button on Github should appear
+        and work.</para>
+
+        <para>If you can't/don't want to use Github, use this command on your
+        clone of the Apache repo (not the Github repo) (need to be tested if
+        it still works after the migration to Gitbox):</para>
+
+        <programlisting language="unknown">git pull --no-ff https://github.com/apache/&lt;PROJECT&gt; refs/pull/&lt;PR_NUMBER&gt;/head</programlisting>
+
+        <para>Where:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
+            </literal>is usually <literal>freemarker</literal></para>
+          </listitem>
+
+          <listitem>
+            <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
+            </literal>is the pull request number that GitHub shows prominently
+            after a <quote>#</quote></para>
+          </listitem>
+        </itemizedlist>
+
+        <para>Pushing such a merge commit to the ASF repo will automatically
+        close the pull request on Github.</para>
       </section>
 
       <section xml:id="close-pull-request-without-merging">
         <title>Closing GitHub pull requests without merging</title>
 
-        <para>Yet again the github buttons for this should work. You should
-        state the reason of closing in the closing comment.</para>
+        <para>You should state the reason of closing in the closing
+        comment.</para>
+
+        <para>Yet again, if your Apache and Github accounts are linked, the
+        Close button on Github should appear and work.</para>
+
+        <para>Without linked accounts, we used this command on the clone of
+        the Apache repo (but apparently it doesn't work on non-master branch
+        anymore):</para>
+
+        <programlisting language="unknown">git commit --allow-empty -m "closes apache/&lt;PROJECT&gt;#&lt;PR_NUMBER&gt;: &lt;WHY&gt;"</programlisting>
+
+        <para>Where:</para>
+
+        <itemizedlist>
+          <listitem>
+            <para><literal> <replaceable>&lt;PROJECT&gt;</replaceable>
+            </literal>is usually <literal>freemarker</literal></para>
+          </listitem>
+
+          <listitem>
+            <para><literal> <replaceable>&lt;PR_NUMBER&gt;</replaceable>
+            </literal>is the pull request number that GitHub shows prominently
+            after a <quote>#</quote></para>
+          </listitem>
+
+          <listitem>
+            <para><literal> <replaceable>&lt;WHY&gt;</replaceable>
+            </literal>is the reason of the closing. For clarity, you may want
+            to end it with <quote>Closed PR without merging.</quote> or
+            something similar.</para>
+          </listitem>
+        </itemizedlist>
       </section>
 
       <section xml:id="making-releases">
