@@ -512,6 +512,14 @@ var toc = {
 }
 ,
 {
+"title": "Local lambdas",
+"url": "dgui_template_exp.html#dgui_template_exp_lambda",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "Parentheses",
 "url": "dgui_template_exp.html#dgui_template_exp_parentheses",
 "isFile": false,
@@ -2109,6 +2117,22 @@ var toc = {
 }
 ,
 {
+"title": "drop_while",
+"url": "ref_builtins_sequence.html#ref_builtin_drop_while",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "filter",
+"url": "ref_builtins_sequence.html#ref_builtin_filter",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "first",
 "url": "ref_builtins_sequence.html#ref_builtin_first",
 "isFile": false,
@@ -2127,6 +2151,14 @@ var toc = {
 {
 "title": "last",
 "url": "ref_builtins_sequence.html#ref_builtin_last",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "map",
+"url": "ref_builtins_sequence.html#ref_builtin_map",
 "isFile": false,
 "children": [
 ]
@@ -2191,6 +2223,14 @@ var toc = {
 {
 "title": "sort_by",
 "url": "ref_builtins_sequence.html#ref_builtin_sort_by",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "take_while",
+"url": "ref_builtins_sequence.html#ref_builtin_take_while",
 "isFile": false,
 "children": [
 ]
