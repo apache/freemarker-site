@@ -21,7 +21,7 @@
   AFTER CHANGING THIS FILE don't forget to issue: ant update-deps
 -->
 <ivy-module version="2.0">
-    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20180803074421"/>
+    <info organisation="org.freemarker" module="docgen" revision="2.0-branch-head" status="integration" publication="20190818094503"/>
     <configurations>
       <conf name="default"/>
       <conf name="rat" description="for generating the Rat report"/>
@@ -34,7 +34,7 @@
             <exclude org="xerces" name="xercesImpl"/>
             <exclude org="xml-apis" name="xml-apis"/>
         </dependency>
-        <dependency org="org.freemarker" name="freemarker" rev="2.3.27-incubating" conf="default->default" changing="true"/>
+        <dependency org="org.freemarker" name="freemarker" rev="2.3.29" conf="default->default" changing="true"/>
         <dependency org="xalan" name="xalan" rev="2.7.2" conf="default->default"> <!-- Needed on OpenJDK 9 -->
             <exclude org="xml-apis" name="xml-apis"/>
         </dependency>
