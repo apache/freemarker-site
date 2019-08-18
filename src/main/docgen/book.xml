@@ -1279,8 +1279,8 @@ two freemarker.jar-s and unpredictable behavior!
 
             <itemizedlist>
               <listitem>
-                <para>FreeMarker Spring MVC integration. Someone who knows both
-                well should keep an eye on this, improving it where
+                <para>FreeMarker Spring MVC integration. Someone who knows
+                both well should keep an eye on this, improving it where
                 necessary.</para>
               </listitem>
 
@@ -1381,9 +1381,10 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para><emphasis>This page applies to Committers only, not to usual
       contributors.</emphasis> A Committer is a person with extra rights who
-      receives his or her status via invitation. You don't need to be a Committer to
-      contribute, anyone can fork and send pull requests on Github; see more
-      on <link linkend="contribute">the page for contributors</link>.</para>
+      receives his or her status via invitation. You don't need to be a
+      Committer to contribute, anyone can fork and send pull requests on
+      Github; see more on <link linkend="contribute">the page for
+      contributors</link>.</para>
 
       <section xml:id="git-commit-policy">
         <title>Git commit policies</title>
@@ -1885,9 +1886,9 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Update try.freemarker.org to use the latest FreeMarker
-            version. About the deployment, see more <link
-            xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/try.freemarker.org+maintenance+and+installation">here...</link></para>
+            <para>Update try.freemarker.apache.org to use the latest
+            FreeMarker version. About the deployment, see more <link
+            xlink:href="https://cwiki.apache.org/confluence/display/FREEMARKER/try.freemarker.apache.org+maintenance+and+installation">here...</link></para>
           </listitem>
 
           <listitem>
