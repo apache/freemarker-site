@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_expert.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1522915944172">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1566152331292">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -36,8 +36,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Seldom used and expert built-ins"];</script>
-      <script src="toc.js?1522915944172"></script>
-      <script src="docgen-resources/main.min.js?1522915944172"></script>
+      <script src="toc.js?1566152331292"></script>
+      <script src="docgen-resources/main.min.js?1566152331292"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_expert" itemprop="headline">Seldom used and expert built-ins</h1>
@@ -829,8 +829,9 @@ May 16, 2011
           support operations like <code class="inline-code">xs[index]</code> and
           <code class="inline-code">xs?size</code>. Also, the resulting value is listable
           for multiple times, even if the original value was backed by a
-          <code class="inline-code">java.util.Iterator</code>. This built-in is typically
-          used to work around data-model problems, in case you can&#39;t fix the
+          <code class="inline-code">java.util.Iterator</code> (which gives error when you
+          try to list it for the 2nd time). This built-in is typically used to
+          work around data-model problems, in case you can&#39;t fix the
           data-model itself. If you can, always fix the data-model instead
           (give a <code class="inline-code">java.util.List</code> or array to the template
           instead of a more restricted object, like a
@@ -840,10 +841,12 @@ May 16, 2011
           <p>If the value is already a sequence, then this built-in just
           returns that as is. If the value is not something that the <a href="ref_directive_list.html#ref.directive.list"><code>list</code>
           directive</a> could list, then template processing will be
-          aborted with error. Otherwise, it fetches all the values, and stores
-          them into a sequence. Be careful if you can have a huge number of
-          items, as all of them will be held in memory on the same
-          time.</p>
+          aborted with error. Otherwise, it usually fetches all the values,
+          and stores them into a sequence. Be careful if you can have a huge
+          number of items, as all of them will be held in memory on the same
+          time. However, in some special cases fetching and/or storing all
+          elements is avoided; see about the <a href="#ref_builtin_sequence_optimizations">optimizations</a>
+          later.</p>
 
           <p>You should convert a value with <code class="inline-code">sequence</code>
           only once. If you need the resulting sequence at multiple places,
@@ -867,13 +870,49 @@ May 16, 2011
 &lt;#list usersSeq as user&gt;...&lt;/#list&gt;
 Again:
 &lt;#list usersSeq as user&gt;...&lt;/#list&gt;</pre></div>
+
+          
+            
+
+
+
+<h3 class="content-header header-simplesect" id="ref_builtin_sequence_optimizations">Optimizations</h3>
+
+
+            <p>Since version 2.3.29, if the result of the
+            <code class="inline-code">sequence</code> built-in is directly the input of to
+            the <a href="dgui_template_exp.html#dgui_template_exp_var_sequence"><code>[<em>index</em>]</code></a>
+            or <a href="dgui_template_exp.html#dgui_template_exp_seqenceop_slice"><code>[<em>range</em>]</code></a>
+            operator, or of <code class="inline-code">?size</code>, or of
+            <code class="inline-code">?first</code>, or a chain of these operations, then
+            the elements will not be collected into the memory, and only as
+            many elements as strictly necessary will be fetched. For example
+            <code class="inline-code">anIterator?sequence[1]</code> will just fetch the
+            first 2 items (instead of building a sequence that contains all
+            the elements, and then getting the 2nd element from that). Or, if
+            you write <code class="inline-code">anIterator?sequence?size</code>, it will
+            just skip through all elements to count them, but won&#39;t store them
+            in memory.</p>
+
+            <p>The optimizations will only work within the same chain of
+            built-in calls, so for example in <code class="inline-code">&lt;#assign seq =
+            anIterator?sequence&gt;${seq[1]}</code> the
+            <code class="inline-code">?sequence</code> step will collect all the elements
+            into the memory, as <code class="inline-code">anIterator?sequence</code> and
+            <code class="inline-code">seq[1]</code> are separated. On the other hand, the
+            optimizations will work in
+            <code class="inline-code">anIterator?sequence[10..]?size</code>, as both
+            <code class="inline-code">[<em class="code-color">range</em>]</code> and
+            <code class="inline-code">?size</code> supports it, and they are directly
+            chained together.</p>
+          
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2018-04-05T08:12:24Z" title="Thursday, April 5, 2018 8:12:24 AM GMT">2018-04-05 08:12:24 GMT</time>, for Freemarker 2.3.28 </p>
+<time itemprop="dateModified" datetime="2019-08-18T18:18:51Z" title="Sunday, August 18, 2019 6:18:51 PM GMT">2019-08-18 18:18:51 GMT</time>, for Freemarker 2.3.29 </p>
 <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2018
+© <span itemprop="copyrightYear">1999</span>–2019
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
 </div></div></div></body>
 </html>
