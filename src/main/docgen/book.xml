@@ -329,30 +329,22 @@ two freemarker.jar-s and unpredictable behavior!
           <tr>
             <td>Eclipse</td>
 
-            <td>Syntax highlight, syntax error marker, code completion for
-            macro names and bean property names.</td>
+            <td>Syntax highlighting (template language only), syntax error
+            markers, completion proposals for template language constructs and
+            data-model members.</td>
 
             <td><para>This plugin was developed at <link
-            xlink:href="http://tools.jboss.org/">JBoss Tools</link>, but since
-            then they have dropped it, and so what we link here is an
-            <quote>unofficial</quote> maintenance fork made by an individual,
-            not by JBoss (Red Hat), nor by Apache.</para><para>Eclipse update
-            site: <link
-            xlink:href="http://dl.bintray.com/freemarker/freemarker-ide/">http://dl.bintray.com/freemarker/freemarker-ide/</link></para><para>Report
-            bugs or contribute here: <link
-            xlink:href="https://github.com/ddekany/jbosstools-freemarker">https://github.com/ddekany/jbosstools-freemarker</link></para><para>Note:
-            If the plugin comes with an older FreeMarker version than the one
-            your application uses, it will mark the usage of too fresh
-            language features as errors. To fix this, find
-            <literal>freemarker*.jar</literal> inside the installed plugin,
-            under <literal>&lt;userHome&gt;/.eclipse/</literal> or under the
-            Eclipse installation directory (you may need to search inside
-            <literal>jar</literal>-s). Exit Eclipse, and overwrite it with the
-            <literal>freemarker.jar</literal> you want, but keep the file name
-            of the replaced <literal>jar</literal>. You may also need to find
-            and delete the extracted OSGi bundle under
-            <literal>configuration\org.eclipse.osgi</literal> for the changes
-            to take effect.</para></td>
+            xlink:href="http://tools.jboss.org/">JBoss Tools</link> by Red Hat
+            Inc., but since then they have dropped it, and so what we link
+            here is an <quote>unofficial</quote> maintenance fork made by an
+            individual, not by JBoss (Red Hat Inc.), nor by
+            Apache.</para><para><link
+            xlink:href="https://marketplace.eclipse.org/content/freemarker-ide">Eclipse
+            Marketplace page</link></para><para>Report bugs or contribute
+            here: <link
+            xlink:href="https://github.com/ddekany/jbosstools-freemarker">https://github.com/ddekany/jbosstools-freemarker</link></para><para>Eclipse
+            update site: <link
+            xlink:href="http://dl.bintray.com/freemarker/freemarker-ide/">http://dl.bintray.com/freemarker/freemarker-ide/</link></para></td>
           </tr>
 
           <tr>
