@@ -937,6 +937,22 @@ two freemarker.jar-s and unpredictable behavior!
             </tr>
 
             <tr valign="top">
+              <td><link xlink:href="https://synesty.com/">Synesty
+              Studio</link></td>
+
+              <td>[German language only.] Synesty Studio is a low-code
+              cloud-middleware that can be used to connect various APIs and
+              software systems via drag&amp;drop. A typical use-case in
+              e-commerce is the integration and transformation of product data
+              and order data between shop and ERP-systems or marketplaces.
+              FreeMarker can be used by users as a scripting language for data
+              manipulation and logic (<link
+              xlink:href="https://apps.synesty.com/transformy?action=executeStep&amp;mode=example">Live-Demo</link>).
+              Furhermore FreeMarker is used internally for rendering all web
+              pages of Synesty Studio itself.</td>
+            </tr>
+
+            <tr valign="top">
               <td><link
               xlink:href="http://www.trackstudio.com/">TrackStudio</link></td>
 
