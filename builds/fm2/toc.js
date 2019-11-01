@@ -2472,14 +2472,6 @@ var toc = {
 }
 ,
 {
-"title": "spread_args",
-"url": "ref_builtins_expert.html#ref_builtin_spread_args",
-"isFile": false,
-"children": [
-]
-}
-,
-{
 "title": "eval",
 "url": "ref_builtins_expert.html#ref_builtin_eval",
 "isFile": false,
@@ -2546,6 +2538,14 @@ var toc = {
 {
 "title": "sequence",
 "url": "ref_builtins_expert.html#ref_builtin_sequence",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "with_args",
+"url": "ref_builtins_expert.html#ref_builtin_with_args",
 "isFile": false,
 "children": [
 ]

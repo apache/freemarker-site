@@ -31,7 +31,7 @@ under the License.
 <meta property="og:url" content="https://freemarker.apache.org/docs/ref_builtins_expert.html">
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_expert.html">
 <link rel="icon" href="favicon.png" type="image/png">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1572117247076">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1572634663201">
 </head>
 <body itemscope itemtype="https://schema.org/Code">
     <meta itemprop="url" content="https://freemarker.apache.org/docs/">
@@ -44,14 +44,14 @@ under the License.
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Seldom used and expert built-ins"];</script>
-      <script src="toc.js?1572117247076"></script>
-      <script src="docgen-resources/main.min.js?1572117247076"></script>
+      <script src="toc.js?1572634663201"></script>
+      <script src="docgen-resources/main.min.js?1572634663201"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_expert" itemprop="headline">Seldom used and expert built-ins</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#ref_builtin_absolute_template_name" data-menu-target="ref_builtin_absolute_template_name">absolute_template_name</a></li><li><a class="page-menu-link" href="#ref_buitin_api_and_has_api" data-menu-target="ref_buitin_api_and_has_api">api, has_api</a></li><li><a class="page-menu-link" href="#ref_builtin_numType" data-menu-target="ref_builtin_numType">byte, double, float, int, long, short</a></li><li><a class="page-menu-link" href="#ref_builtin_spread_args" data-menu-target="ref_builtin_spread_args">spread_args</a></li><li><a class="page-menu-link" href="#ref_builtin_eval" data-menu-target="ref_builtin_eval">eval</a></li><li><a class="page-menu-link" href="#ref_builtin_has_content" data-menu-target="ref_builtin_has_content">has_content</a></li><li><a class="page-menu-link" href="#ref_builtin_interpret" data-menu-target="ref_builtin_interpret">interpret</a></li><li><a class="page-menu-link" href="#ref_builtin_isType" data-menu-target="ref_builtin_isType">is_...</a></li><li><a class="page-menu-link" href="#ref_builtin_markup_string" data-menu-target="ref_builtin_markup_string">markup_string</a></li><li><a class="page-menu-link" href="#ref_builtin_namespace" data-menu-target="ref_builtin_namespace">namespace</a></li><li><a class="page-menu-link" href="#ref_builtin_new" data-menu-target="ref_builtin_new">new</a></li><li><a class="page-menu-link" href="#ref_builtin_numToDate" data-menu-target="ref_builtin_numToDate">number_to_date, number_to_time, number_to_datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_sequence" data-menu-target="ref_builtin_sequence">sequence</a></li></ul> </div><p>These are the built-ins that normally you should not use, but in
+<ul><li><a class="page-menu-link" href="#ref_builtin_absolute_template_name" data-menu-target="ref_builtin_absolute_template_name">absolute_template_name</a></li><li><a class="page-menu-link" href="#ref_buitin_api_and_has_api" data-menu-target="ref_buitin_api_and_has_api">api, has_api</a></li><li><a class="page-menu-link" href="#ref_builtin_numType" data-menu-target="ref_builtin_numType">byte, double, float, int, long, short</a></li><li><a class="page-menu-link" href="#ref_builtin_eval" data-menu-target="ref_builtin_eval">eval</a></li><li><a class="page-menu-link" href="#ref_builtin_has_content" data-menu-target="ref_builtin_has_content">has_content</a></li><li><a class="page-menu-link" href="#ref_builtin_interpret" data-menu-target="ref_builtin_interpret">interpret</a></li><li><a class="page-menu-link" href="#ref_builtin_isType" data-menu-target="ref_builtin_isType">is_...</a></li><li><a class="page-menu-link" href="#ref_builtin_markup_string" data-menu-target="ref_builtin_markup_string">markup_string</a></li><li><a class="page-menu-link" href="#ref_builtin_namespace" data-menu-target="ref_builtin_namespace">namespace</a></li><li><a class="page-menu-link" href="#ref_builtin_new" data-menu-target="ref_builtin_new">new</a></li><li><a class="page-menu-link" href="#ref_builtin_numToDate" data-menu-target="ref_builtin_numToDate">number_to_date, number_to_time, number_to_datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_sequence" data-menu-target="ref_builtin_sequence">sequence</a></li><li><a class="page-menu-link" href="#ref_builtin_with_args" data-menu-target="ref_builtin_with_args">with_args</a></li></ul> </div><p>These are the built-ins that normally you should not use, but in
         exceptional situations (debugging, advanced macros) they can be
         useful. If you need to use these in your normal page templates, you
         may revisit the data-model so you don&#39;t need to use these.</p>
@@ -288,218 +288,6 @@ under the License.
           <code class="inline-code">java.util.Date.getTime()</code> would return. This is
           useful if you have to call a Java methods that expect a timestamp as
           a <code class="inline-code">long</code>.</p>
-        
-          
-
-
-
-<h2 class="content-header header-section2" id="ref_builtin_spread_args">spread_args</h2>
-
-
-            <div class="callout note">
-    <strong class="callout-label">Note:</strong>
-
-            <p>This built-in is available since 2.3.30</p>
-            </div>
-
-
-          <p>The goal of this built-in is to add parameters
-          <em>dynamically</em> to the call of a directive (like a
-          macro), function or method. Dynamically means that parameters are
-          added based on a hash value (like <code class="inline-code">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;:
-          3}</code> or a Java <code class="inline-code">Map</code>), or a sequence value
-          (like <code class="inline-code">[1, 2, 3]</code> or a Java
-          <code class="inline-code">List</code>), whose the actual content is might only
-          known at the moment when the call happens.</p>
-
-          <p>For example, we have this macro <code class="inline-code">m</code>:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;</pre></div>
-
-          <p>Normally you call it like:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;@m a=1 b=2 c=3 /&gt;</pre></div>
-
-          <p>Below call does the same, assuming <code class="inline-code">dynArgs</code>
-          is the hash <code class="inline-code">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</code>:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;@m?spread_args(dynArgs) /&gt;</pre></div>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-output">a=1, b=1, c=1</pre></div>
-
-          <p>Below call also does the same, but combines dynamic arguments
-          from <code class="inline-code">dynArgsAB</code>, assumed to be <code class="inline-code">{&#39;a&#39;: 1,
-          &#39;b&#39;: 2}</code>, and argument <code class="inline-code">c</code> specified
-          directly:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;@m?spread_args(dynArgsAB) c=3 /&gt;</pre></div>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-output">a=1, b=1, c=1</pre></div>
-
-          <p>To understand why this works, you need to realize that macros,
-          custom directives, functions, and methods in FreeMarker are just
-          values, just like numbers, strings, etc. <code class="inline-code">&lt;#macro m
-          <em class="code-color">...</em>&gt;</code> just creates a value
-          that&#39;s a macro (as opposed to a number, or string, etc.), and then
-          assigns it to variable <code class="inline-code">m</code>. Thus,
-          <code class="inline-code">m</code> in itself is a valid expression, which
-          evaluates to the macro (but it doesn&#39;t <em>call</em> the
-          macro). <code class="inline-code">&lt;@m <em class="code-color">...</em>
-          /&gt;</code> evaluates the expression <code class="inline-code">m</code> (and
-          you can use arbitrarily complex expressions there too, like
-          <code class="inline-code">m?spread_args(<em class="code-color">...</em>)</code>),
-          and then <em>calls</em> the resulting macro.
-          <code class="inline-code">m?spread_args(<em class="code-color">dynArgs</em>)</code>
-          returns a macro that&#39;s very similar to the original macro (that&#39;s
-          stored in <code class="inline-code">m</code>), but its arguments default to the
-          values specified in
-          <code class="inline-code"><em class="code-color">dynArgs</em></code>. So the result
-          of <code class="inline-code">m?spread_args({&#39;b&#39;: 22, &#39;c&#39;: 33})</code> is similar
-          to a modified macro that was created as <code class="inline-code">&lt;#macro
-          <em class="code-color">unspefiedName</em> a b=22 c=33&gt;</code>.
-          With an example:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign mWithDefs = m?spread_args({&#39;b&#39;: 22, &#39;c&#39;: 33})&gt;
-&lt;@myWithDefs a=1 c=&#39;overridden&#39;/&gt;</pre></div>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-output">a=1, b=22, c=overridden</pre></div>
-
-          <p>Above we have created a new macro based on the value of
-          <code class="inline-code">m</code>, stored it in variable
-          <code class="inline-code">mWithDefs</code>, and then later we called it with
-          <code class="inline-code">&lt;@myWithDefs <em class="code-color">...</em>
-          /&gt;</code>.</p>
-
-          <p><code class="inline-code">spread_args</code> can also be applied on
-          functions (crated with <code class="inline-code">&lt;#function
-          <em class="code-color">...</em>&gt;</code>) and Java methods
-          (usually get from the data-model, like
-          <code class="inline-code">myObject.myMethod</code>). But because functions and
-          methods can only be called with positional arguments (like
-          <code class="inline-code">f(1, 2, 3)</code>, and <em>not</em> as
-          <code class="inline-code">f(a=1, b=2, c=3)</code>), the argument to
-          <code class="inline-code">spread_args</code> must be a sequence instead of a hash.
-          Other than that, the same tricks work as with macros:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#function f(a, b, c)&gt;&lt;#return &quot;a=${a}, b=${b}, c=${c}&quot;&gt;&lt;/#function&gt;
-&lt;#assign dynArgs=[1, 2, 3]&gt;
-
-${f(1, 2, 3)}
-Same as:
-${f?spread_args(dynArgs)()}
-or as:
-${f?spread_args([1, 2])(3)}
-or as:
-${f?spread_args([1])(2, 3)}
-
-&lt;#assign fWithOneAsFirstArg = f?spread_args([1])&gt;
-${fWithOneAsFirstArg(2, 3)} &lt;#-- same as f(1, 2, 3) --&gt;</pre></div>
-
-          <p>Note the double application of
-          <code class="inline-code">(<em class="code-color">...</em>)</code> above, like in
-          <code class="inline-code">f?spread_args(<em class="code-color">dynArgs</em>)()</code>.
-          That&#39;s because
-          <code class="inline-code">f?spread_args(<em class="code-color">dynArgs</em>)</code>
-          just returns a new function (which is just a value), but doesn&#39;t
-          call it. So if you want to call that new function immediately (as
-          opposed to assigning it to a variable for example), you need the
-          second <code class="inline-code">()</code>.</p>
-
-          <p>Because macro calls support both named and positional
-          arguments, the <code class="inline-code">spread_args</code> argument can be a
-          sequence for macros as well (though using a hash is usually a better
-          practice):</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;
-
-&lt;#-- Called with named parameters: --&gt;
-&lt;@m a=1 b=2 c=3 /&gt;
-Same as:
-&lt;#-- Called with positional parameters: --&gt;
-&lt;@m 1 2 3 /&gt;
-Same as:
-&lt;@m?spread_args([1, 2, 3]) /&gt;
-Same as:
-&lt;#-- Sequence spread_args with positional c parameter: --&gt;
-&lt;@m?spread_args([1, 2]) 3 /&gt;
-Same as:
-&lt;#-- Sequence spread_args with named c parameter: --&gt;
-&lt;@m?spread_args([1, 2]) c=3 /&gt;</pre></div>
-
-          <p>To summarize, depending on the type of the value
-          <code class="inline-code">spread_args</code> is applied on, the type of argument
-          to <code class="inline-code">spread_args</code> can be:</p>
-
-          <ul>
-            <li>
-              <p>Function or method: sequence. Note that WRONG
-              <code class="inline-code">f?spread_args(1, 2)</code> is WRONG, the correct
-              form is <code class="inline-code">f?spread_args([1, 2])</code>.</p>
-            </li>
-
-            <li>
-              <p>Macro: hash or sequence</p>
-            </li>
-
-            <li>
-              <p>Directive (user defined): hash</p>
-            </li>
-          </ul>
-
-          <p>The return type of <code class="inline-code">spread_args</code> is the same
-          as the type of value it was applied on, like if it&#39;s applied on a
-          method (like
-          <code class="inline-code">myObj.myMethod?spread_args(dynArgs)</code>), then it
-          returns a method.</p>
-
-          <p>Note that it&#39;s not possible to apply
-          <code class="inline-code">spread_args</code> on built-in directives, like
-          <code class="inline-code">&lt;#if <em class="code-color">...</em>&gt;</code>,
-          <code class="inline-code">&lt;#list <em class="code-color">...</em>&gt;</code>,
-          etc., because they aren&#39;t available as values.</p>
-
-          <p>This built-in is often used together with the <a href="ref_specvar.html#specvar.args"><code>.args</code> special
-          variable</a>. For example:</p>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m1 a b c&gt;
-  m1 does things with ${a}, ${b}, ${c}
-&lt;/#macro&gt;
-
-&lt;#macro m2 a b c&gt;
-  m2 does things with ${a}, ${b}, ${c}
-  Delegate to m1:
-  &lt;@m1?spread_args(.args) /&gt;
-&lt;/#macro&gt;
-
-&lt;@m2 a=1 b=2 c=3 /&gt;</pre></div>
-
-          
-
-<div class="code-wrapper"><pre class="code-block code-output">  m2 does things with 1, 2, 3
-  Delegate to m1:
-  m1 does things with 1, 2, 3</pre></div>
         
           
 
@@ -1126,11 +914,232 @@ Again:
             <code class="inline-code">?size</code> supports it, and they are directly
             chained together.</p>
           
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_with_args">with_args</h2>
+
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>This built-in is available since 2.3.30</p>
+            </div>
+
+
+          <p>The goal of this built-in is to add parameters
+          <em>dynamically</em> to the call of a directive (like a
+          macro), function or method. Dynamically means that parameters are
+          added based on a hash value (like <code class="inline-code">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;:
+          3}</code> or a Java <code class="inline-code">Map</code>), or a sequence value
+          (like <code class="inline-code">[1, 2, 3]</code> or a Java
+          <code class="inline-code">List</code>), whose actual content is might only known
+          at the moment when the call happens.</p>
+
+          <p>For example, we have this macro <code class="inline-code">m</code>:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;</pre></div>
+
+          <p>Normally you call it like:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;@m a=1 b=2 c=3 /&gt;</pre></div>
+
+          <p>Below call does the same, assuming <code class="inline-code">dynArgs</code>
+          is the hash <code class="inline-code">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</code>:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;@m?with_args(dynArgs) /&gt;</pre></div>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-output">a=1, b=1, c=1</pre></div>
+
+          <p>Below call also does the same, but combines dynamic arguments
+          from <code class="inline-code">dynArgsAB</code>, assumed to be <code class="inline-code">{&#39;a&#39;: 1,
+          &#39;b&#39;: 2}</code>, and argument <code class="inline-code">c</code> specified
+          directly:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;@m?with_args(dynArgsAB) c=3 /&gt;</pre></div>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-output">a=1, b=1, c=1</pre></div>
+
+          <p>To understand why this works, you need to realize that macros,
+          custom directives, functions, and methods in FreeMarker are just
+          values, just like numbers, strings, etc. <code class="inline-code">&lt;#macro m
+          <em class="code-color">...</em>&gt;</code> just creates a value
+          that&#39;s a macro (as opposed to a number, or string, etc.), and then
+          assigns it to variable <code class="inline-code">m</code>. Thus,
+          <code class="inline-code">m</code> in itself is a valid expression, which
+          evaluates to the macro (but it doesn&#39;t <em>call</em> the
+          macro). <code class="inline-code">&lt;@m <em class="code-color">...</em>
+          /&gt;</code> evaluates the expression <code class="inline-code">m</code> (and
+          you can use arbitrarily complex expressions there too, like
+          <code class="inline-code">m?with_args(<em class="code-color">...</em>)</code>), and
+          then <em>calls</em> the resulting macro.
+          <code class="inline-code">m?with_args(<em class="code-color">dynArgs</em>)</code>
+          returns a macro that&#39;s very similar to the original macro (that&#39;s
+          stored in <code class="inline-code">m</code>), but its arguments
+          <em>default</em> to the values specified in
+          <code class="inline-code"><em class="code-color">dynArgs</em></code>. So the result
+          of <code class="inline-code">m?with_args({&#39;b&#39;: 22, &#39;c&#39;: 33})</code> is similar to
+          a modified macro that was created as <code class="inline-code">&lt;#macro
+          <em class="code-color">unspefiedName</em> a b=22 c=33&gt;</code>.
+          With an example:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign mWithDefs = m?with_args({&#39;b&#39;: 22, &#39;c&#39;: 33})&gt;
+&lt;@myWithDefs a=1 c=&#39;overridden&#39;/&gt;</pre></div>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-output">a=1, b=22, c=overridden</pre></div>
+
+          <p>Above we have created a new macro based on the value of
+          <code class="inline-code">m</code>, stored it in variable
+          <code class="inline-code">mWithDefs</code>, and then later we called it with
+          <code class="inline-code">&lt;@myWithDefs <em class="code-color">...</em>
+          /&gt;</code>.</p>
+
+          <p><code class="inline-code">with_args</code> can also be applied on functions
+          (crated with <code class="inline-code">&lt;#function
+          <em class="code-color">...</em>&gt;</code>) and Java methods
+          (usually get from the data-model, like
+          <code class="inline-code">myObject.myMethod</code>). But because functions and
+          methods can only be called with positional arguments (like
+          <code class="inline-code">f(1, 2, 3)</code>, and <em>not</em> as
+          <code class="inline-code">f(a=1, b=2, c=3)</code>), the argument to
+          <code class="inline-code">with_args</code> must be a sequence instead of a hash.
+          Other than that, the same tricks work as with macros:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#function f(a, b, c)&gt;&lt;#return &quot;a=${a}, b=${b}, c=${c}&quot;&gt;&lt;/#function&gt;
+&lt;#assign dynArgs=[1, 2, 3]&gt;
+
+${f(1, 2, 3)}
+Same as:
+${f?with_args(dynArgs)()}
+or as:
+${f?with_args([1, 2])(3)}
+or as:
+${f?with_args([1])(2, 3)}
+
+&lt;#assign fWithOneAsFirstArg = f?with_args([1])&gt;
+${fWithOneAsFirstArg(2, 3)} &lt;#-- same as f(1, 2, 3) --&gt;</pre></div>
+
+          <p>Note the double application of
+          <code class="inline-code">(<em class="code-color">...</em>)</code> above, like in
+          <code class="inline-code">f?with_args(<em class="code-color">dynArgs</em>)()</code>.
+          That&#39;s because
+          <code class="inline-code">f?with_args(<em class="code-color">dynArgs</em>)</code>
+          just returns a new function (which is just a value), but doesn&#39;t
+          call it. So if you want to call that new function immediately (as
+          opposed to assigning it to a variable for example), you need the
+          second <code class="inline-code">()</code>.</p>
+
+          <p>Because macro calls support both named and positional
+          arguments, the <code class="inline-code">with_args</code> argument can be a
+          sequence for macros as well (though using a hash is usually a better
+          practice):</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;
+
+&lt;#-- Called with named parameters: --&gt;
+&lt;@m a=1 b=2 c=3 /&gt;
+Same as:
+&lt;#-- Called with positional parameters: --&gt;
+&lt;@m 1 2 3 /&gt;
+Same as:
+&lt;@m?with_args([1, 2, 3]) /&gt;
+Same as:
+&lt;#-- Sequence with_args with positional c parameter: --&gt;
+&lt;@m?with_args([1, 2]) 3 /&gt;
+Same as:
+&lt;#-- Sequence with_args with named c parameter: --&gt;
+&lt;@m?with_args([1, 2]) c=3 /&gt;</pre></div>
+
+          <p>To summarize, depending on the type of the value
+          <code class="inline-code">with_args</code> is applied on, the type of argument to
+          <code class="inline-code">with_args</code> can be:</p>
+
+          <ul>
+            <li>
+              <p>Function or method: sequence. Note that WRONG
+              <code class="inline-code">f?with_args(1, 2)</code> is WRONG, the correct form
+              is <code class="inline-code">f?with_args([1, 2])</code>.</p>
+            </li>
+
+            <li>
+              <p>Macro: hash or sequence</p>
+            </li>
+
+            <li>
+              <p>Directive (user defined): hash</p>
+            </li>
+          </ul>
+
+          <p>The return type of <code class="inline-code">with_args</code> is the same as
+          the type of value it was applied on, like if it&#39;s applied on a
+          method (like <code class="inline-code">myObj.myMethod?with_args(dynArgs)</code>),
+          then it returns a method.</p>
+
+          <p>Note that it&#39;s not possible to apply
+          <code class="inline-code">with_args</code> on built-in directives, like
+          <code class="inline-code">&lt;#if <em class="code-color">...</em>&gt;</code>,
+          <code class="inline-code">&lt;#list <em class="code-color">...</em>&gt;</code>,
+          etc., because they aren&#39;t available as values.</p>
+
+          <p>This built-in is often used together with the <a href="ref_specvar.html#specvar.args"><code>.args</code> special
+          variable</a>. For example:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;#macro m1 a b c&gt;
+  m1 does things with ${a}, ${b}, ${c}
+&lt;/#macro&gt;
+
+&lt;#macro m2 a b c&gt;
+  m2 does things with ${a}, ${b}, ${c}
+  Delegate to m1:
+  &lt;@m1?with_args(.args) /&gt;
+&lt;/#macro&gt;
+
+&lt;@m2 a=1 b=2 c=3 /&gt;</pre></div>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-output">  m2 does things with 1, 2, 3
+  Delegate to m1:
+  m1 does things with 1, 2, 3</pre></div>
+
+          <p>FreeMarker syntax allows using the name before the
+          <code class="inline-code">?with_args(<em class="code-color">...</em>)</code> in the
+          end-tag, just as if the
+          <code class="inline-code">?with_args(<em class="code-color">...</em>)</code> wasn&#39;t
+          there:</p>
+
+          
+
+<div class="code-wrapper"><pre class="code-block code-template">&lt;@myMacro?with_args({&#39;a&#39;: 1})&gt;...&lt;/<strong>@myMacro</strong>&gt;</pre></div>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2019-10-26T19:14:07Z" title="Saturday, October 26, 2019 7:14:07 PM GMT">2019-10-26 19:14:07 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2019-11-01T18:57:43Z" title="Friday, November 1, 2019 6:57:43 PM GMT">2019-11-01 18:57:43 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2019
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
