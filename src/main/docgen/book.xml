@@ -509,13 +509,6 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section>
-      <title><olink targetdoc="oldBugTracker">Bugs still in the old
-      tracker</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
       <title><olink targetdoc="newStackOverflowQuestion">Ask help on Stack
       Overflow</olink></title>
 
@@ -644,30 +637,6 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>The mailing list archive can be found <olink
       targetdoc="devMailingListArchive">here...</olink></para>
-
-      <simplesect>
-        <title>Retired mailing lists</title>
-
-        <para>These are the lists on sourceforge.net, which
-        <emphasis>shouldn't be used anymore</emphasis>.</para>
-
-        <para>Archives of <emphasis>retired</emphasis> lists:</para>
-
-        <itemizedlist>
-          <listitem>
-            <para><olink
-            targetdoc="oldUserMailingListArchive">freemarker-user@lists.sourceforge.net</olink></para>
-          </listitem>
-
-          <listitem>
-            <para><olink
-            targetdoc="oldDevelMailingListArchive">freemarker-devel@lists.sourceforge.net</olink></para>
-          </listitem>
-        </itemizedlist>
-
-        <para><olink targetdoc="oldMailingListSubscription">Manage
-        <emphasis>retired</emphasis> list subscriptions...</olink></para>
-      </simplesect>
     </section>
 
     <section xml:id="poweredBy">
@@ -1534,14 +1503,6 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>The same two artifacts should also be released (uploaded for
-            download) on <link
-            xlink:href="https://sourceforge.net/projects/freemarker/">https://sourceforge.net/projects/freemarker/</link>.
-            We add a note there to indicate that the canonical download is the
-            one from Apache.</para>
-          </listitem>
-
-          <listitem>
             <para>Releases should have a usual jar artifact, an src artifact
             and javadoc artifact either in the Apache Maven staging repository
             (for RC-s), or in the Maven Central Repository (for
@@ -1877,11 +1838,6 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>On <link
                 xlink:href="https://twitter.com/freemarker">https://twitter.com/freemarker</link></para>
-              </listitem>
-
-              <listitem>
-                <para>On the old FreeMarker mailing lists: freemarker-user,
-                freemarker-devel, freemarker-announce</para>
               </listitem>
             </itemizedlist>
           </listitem>
