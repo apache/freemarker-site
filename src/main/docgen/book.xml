@@ -1526,27 +1526,6 @@ two freemarker.jar-s and unpredictable behavior!
 
         <itemizedlist>
           <listitem>
-            <para>Releases with non-trivial changes should have at least one
-            Release Candidate (RC01) release, which is legally a normal
-            release (not just a internal/developer one), and is promoted for
-            at least 1 month on our web page. The differences to a final
-            release are these:</para>
-
-            <itemizedlist>
-              <listitem>
-                <para>RC-s aren't released to the Maven Central
-                Repository</para>
-              </listitem>
-
-              <listitem>
-                <para>RC documentation (Manual + JavaDoc) is only published
-                under
-                https://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>-rc<replaceable>X</replaceable>/</para>
-              </listitem>
-            </itemizedlist>
-          </listitem>
-
-          <listitem>
             <para>The official release is provided as source code to build the
             project (src tar.gz). For the convenience of users the release is
             also accompanied by compiled binaries (bin tar.gz, which also
@@ -1575,6 +1554,33 @@ two freemarker.jar-s and unpredictable behavior!
             release steps, you do many of them twice. Note that source code
             changes should be made in the 2.3-gae branch, and then merged into
             the 2.3 branch (unless a change only applies to 2.3).</para>
+          </listitem>
+
+          <listitem>
+            <para>Releases with deeper changes sometimes should have one or
+            more Release Candidate releases (RC01, RC02, etc.), which is
+            legally a normal release (not just a internal/developer one), and
+            is promoted on our web page. The differences to a final release
+            are these:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>RC-s aren't released to the Maven Central Repository,
+                only to the Apache Maven repository</para>
+              </listitem>
+
+              <listitem>
+                <para>RC documentation (Manual + JavaDoc) is only published
+                under
+                https://freemarker.apache.org/builds/<replaceable>X.X.X</replaceable>-rc<replaceable>X</replaceable>/</para>
+              </listitem>
+
+              <listitem>
+                <para>RC-s promise no backward compatibility for the new
+                features they add; they may be redesigned or dropped till the
+                final release comes out.</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
         </itemizedlist>
 
