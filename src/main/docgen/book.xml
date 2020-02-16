@@ -1558,7 +1558,7 @@ two freemarker.jar-s and unpredictable behavior!
             history of the Manual is up to date. Also the release date Version
             history section of the Manual has to be updated. That's tricky as
             you can't know it exactly, yet you can't change it when the actual
-            release is about to hapen, as that would change the release
+            release is about to happen, as that would change the release
             artifacts that were voted upon. So write the current date and
             <quote>+ release process</quote> after it; that's how it will be
             in the released artifacts.</para>
@@ -1618,7 +1618,10 @@ two freemarker.jar-s and unpredictable behavior!
             <para>SVN commit the release files into the proper subdirectory of
             https://dist.apache.org/repos/dist/<emphasis
             role="bold">dev</emphasis>/freemarker. Note that this is
-            <quote>dev/</quote>, not <quote>release/</quote>!</para>
+            <quote>dev/</quote>, not <quote>release/</quote>! You will likely
+            find the <quote>dev</quote> directory empty, so see the proper
+            layout under the <quote>release</quote> directory as a sample, but
+            don't commit to there accidentally.</para>
           </listitem>
 
           <listitem>
@@ -1628,7 +1631,10 @@ two freemarker.jar-s and unpredictable behavior!
               <listitem>
                 <para>If your Maven <literal>settings-security.xml</literal>
                 is relocated to an encrypted storage (recommended), mount it,
-                otherwise you will get 401 error when uploading.</para>
+                otherwise you will get 401 error when uploading. (How that's
+                done: create a file called settings-security.xml next to
+                ~/.m2/settings.xml, with content
+                <literal>&lt;settingsSecurity&gt;&lt;relocation&gt;<replaceable>your-decrypted-storage-mount</replaceable>/settings-security.xml&lt;/relocation&gt;&lt;/settingsSecurity&gt;</literal>)</para>
               </listitem>
 
               <listitem>
@@ -1637,7 +1643,7 @@ two freemarker.jar-s and unpredictable behavior!
 
               <listitem>
                 <para>Go to <link
-                xlink:href="http://repository.apache.org/">http://repository.apache.org/</link>,
+                xlink:href="https://repository.apache.org/">https://repository.apache.org/</link>,
                 log in, chose <quote>Staging Repositories</quote>, find and
                 click the repository just created. Check the upload files
                 manually (on the <quote>Content</quote> tab). Then
@@ -1650,8 +1656,9 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Upload the content of <literal>documentation/_html</literal>
-            from the binary release to https://freemarker.apache.org/<emphasis
+            <para>Upload the content <emphasis>inside</emphasis>
+            <literal>documentation/_html</literal> from the binary release to
+            https://freemarker.apache.org/<emphasis
             role="bold">builds/<replaceable>X.X.X</replaceable>-voting</emphasis>/
             (by committing it into the <quote>asf-site</quote> branch of
             https://git-wip-us.apache.org/repos/asf/freemarker-site.git). The
