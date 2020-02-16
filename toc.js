@@ -104,14 +104,6 @@ var toc = {
 }
 ,
 {
-"title": "Bugs still in the old\n tracker",
-"url": "https://sourceforge.net/p/freemarker/bugs/",
-"isFile": true,
-"children": [
-]
-}
-,
-{
 "title": "Ask help on Stack\n Overflow",
 "url": "https://stackoverflow.com/questions/ask?tags=freemarker",
 "isFile": true,
