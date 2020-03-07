@@ -1815,13 +1815,6 @@ two freemarker.jar-s and unpredictable behavior!
 
             <itemizedlist>
               <listitem>
-                <para>Release on sourceforge.net. The
-                <literal>README.md</literal> should note that it's for
-                convenience only, and point to the official download
-                page.</para>
-              </listitem>
-
-              <listitem>
                 <para>Update <link
                 xlink:href="https://en.wikipedia.org/wiki/FreeMarker">https://en.wikipedia.org/wiki/FreeMarker</link></para>
               </listitem>
