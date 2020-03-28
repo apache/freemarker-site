@@ -78,6 +78,7 @@ olinks: {
   githubMirrorOnlineTester: "https://github.com/apache/freemarker-online-tester"
   githubProject: "olink:githubMirrorFreemarker"
   githubProjectOld: "https://github.com/freemarker/"
+  securityMailingList: "mailto:security@apache.org"
   privateMailingList: "mailto:private@freemarker.apache.org"
   devMailingList: "mailto:dev@freemarker.apache.org"
   devMailingListSubscribe: "mailto:dev-subscribe@freemarker.apache.org"
@@ -94,6 +95,7 @@ olinks: {
   asfHome: "http://www.apache.org/"
   asfIncubator: "http://incubator.apache.org/"
   asfLicense: "http://www.apache.org/licenses/"
+  templateUploadingSecurityFaq: "https://freemarker.apache.org/docs/app_faq.html#faq_template_uploading_security"
   
   emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
   kwritePluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/kwriteftl.tar.gz/download"
