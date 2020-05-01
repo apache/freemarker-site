@@ -1707,6 +1707,28 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
                 well behaving <code class="inline-code">ObjectWrapper</code>, like
                 <code class="inline-code">DefaultObjectWrapper</code>.)</p>
 
+                <p>If you are using the default object wrapper class
+                (<code class="inline-code">freemarker.template.DefaultObjectWrapper</code>),
+                or a subclass of it, you should disable the XML (DOM) wrapping
+                feature of it, by overriding <code class="inline-code">wrapDomNode(Object
+                obj)</code> so that it does this: <code class="inline-code">return
+                getModelFactory(obj.getClass()).create(obj, this);</code>.
+                The problem with the XML wrapping feature, which wraps
+                <code class="inline-code">org.w3c.dom.Node</code> objects on special way to
+                make them easier to work with in templates, is that this
+                facility by design lets template authors evaluate arbitrary
+                XPath expressions, and XPath can do too much in certain
+                setups. If you really need the XML wrapping facility, review
+                carefully what XPath expressions are possible in your setup.
+                Also, be sure you don&#39;t use the long deprecated, and more
+                dangerous <code class="inline-code">freemarker.ext.xml</code> package, only
+                <code class="inline-code">freemarker.ext.dom</code>. Also, note that when
+                using the XML wrapping feature, not allowing
+                <code class="inline-code">org.w3c.dom.Node</code> methods in the
+                <code class="inline-code">MemberAccessPolicy</code> has no effect, since it
+                doesn&#39;t expose Java <code class="inline-code">Node</code> members to
+                templates directly.</p>
+
                 <p>Last not least, some maybe aware of the historical
                 legacy that standard object wrappers filter out some well
                 known "unsafe" methods, like
@@ -1755,11 +1777,13 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
                 <code class="inline-code">TemplateModel</code>, its static initialization
                 will be run. To avoid these, you should use a
                 <code class="inline-code">TemplateClassResolver</code> that restricts the
-                accessible classes (possibly based on which template asks for
-                them), such as
+                accessible classes to the absolute minimum (possibly based on
+                which template asks for them), such as
                 <code class="inline-code">TemplateClassResolver.ALLOWS_NOTHING_RESOLVER</code>.
-                Note that if, and only if your
-                <code class="inline-code">ObjectWrapper</code> is a
+                Do <em>not</em> use
+                <code class="inline-code">TemplateClassResolver.SAFER_RESOLVER</code>, it&#39;s
+                not restrictive enough for this purpose! Note that if, and
+                only if your <code class="inline-code">ObjectWrapper</code> is a
                 <code class="inline-code">BeansWrapper</code> or a subclass of it (typically
                 <code class="inline-code">DefaultObjectWrapper</code>), constructors not
                 allowed by the <code class="inline-code">MemberAccessPolicy</code> also
@@ -1920,7 +1944,7 @@ TemplateModel x = env.getVariable(&quot;x&quot;);  // get variable x</pre></div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-03-28T10:05:16Z" title="Saturday, March 28, 2020 10:05:16 AM GMT">2020-03-28 10:05:16 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-05-01T14:24:19Z" title="Friday, May 1, 2020 2:24:19 PM GMT">2020-05-01 14:24:19 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
