@@ -2836,6 +2836,14 @@ var toc = {
 "children": [
 ]
 }
+,
+{
+"title": "Why import should be used instead of\n include",
+"url": "ref_directive_include.html#topic.import_vs_include",
+"isFile": false,
+"children": [
+]
+}
 ]
 }
 ]
