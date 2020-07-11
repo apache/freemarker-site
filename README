@@ -20,13 +20,19 @@
 Apache FreeMarker Site
 ----------------------
 
-This is the project with which we generate the freemarker.apache.org home page.
-Note that most of the work is done by Apache FreeMarker Docgen, which is
-a dependency of this project.
+This is the project that generates the freemarker.apache.org home page,
+except the documentation of FreeMarker, or of other released products.
+Note that most of the work is done by the freemarker-docgen depedency. (If
+Maven can't get the proper version of that depedency, try the Apache Maven
+repository, or you have to check out freemarker-docgen "mvn install" it
+locally.)
 
-To publish the built site, commit the output into the "asf-site" branch.
+To build the site, issue:
 
-Note that as of this writing, the "docgen" dependency is get from the Ivy
-repo on the published homepage (https://freemarker.apache.org/repos/ivy/). Those
-modifying docgen should upload the fresh docgen jar there. Then you need to
-run `ant update-deps` here to grab the latest version.
+  mvn package
+
+This will output the site into target/site. To publish the built site, commit the
+output into the "asf-site" branch of the freemarker-site Git repo.
+
+This project shouldn't be deployed or installed, as it produces no
+meaningful artifact.
