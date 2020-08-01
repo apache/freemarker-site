@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/dgui_template_exp.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1590264577448">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1594832400000">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,14 +30,22 @@ ga('send', 'pageview');
     <meta itemprop="name" content="Apache FreeMarker Manual">
 
   <!--[if lte IE 9]>
-  <div style="background-color: #C00; color: #fff; padding: 12px 24px;">Please use a modern browser to view this website.</div>
-  <![endif]--><div class="header-top-bg"><div class="site-width header-top"><a class="logo" href="https://freemarker.apache.org" role="banner">            <img itemprop="image" src="logo.png" alt="FreeMarker">
-</a><ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row"><ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui.html"><span itemprop="name">Template Author&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_template.html"><span itemprop="name">The Template</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_template_exp.html"><span itemprop="name">Expressions</span></a></li></ul><div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul class="bookmark-list"><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
+  <div class="oldBrowserWarning" style="display: block">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+  <![endif]-->  <div class="oldBrowserWarning">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+<div class="header-top-bg"><div class="site-width header-top"><div id="hamburger-menu" role="button"></div>          <div class="logo">
+<a href="https://freemarker.apache.org" role="banner"><img itemprop="image" src="logo.png" alt="FreeMarker"></a>          </div>
+<ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row">  <div class="breadcrumbs">
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui.html"><span itemprop="name">Template Author&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_template.html"><span itemprop="name">The Template</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_template_exp.html"><span itemprop="name">Expressions</span></a></li></ul>  </div>
+<div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","The Template","Expressions"];</script>
-      <script src="toc.js?1590264577448"></script>
-      <script src="docgen-resources/main.min.js?1590264577448"></script>
+      <script src="toc.js?1594832400000"></script>
+      <script src="docgen-resources/main.min.js?1594832400000"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_template_directives.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_template_valueinsertion.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_template_exp" itemprop="headline">Expressions</h1>
@@ -316,21 +324,21 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">${&quot;It&#39;s \&quot;quoted\&quot; and
+<pre class="code-block code-template">${&quot;It&#39;s \&quot;quoted\&quot; and
 this is a backslash: \\&quot;}
 
 ${&#39;It\&#39;s &quot;quoted&quot; and
-this is a backslash: \\&#39;}</pre></div>
+this is a backslash: \\&#39;}</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">It&#39;s &quot;quoted&quot; and
+<pre class="code-block code-output">It&#39;s &quot;quoted&quot; and
 this is a backslash: \
 
 It&#39;s &quot;quoted&quot; and
-this is a backslash: \</pre></div>
+this is a backslash: \</pre>
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -535,15 +543,15 @@ this is a backslash: \</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">${r&quot;${foo}&quot;}
-${r&quot;C:\foo\bar&quot;}</pre></div>
+<pre class="code-block code-template">${r&quot;${foo}&quot;}
+${r&quot;C:\foo\bar&quot;}</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">${foo}
-C:\foo\bar</pre></div>
+<pre class="code-block code-output">${foo}
+C:\foo\bar</pre>
           
 
           
@@ -616,18 +624,18 @@ C:\foo\bar</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#list <strong>[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]</strong> as x&gt;
+<pre class="code-block code-template">&lt;#list <strong>[&quot;foo&quot;, &quot;bar&quot;, &quot;baz&quot;]</strong> as x&gt;
 ${x}
-&lt;/#list&gt;</pre></div>
+&lt;/#list&gt;</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">foo
+<pre class="code-block code-output">foo
 bar
 baz
- </pre></div>
+ </pre>
 
             <p>The items in the list are expressions, so you can do this
             for example: <code class="inline-code">[2 + 2, [1, 2, 3, 4], &quot;foo&quot;]</code>. Here
@@ -826,7 +834,7 @@ baz
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">${user}</pre></div>
+<pre class="code-block code-template">${user}</pre>
 
             <p>If there is no such top-level variable, then an error will
             result when FreeMarker tries to evaluate the expression, and it
@@ -868,7 +876,7 @@ baz
 
             
 
-<div class="code-wrapper"><pre class="code-block code-data-model">(root)
+<pre class="code-block code-data-model">(root)
  |
  +- book
  |   |
@@ -880,7 +888,7 @@ baz
  |       |
  |       +- info = &quot;Biologist, 1923-1985, Canada&quot;
  |
- +- test = &quot;title&quot;</pre></div>
+ +- test = &quot;title&quot;</pre>
 
             <p>Now we can read the <code class="inline-code">title</code> with
             <code class="inline-code">book.title</code>, since the book expression will
@@ -1013,14 +1021,14 @@ baz
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign s = &quot;Hello ${user}!&quot;&gt;
-${s} &lt;#-- Just to see what the value of s is --&gt;</pre></div>
+<pre class="code-block code-template">&lt;#assign s = &quot;Hello ${user}!&quot;&gt;
+${s} &lt;#-- Just to see what the value of s is --&gt;</pre>
 
             <p>This will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">Hello Big Joe!</pre></div>
+<pre class="code-block code-output">Hello Big Joe!</pre>
 
               <div class="callout warning">
     <strong class="callout-label">Warning!</strong>
@@ -1048,7 +1056,7 @@ ${s} &lt;#-- Just to see what the value of s is --&gt;</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign s = &quot;Hello &quot; + user + &quot;!&quot;&gt;</pre></div>
+<pre class="code-block code-template">&lt;#assign s = &quot;Hello &quot; + user + &quot;!&quot;&gt;</pre>
 
             <p>This gives the same result as the earlier example with the
             <code class="inline-code">${<em class="code-color">...</em>}</code>.</p>
@@ -1117,16 +1125,16 @@ ${s} &lt;#-- Just to see what the value of s is --&gt;</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">${user[0]}
-${user[4]}</pre></div>
+<pre class="code-block code-template">${user[0]}
+${user[4]}</pre>
 
             <p>will print (note that the index of the first character is
             0):</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">B
-J</pre></div>
+<pre class="code-block code-output">B
+J</pre>
           
 
           
@@ -1182,22 +1190,22 @@ J</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign s = &quot;ABCDEF&quot;&gt;
+<pre class="code-block code-template">&lt;#assign s = &quot;ABCDEF&quot;&gt;
 ${s[2..3]}
 ${s[2..&lt;4]}
 ${s[2..*3]}
 ${s[2..*100]}
-${s[2..]}</pre></div>
+${s[2..]}</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">CD
+<pre class="code-block code-output">CD
 CD
 CDE
 CDEF
-CDEF</pre></div>
+CDEF</pre>
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -1243,19 +1251,19 @@ CDEF</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#list [&quot;Joe&quot;, &quot;Fred&quot;] + [&quot;Julia&quot;, &quot;Kate&quot;] as user&gt;
+<pre class="code-block code-template">&lt;#list [&quot;Joe&quot;, &quot;Fred&quot;] + [&quot;Julia&quot;, &quot;Kate&quot;] as user&gt;
 - ${user}
-&lt;/#list&gt;</pre></div>
+&lt;/#list&gt;</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">- Joe
+<pre class="code-block code-output">- Joe
 - Fred
 - Julia
 - Kate
- </pre></div>
+ </pre>
 
             <p>Note that sequence concatenation is not to be used for many
             repeated concatenations, like for appending items to a sequence
@@ -1294,14 +1302,14 @@ CDEF</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign seq = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;]&gt;
-&lt;#list seq[1..3] as i&gt;${i}&lt;/#list&gt;</pre></div>
+<pre class="code-block code-template">&lt;#assign seq = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;]&gt;
+&lt;#list seq[1..3] as i&gt;${i}&lt;/#list&gt;</pre>
 
             <p>will print</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">BCD </pre></div>
+<pre class="code-block code-output">BCD </pre>
 
             <p>Furthermore, the items in the slice will be in the same
             order as in the range. Thus for example the above example with the
@@ -1328,7 +1336,7 @@ CDEF</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign seq = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]&gt;
+<pre class="code-block code-template">&lt;#assign seq = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]&gt;
 
 Slicing with length limited ranges:
 - &lt;#list seq[0..*2] as i&gt;${i}&lt;/#list&gt;
@@ -1340,13 +1348,13 @@ Slicing with right-unlimited ranges:
 - &lt;#list seq[0..] as i&gt;${i}&lt;/#list&gt;
 - &lt;#list seq[1..] as i&gt;${i}&lt;/#list&gt;
 - &lt;#list seq[2..] as i&gt;${i}&lt;/#list&gt;
-- &lt;#list seq[3..] as i&gt;${i}&lt;/#list&gt;</pre></div>
+- &lt;#list seq[3..] as i&gt;${i}&lt;/#list&gt;</pre>
 
             <p>This will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">Slicing with length limited ranges:
+<pre class="code-block code-output">Slicing with length limited ranges:
 - AB
 - BC
 - C
@@ -1356,7 +1364,7 @@ Slicing with right-unlimited ranges:
 - ABC
 - BC
 - C
--</pre></div>
+-</pre>
 
             <p>Note above that slicing with length limited and right
             unbounded ranges allow the starting index to be past the last item
@@ -1404,18 +1412,18 @@ Slicing with right-unlimited ranges:
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign ages = {&quot;Joe&quot;:23, &quot;Fred&quot;:25} + {&quot;Joe&quot;:30, &quot;Julia&quot;:18}&gt;
+<pre class="code-block code-template">&lt;#assign ages = {&quot;Joe&quot;:23, &quot;Fred&quot;:25} + {&quot;Joe&quot;:30, &quot;Julia&quot;:18}&gt;
 - Joe is ${ages.Joe}
 - Fred is ${ages.Fred}
-- Julia is ${ages.Julia}</pre></div>
+- Julia is ${ages.Julia}</pre>
 
             <p>will print:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">- Joe is 30
+<pre class="code-block code-output">- Joe is 30
 - Fred is 25
-- Julia is 18</pre></div>
+- Julia is 18</pre>
 
             <p>Note that hash concatenation is not to be used for many
             repeated concatenations, like for adding items to a hash inside a
@@ -1475,17 +1483,17 @@ Slicing with right-unlimited ranges:
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${100 - x * x}
+<pre class="code-block code-template">${100 - x * x}
 ${x / 2}
-${12 % 10}</pre></div>
+${12 % 10}</pre>
 
           <p>Assuming that <code class="inline-code">x</code> is 5, it will print:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">75
+<pre class="code-block code-output">75
 2.5
-2</pre></div>
+2</pre>
 
           <p>Both operands must be expressions which evaluate to a
           numerical value. So the example below will cause an error when
@@ -1494,7 +1502,7 @@ ${12 % 10}</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${3 * &quot;5&quot;} &lt;#-- WRONG! --&gt;</pre></div>
+<pre class="code-block code-template">${3 * &quot;5&quot;} &lt;#-- WRONG! --&gt;</pre>
 
           <p>There is an exception to the above rule. The
           <code class="inline-code">+</code> operator, is used to <a href="#dgui_template_exp_stringop_interpolation">concatenate
@@ -1507,11 +1515,11 @@ ${12 % 10}</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${3 + &quot;5&quot;}</pre></div>
+<pre class="code-block code-template">${3 + &quot;5&quot;}</pre>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">35</pre></div>
+<pre class="code-block code-output">35</pre>
 
           <p>Generally, FreeMarker never converts a string to a number
           automatically, but it may convert a number to a string
@@ -1523,21 +1531,21 @@ ${12 % 10}</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${(x/2)?int}
+<pre class="code-block code-template">${(x/2)?int}
 ${1.1?int}
 ${1.999?int}
 ${-1.1?int}
-${-1.999?int}</pre></div>
+${-1.999?int}</pre>
 
           <p>Assuming that <code class="inline-code">x</code> is 5, it will print:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">2
+<pre class="code-block code-output">2
 1
 1
 -1
--1</pre></div>
+-1</pre>
 
           <p>Due to historical reasons, the <code class="inline-code">%</code> operator
           works by first truncating the operands to an integer number, and
@@ -1545,12 +1553,12 @@ ${-1.999?int}</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${12 % 5}   &lt;#-- Prints 2 --&gt;
+<pre class="code-block code-template">${12 % 5}   &lt;#-- Prints 2 --&gt;
 ${12.9 % 5} &lt;#-- Prints 2 --&gt;
 ${12.1 % 5} &lt;#-- Prints 2 --&gt;
 
 ${12 % 6}   &lt;#-- Prints 0 --&gt;
-${12 % 6.9} &lt;#-- Prints 0 --&gt;</pre></div>
+${12 % 6.9} &lt;#-- Prints 0 --&gt;</pre>
 
           <p>The sign of the result of <code class="inline-code">%</code> is the same as
           the sign of the left hand operand, and its absolute value is the
@@ -1558,9 +1566,9 @@ ${12 % 6.9} &lt;#-- Prints 0 --&gt;</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${-12 % -5} &lt;#-- Prints -2 --&gt;
+<pre class="code-block code-template">${-12 % -5} &lt;#-- Prints -2 --&gt;
 ${-12 % 5} &lt;#-- Prints -2 --&gt;
-${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
+${12 % -5} &lt;#-- Prints 2 --&gt;</pre>
 
           <p class="programmers-note">About the precision of the operations:
           By default FreeMarker uses <code class="inline-code">BigDecimal</code>-s for all
@@ -1608,12 +1616,12 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if <strong>user == &quot;Big Joe&quot;</strong>&gt;
+<pre class="code-block code-template">&lt;#if <strong>user == &quot;Big Joe&quot;</strong>&gt;
   It is Big Joe
 &lt;/#if&gt;
 &lt;#if <strong>user != &quot;Big Joe&quot;</strong>&gt;
   It is not Big Joe
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
           <p>The <code class="inline-code">user == &quot;Big Joe&quot;</code> expression in the
           <code class="inline-code">&lt;#if ...&gt;</code> will evaluate to the boolean
@@ -1638,9 +1646,9 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if x <strong>&lt;=</strong> 12&gt;
+<pre class="code-block code-template">&lt;#if x <strong>&lt;=</strong> 12&gt;
   x is less or equivalent with 12
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
           <p>There&#39;s a problem with <code class="inline-code">&gt;=</code> and
           <code class="inline-code">&gt;</code>. FreeMarker interprets the
@@ -1718,12 +1726,12 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if x &lt; 12 <strong>&amp;&amp;</strong> color == &quot;green&quot;&gt;
+<pre class="code-block code-template">&lt;#if x &lt; 12 <strong>&amp;&amp;</strong> color == &quot;green&quot;&gt;
   We have less than 12 things, and they are green.
 &lt;/#if&gt;
 &lt;#if <strong>!</strong>hot&gt; &lt;#-- here hot must be a boolean --&gt;
   It&#39;s not hot.
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
           <p>FreeMarker supports some more syntactical alternatives:</p>
 
@@ -1804,12 +1812,12 @@ ${12 % -5} &lt;#-- Prints 2 --&gt;</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${testString?upper_case}
+<pre class="code-block code-template">${testString?upper_case}
 ${testString?html}
 ${testString?upper_case?html}
 
 ${testSequence?size}
-${testSequence?join(&quot;, &quot;)}</pre></div>
+${testSequence?join(&quot;, &quot;)}</pre>
 
           <p>Assuming that <code class="inline-code">testString</code> stores the string
           "Tom &amp; Jerry", and testSequnce stores the strings
@@ -1818,12 +1826,12 @@ ${testSequence?join(&quot;, &quot;)}</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">TOM &amp; JERRY
+<pre class="code-block code-output">TOM &amp; JERRY
 Tom &amp;amp; Jerry
 TOM &amp;amp; JERRY
 
 3
-foo, bar, baz</pre></div>
+foo, bar, baz</pre>
 
           <p>Note the <code class="inline-code">test?upper_case?html</code> above. Since
           the result of <code class="inline-code">test?upper_case</code> is a string, you
@@ -1834,15 +1842,15 @@ foo, bar, baz</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${testSeqence[1]?cap_first}
+<pre class="code-block code-template">${testSeqence[1]?cap_first}
 ${&quot;horse&quot;?cap_first}
-${(testString + &quot; &amp; Duck&quot;)?html}</pre></div>
+${(testString + &quot; &amp; Duck&quot;)?html}</pre>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">Bar
+<pre class="code-block code-output">Bar
 Horse
-Tom &amp;amp; Jerry &amp;amp; Duck</pre></div>
+Tom &amp;amp; Jerry &amp;amp; Duck</pre>
         
           
 
@@ -1870,13 +1878,13 @@ Tom &amp;amp; Jerry &amp;amp; Duck</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${repeat(&quot;Foo&quot;, 3)}</pre></div>
+<pre class="code-block code-template">${repeat(&quot;Foo&quot;, 3)}</pre>
 
           <p>will print:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">FooFooFoo</pre></div>
+<pre class="code-block code-output">FooFooFoo</pre>
 
           <p>Here <code class="inline-code">repeat</code> was evaluated to the method
           variable (according to how you <a href="#dgui_template_exp_var_toplevel">access top-level
@@ -1888,13 +1896,13 @@ Tom &amp;amp; Jerry &amp;amp; Duck</pre></div>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${repeat(repeat(&quot;x&quot;, 2), 3) + repeat(&quot;Foo&quot;, 4)?upper_case}</pre></div>
+<pre class="code-block code-template">${repeat(repeat(&quot;x&quot;, 2), 3) + repeat(&quot;Foo&quot;, 4)?upper_case}</pre>
 
           <p>will print this:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">xxxxxxFOOFOOFOOFOO</pre></div>
+<pre class="code-block code-output">xxxxxxFOOFOOFOOFOO</pre>
         
           
 
@@ -1982,16 +1990,16 @@ Tom &amp;amp; Jerry &amp;amp; Duck</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">${mouse!&quot;No mouse.&quot;}
+<pre class="code-block code-template">${mouse!&quot;No mouse.&quot;}
 &lt;#assign mouse=&quot;Jerry&quot;&gt;
-${mouse!&quot;No mouse.&quot;}</pre></div>
+${mouse!&quot;No mouse.&quot;}</pre>
 
             <p>The output will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">No mouse.
-Jerry</pre></div>
+<pre class="code-block code-output">No mouse.
+Jerry</pre>
 
             <p>The default value can be any kind of expression, so it
             doesn&#39;t have to be a string. For example you can write
@@ -2030,16 +2038,16 @@ Jerry</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">(${mouse!})
+<pre class="code-block code-template">(${mouse!})
 &lt;#assign mouse = &quot;Jerry&quot;&gt;
-(${mouse!})</pre></div>
+(${mouse!})</pre>
 
             <p>The output will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">()
-(Jerry)</pre></div>
+<pre class="code-block code-output">()
+(Jerry)</pre>
 
               <div class="callout warning">
     <strong class="callout-label">Warning!</strong>
@@ -2060,7 +2068,7 @@ Jerry</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">product.color!&quot;red&quot;</pre></div>
+<pre class="code-block code-template">product.color!&quot;red&quot;</pre>
 
             <p>This will handle if <code class="inline-code">color</code> is missing
             inside <code class="inline-code">product</code> (and returns
@@ -2071,7 +2079,7 @@ Jerry</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">(product.color)!&quot;red&quot;</pre></div>
+<pre class="code-block code-template">(product.color)!&quot;red&quot;</pre>
 
             <p>This will handle if <code class="inline-code">product.color</code> is
             missing. That is, if <code class="inline-code">product</code> is missing, or
@@ -2089,20 +2097,20 @@ Jerry</pre></div>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign seq = [&#39;a&#39;, &#39;b&#39;]&gt;
+<pre class="code-block code-template">&lt;#assign seq = [&#39;a&#39;, &#39;b&#39;]&gt;
 ${seq[0]!&#39;-&#39;}
 ${seq[1]!&#39;-&#39;}
 ${seq[2]!&#39;-&#39;}
-${seq[3]!&#39;-&#39;}</pre></div>
+${seq[3]!&#39;-&#39;}</pre>
 
             <p>the outpur will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">a
+<pre class="code-block code-output">a
 b
 -
--</pre></div>
+-</pre>
 
             <p>A negative sequence index (as
             <code class="inline-code">seq[-1]!&#39;-&#39;</code>) will always cause an error, you
@@ -2142,7 +2150,7 @@ b
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if mouse??&gt;
+<pre class="code-block code-template">&lt;#if mouse??&gt;
   Mouse found
 &lt;#else&gt;
   No mouse found
@@ -2153,15 +2161,15 @@ Creating mouse...
   Mouse found
 &lt;#else&gt;
   No mouse found
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>The output will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">  No mouse found
+<pre class="code-block code-output">  No mouse found
 Creating mouse...
-  Mouse found</pre></div>
+  Mouse found</pre>
 
             <p>With non-top-level variables the rules are the same as with
             the default value operator, that is, you can write
@@ -2268,7 +2276,7 @@ Creating mouse...
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">                               &lt;#-- Output will be: --&gt;
+<pre class="code-block code-template">                               &lt;#-- Output will be: --&gt;
 ${3 * 2 + 2}                   &lt;#-- 8 --&gt;
 ${3 * (2 + 2)}                 &lt;#-- 12 --&gt;
 ${3 * ((2 + 2) * (1 / 2))}     &lt;#-- 6 --&gt;
@@ -2276,7 +2284,7 @@ ${&quot;green &quot; + &quot;mouse&quot;?upper_case}    &lt;#-- green MOUSE --&g
 ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&gt;
 &lt;#if !(color == &quot;red&quot; || color == &quot;green&quot;)&gt;
   The color is nor red nor green
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
           <p>Note that the parentheses of a <a href="#dgui_template_exp_methodcall">method call
           expressions</a> have nothing to do with the parentheses used for
@@ -2294,23 +2302,23 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${x + &quot;:&quot; + book.title?upper_case}</pre></div>
+<pre class="code-block code-template">${x + &quot;:&quot; + book.title?upper_case}</pre>
 
           <p>and</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${x+&quot;:&quot;+book.title?upper_case}</pre></div>
+<pre class="code-block code-template">${x+&quot;:&quot;+book.title?upper_case}</pre>
 
           <p>and</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">${
+<pre class="code-block code-template">${
    x
  + &quot;:&quot;   +  book   .   title
    ?   upper_case
-      }</pre></div>
+      }</pre>
         
           
 
@@ -2328,7 +2336,7 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign x &lt;#-- A comment --&gt; = 123 &lt;#-- A comment --&gt;&gt;
+<pre class="code-block code-template">&lt;#assign x &lt;#-- A comment --&gt; = 123 &lt;#-- A comment --&gt;&gt;
 &lt;#function f(x &lt;#-- A comment --&gt;, y &lt;#-- A comment --&gt;)&gt;
   &lt;#return &lt;#-- A comment --&gt; 1 &lt;#-- A comment --&gt;&gt;
 &lt;/#function&gt;
@@ -2337,7 +2345,7 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
     &quot;bar&quot;: x &lt;#-- A comment --&gt; + 1,
     &lt;#-- A comment --&gt;
     &quot;baaz&quot;: f(1 &lt;#-- A comment --&gt;, 2 &lt;#-- A comment --&gt;)
-} &lt;#-- A comment --&gt;&gt;</pre></div>
+} &lt;#-- A comment --&gt;&gt;</pre>
         
           
 
@@ -2498,7 +2506,7 @@ ${(&quot;green &quot; + &quot;mouse&quot;)?upper_case}  &lt;#-- GREEN MOUSE --&g
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-05-23T20:09:37Z" title="Saturday, May 23, 2020 8:09:37 PM GMT">2020-05-23 20:09:37 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-07-15T17:00:00Z" title="Wednesday, July 15, 2020 at 5:00:00 PM Greenwich Mean Time">2020-07-15 17:00:00 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

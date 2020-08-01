@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/dgui_quickstart_template.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1590264577448">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1594832400000">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,14 +30,22 @@ ga('send', 'pageview');
     <meta itemprop="name" content="Apache FreeMarker Manual">
 
   <!--[if lte IE 9]>
-  <div style="background-color: #C00; color: #fff; padding: 12px 24px;">Please use a modern browser to view this website.</div>
-  <![endif]--><div class="header-top-bg"><div class="site-width header-top"><a class="logo" href="https://freemarker.apache.org" role="banner">            <img itemprop="image" src="logo.png" alt="FreeMarker">
-</a><ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row"><ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui.html"><span itemprop="name">Template Author&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_quickstart.html"><span itemprop="name">Getting Started</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_quickstart_template.html"><span itemprop="name">The template at a glance</span></a></li></ul><div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul class="bookmark-list"><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
+  <div class="oldBrowserWarning" style="display: block">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+  <![endif]-->  <div class="oldBrowserWarning">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+<div class="header-top-bg"><div class="site-width header-top"><div id="hamburger-menu" role="button"></div>          <div class="logo">
+<a href="https://freemarker.apache.org" role="banner"><img itemprop="image" src="logo.png" alt="FreeMarker"></a>          </div>
+<ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row">  <div class="breadcrumbs">
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui.html"><span itemprop="name">Template Author&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_quickstart.html"><span itemprop="name">Getting Started</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="dgui_quickstart_template.html"><span itemprop="name">The template at a glance</span></a></li></ul>  </div>
+<div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","Getting Started","The template at a glance"];</script>
-      <script src="toc.js?1590264577448"></script>
-      <script src="docgen-resources/main.min.js?1590264577448"></script>
+      <script src="toc.js?1594832400000"></script>
+      <script src="docgen-resources/main.min.js?1594832400000"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_quickstart_datamodel.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_datamodel.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_quickstart_template" itemprop="headline">The template at a glance</h1>
@@ -114,7 +122,7 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;html&gt;
+<pre class="code-block code-template">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Welcome!&lt;/title&gt;
 &lt;/head&gt;
@@ -125,7 +133,7 @@ ga('send', 'pageview');
   &lt;p&gt;Our latest product:
   &lt;a href=&quot;${latestProduct.url}&quot;&gt;${latestProduct.name}&lt;/a&gt;!
 &lt;/body&gt;
-&lt;/html&gt;</pre></div>
+&lt;/html&gt;</pre>
 
             <p>Here you have told FreeMarker that the ", our beloved
             leader" should be there only if the value of the variable
@@ -154,9 +162,9 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if animals.python.price == <strong>0</strong>&gt;
+<pre class="code-block code-template">&lt;#if animals.python.price == <strong>0</strong>&gt;
   Pythons are free today!
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>Similarly as earlier when a string was specified directly,
             here a number is specified directly (<code class="inline-code">0</code>). Note
@@ -170,9 +178,9 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if animals.python.price <strong>!=</strong> 0&gt;
+<pre class="code-block code-template">&lt;#if animals.python.price <strong>!=</strong> 0&gt;
   Pythons are not free today!
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>As you probably guessed, <code class="inline-code">!=</code> means
             "not equals".</p>
@@ -182,20 +190,20 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if <strong>animals.python.price &lt; animals.elephant.price</strong>&gt;
+<pre class="code-block code-template">&lt;#if <strong>animals.python.price &lt; animals.elephant.price</strong>&gt;
   Pythons are cheaper than elephants today.
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>With the <code class="inline-code">&lt;#else&gt;</code> tag you can
             specify what to do if the condition is false. For example:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
+<pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
   Pythons are cheaper than elephants today.
 <strong>&lt;#else&gt;</strong>
   Pythons are not cheaper than elephants today.
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>This prints "Pythons are cheaper than elephants
             today." if the price of python is less than the price of
@@ -205,13 +213,13 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
+<pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
   Pythons are cheaper than elephants today.
 <strong>&lt;#elseif animals.elephant.price &lt; animals.python.price&gt;</strong>
   Elephants are cheaper than pythons today.
 &lt;#else&gt;
   Elephants and pythons cost the same today.
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
 
             <p>If you have a variable with boolean value (a true/false
             thing) then you can use it directly as the
@@ -220,9 +228,9 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if animals.python.protected&gt;
+<pre class="code-block code-template">&lt;#if animals.python.protected&gt;
   Pythons are protected animals!
-&lt;/#if&gt;</pre></div>
+&lt;/#if&gt;</pre>
           
 
           
@@ -241,23 +249,23 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;p&gt;We have these animals:
+<pre class="code-block code-template">&lt;p&gt;We have these animals:
 &lt;table border=1&gt;
   <strong>&lt;#list animals as animal&gt;</strong>
     &lt;tr&gt;&lt;td&gt;${<strong>animal</strong>.name}&lt;td&gt;${<strong>animal</strong>.price} Euros
   <strong>&lt;/#list&gt;</strong>
-&lt;/table&gt;</pre></div>
+&lt;/table&gt;</pre>
 
             <p>then the output will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">&lt;p&gt;We have these animals:
+<pre class="code-block code-output">&lt;p&gt;We have these animals:
 &lt;table border=1&gt;
     <strong>&lt;tr&gt;&lt;td&gt;mouse&lt;td&gt;50 Euros
     &lt;tr&gt;&lt;td&gt;elephant&lt;td&gt;5000 Euros
     &lt;tr&gt;&lt;td&gt;python&lt;td&gt;4999 Euros</strong>
-&lt;/table&gt;</pre></div>
+&lt;/table&gt;</pre>
 
             <p>The generic form of the <code class="inline-code">list</code> directive
             is:<code class="inline-code"> &lt;#list <em class="code-color">sequence</em> as
@@ -279,11 +287,11 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;ul&gt;
+<pre class="code-block code-template">&lt;ul&gt;
 <strong>&lt;#list misc.fruits as fruit&gt;</strong>
   &lt;li&gt;${fruit}
 <strong>&lt;/#list&gt;</strong>
-&lt;/ul&gt;</pre></div>
+&lt;/ul&gt;</pre>
 
             <p>The <code class="inline-code">misc.fruits</code> expression should be
             familiar to you; it <a href="dgui_quickstart_datamodel.html#topic.qStart.accessVariables">references a variable in
@@ -297,13 +305,13 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#list misc.fruits&gt;
+<pre class="code-block code-template">&lt;#list misc.fruits&gt;
   &lt;ul&gt;
    <strong> &lt;#items as fruit&gt;</strong>
       &lt;li&gt;${fruit}
  <strong>   &lt;/#items&gt;</strong>
   &lt;/ul&gt;
-&lt;/#list&gt;</pre></div>
+&lt;/#list&gt;</pre>
 
             <p>Here, the <code class="inline-code">list</code> directive represents the
             listing as a whole, and only the part inside the
@@ -317,11 +325,11 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre></div>
+<pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">&lt;p&gt;Fruits: orange, banana</pre></div>
+<pre class="code-block code-output">&lt;p&gt;Fruits: orange, banana</pre>
 
             <p>The section covered by <code class="inline-code">sep</code> (which we
             could be written like this too:
@@ -338,7 +346,7 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}&lt;#sep&gt;, <strong>&lt;#else&gt;None</strong>&lt;/#list&gt;</pre></div>
+<pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}&lt;#sep&gt;, <strong>&lt;#else&gt;None</strong>&lt;/#list&gt;</pre>
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -349,7 +357,7 @@ ga('send', 'pageview');
 
               
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;p&gt;Fruits: ${fruits?join(&quot;, &quot;, &quot;None&quot;)}</pre></div>
+<pre class="code-block code-template">&lt;p&gt;Fruits: ${fruits?join(&quot;, &quot;, &quot;None&quot;)}</pre>
               </div>
 
 
@@ -359,7 +367,7 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#list misc.fruits&gt;
+<pre class="code-block code-template">&lt;#list misc.fruits&gt;
   &lt;p&gt;Fruits:
   &lt;ul&gt;
     &lt;#items as fruit&gt;
@@ -368,7 +376,7 @@ ga('send', 'pageview');
   &lt;/ul&gt;
 &lt;#else&gt;
   &lt;p&gt;We have no fruits.
-&lt;/#list&gt;</pre></div>
+&lt;/#list&gt;</pre>
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -397,19 +405,19 @@ ga('send', 'pageview');
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;hr&gt;
+<pre class="code-block code-template">&lt;hr&gt;
 &lt;i&gt;
 Copyright (c) 2000 &lt;a href=&quot;http://www.acmee.com&quot;&gt;Acmee Inc&lt;/a&gt;,
 &lt;br&gt;
 All Rights Reserved.
-&lt;/i&gt;</pre></div>
+&lt;/i&gt;</pre>
 
             <p>Whenever you need that file you simply insert it with the
             <code class="inline-code">include</code> directive:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;html&gt;
+<pre class="code-block code-template">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Test page&lt;/title&gt;
 &lt;/head&gt;
@@ -418,13 +426,13 @@ All Rights Reserved.
   &lt;p&gt;Blah blah...
 <strong>  &lt;#include &quot;/copyright_footer.html&quot;&gt;</strong>
 &lt;/body&gt;
-&lt;/html&gt;</pre></div>
+&lt;/html&gt;</pre>
 
             <p>and the output will be:</p>
 
             
 
-<div class="code-wrapper"><pre class="code-block code-output">&lt;html&gt;
+<pre class="code-block code-output">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Test page&lt;/title&gt;
 &lt;/head&gt;
@@ -438,7 +446,7 @@ Copyright (c) 2000 &lt;a href=&quot;http://www.acmee.com&quot;&gt;Acmee Inc&lt;/
 All Rights Reserved.
 &lt;/i&gt;</strong>
 &lt;/body&gt;
-&lt;/html&gt;</pre></div>
+&lt;/html&gt;</pre>
 
             <p>If you change the <code class="inline-code">copyright_footer.html</code>,
             then the visitor will see the new copyright notice on all
@@ -467,11 +475,11 @@ All Rights Reserved.
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template"><strong>&lt;#list animals as animal&gt;</strong>
+<pre class="code-block code-template"><strong>&lt;#list animals as animal&gt;</strong>
       &lt;div<strong>&lt;#if animal.protected&gt;</strong><strong> </strong>class=&quot;protected&quot;<strong>&lt;/#if&gt;</strong>&gt;
         ${animal.name} for ${animal.price} Euros
       &lt;/div&gt;
-<strong>&lt;/#list&gt;</strong></pre></div>
+<strong>&lt;/#list&gt;</strong></pre>
 
           <p>Note that since FreeMarker does not interpret text outside FTL
           tags, interpolations and FTL comments, above you could use the FTL
@@ -624,7 +632,7 @@ All Rights Reserved.
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;h1&gt;Welcome ${user<strong>!&quot;visitor&quot;</strong>}!&lt;/h1&gt;</pre></div>
+<pre class="code-block code-template">&lt;h1&gt;Welcome ${user<strong>!&quot;visitor&quot;</strong>}!&lt;/h1&gt;</pre>
 
           <p>You can ask whether a variable isn&#39;t missing by putting
           <code class="inline-code">??</code> after its name. Combining this with the
@@ -634,7 +642,7 @@ All Rights Reserved.
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#if <strong>user??</strong>&gt;&lt;h1&gt;Welcome ${user}!&lt;/h1&gt;&lt;/#if&gt;</pre></div>
+<pre class="code-block code-template">&lt;#if <strong>user??</strong>&gt;&lt;h1&gt;Welcome ${user}!&lt;/h1&gt;&lt;/#if&gt;</pre>
 
           <p>Regarding variable accessing with multiple steps, like
           <code class="inline-code">animals.python.price</code>, writing
@@ -683,7 +691,7 @@ All Rights Reserved.
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot;&gt;</pre></div>
+<pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot;&gt;</pre>
 
           <p>(Use <code class="inline-code">&quot;XML&quot;</code> instead of
           <code class="inline-code">&quot;HTML&quot;</code> above if you generate XML.)</p>
@@ -708,7 +716,7 @@ All Rights Reserved.
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-05-23T20:09:37Z" title="Saturday, May 23, 2020 8:09:37 PM GMT">2020-05-23 20:09:37 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-07-15T17:00:00Z" title="Wednesday, July 15, 2020 at 5:00:00 PM Greenwich Mean Time">2020-07-15 17:00:00 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

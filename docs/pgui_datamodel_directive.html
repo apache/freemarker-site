@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/pgui_datamodel_directive.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1590264577448">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1594832400000">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -30,14 +30,22 @@ ga('send', 'pageview');
     <meta itemprop="name" content="Apache FreeMarker Manual">
 
   <!--[if lte IE 9]>
-  <div style="background-color: #C00; color: #fff; padding: 12px 24px;">Please use a modern browser to view this website.</div>
-  <![endif]--><div class="header-top-bg"><div class="site-width header-top"><a class="logo" href="https://freemarker.apache.org" role="banner">            <img itemprop="image" src="logo.png" alt="FreeMarker">
-</a><ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row"><ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui.html"><span itemprop="name">Programmer&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui_datamodel.html"><span itemprop="name">The Data Model</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui_datamodel_directive.html"><span itemprop="name">Directives</span></a></li></ul><div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul class="bookmark-list"><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
+  <div class="oldBrowserWarning" style="display: block">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+  <![endif]-->  <div class="oldBrowserWarning">
+    Unsupported web browser - Use a modern browser to view this website!
+  </div>
+<div class="header-top-bg"><div class="site-width header-top"><div id="hamburger-menu" role="button"></div>          <div class="logo">
+<a href="https://freemarker.apache.org" role="banner"><img itemprop="image" src="logo.png" alt="FreeMarker"></a>          </div>
+<ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/browse/FREEMARKER/" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row">  <div class="breadcrumbs">
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui.html"><span itemprop="name">Programmer&#39;s Guide</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui_datamodel.html"><span itemprop="name">The Data Model</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="pgui_datamodel_directive.html"><span itemprop="name">Directives</span></a></li></ul>  </div>
+<div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Programmer\'s Guide","The Data Model","Directives"];</script>
-      <script src="toc.js?1590264577448"></script>
-      <script src="docgen-resources/main.min.js?1590264577448"></script>
+      <script src="toc.js?1594832400000"></script>
+      <script src="docgen-resources/main.min.js?1594832400000"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="pgui_datamodel_method.html"><span>Previous</span></a><a class="paging-arrow next" href="pgui_datamodel_node.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="pgui_datamodel_directive" itemprop="headline">Directives</h1>
@@ -66,7 +74,7 @@ ga('send', 'pageview');
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">foo
+<pre class="code-block code-template">foo
 <strong>&lt;@upper&gt;</strong>
   bar
   &lt;#-- All kind of FTL is allowed here --&gt;
@@ -75,25 +83,25 @@ ga('send', 'pageview');
   &lt;/#list&gt;
   baaz
 <strong>&lt;/@upper&gt;</strong>
-wombat</pre></div>
+wombat</pre>
 
           <p>will output this:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">foo
+<pre class="code-block code-output">foo
   BAR
     RED
     GREEN
     BLUE
   BAAZ
-wombat</pre></div>
+wombat</pre>
 
           <p>This is the source code of the directive class:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-unspecified">package com.example;
+<pre class="code-block code-unspecified">package com.example;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Map;
@@ -172,7 +180,7 @@ public class UpperDirective implements TemplateDirectiveModel {
         }
     }
 
-}</pre></div>
+}</pre>
 
           <p>Now we still need to create an instance of this class, and
           make this directive available to the template with the name &quot;upper&quot;
@@ -181,7 +189,7 @@ public class UpperDirective implements TemplateDirectiveModel {
 
           
 
-<div class="code-wrapper"><pre class="code-block code-unspecified">root.put(&quot;upper&quot;, new com.example.UpperDirective());</pre></div>
+<pre class="code-block code-unspecified">root.put(&quot;upper&quot;, new com.example.UpperDirective());</pre>
 
           <p>But typically it is better practice to put commonly used
           directives into the <code class="inline-code">Configuration</code> as <a href="pgui_config_sharedvariables.html">shared
@@ -195,13 +203,13 @@ public class UpperDirective implements TemplateDirectiveModel {
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#-- Maybe you have directives that you have implemented in FTL --&gt;
+<pre class="code-block code-template">&lt;#-- Maybe you have directives that you have implemented in FTL --&gt;
 &lt;#macro something&gt;
   ...
 &lt;/#macro&gt;
 
 &lt;#-- Now you can&#39;t use &lt;#macro upper&gt;, but instead you can: --&gt;
-&lt;#assign upper = &quot;com.example.UpperDirective&quot;?new()&gt;</pre></div>
+&lt;#assign upper = &quot;com.example.UpperDirective&quot;?new()&gt;</pre>
         
           
 
@@ -218,7 +226,7 @@ public class UpperDirective implements TemplateDirectiveModel {
 
           
 
-<div class="code-wrapper"><pre class="code-block code-template">&lt;#assign x = 1&gt;
+<pre class="code-block code-template">&lt;#assign x = 1&gt;
 
 <strong>&lt;@repeat count=4&gt;</strong>
   Test ${x}
@@ -231,13 +239,13 @@ public class UpperDirective implements TemplateDirectiveModel {
 
 <strong>&lt;@repeat count=3; cnt&gt;</strong>
   ${cnt}. Test
-<strong>&lt;/@repeat&gt;</strong></pre></div>
+<strong>&lt;/@repeat&gt;</strong></pre>
 
           <p>Output:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-output">  Test 1
+<pre class="code-block code-output">  Test 1
   Test 2
   Test 3
   Test 4
@@ -249,13 +257,13 @@ public class UpperDirective implements TemplateDirectiveModel {
   1. Test
   2. Test
   3. Test
- </pre></div>
+ </pre>
 
           <p>The class:</p>
 
           
 
-<div class="code-wrapper"><pre class="code-block code-unspecified">package com.example;
+<pre class="code-block code-unspecified">package com.example;
 import java.io.IOException;
 import java.io.Writer;
 import java.util.Iterator;
@@ -381,7 +389,7 @@ public class RepeatDirective implements TemplateDirectiveModel {
         }
     }
 
-}</pre></div>
+}</pre>
         
           
 
@@ -404,7 +412,7 @@ public class RepeatDirective implements TemplateDirectiveModel {
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-05-23T20:09:37Z" title="Saturday, May 23, 2020 8:09:37 PM GMT">2020-05-23 20:09:37 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-07-15T17:00:00Z" title="Wednesday, July 15, 2020 at 5:00:00 PM Greenwich Mean Time">2020-07-15 17:00:00 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
