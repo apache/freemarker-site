@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_string.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Built-ins for strings"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_alphaidx.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_number.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_string" itemprop="headline">Built-ins for strings</h1>
@@ -100,17 +100,21 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">${&quot;  green mouse&quot;?cap_first}
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;  green mouse&quot;?cap_first}
 ${&quot;GreEN mouse&quot;?cap_first}
-${&quot;- green mouse&quot;?cap_first}</pre>
+${&quot;- green mouse&quot;?cap_first}</pre>    </div>
+
 
           <p>The output:</p>
 
           
 
-<pre class="code-block code-output">  Green mouse
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  Green mouse
 GreEN mouse
-- green mouse</pre>
+- green mouse</pre>    </div>
+
 
           <p>In the case of <code class="inline-code">&quot;- green mouse&quot;</code>, the first
           word is the <code class="inline-code">-</code>.</p>
@@ -130,15 +134,19 @@ GreEN mouse
 
           
 
-<pre class="code-block code-template">${&quot;  green  mouse&quot;?capitalize}
-${&quot;GreEN mouse&quot;?capitalize}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;  green  mouse&quot;?capitalize}
+${&quot;GreEN mouse&quot;?capitalize}</pre>    </div>
+
 
           <p>The output:</p>
 
           
 
-<pre class="code-block code-output">  Green Mouse
-Green Mouse</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  Green Mouse
+Green Mouse</pre>    </div>
+
         
           
 
@@ -174,13 +182,17 @@ Green Mouse</pre>
 
           
 
-<pre class="code-block code-template">&lt;#if &quot;piceous&quot;?contains(&quot;ice&quot;)&gt;It contains &quot;ice&quot;&lt;/#if&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if &quot;piceous&quot;?contains(&quot;ice&quot;)&gt;It contains &quot;ice&quot;&lt;/#if&gt;</pre>    </div>
+
 
           <p>This will output:</p>
 
           
 
-<pre class="code-block code-output">It contains &quot;ice&quot;</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">It contains &quot;ice&quot;</pre>    </div>
+
         
           
 
@@ -226,14 +238,16 @@ Green Mouse</pre>
 
           
 
-<pre class="code-block code-template">&lt;#-- The date_format, time_format and datetime_format settings must match this format! --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- The date_format, time_format and datetime_format settings must match this format! --&gt;
 &lt;#assign someDate = &quot;Oct 25, 1995&quot;?date&gt;
 &lt;#assign someTime = &quot;3:05:30 PM&quot;?time&gt;
 &lt;#assign someDatetime = &quot;Oct 25, 1995 03:05:00 PM&quot;?datetime&gt;
 
 &lt;#-- Changing the setting value changes the expected format: --&gt;
 &lt;#setting datetime_format=&quot;iso&quot;&gt;
-&lt;#assign someDatetime = &quot;1995-10-25T15:05&quot;?datetime&gt;</pre>
+&lt;#assign someDatetime = &quot;1995-10-25T15:05&quot;?datetime&gt;</pre>    </div>
+
 
           <p>You can also specify the format explicitly like
           <code class="inline-code">?datetime.<em class="code-color">format</em></code> (and
@@ -250,7 +264,8 @@ Green Mouse</pre>
 
           
 
-<pre class="code-block code-template">&lt;#-- Parsing XML Schema xs:date, xs:time and xs:dateTime values: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Parsing XML Schema xs:date, xs:time and xs:dateTime values: --&gt;
 &lt;#assign someDate = &quot;1995-10-25&quot;?date.xs&gt;
 &lt;#assign someTime = &quot;15:05:30&quot;?time.xs&gt;
 &lt;#assign someDatetime = &quot;1995-10-25T15:05:00&quot;?datetime.xs&gt;
@@ -265,7 +280,8 @@ Green Mouse</pre>
 &lt;#assign someDatetime = &quot;1995-10-25 03:05 PM&quot;?datetime(&quot;yyyy-MM-dd hh:mm a&quot;)&gt;
 
 &lt;#-- Parsing with custom date formats: --&gt;
-&lt;#assign someDatetime = &quot;October/25/1995 03:05 PM&quot;?datetime.@worklog&gt;</pre>
+&lt;#assign someDatetime = &quot;October/25/1995 03:05 PM&quot;?datetime.@worklog&gt;</pre>    </div>
+
 
           <p>To prevent misunderstandings, the left-hand value need not be
           a string literal. For example, when you read data from XML DOM (from
@@ -389,30 +405,38 @@ Green Mouse</pre>
 
           
 
-<pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot; <strong>auto_esc=false</strong>&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#ftl output_format=&quot;HTML&quot; <strong>auto_esc=false</strong>&gt;
 &lt;#assign s = &quot;R&amp;D&quot;&gt;
 ${s}
-${s?esc}</pre>
+${s?esc}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">R&amp;D
-R&amp;amp;D</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">R&amp;D
+R&amp;amp;D</pre>    </div>
+
 
           <p>In templates, where auto-escaping is on, using it is
           redundant:</p>
 
           
 
-<pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#ftl output_format=&quot;HTML&quot;&gt;
 &lt;#assign s = &quot;R&amp;D&quot;&gt;
 ${s}
-${s?esc} &lt;#-- ?esc is redundant here --&gt;</pre>
+${s?esc} &lt;#-- ?esc is redundant here --&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">R&amp;amp;D
-R&amp;amp;D</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">R&amp;amp;D
+R&amp;amp;D</pre>    </div>
+
 
           <p>This built-in works by converting the string value to a <a href="dgui_misc_autoescaping.html#dgui_misc_autoescaping_movalues">markup output
           value</a>, by escaping the string with the current output format,
@@ -513,7 +537,9 @@ R&amp;amp;D</pre>
 
           
 
-<pre class="code-block code-template">&lt;input type=text name=user value=<strong>&quot;</strong>${user?html}<strong>&quot;</strong>&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;input type=text name=user value=<strong>&quot;</strong>${user?html}<strong>&quot;</strong>&gt;</pre>    </div>
+
 
             <div class="callout warning">
     <strong class="callout-label">Warning!</strong>
@@ -582,14 +608,18 @@ R&amp;amp;D</pre>
 
           
 
-<pre class="code-block code-template">&lt;#assign beanName = &#39;The &quot;foo&quot; bean.&#39;&gt;
-String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign beanName = &#39;The &quot;foo&quot; bean.&#39;&gt;
+String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>    </div>
+
 
           <p>will output:</p>
 
           
 
-<pre class="code-block code-output">String BEAN_NAME = &quot;The \&quot;foo\&quot; bean.&quot;;</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">String BEAN_NAME = &quot;The \&quot;foo\&quot; bean.&quot;;</pre>    </div>
+
         
           
 
@@ -623,18 +653,22 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">&lt;#assign user = &quot;Big Joe&#39;s \&quot;right hand\&quot;&quot;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign user = &quot;Big Joe&#39;s \&quot;right hand\&quot;&quot;&gt;
 &lt;script&gt;
   alert(&quot;Welcome ${user?js_string}!&quot;);
-&lt;/script&gt;</pre>
+&lt;/script&gt;</pre>    </div>
+
 
           <p>will output:</p>
 
           
 
-<pre class="code-block code-output">&lt;script&gt;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">&lt;script&gt;
   alert(&quot;Welcome Big Joe\&#39;s \&quot;right hand\&quot;!&quot;);
-&lt;/script&gt;</pre>
+&lt;/script&gt;</pre>    </div>
+
 
           <p>The exact escaping rules are:</p>
 
@@ -741,13 +775,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;abcdefgh&quot;?keep_after(&quot;de&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;abcdefgh&quot;?keep_after(&quot;de&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">fgh</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">fgh</pre>    </div>
+
 
           <p>If the parameter string is not found, it will return an empty
           string. If the parameter string is a 0-length string, it will return
@@ -758,13 +796,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;foo : bar&quot;?keep_after(r&quot;\s*:\s*&quot;, &quot;r&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;foo : bar&quot;?keep_after(r&quot;\s*:\s*&quot;, &quot;r&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">bar</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">bar</pre>    </div>
+
         
           
 
@@ -788,13 +830,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;foo.bar.txt&quot;?keep_after_last(&quot;.&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;foo.bar.txt&quot;?keep_after_last(&quot;.&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">txt</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">txt</pre>    </div>
+
 
           <p>while with <code class="inline-code">keep_after</code> you would get
           <code class="inline-code">bar.txt</code>.</p>
@@ -820,13 +866,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;abcdef&quot;?keep_before(&quot;de&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;abcdef&quot;?keep_before(&quot;de&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">abc</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">abc</pre>    </div>
+
 
           <p>If the parameter string is not found, it will return the
           original string unchanged. If the parameter string is a 0-length
@@ -837,13 +887,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;foo : bar&quot;?keep_before(r&quot;\s*:\s*&quot;, &quot;r&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;foo : bar&quot;?keep_before(r&quot;\s*:\s*&quot;, &quot;r&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">foo</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">foo</pre>    </div>
+
         
           
 
@@ -867,13 +921,17 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">${&quot;foo.bar.txt&quot;?keep_before_last(&quot;.&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;foo.bar.txt&quot;?keep_before_last(&quot;.&quot;)}</pre>    </div>
+
 
           <p>will print</p>
 
           
 
-<pre class="code-block code-output">foo.bar</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">foo.bar</pre>    </div>
+
 
           <p>while with <code class="inline-code">keep_before</code> you would get
           <code class="inline-code">foo</code>.</p>
@@ -931,7 +989,8 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">[${&quot;&quot;?left_pad(5)}]
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">[${&quot;&quot;?left_pad(5)}]
 [${&quot;a&quot;?left_pad(5)}]
 [${&quot;ab&quot;?left_pad(5)}]
 [${&quot;abc&quot;?left_pad(5)}]
@@ -939,13 +998,15 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 [${&quot;abcde&quot;?left_pad(5)}]
 [${&quot;abcdef&quot;?left_pad(5)}]
 [${&quot;abcdefg&quot;?left_pad(5)}]
-[${&quot;abcdefgh&quot;?left_pad(5)}]</pre>
+[${&quot;abcdefgh&quot;?left_pad(5)}]</pre>    </div>
+
 
           <p>will output this:</p>
 
           
 
-<pre class="code-block code-output">[     ]
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">[     ]
 [    a]
 [   ab]
 [  abc]
@@ -953,7 +1014,8 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 [abcde]
 [abcdef]
 [abcdefg]
-[abcdefgh]</pre>
+[abcdefgh]</pre>    </div>
+
 
           <p>If it&#39;s used with 2 parameters, then the 1st parameter means
           the same as if you were using the built-in with only 1 parameter,
@@ -962,23 +1024,27 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">[${&quot;&quot;?left_pad(5, &quot;-&quot;)}]
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">[${&quot;&quot;?left_pad(5, &quot;-&quot;)}]
 [${&quot;a&quot;?left_pad(5, &quot;-&quot;)}]
 [${&quot;ab&quot;?left_pad(5, &quot;-&quot;)}]
 [${&quot;abc&quot;?left_pad(5, &quot;-&quot;)}]
 [${&quot;abcd&quot;?left_pad(5, &quot;-&quot;)}]
-[${&quot;abcde&quot;?left_pad(5, &quot;-&quot;)}]</pre>
+[${&quot;abcde&quot;?left_pad(5, &quot;-&quot;)}]</pre>    </div>
+
 
           <p>will output this:</p>
 
           
 
-<pre class="code-block code-output">[-----]
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">[-----]
 [----a]
 [---ab]
 [--abc]
 [-abcd]
-[abcde]</pre>
+[abcde]</pre>    </div>
+
 
           <p>The 2nd parameter can be a string whose length is greater than
           1. Then the string will be inserted periodically, for
@@ -986,21 +1052,25 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">[${&quot;&quot;?left_pad(8, &quot;.oO&quot;)}]
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">[${&quot;&quot;?left_pad(8, &quot;.oO&quot;)}]
 [${&quot;a&quot;?left_pad(8, &quot;.oO&quot;)}]
 [${&quot;ab&quot;?left_pad(8, &quot;.oO&quot;)}]
 [${&quot;abc&quot;?left_pad(8, &quot;.oO&quot;)}]
-[${&quot;abcd&quot;?left_pad(8, &quot;.oO&quot;)}]</pre>
+[${&quot;abcd&quot;?left_pad(8, &quot;.oO&quot;)}]</pre>    </div>
+
 
           <p>will output this:</p>
 
           
 
-<pre class="code-block code-output">[.oO.oO.o]
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">[.oO.oO.o]
 [.oO.oO.a]
 [.oO.oOab]
 [.oO.oabc]
-[.oO.abcd]</pre>
+[.oO.abcd]</pre>    </div>
+
 
           <p>The 2nd parameter must be a string value, and it must be at
           least 1 character long.</p>
@@ -1066,25 +1136,29 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>
 
           
 
-<pre class="code-block code-template">&lt;#if &quot;fxo&quot;?matches(&quot;f.?o&quot;)&gt;Matches.&lt;#else&gt;Does not match.&lt;/#if&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if &quot;fxo&quot;?matches(&quot;f.?o&quot;)&gt;Matches.&lt;#else&gt;Does not match.&lt;/#if&gt;
 
 &lt;#assign res = &quot;foo bar fyo&quot;?matches(&quot;f.?o&quot;)&gt;
 &lt;#if res&gt;Matches.&lt;#else&gt;Does not match.&lt;/#if&gt;
 Matching sub-strings:
 &lt;#list res as m&gt;
 - ${m}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">Matches.
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Matches.
 
 Does not match.
 Matching sub-strings:
 - foo
-- fyo</pre>
+- fyo</pre>    </div>
+
 
           <p>If the regular expression contains groups (parentheses), then
           you can access them with the <code class="inline-code">groups</code>
@@ -1092,7 +1166,8 @@ Matching sub-strings:
 
           
 
-<pre class="code-block code-template">&lt;#-- Entire input match --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Entire input match --&gt;
 &lt;#assign res = &quot;John Doe&quot;?matches(r&quot;(\w+) (\w+)&quot;)&gt;
 &lt;#if res&gt; &lt;#-- Must not try to access groups if there was no match! --&gt;
   First name: ${res?groups[1]}
@@ -1103,17 +1178,20 @@ Matching sub-strings:
 &lt;#assign res = &quot;aa/rx; ab/r;&quot;?matches(&quot;(.+?)/*(.+?);&quot;)&gt;
 &lt;#list res as m&gt;
   - &quot;${m}&quot; is &quot;${m?groups[1]}&quot; per &quot;${m?groups[2]}&quot;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
           <p>This will print:</p>
 
           
 
-<pre class="code-block code-output">  First name: John
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  First name: John
   Second name: Doe
 
   - &quot;aa/rx;&quot; is &quot;a&quot; per &quot;a/rx&quot;
-  - &quot; ab/r;&quot; is &quot; &quot; per &quot;ab/r&quot;</pre>
+  - &quot; ab/r;&quot; is &quot; &quot; per &quot;ab/r&quot;</pre>    </div>
+
 
           <p>Notes regarding the behavior of the <code class="inline-code">groups</code>
           built-in:</p>
@@ -1184,15 +1262,19 @@ Matching sub-strings:
 
           
 
-<pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#ftl output_format=&quot;HTML&quot;&gt;
 &lt;#assign s = &quot;&lt;b&gt;Test&lt;/b&gt;&quot;&gt;
 ${s}
-${s?no_esc}</pre>
+${s?no_esc}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">&amp;lt;b&amp;gt;Test&amp;lt;/b&amp;gt;
-&lt;b&gt;Test&lt;/b&gt;</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">&amp;lt;b&amp;gt;Test&amp;lt;/b&amp;gt;
+&lt;b&gt;Test&lt;/b&gt;</pre>    </div>
+
 
           <p>This works by converting the string value to a <a href="dgui_misc_autoescaping.html#dgui_misc_autoescaping_movalues">markup output
           value</a>, which uses the string as the markup as is, and belongs
@@ -1274,26 +1356,34 @@ ${s?no_esc}</pre>
 
           
 
-<pre class="code-block code-template">${&quot;this is a car acarus&quot;?replace(&quot;car&quot;, &quot;bulldozer&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;this is a car acarus&quot;?replace(&quot;car&quot;, &quot;bulldozer&quot;)}</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">this is a bulldozer abulldozerus</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">this is a bulldozer abulldozerus</pre>    </div>
+
 
           <p>The replacing occurs in left-to-right order. This means that
           this:</p>
 
           
 
-<pre class="code-block code-template">${&quot;aaaaa&quot;?replace(&quot;aaa&quot;, &quot;X&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;aaaaa&quot;?replace(&quot;aaa&quot;, &quot;X&quot;)}</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">Xaa</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Xaa</pre>    </div>
+
 
           <p>If the 1st parameter is an empty string, then all occurrences
           of the empty string will be replaced, like
@@ -1330,7 +1420,8 @@ ${s?no_esc}</pre>
 
           
 
-<pre class="code-block code-template">[${&quot;&quot;?right_pad(5)}]
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">[${&quot;&quot;?right_pad(5)}]
 [${&quot;a&quot;?right_pad(5)}]
 [${&quot;ab&quot;?right_pad(5)}]
 [${&quot;abc&quot;?right_pad(5)}]
@@ -1344,13 +1435,15 @@ ${s?no_esc}</pre>
 [${&quot;a&quot;?right_pad(8, &quot;.oO&quot;)}]
 [${&quot;ab&quot;?right_pad(8, &quot;.oO&quot;)}]
 [${&quot;abc&quot;?right_pad(8, &quot;.oO&quot;)}]
-[${&quot;abcd&quot;?right_pad(8, &quot;.oO&quot;)}]</pre>
+[${&quot;abcd&quot;?right_pad(8, &quot;.oO&quot;)}]</pre>    </div>
+
 
           <p>This will output this:</p>
 
           
 
-<pre class="code-block code-output">[     ]
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">[     ]
 [a    ]
 [ab   ]
 [abc  ]
@@ -1364,7 +1457,8 @@ ${s?no_esc}</pre>
 [aoO.oO.o]
 [abO.oO.o]
 [abc.oO.o]
-[abcdoO.o]</pre>
+[abcdoO.o]</pre>    </div>
+
         
           
 
@@ -1388,15 +1482,19 @@ ${s?no_esc}</pre>
 
           
 
-<pre class="code-block code-template">${&quot;abcdef&quot;?remove_beginning(&quot;abc&quot;)}
-${&quot;foobar&quot;?remove_beginning(&quot;abc&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;abcdef&quot;?remove_beginning(&quot;abc&quot;)}
+${&quot;foobar&quot;?remove_beginning(&quot;abc&quot;)}</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">def
-foobar</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">def
+foobar</pre>    </div>
+
         
           
 
@@ -1420,15 +1518,19 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">${&quot;abcdef&quot;?remove_ending(&quot;def&quot;)}
-${&quot;foobar&quot;?remove_ending(&quot;def&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;abcdef&quot;?remove_ending(&quot;def&quot;)}
+${&quot;foobar&quot;?remove_ending(&quot;def&quot;)}</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">abc
-foobar</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">abc
+foobar</pre>    </div>
+
         
           
 
@@ -1488,17 +1590,21 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">&lt;#list &quot;someMOOtestMOOtext&quot;?split(&quot;MOO&quot;) as x&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list &quot;someMOOtestMOOtext&quot;?split(&quot;MOO&quot;) as x&gt;
 - ${x}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">- some
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">- some
 - test
-- text</pre>
+- text</pre>    </div>
+
 
           <p>Note that it is assumed that all occurrences of the separator
           is before a new item (except with <code class="inline-code">&quot;r&quot;</code> flag - see
@@ -1506,19 +1612,23 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">&lt;#list &quot;some,,test,text,&quot;?split(&quot;,&quot;) as x&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list &quot;some,,test,text,&quot;?split(&quot;,&quot;) as x&gt;
 - &quot;${x}&quot;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
           <p>will print:</p>
 
           
 
-<pre class="code-block code-output">- &quot;some&quot;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">- &quot;some&quot;
 - &quot;&quot;
 - &quot;test&quot;
 - &quot;text&quot;
-- &quot;&quot;</pre>
+- &quot;&quot;</pre>    </div>
+
 
           <p><code class="inline-code">split</code> accepts an optional <a href="#ref_builtin_string_flags">flags parameter</a>, as its
           2nd parameter. There&#39;s a historical glitch with the
@@ -1649,7 +1759,8 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">- ${&#39;abc&#39;?substring(0)}
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">- ${&#39;abc&#39;?substring(0)}
 - ${&#39;abc&#39;?substring(1)}
 - ${&#39;abc&#39;?substring(2)}
 - ${&#39;abc&#39;?substring(3)}
@@ -1661,13 +1772,15 @@ foobar</pre>
 
 - ${&#39;abc&#39;?substring(0, 1)}
 - ${&#39;abc&#39;?substring(1, 2)}
-- ${&#39;abc&#39;?substring(2, 3)}</pre>
+- ${&#39;abc&#39;?substring(2, 3)}</pre>    </div>
+
 
           <p>The output:</p>
 
           
 
-<pre class="code-block code-output">- abc
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">- abc
 - bc
 - c
 -
@@ -1679,7 +1792,8 @@ foobar</pre>
 
 - a
 - b
-- c</pre>
+- c</pre>    </div>
+
         
           
 
@@ -1695,13 +1809,17 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">(${&quot;  green mouse  &quot;?trim})</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">(${&quot;  green mouse  &quot;?trim})</pre>    </div>
+
 
           <p>The output:</p>
 
           
 
-<pre class="code-block code-output">(green mouse)</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">(green mouse)</pre>    </div>
+
         
           
 
@@ -1730,7 +1848,8 @@ foobar</pre>
 
           
 
-<pre class="code-block code-template">&lt;#assign shortName=&#39;This is short&#39;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign shortName=&#39;This is short&#39;&gt;
 &lt;#assign longName=&#39;This is a too long name&#39;&gt;
 &lt;#assign difficultName=&#39;This isoneveryverylongword&#39;&gt;
 
@@ -1741,18 +1860,21 @@ Truncated at word boundary:
 ${longName?truncate(16)}
 
 Truncated at &quot;character boundary&quot;:
-${difficultName?truncate(16)}</pre>
+${difficultName?truncate(16)}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">No truncation needed:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">No truncation needed:
 This is short
 
 Truncated at word boundary:
 This is a [...]
 
 Truncated at &quot;character boundary&quot;:
-This isonev[...]</pre>
+This isonev[...]</pre>    </div>
+
 
           <p>Things to note above:</p>
 
@@ -1854,13 +1976,17 @@ This isonev[...]</pre>
 
                 
 
-<pre class="code-block code-template">${longName?truncate(16, &#39;...&#39;)}
-${longName?truncate(16, &#39;...&#39;, 1)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${longName?truncate(16, &#39;...&#39;)}
+${longName?truncate(16, &#39;...&#39;, 1)}</pre>    </div>
+
 
                 
 
-<pre class="code-block code-output">This is a ...
-This is a too ...</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">This is a ...
+This is a too ...</pre>    </div>
+
 
                 <p>When the terminator string starts with dot
                 (<code class="inline-code">.</code>) or ellipsis (<code class="inline-code">…</code>), the
@@ -1870,15 +1996,19 @@ This is a too ...</pre>
 
                 
 
-<pre class="code-block code-template">${&#39;Foo bar.baaz&#39;?truncate(11, &#39;---&#39;)}
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&#39;Foo bar.baaz&#39;?truncate(11, &#39;---&#39;)}
 ${&#39;Foo bar.baaz&#39;?truncate(11, &#39;...&#39;)} (Not &quot;Foo bar....&quot;)
-${&#39;Fo bar. baaz&#39;?truncate(11, &#39;...&#39;)} (Word separator space prevents touching)</pre>
+${&#39;Fo bar. baaz&#39;?truncate(11, &#39;...&#39;)} (Word separator space prevents touching)</pre>    </div>
+
 
                 
 
-<pre class="code-block code-output">Foo bar.---
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Foo bar.---
 Foo bar... (Not &quot;Foo bar....&quot;)
-Fo bar. ... (Word separator space prevents touching)</pre>
+Fo bar. ... (Word separator space prevents touching)</pre>    </div>
+
               </li>
             </ul>
           
@@ -1905,15 +2035,19 @@ Fo bar. ... (Word separator space prevents touching)</pre>
 
             
 
-<pre class="code-block code-template">${longName?truncate_m(16)}
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${longName?truncate_m(16)}
 ${difficultName?truncate_w_m(16)}
-${longName?truncate_c_m(16)}</pre>
+${longName?truncate_c_m(16)}</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">This is a &lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">This is a &lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;
 This &lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;
-This is a to&lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;</pre>
+This is a to&lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;</pre>    </div>
+
 
             <p>Note above that the terminator string was considered to be
             only 3 characters long (<code class="inline-code">&#39;[&#39;</code>,
@@ -1934,14 +2068,18 @@ This is a to&lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/spa
 
             
 
-<pre class="code-block code-template">&lt;#ftl output_format=&#39;HTML&#39;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#ftl output_format=&#39;HTML&#39;&gt;
 ${&#39;This is auto-escaped: &lt;span&gt;&#39;}
-${&#39;This is auto-escaped: &lt;span&gt;, but not the terminator string&#39;?truncate_m(41)}</pre>
+${&#39;This is auto-escaped: &lt;span&gt;, but not the terminator string&#39;?truncate_m(41)}</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">This is auto-escaped: &amp;lt;span&amp;gt;
-This is auto-escaped: &amp;lt;span&amp;gt;, but not &lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">This is auto-escaped: &amp;lt;span&amp;gt;
+This is auto-escaped: &amp;lt;span&amp;gt;, but not &lt;span class=&#39;truncateTerminator&#39;&gt;[&amp;#8230;]&lt;/span&gt;</pre>    </div>
+
           
         
           
@@ -2004,15 +2142,19 @@ This is auto-escaped: &amp;lt;span&amp;gt;, but not &lt;span class=&#39;truncate
 
           
 
-<pre class="code-block code-template">&lt;#assign x = &#39;a/b c&#39;&gt;
-${x?url}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign x = &#39;a/b c&#39;&gt;
+${x?url}</pre>    </div>
+
 
           <p>The output will be (assuming that the charset used for the
           escaping is an US-ASCII compatible charset):</p>
 
           
 
-<pre class="code-block code-output">a%2Fb%20c</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">a%2Fb%20c</pre>    </div>
+
 
           <p>Note that it escapes <em>all</em> reserved URL
           characters (<code class="inline-code">/</code>, <code class="inline-code">=</code>,
@@ -2021,7 +2163,9 @@ ${x?url}</pre>
 
           
 
-<pre class="code-block code-template">&lt;a href=&quot;foo.cgi?x=${x?url}&amp;y=${y?url}&quot;&gt;Click here...&lt;/a&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;a href=&quot;foo.cgi?x=${x?url}&amp;y=${y?url}&quot;&gt;Click here...&lt;/a&gt;</pre>    </div>
+
 
             <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -2050,7 +2194,8 @@ ${x?url}</pre>
 
           
 
-<pre class="code-block code-template">&lt;#--
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#--
   This will use the charset specified by the programmers
   before the template execution has started.
 --&gt;
@@ -2060,14 +2205,17 @@ ${x?url}</pre>
 <strong>&lt;#setting url_escaping_charset=&quot;UTF-8&quot;&gt;</strong>
 
 &lt;#-- This will surely use UTF-8 charset --&gt;
-&lt;a href=&quot;bar.cgi?x=${x?url}&quot;&gt;bar&lt;/a&gt;</pre>
+&lt;a href=&quot;bar.cgi?x=${x?url}&quot;&gt;bar&lt;/a&gt;</pre>    </div>
+
 
           <p>Furthermore, you can explicitly specify a charset for a single
           URL escaping as the parameter to the built-in:</p>
 
           
 
-<pre class="code-block code-template">&lt;a href=&quot;foo.cgi?x=${x?url<strong>(&#39;ISO-8895-2&#39;)</strong>}&quot;&gt;foo&lt;/a&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;a href=&quot;foo.cgi?x=${x?url<strong>(&#39;ISO-8895-2&#39;)</strong>}&quot;&gt;foo&lt;/a&gt;</pre>    </div>
+
 
           <p><span class="marked-for-programmers">If the <code class="inline-code">url</code> built-in has no
           parameter, then it will use the charset specified as the value of
@@ -2154,14 +2302,18 @@ ${x?url}</pre>
 
           
 
-<pre class="code-block code-template">&lt;#assign words = &quot;   a bcd, .   1-2-3&quot;?word_list&gt;
-&lt;#list words as word&gt;[${word}]&lt;/#list&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign words = &quot;   a bcd, .   1-2-3&quot;?word_list&gt;
+&lt;#list words as word&gt;[${word}]&lt;/#list&gt;</pre>    </div>
+
 
           <p>will output:</p>
 
           
 
-<pre class="code-block code-output">[a][bcd,][.][1-2-3]</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">[a][bcd,][.][1-2-3]</pre>    </div>
+
         
           
 
@@ -2367,24 +2519,28 @@ ${x?url}</pre>
 
           
 
-<pre class="code-block code-template">&lt;#assign s = &#39;foo bAr baar&#39;&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign s = &#39;foo bAr baar&#39;&gt;
 ${s?replace(&#39;ba&#39;, &#39;XY&#39;)}
 i: ${s?replace(&#39;ba&#39;, &#39;XY&#39;, &#39;i&#39;)}
 if: ${s?replace(&#39;ba&#39;, &#39;XY&#39;, &#39;if&#39;)}
 r: ${s?replace(&#39;ba*&#39;, &#39;XY&#39;, &#39;r&#39;)}
 ri: ${s?replace(&#39;ba*&#39;, &#39;XY&#39;, &#39;ri&#39;)}
-rif: ${s?replace(&#39;ba*&#39;, &#39;XY&#39;, &#39;rif&#39;)}</pre>
+rif: ${s?replace(&#39;ba*&#39;, &#39;XY&#39;, &#39;rif&#39;)}</pre>    </div>
+
 
           <p>This outputs this:</p>
 
           
 
-<pre class="code-block code-output">foo bAr XYar
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">foo bAr XYar
 i: foo XYr XYar
 if: foo XYr baar
 r: foo XYAr XYr
 ri: foo XYr XYr
-rif: foo XYr baar</pre>
+rif: foo XYr baar</pre>    </div>
+
 
           <p>This is the table of built-ins that use these common flags,
           and which supports which flags:</p>
@@ -2620,7 +2776,7 @@ rif: foo XYr baar</pre>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

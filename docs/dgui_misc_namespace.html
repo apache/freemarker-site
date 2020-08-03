@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/dgui_misc_namespace.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","Miscellaneous","Namespaces"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_misc_var.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_misc_autoescaping.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_misc_namespace" itemprop="headline">Namespaces</h1>
@@ -86,11 +86,13 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#macro copyright date&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro copyright date&gt;
   &lt;p&gt;Copyright (C) ${date} Someone. All rights reserved.&lt;/p&gt;
 &lt;/#macro&gt;
 
-&lt;#assign mail = &quot;user@example.com&quot;&gt;</pre>
+&lt;#assign mail = &quot;user@example.com&quot;&gt;</pre>    </div>
+
 
           <p>Save this into the <code class="inline-code">lib/example.ftl</code> file
           (inside the directory where you store the templates). Then create a
@@ -99,17 +101,21 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#<strong>import</strong> &quot;/lib/example.ftl&quot; as <strong>e</strong>&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#<strong>import</strong> &quot;/lib/example.ftl&quot; as <strong>e</strong>&gt;
 
 Some Web page...
 &lt;@<strong>e</strong>.copyright date=&quot;1999-2002&quot;/&gt;
-${<strong>e</strong>.mail}</pre>
+${<strong>e</strong>.mail}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">Some Web page...
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Some Web page...
   &lt;p&gt;Copyright (C) 1999-2002 Someone. All rights reserved.&lt;/p&gt;
-user@example.com</pre>
+user@example.com</pre>    </div>
+
 
           <p>Note the <a href="ref_directive_import.html#ref.directive.import"><code>import</code>
           directive</a> above, and the subsequent usage of the
@@ -136,29 +142,35 @@ user@example.com</pre>
 
           
 
-<pre class="code-block code-template">&lt;#macro copyright date&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro copyright date&gt;
   &lt;p&gt;Copyright (C) ${date} Someone. All rights reserved.
   &lt;br&gt;Email: <strong>${mail}</strong>&lt;/p&gt;
 &lt;/#macro&gt;
 
-&lt;#assign mail = &quot;user@example.com&quot;&gt;</pre>
+&lt;#assign mail = &quot;user@example.com&quot;&gt;</pre>    </div>
+
 
           <p>and <code class="inline-code">some_web_page.ftl</code> with this:</p>
 
           
 
-<pre class="code-block code-template">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
 <strong>&lt;#assign mail=&quot;other@example.com&quot;&gt;</strong>
 &lt;@e.copyright date=&quot;1999-2002&quot;/&gt;
 ${e.mail}
-${mail}</pre>
+${mail}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">  &lt;p&gt;Copyright (C) 1999-2002 Someone. All rights reserved.
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;p&gt;Copyright (C) 1999-2002 Someone. All rights reserved.
   &lt;br&gt;Email: <strong>user@example.com</strong>&lt;/p&gt;
 user@example.com
-other@example.com</pre>
+other@example.com</pre>    </div>
+
 
           <p>As you can see, the <code class="inline-code">mail</code> variable assigned
           in <code class="inline-code">some_web_page.ftl</code> is separate from the
@@ -179,15 +191,19 @@ other@example.com</pre>
 
           
 
-<pre class="code-block code-template">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
 ${e.mail}
 &lt;#assign mail=&quot;other@example.com&quot; <strong>in e</strong>&gt;
-${e.mail}</pre>
+${e.mail}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">user@example.com
-other@example.com</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">user@example.com
+other@example.com</pre>    </div>
+
         
           
 
@@ -203,23 +219,29 @@ other@example.com</pre>
 
           
 
-<pre class="code-block code-template">&lt;#macro copyright date&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro copyright date&gt;
   &lt;p&gt;Copyright (C) ${date} <strong>${user}</strong>. All rights reserved.&lt;/p&gt;
-&lt;/#macro&gt;</pre>
+&lt;/#macro&gt;</pre>    </div>
+
 
           <p>Assuming <code class="inline-code">user</code> is "John
           Doe":</p>
 
           
 
-<pre class="code-block code-template">&lt;#import &quot;/lib/my_test.ftl&quot; as my&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#import &quot;/lib/my_test.ftl&quot; as my&gt;
 User is: ${user}
-&lt;@my.copyright date=&quot;1999-2002&quot;/&gt;</pre>
+&lt;@my.copyright date=&quot;1999-2002&quot;/&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">User is: John Doe
-  &lt;p&gt;Copyright (C) 1999-2002 John Doe. All rights reserved.&lt;/p&gt;</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">User is: John Doe
+  &lt;p&gt;Copyright (C) 1999-2002 John Doe. All rights reserved.&lt;/p&gt;</pre>    </div>
+
 
           <p>Don&#39;t forget that the variables in the namespace (the
           variables you create with <code class="inline-code">assign</code>,
@@ -259,17 +281,21 @@ User is: ${user}
 
           
 
-<pre class="code-block code-template">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#import &quot;/lib/example.ftl&quot; as e&gt;
 &lt;#import &quot;/lib/example.ftl&quot; as e2&gt;
 &lt;#import &quot;/lib/example.ftl&quot; as e3&gt;
 ${e.mail}, ${e2.mail}, ${e3.mail}
 &lt;#assign mail=&quot;other@example.com&quot; in e&gt;
-${e.mail}, ${e2.mail}, ${e3.mail}</pre>
+${e.mail}, ${e2.mail}, ${e3.mail}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">user@example.com, user@example.com, user@example.com
-other@example.com, other@example.com, other@example.com</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">user@example.com, user@example.com, user@example.com
+other@example.com, other@example.com, other@example.com</pre>    </div>
+
 
           <p>As you access the same namespace through <code class="inline-code">e</code>,
           <code class="inline-code">e2</code>, and <code class="inline-code">e3</code>, the
@@ -316,7 +342,7 @@ other@example.com, other@example.com, other@example.com</pre>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

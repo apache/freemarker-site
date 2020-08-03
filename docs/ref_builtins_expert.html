@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_expert.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Seldom used and expert built-ins"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_expert" itemprop="headline">Seldom used and expert built-ins</h1>
@@ -93,7 +93,8 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#--
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#--
   &lt;@smileyInclude name /&gt; behaves like &lt;#include name&gt;, but prints a &quot;(:&quot; before the
   template, or prints &quot;):&quot; instead if the template is missing.
 
@@ -112,7 +113,8 @@ ga('send', 'pageview');
   &lt;#else&gt;
     ):
   &lt;/#if&gt;
-&lt;/#macro&gt;</pre>
+&lt;/#macro&gt;</pre>    </div>
+
         
           
 
@@ -371,17 +373,21 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#assign x=[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign x=[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]&gt;
 &lt;#assign templateSource = r&quot;&lt;#list x as y&gt;${y}&lt;/#list&gt;&quot;&gt;
 &lt;#-- Note: That r was needed so that the ${y} is not interpreted above --&gt;
 &lt;#assign inlineTemplate = templateSource?interpret&gt;
-&lt;@inlineTemplate /&gt;</pre>
+&lt;@inlineTemplate /&gt;</pre>    </div>
+
 
           <p>The output:</p>
 
           
 
-<pre class="code-block code-output">abc</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">abc</pre>    </div>
+
 
           <p>As you can see, <code class="inline-code">inlineTemplate</code> is a
           user-defined directive that, when executed, runs the template whose
@@ -409,7 +415,9 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#assign inlineTemplate = [mailTemplateSource, &quot;mail_templates id=${mailTemplateId}&quot;]?interpret&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign inlineTemplate = [mailTemplateSource, &quot;mail_templates id=${mailTemplateId}&quot;]?interpret&gt;</pre>    </div>
+
 
           <p>As you can see, <code class="inline-code">interpret</code> can be applied on
           a sequence of two items, in which case the first item is the FTL
@@ -754,10 +762,12 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">&lt;#-- Creates an user-defined directive be calling the parameterless constructor of the class --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Creates an user-defined directive be calling the parameterless constructor of the class --&gt;
 &lt;#assign word_wrapp = &quot;com.acmee.freemarker.WordWrapperDirective&quot;?new()&gt;
 &lt;#-- Creates an user-defined directive be calling the constructor with one numerical argument --&gt;
-&lt;#assign word_wrapp_narrow = &quot;com.acmee.freemarker.WordWrapperDirective&quot;?new(40)&gt;</pre>
+&lt;#assign word_wrapp_narrow = &quot;com.acmee.freemarker.WordWrapperDirective&quot;?new(40)&gt;</pre>    </div>
+
 
           <p>For more information about how the constructor parameters are
           unwrapped and how overloaded constructor is chosen, read: <a href="pgui_misc_beanwrapper.html">Programmer&#39;s Guide/Miscellaneous/Bean wrapper</a></p>
@@ -809,18 +819,22 @@ ga('send', 'pageview');
 
           
 
-<pre class="code-block code-template">${1305575275540?number_to_datetime}
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${1305575275540?number_to_datetime}
 ${1305575275540?number_to_date}
-${1305575275540?number_to_time}</pre>
+${1305575275540?number_to_time}</pre>    </div>
+
 
           <p>The output will be something like this (depending on the
           current locale and time zone):</p>
 
           
 
-<pre class="code-block code-output">May 16, 2011 3:47:55 PM
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">May 16, 2011 3:47:55 PM
 May 16, 2011
-3:47:55 PM</pre>
+3:47:55 PM</pre>    </div>
+
         
           
 
@@ -872,12 +886,14 @@ May 16, 2011
 
           
 
-<pre class="code-block code-template">&lt;#-- Collect all the users into a sequence: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Collect all the users into a sequence: --&gt;
 &lt;#assign usersSeq = users?sequence&gt;
 
 &lt;#list usersSeq as user&gt;...&lt;/#list&gt;
 Again:
-&lt;#list usersSeq as user&gt;...&lt;/#list&gt;</pre>
+&lt;#list usersSeq as user&gt;...&lt;/#list&gt;</pre>    </div>
+
 
           
             
@@ -942,24 +958,32 @@ Again:
 
           
 
-<pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;</pre>    </div>
+
 
           <p>Normally you call it like:</p>
 
           
 
-<pre class="code-block code-template">&lt;@m a=1 b=2 c=3 /&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@m a=1 b=2 c=3 /&gt;</pre>    </div>
+
 
           <p>Below call does the same, assuming <code class="inline-code">dynArgs</code>
           is the hash <code class="inline-code">{&#39;a&#39;: 1, &#39;b&#39;: 2, &#39;c&#39;: 3}</code>:</p>
 
           
 
-<pre class="code-block code-template">&lt;@m?with_args(dynArgs) /&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@m?with_args(dynArgs) /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">a=1, b=1, c=1</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">a=1, b=1, c=1</pre>    </div>
+
 
           <p>Below call also does the same, but combines dynamic arguments
           from <code class="inline-code">dynArgsAB</code>, assumed to be <code class="inline-code">{&#39;a&#39;: 1,
@@ -968,11 +992,15 @@ Again:
 
           
 
-<pre class="code-block code-template">&lt;@m?with_args(dynArgsAB) c=3 /&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@m?with_args(dynArgsAB) c=3 /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">a=1, b=1, c=1</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">a=1, b=1, c=1</pre>    </div>
+
 
           <p>To understand why this works, you need to realize that macros,
           custom directives, functions, and methods in FreeMarker are just
@@ -999,12 +1027,16 @@ Again:
 
           
 
-<pre class="code-block code-template">&lt;#assign mWithDefs = m?with_args({&#39;b&#39;: 22, &#39;c&#39;: 33})&gt;
-&lt;@myWithDefs a=1 c=&#39;overridden&#39;/&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign mWithDefs = m?with_args({&#39;b&#39;: 22, &#39;c&#39;: 33})&gt;
+&lt;@myWithDefs a=1 c=&#39;overridden&#39;/&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">a=1, b=22, c=overridden</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">a=1, b=22, c=overridden</pre>    </div>
+
 
           <p>Above we have created a new macro based on the value of
           <code class="inline-code">m</code>, stored it in variable
@@ -1025,7 +1057,8 @@ Again:
 
           
 
-<pre class="code-block code-template">&lt;#function f(a, b, c)&gt;&lt;#return &quot;a=${a}, b=${b}, c=${c}&quot;&gt;&lt;/#function&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#function f(a, b, c)&gt;&lt;#return &quot;a=${a}, b=${b}, c=${c}&quot;&gt;&lt;/#function&gt;
 &lt;#assign dynArgs=[1, 2, 3]&gt;
 
 ${f(1, 2, 3)}
@@ -1037,7 +1070,8 @@ or as:
 ${f?with_args([1])(2, 3)}
 
 &lt;#assign fWithOneAsFirstArg = f?with_args([1])&gt;
-${fWithOneAsFirstArg(2, 3)} &lt;#-- same as f(1, 2, 3) --&gt;</pre>
+${fWithOneAsFirstArg(2, 3)} &lt;#-- same as f(1, 2, 3) --&gt;</pre>    </div>
+
 
           <p>Note the double application of
           <code class="inline-code">(<em class="code-color">...</em>)</code> above, like in
@@ -1056,7 +1090,8 @@ ${fWithOneAsFirstArg(2, 3)} &lt;#-- same as f(1, 2, 3) --&gt;</pre>
 
           
 
-<pre class="code-block code-template">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m a b c&gt;a=${a}, b=${b}, c=${c}&lt;/#macro&gt;
 
 &lt;#-- Called with named parameters: --&gt;
 &lt;@m a=1 b=2 c=3 /&gt;
@@ -1070,7 +1105,8 @@ Same as:
 &lt;@m?with_args([1, 2]) 3 /&gt;
 Same as:
 &lt;#-- Sequence with_args with named c parameter: --&gt;
-&lt;@m?with_args([1, 2]) c=3 /&gt;</pre>
+&lt;@m?with_args([1, 2]) c=3 /&gt;</pre>    </div>
+
 
           <p>To summarize, depending on the type of the value
           <code class="inline-code">with_args</code> is applied on, the type of argument to
@@ -1108,7 +1144,8 @@ Same as:
 
           
 
-<pre class="code-block code-template">&lt;#macro m1 a b c&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m1 a b c&gt;
   m1 does things with ${a}, ${b}, ${c}
 &lt;/#macro&gt;
 
@@ -1118,13 +1155,16 @@ Same as:
   &lt;@m1?with_args(.args) /&gt;
 &lt;/#macro&gt;
 
-&lt;@m2 a=1 b=2 c=3 /&gt;</pre>
+&lt;@m2 a=1 b=2 c=3 /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">  m2 does things with 1, 2, 3
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  m2 does things with 1, 2, 3
   Delegate to m1:
-  m1 does things with 1, 2, 3</pre>
+  m1 does things with 1, 2, 3</pre>    </div>
+
 
           <p>FreeMarker syntax allows using the name before the
           <code class="inline-code">?with_args(<em class="code-color">...</em>)</code> in the
@@ -1134,7 +1174,9 @@ Same as:
 
           
 
-<pre class="code-block code-template">&lt;@myMacro?with_args({&#39;a&#39;: 1})&gt;...&lt;/<strong>@myMacro</strong>&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@myMacro?with_args({&#39;a&#39;: 1})&gt;...&lt;/<strong>@myMacro</strong>&gt;</pre>    </div>
+
 
           <p>Note that as far as the order of arguments is concerned,
           arguments coming from
@@ -1169,7 +1211,8 @@ Same as:
 
           
 
-<pre class="code-block code-template">&lt;#function f a b c d&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#function f a b c d&gt;
   &lt;#return &quot;a=${a}, b=${b}, c=${c}, d=${d}&quot;&gt;
 &lt;/#function&gt;
 
@@ -1179,15 +1222,18 @@ with_args:
 ${f?with_args(dynamicArgs)(1, 2)}
 
 with_args_last:
-${f?with_args_last(dynamicArgs)(1, 2)}</pre>
+${f?with_args_last(dynamicArgs)(1, 2)}</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">with_args:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">with_args:
 a=3, b=4, c=1, d=2
 
 with_args_last:
-a=1, b=2, c=3, d=4</pre>
+a=1, b=2, c=3, d=4</pre>    </div>
+
 
           <p>In the case of name arguments, while the primary mean of
           identifying an argument is the its name, catch-all arguments
@@ -1195,7 +1241,8 @@ a=1, b=2, c=3, d=4</pre>
 
           
 
-<pre class="code-block code-template">&lt;#macro m a b others...&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m a b others...&gt;
   a=${a}
   b=${b}
   others:
@@ -1210,11 +1257,13 @@ with_args:
 &lt;@m?with_args(dynamicArgs) a=1 b=2 c=3 d=4 /&gt;
 
 with_args_last:
-&lt;@m?with_args_last(dynamicArgs) a=1 b=2 c=3 d=4 /&gt;</pre>
+&lt;@m?with_args_last(dynamicArgs) a=1 b=2 c=3 d=4 /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">with_args:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">with_args:
   a=1
   b=2
   others:
@@ -1230,7 +1279,8 @@ with_args_last:
     c = 3
     d = 4
     e = 5
-    f = 6</pre>
+    f = 6</pre>    </div>
+
 
           <p>If you specify a named parameter that are not catch-all, so
           they are declared in the <code class="inline-code">macro</code> tag (as
@@ -1241,7 +1291,8 @@ with_args_last:
 
           
 
-<pre class="code-block code-template">&lt;#macro m a=0 b=0&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m a=0 b=0&gt;
   &lt;#-- We use .args to demonstrate the ordering of a and b: --&gt;
   &lt;#list .args as k, v&gt;
     ${k} = ${v}
@@ -1254,17 +1305,20 @@ with_args:
 &lt;@m?with_args(dynamicArgs) a=1 /&gt;
 
 with_args_last:
-&lt;@m?with_args_last(dynamicArgs) a=1 /&gt;</pre>
+&lt;@m?with_args_last(dynamicArgs) a=1 /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">with_args:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">with_args:
     a = 1
     b = 1
 
 with_args_last:
     a = 1
-    b = 1</pre>
+    b = 1</pre>    </div>
+
 
           <p>If both the macro or directive call, and the
           <code class="inline-code">with_args_last</code> argument specifies named catch-all
@@ -1274,7 +1328,8 @@ with_args_last:
 
           
 
-<pre class="code-block code-template">&lt;#macro m others...&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#macro m others...&gt;
   &lt;#list others as k, v&gt;
     ${k} = ${v}
   &lt;/#list&gt;
@@ -1286,11 +1341,13 @@ with_args:
 &lt;@m?with_args(dynamicArgs) a=1 b=2 c=3 /&gt;
 
 with_args_last:
-&lt;@m?with_args_last(dynamicArgs) a=1 b=2 c=3 /&gt;</pre>
+&lt;@m?with_args_last(dynamicArgs) a=1 b=2 c=3 /&gt;</pre>    </div>
+
 
           
 
-<pre class="code-block code-output">with_args:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">with_args:
 <strong>    b = 2
     d = 4
 </strong>    a = 1
@@ -1300,12 +1357,13 @@ with_args_last:
     a = 1
 <strong>    b = 2
 </strong>    c = 3
-<strong>    d = 4</strong></pre>
+<strong>    d = 4</strong></pre>    </div>
+
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="ref_builtins_type_independent.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directives.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

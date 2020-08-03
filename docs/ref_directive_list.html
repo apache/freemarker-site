@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_directive_list.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Directive Reference","list, else, items, sep, break, continue"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_directive_include.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directive_local.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_directive_list" itemprop="headline">list, else, items, sep, break, continue</h1>
@@ -160,15 +160,19 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users as user&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users as user&gt;
   &lt;p&gt;${user}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  &lt;p&gt;Joe
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;p&gt;Joe
   &lt;p&gt;Kate
-  &lt;p&gt;Fred</pre>
+  &lt;p&gt;Fred</pre>    </div>
+
 
             <p>The <code class="inline-code">list</code> directive executes the code
             between the <code class="inline-code">list</code> start-tag and
@@ -191,15 +195,19 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list products as name, price&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list products as name, price&gt;
   &lt;p&gt;${name}: ${price}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  &lt;p&gt;apple: 5
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;p&gt;apple: 5
   &lt;p&gt;banan: 10
-  &lt;p&gt;kiwi: 15</pre>
+  &lt;p&gt;kiwi: 15</pre>    </div>
+
 
             <p>Note that not all hash variables can be listed, because some
             of them isn&#39;t able to enumerate its keys. It&#39;s practically safe to
@@ -233,18 +241,22 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users as user&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users as user&gt;
   &lt;p&gt;${user}
 &lt;#else&gt;
   &lt;p&gt;No users
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             <p>This outputs the same as the earlier example, except when
             <code class="inline-code">users</code> contains 0 items:</p>
 
             
 
-<pre class="code-block code-output">  &lt;p&gt;No users</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;p&gt;No users</pre>    </div>
+
 
             <p>Note that the loop variable (<code class="inline-code">user</code>)
             doesn&#39;t exist between the <code class="inline-code">else</code> tag and the
@@ -284,21 +296,25 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users&gt;
   &lt;ul&gt;
     &lt;#items as user&gt;
       &lt;li&gt;${user}&lt;/li&gt;
     &lt;/#items&gt;
   &lt;/ul&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  &lt;ul&gt;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;ul&gt;
       &lt;li&gt;Joe&lt;/li&gt;
       &lt;li&gt;Kate&lt;/li&gt;
       &lt;li&gt;Fred&lt;/li&gt;
-  &lt;/ul&gt;</pre>
+  &lt;/ul&gt;</pre>    </div>
+
 
             <p>If there are 0 items, the above won&#39;t print anything, thus
             you don&#39;t end up with an empty
@@ -320,7 +336,8 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users&gt;
   &lt;ul&gt;
     &lt;#items as user&gt;
       &lt;li&gt;${user}&lt;/li&gt;
@@ -328,7 +345,8 @@ ga('send', 'pageview');
   &lt;/ul&gt;
 &lt;#else&gt;
   &lt;p&gt;No users
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             <p>Some further details:</p>
 
@@ -398,11 +416,15 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users as user&gt;${user}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users as user&gt;${user}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">Joe, Kate, Fred</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Joe, Kate, Fred</pre>    </div>
+
 
             <p>Above, <code class="inline-code">&lt;#sep&gt;, &lt;/#list&gt;</code> is a
             shorthand for <code class="inline-code">&lt;#sep&gt;,
@@ -414,11 +436,13 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users as user&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users as user&gt;
   &lt;div&gt;
     ${user}<strong>&lt;#sep&gt;, &lt;/#sep&gt;</strong>
   &lt;/div&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             <p><code class="inline-code">sep</code> is just a shorthand for
             <code class="inline-code">&lt;#if
@@ -465,18 +489,22 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list 1..10 as x&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list 1..10 as x&gt;
   ${x}
   &lt;#if x == 3&gt;
     <strong>&lt;#break&gt;</strong>
   &lt;/#if&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  1
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  1
   2
-  3</pre>
+  3</pre>    </div>
+
 
             <p>The <code class="inline-code">break</code> directives can be placed
             anywhere inside <code class="inline-code">list</code> as far as it has
@@ -559,19 +587,23 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list 1..5 as x&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list 1..5 as x&gt;
   &lt;#if x == 3&gt;
     &lt;#continue&gt;
   &lt;/#if&gt;
   ${x}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  1
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  1
   2
   4
-  5</pre>
+  5</pre>    </div>
+
 
             <p>The <code class="inline-code">continue</code> directives can be placed
             anywhere inside <code class="inline-code">list</code> as far as it has
@@ -623,7 +655,8 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list users&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list users&gt;
   &lt;table&gt;
     &lt;#items as user&gt;
       &lt;tr class=&quot;${user<strong>?item_parity</strong>}Row&quot;&gt;
@@ -631,11 +664,13 @@ ga('send', 'pageview');
         &lt;td&gt;${user}
     &lt;/#items&gt;
   &lt;/table&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  &lt;table&gt;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  &lt;table&gt;
       &lt;tr class=&quot;<strong>odd</strong>Row&quot;&gt;
         &lt;td&gt;<strong>1</strong>
         &lt;td&gt;Joe
@@ -645,7 +680,8 @@ ga('send', 'pageview');
       &lt;tr class=&quot;<strong>odd</strong>Row&quot;&gt;
         &lt;td&gt;<strong>3</strong>
         &lt;td&gt;Fred
-  &lt;/table&gt;</pre>
+  &lt;/table&gt;</pre>    </div>
+
 
             <p>In 2.3.22 and earlier, there were two extra loop variables
             to retrieve the iteration state instead (and they still exist for
@@ -708,22 +744,26 @@ ga('send', 'pageview');
 
               
 
-<pre class="code-block code-template">&lt;#-- WRONG solution! The row parity classes will be possibly messed up: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- WRONG solution! The row parity classes will be possibly messed up: --&gt;
 &lt;#list products as product&gt;
    &lt;#<strong>if product.recommended</strong>&gt;
      &lt;div class=&quot;${product<strong>?item_parity</strong>}Row&quot;&gt;${product.name}&lt;/div&gt;
    &lt;/#if&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
               <p>Here&#39;s the good solution that uses the <a href="ref_builtins_sequence.html#ref_builtin_filter"><code>filter</code>
               built-in</a>:</p>
 
               
 
-<pre class="code-block code-template">&lt;#-- Good solution: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Good solution: --&gt;
 &lt;#list products<strong>?filter(p -&gt; p.recommended)</strong> as product&gt;
   &lt;div class=&quot;${product?item_parity}Row&quot;&gt;${product.name}&lt;/div&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
             
 
             
@@ -743,13 +783,15 @@ ga('send', 'pageview');
 
               
 
-<pre class="code-block code-template">&lt;#-- WRONG solution! &lt;br&gt; might be added after the last printed line: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- WRONG solution! &lt;br&gt; might be added after the last printed line: --&gt;
 &lt;#list lines as line&gt;
    &lt;#if line == &#39;&#39;&gt;
      &lt;#break&gt;
    &lt;/#if&gt;
    ${line}&lt;#sep&gt;&lt;br&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
               <p>Here&#39;s the good solution that uses the <a href="ref_builtins_sequence.html#ref_builtin_take_while"><code>take_while</code>
               built-in</a> (note that the condition is inverted compared to
@@ -758,10 +800,12 @@ ga('send', 'pageview');
 
               
 
-<pre class="code-block code-template">&lt;#-- Good solution: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Good solution: --&gt;
 &lt;#list lines?take_while(line -&gt; line != &#39;&#39;) as line&gt;
    ${line}&lt;#sep&gt;&lt;br&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
             
           
 
@@ -779,37 +823,44 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list 1..2 as i&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list 1..2 as i&gt;
   &lt;#list 1..3 as j&gt;
     i = ${i}, j = ${j}
   &lt;/#list&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">    i = 1, j = 1
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">    i = 1, j = 1
     i = 1, j = 2
     i = 1, j = 3
     i = 2, j = 1
     i = 2, j = 2
-    i = 2, j = 3</pre>
+    i = 2, j = 3</pre>    </div>
+
 
             <p>It&#39;s also allowed to use clashing loop variable names
             like:</p>
 
             
 
-<pre class="code-block code-template">&lt;#list 1..2 as i&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list 1..2 as i&gt;
   Outer: ${i}
   &lt;#list 10..12 as i&gt;
     Inner: ${i}
   &lt;/#list&gt;
   Outer again: ${i}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">  Outer: 1
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">  Outer: 1
     Inner: 10
     Inner: 11
     Inner: 12
@@ -818,7 +869,8 @@ ga('send', 'pageview');
     Inner: 10
     Inner: 11
     Inner: 12
-  Outer again: 2</pre>
+  Outer again: 2</pre>    </div>
+
           
 
           
@@ -844,9 +896,11 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list xs as x&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list xs as x&gt;
   ${x!&#39;Missing&#39;}
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             <p>Here, the intent of the author is to print
             "Missing" for the missing elements (hopes) of
@@ -886,7 +940,7 @@ ga('send', 'pageview');
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

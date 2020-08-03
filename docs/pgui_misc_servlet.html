@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/pgui_misc_servlet.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Programmer\'s Guide","Miscellaneous","Using FreeMarker with servlets"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="pgui_misc_logging.html"><span>Previous</span></a><a class="paging-arrow next" href="pgui_misc_secureenv.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="pgui_misc_servlet" itemprop="headline">Using FreeMarker with servlets</h1>
@@ -109,7 +109,8 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
           
 
-<pre class="code-block code-unspecified">&lt;servlet&gt;
+    <div class="code-block role-unspecified">
+<pre class="code-block-body">&lt;servlet&gt;
   &lt;servlet-name&gt;freemarker&lt;/servlet-name&gt;
   &lt;servlet-class&gt;<strong>freemarker.ext.servlet.FreemarkerServlet</strong>&lt;/servlet-class&gt;
 
@@ -206,7 +207,8 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
   &lt;auth-constraint&gt;
     &lt;!-- Nobody is allowed to visit these directly. --&gt;
   &lt;/auth-constraint&gt;
-&lt;/security-constraint&gt;</pre>
+&lt;/security-constraint&gt;</pre>    </div>
+
 
           <p>After this, you can use FTL files (<code class="inline-code">*.ftl</code>)
           in the same manner as JSP (<code class="inline-code">*.jsp</code>) files. (Of
@@ -238,7 +240,8 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
           
 
-<pre class="code-block code-template">&lt;%@ taglib uri=&quot;/WEB-INF/struts-bean.tld&quot; prefix=&quot;bean&quot; %&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;%@ taglib uri=&quot;/WEB-INF/struts-bean.tld&quot; prefix=&quot;bean&quot; %&gt;
 &lt;%@ taglib uri=&quot;/WEB-INF/struts-logic.tld&quot; prefix=&quot;logic&quot; %&gt;
 
 &lt;html&gt;
@@ -253,14 +256,16 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
     &lt;/logic:iterate&gt;
   &lt;/ul&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</pre>    </div>
+
 
           <p>you can use this FTL file (use <code class="inline-code">ftl</code> file
           extension instead of <code class="inline-code">jsp</code>):</p>
 
           
 
-<pre class="code-block code-template">&lt;html&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;html&gt;
 &lt;head&gt;&lt;title&gt;Acmee Products International&lt;/title&gt;
 &lt;body&gt;
   &lt;h1&gt;Hello ${user}!&lt;/h1&gt;
@@ -271,7 +276,8 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
     &lt;/#list&gt;
   &lt;/ul&gt;
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</pre>    </div>
+
 
             <div class="callout warning">
     <strong class="callout-label">Warning!</strong>
@@ -292,17 +298,21 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
             
 
-<pre class="code-block code-template">&lt;#-- WRONG: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- WRONG: --&gt;
 &lt;@my.jspTag color=&quot;${aVariable}&quot; name=&quot;aStringLiteral&quot;
-            width=&quot;100&quot; height=${a+b} /&gt;</pre>
+            width=&quot;100&quot; height=${a+b} /&gt;</pre>    </div>
+
 
             <p>and this is good:</p>
 
             
 
-<pre class="code-block code-template">&lt;#-- Good: --&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#-- Good: --&gt;
 &lt;@my.jspTag color=aVariable name=&quot;aStringLiteral&quot;
-            width=100 height=a+b /&gt;</pre>
+            width=100 height=a+b /&gt;</pre>    </div>
+
             </div>
 
 
@@ -380,13 +390,17 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
           
 
-<pre class="code-block code-template">&lt;@include_page path=&quot;path/to/some.jsp&quot;/&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@include_page path=&quot;path/to/some.jsp&quot;/&gt;</pre>    </div>
+
 
           <p>is identical to using this tag in JSP:</p>
 
           
 
-<pre class="code-block code-template">&lt;jsp:include page=&quot;path/to/some.jsp&quot;&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;jsp:include page=&quot;path/to/some.jsp&quot;&gt;</pre>    </div>
+
 
             <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -440,7 +454,9 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
           
 
-<pre class="code-block code-template">&lt;@include_page path=&quot;path/to/some.jsp&quot; inherit_params=true params={&quot;foo&quot;: &quot;99&quot;, &quot;bar&quot;: [&quot;a&quot;, &quot;b&quot;]}/&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;@include_page path=&quot;path/to/some.jsp&quot; inherit_params=true params={&quot;foo&quot;: &quot;99&quot;, &quot;bar&quot;: [&quot;a&quot;, &quot;b&quot;]}/&gt;</pre>    </div>
+
 
           <p>This will include the page
           <code class="inline-code">path/to/some.jsp</code>, pass it all request parameters
@@ -485,7 +501,8 @@ resources</a></li><li><a class="page-menu-link" href="#autoid_63" data-menu-targ
 
           
 
-<pre class="code-block code-template">&lt;%@ page contentType=&quot;text/html;charset=ISO-8859-2&quot; language=&quot;java&quot;%&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;%@ page contentType=&quot;text/html;charset=ISO-8859-2&quot; language=&quot;java&quot;%&gt;
 &lt;%@ taglib prefix=&quot;e&quot; uri=&quot;/WEB-INF/example.tld&quot; %&gt;
 &lt;%@ taglib prefix=&quot;oe&quot; uri=&quot;/WEB-INF/other-example.tld&quot; %&gt;
 &lt;%@ taglib prefix=&quot;c&quot; uri=&quot;http://java.sun.com/jsp/jstl/core&quot; %&gt;
@@ -521,13 +538,15 @@ ${e:someELFunction(1, 2)}
   ${person.name}
 &lt;/c:forEach&gt;
 
-${fn:trim(bar)}</pre>
+${fn:trim(bar)}</pre>    </div>
+
 
           <p>the about equivalent FTL is:</p>
 
           
 
-<pre class="code-block code-template">&lt;#assign e=JspTaglibs[&quot;/WEB-INF/example.tld&quot;]&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign e=JspTaglibs[&quot;/WEB-INF/example.tld&quot;]&gt;
 &lt;#assign oe=JspTaglibs[&quot;/WEB-INF/other-example.tld&quot;]&gt;
 
 &lt;#-- Custom JSP tags and functions: --#&gt;
@@ -557,7 +576,8 @@ ${e.someELFunction(1, 2)}
   ${person.name}
 &lt;/#list&gt;
 
-${bar?trim}</pre>
+${bar?trim}</pre>    </div>
+
 
             <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -636,9 +656,11 @@ ${bar?trim}</pre>
 
           
 
-<pre class="code-block code-unspecified">&lt;listener&gt;
+    <div class="code-block role-unspecified">
+<pre class="code-block-body">&lt;listener&gt;
   &lt;listener-class&gt;freemarker.ext.jsp.EventForwarding&lt;/listener-class&gt;
-&lt;/listener&gt;</pre>
+&lt;/listener&gt;</pre>    </div>
+
 
           <p>Note that you can use JSP taglibs with FreeMarker even if the
           servlet container has no native JSP support, just make sure that the
@@ -692,7 +714,7 @@ ${bar?trim}</pre>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

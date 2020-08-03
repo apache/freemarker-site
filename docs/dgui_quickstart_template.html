@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/dgui_quickstart_template.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596325689081">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1596496868165">
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -44,8 +44,8 @@ ga('send', 'pageview');
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Author\'s Guide","Getting Started","The template at a glance"];</script>
-      <script src="toc.js?1596325689081"></script>
-      <script src="docgen-resources/main.min.js?1596325689081"></script>
+      <script src="toc.js?1596496868165"></script>
+      <script src="docgen-resources/main.min.js?1596496868165"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="dgui_quickstart_datamodel.html"><span>Previous</span></a><a class="paging-arrow next" href="dgui_datamodel.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="dgui_quickstart_template" itemprop="headline">The template at a glance</h1>
@@ -122,7 +122,8 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;html&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Welcome!&lt;/title&gt;
 &lt;/head&gt;
@@ -133,7 +134,8 @@ ga('send', 'pageview');
   &lt;p&gt;Our latest product:
   &lt;a href=&quot;${latestProduct.url}&quot;&gt;${latestProduct.name}&lt;/a&gt;!
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</pre>    </div>
+
 
             <p>Here you have told FreeMarker that the ", our beloved
             leader" should be there only if the value of the variable
@@ -162,9 +164,11 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#if animals.python.price == <strong>0</strong>&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if animals.python.price == <strong>0</strong>&gt;
   Pythons are free today!
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
 
             <p>Similarly as earlier when a string was specified directly,
             here a number is specified directly (<code class="inline-code">0</code>). Note
@@ -178,9 +182,11 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#if animals.python.price <strong>!=</strong> 0&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if animals.python.price <strong>!=</strong> 0&gt;
   Pythons are not free today!
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
 
             <p>As you probably guessed, <code class="inline-code">!=</code> means
             "not equals".</p>
@@ -190,20 +196,24 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#if <strong>animals.python.price &lt; animals.elephant.price</strong>&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if <strong>animals.python.price &lt; animals.elephant.price</strong>&gt;
   Pythons are cheaper than elephants today.
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
 
             <p>With the <code class="inline-code">&lt;#else&gt;</code> tag you can
             specify what to do if the condition is false. For example:</p>
 
             
 
-<pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
   Pythons are cheaper than elephants today.
 <strong>&lt;#else&gt;</strong>
   Pythons are not cheaper than elephants today.
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
 
             <p>This prints "Pythons are cheaper than elephants
             today." if the price of python is less than the price of
@@ -213,13 +223,15 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if animals.python.price &lt; animals.elephant.price&gt;
   Pythons are cheaper than elephants today.
 <strong>&lt;#elseif animals.elephant.price &lt; animals.python.price&gt;</strong>
   Elephants are cheaper than pythons today.
 &lt;#else&gt;
   Elephants and pythons cost the same today.
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
 
             <p>If you have a variable with boolean value (a true/false
             thing) then you can use it directly as the
@@ -228,9 +240,11 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#if animals.python.protected&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if animals.python.protected&gt;
   Pythons are protected animals!
-&lt;/#if&gt;</pre>
+&lt;/#if&gt;</pre>    </div>
+
           
 
           
@@ -249,23 +263,27 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;p&gt;We have these animals:
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;p&gt;We have these animals:
 &lt;table border=1&gt;
   <strong>&lt;#list animals as animal&gt;</strong>
     &lt;tr&gt;&lt;td&gt;${<strong>animal</strong>.name}&lt;td&gt;${<strong>animal</strong>.price} Euros
   <strong>&lt;/#list&gt;</strong>
-&lt;/table&gt;</pre>
+&lt;/table&gt;</pre>    </div>
+
 
             <p>then the output will be:</p>
 
             
 
-<pre class="code-block code-output">&lt;p&gt;We have these animals:
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">&lt;p&gt;We have these animals:
 &lt;table border=1&gt;
     <strong>&lt;tr&gt;&lt;td&gt;mouse&lt;td&gt;50 Euros
     &lt;tr&gt;&lt;td&gt;elephant&lt;td&gt;5000 Euros
     &lt;tr&gt;&lt;td&gt;python&lt;td&gt;4999 Euros</strong>
-&lt;/table&gt;</pre>
+&lt;/table&gt;</pre>    </div>
+
 
             <p>The generic form of the <code class="inline-code">list</code> directive
             is:<code class="inline-code"> &lt;#list <em class="code-color">sequence</em> as
@@ -287,11 +305,13 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;ul&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;ul&gt;
 <strong>&lt;#list misc.fruits as fruit&gt;</strong>
   &lt;li&gt;${fruit}
 <strong>&lt;/#list&gt;</strong>
-&lt;/ul&gt;</pre>
+&lt;/ul&gt;</pre>    </div>
+
 
             <p>The <code class="inline-code">misc.fruits</code> expression should be
             familiar to you; it <a href="dgui_quickstart_datamodel.html#topic.qStart.accessVariables">references a variable in
@@ -305,13 +325,15 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list misc.fruits&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list misc.fruits&gt;
   &lt;ul&gt;
    <strong> &lt;#items as fruit&gt;</strong>
       &lt;li&gt;${fruit}
  <strong>   &lt;/#items&gt;</strong>
   &lt;/ul&gt;
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
             <p>Here, the <code class="inline-code">list</code> directive represents the
             listing as a whole, and only the part inside the
@@ -325,11 +347,15 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}<strong>&lt;#sep&gt;, </strong>&lt;/#list&gt;</pre>    </div>
+
 
             
 
-<pre class="code-block code-output">&lt;p&gt;Fruits: orange, banana</pre>
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">&lt;p&gt;Fruits: orange, banana</pre>    </div>
+
 
             <p>The section covered by <code class="inline-code">sep</code> (which we
             could be written like this too:
@@ -346,7 +372,9 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}&lt;#sep&gt;, <strong>&lt;#else&gt;None</strong>&lt;/#list&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;p&gt;Fruits: &lt;#list misc.fruits as fruit&gt;${fruit}&lt;#sep&gt;, <strong>&lt;#else&gt;None</strong>&lt;/#list&gt;</pre>    </div>
+
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -357,7 +385,9 @@ ga('send', 'pageview');
 
               
 
-<pre class="code-block code-template">&lt;p&gt;Fruits: ${fruits?join(&quot;, &quot;, &quot;None&quot;)}</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;p&gt;Fruits: ${fruits?join(&quot;, &quot;, &quot;None&quot;)}</pre>    </div>
+
               </div>
 
 
@@ -367,7 +397,8 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;#list misc.fruits&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#list misc.fruits&gt;
   &lt;p&gt;Fruits:
   &lt;ul&gt;
     &lt;#items as fruit&gt;
@@ -376,7 +407,8 @@ ga('send', 'pageview');
   &lt;/ul&gt;
 &lt;#else&gt;
   &lt;p&gt;We have no fruits.
-&lt;/#list&gt;</pre>
+&lt;/#list&gt;</pre>    </div>
+
 
               <div class="callout note">
     <strong class="callout-label">Note:</strong>
@@ -405,19 +437,22 @@ ga('send', 'pageview');
 
             
 
-<pre class="code-block code-template">&lt;hr&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;hr&gt;
 &lt;i&gt;
 Copyright (c) 2000 &lt;a href=&quot;http://www.acmee.com&quot;&gt;Acmee Inc&lt;/a&gt;,
 &lt;br&gt;
 All Rights Reserved.
-&lt;/i&gt;</pre>
+&lt;/i&gt;</pre>    </div>
+
 
             <p>Whenever you need that file you simply insert it with the
             <code class="inline-code">include</code> directive:</p>
 
             
 
-<pre class="code-block code-template">&lt;html&gt;
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Test page&lt;/title&gt;
 &lt;/head&gt;
@@ -426,13 +461,15 @@ All Rights Reserved.
   &lt;p&gt;Blah blah...
 <strong>  &lt;#include &quot;/copyright_footer.html&quot;&gt;</strong>
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</pre>    </div>
+
 
             <p>and the output will be:</p>
 
             
 
-<pre class="code-block code-output">&lt;html&gt;
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">&lt;html&gt;
 &lt;head&gt;
   &lt;title&gt;Test page&lt;/title&gt;
 &lt;/head&gt;
@@ -446,7 +483,8 @@ Copyright (c) 2000 &lt;a href=&quot;http://www.acmee.com&quot;&gt;Acmee Inc&lt;/
 All Rights Reserved.
 &lt;/i&gt;</strong>
 &lt;/body&gt;
-&lt;/html&gt;</pre>
+&lt;/html&gt;</pre>    </div>
+
 
             <p>If you change the <code class="inline-code">copyright_footer.html</code>,
             then the visitor will see the new copyright notice on all
@@ -475,11 +513,13 @@ All Rights Reserved.
 
           
 
-<pre class="code-block code-template"><strong>&lt;#list animals as animal&gt;</strong>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body"><strong>&lt;#list animals as animal&gt;</strong>
       &lt;div<strong>&lt;#if animal.protected&gt;</strong><strong> </strong>class=&quot;protected&quot;<strong>&lt;/#if&gt;</strong>&gt;
         ${animal.name} for ${animal.price} Euros
       &lt;/div&gt;
-<strong>&lt;/#list&gt;</strong></pre>
+<strong>&lt;/#list&gt;</strong></pre>    </div>
+
 
           <p>Note that since FreeMarker does not interpret text outside FTL
           tags, interpolations and FTL comments, above you could use the FTL
@@ -632,7 +672,9 @@ All Rights Reserved.
 
           
 
-<pre class="code-block code-template">&lt;h1&gt;Welcome ${user<strong>!&quot;visitor&quot;</strong>}!&lt;/h1&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;h1&gt;Welcome ${user<strong>!&quot;visitor&quot;</strong>}!&lt;/h1&gt;</pre>    </div>
+
 
           <p>You can ask whether a variable isn&#39;t missing by putting
           <code class="inline-code">??</code> after its name. Combining this with the
@@ -642,7 +684,9 @@ All Rights Reserved.
 
           
 
-<pre class="code-block code-template">&lt;#if <strong>user??</strong>&gt;&lt;h1&gt;Welcome ${user}!&lt;/h1&gt;&lt;/#if&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#if <strong>user??</strong>&gt;&lt;h1&gt;Welcome ${user}!&lt;/h1&gt;&lt;/#if&gt;</pre>    </div>
+
 
           <p>Regarding variable accessing with multiple steps, like
           <code class="inline-code">animals.python.price</code>, writing
@@ -691,7 +735,9 @@ All Rights Reserved.
 
           
 
-<pre class="code-block code-template">&lt;#ftl output_format=&quot;HTML&quot;&gt;</pre>
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#ftl output_format=&quot;HTML&quot;&gt;</pre>    </div>
+
 
           <p>(Use <code class="inline-code">&quot;XML&quot;</code> instead of
           <code class="inline-code">&quot;HTML&quot;</code> above if you generate XML.)</p>
@@ -716,7 +762,7 @@ All Rights Reserved.
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="https://freemarker.apache.org/history.html">About us</a></li><li><a itemprop="license" href="app_license.html">License</a></li></ul></div><div class="column"><h3 class="column-header">Handy stuff</h3><ul><li><a href="http://try.freemarker.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/freemarker/freemarker">FreeMarker on Github</a></li><li><a href="https://twitter.com/freemarker">Follow us on Twitter</a></li><li><a href="https://issues.apache.org/jira/browse/FREEMARKER/">Report a bug</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Ask a question</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/freemarker/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2020-08-01T23:48:09Z" title="Saturday, August 1, 2020 at 11:48:09 PM Greenwich Mean Time">2020-08-01 23:48:09 GMT</time>, for Freemarker 2.3.30 </p>
+<time itemprop="dateModified" datetime="2020-08-03T23:21:08Z" title="Monday, August 3, 2020 at 11:21:08 PM Greenwich Mean Time">2020-08-03 23:21:08 GMT</time>, for Freemarker 2.3.30 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2020
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
