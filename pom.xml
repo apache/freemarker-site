@@ -53,7 +53,7 @@
                 <configuration>
                     <sourceDirectory>src/main/docgen</sourceDirectory>
                     <outputDirectory>${siteOutputDirectory}</outputDirectory>
-                    <offline>true</offline>
+                    <offline>false</offline>
                 </configuration>
             </plugin>
             <plugin>
