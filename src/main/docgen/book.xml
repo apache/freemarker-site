@@ -1562,10 +1562,6 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para><literal>ant update-deps</literal></para>
-          </listitem>
-
-          <listitem>
             <para><literal>ant dist</literal></para>
           </listitem>
 
@@ -1895,20 +1891,17 @@ two freemarker.jar-s and unpredictable behavior!
           <listitem>
             <para>The contents of <literal>docs/</literal> is generated from
             the <literal>freemarker</literal> project, by issuing <literal>ant
-            manualFreemarkerOrg</literal>. So to change the content, you
-            should edit
+            manualOnline</literal>. So to change the content, you should edit
             <literal><replaceable>&lt;freemarker-project&gt;</replaceable>/src/manual/en_US/book.xml</literal>.</para>
           </listitem>
 
           <listitem>
             <para>Most other content is generated from the
-            <literal>site</literal> project, by issuing
-            <literal>ant</literal>. So to change the content, you should edit
+            <literal>site</literal> project, by issuing <literal>mvn -U
+            package</literal>. So to change the content, you should edit
             <literal><replaceable>&lt;site-project&gt;</replaceable>/src/main/docgen/book.xml</literal>
             (in the <literal>master</literal> branch, not in the
-            <literal>asf-site</literal> branch). To ensure that you are using
-            the latest Docgen, you may want to issue <literal>ant
-            update-deps</literal> before generating.</para>
+            <literal>asf-site</literal> branch).</para>
           </listitem>
         </itemizedlist>
 
@@ -1929,34 +1922,12 @@ two freemarker.jar-s and unpredictable behavior!
         binary release building (as that contains the Manual in HTML format)
         and of <literal>freemarker-site</literal>.</para>
 
-        <para>Docgen is not published to the Maven Central Repository, as it's
-        only used as an internal build dependency. Currently, it's published
-        manually to the internal Ivy repository of the project, which is under
-        https://freemarker.apache.org/repos/ivy/. If you modify Docgen, don't
-        forget to publish there, or else the next site update or FreeMarker
-        release will use an outdated version. For that:</para>
-
-        <orderedlist>
-          <listitem>
-            <para><literal>ant server-publish-last-build</literal></para>
-          </listitem>
-
-          <listitem>
-            <para>Upload the content of the resulting
-            <literal>build\dummy-server-ivy-repo</literal> directory to
-            <literal>https://freemarker.apache.org/repos/ivy/</literal>. See
-            how to update the contents of freemarker.apache.org <link
-            linkend="updating-homepage">here...</link></para>
-          </listitem>
-
-          <listitem>
-            <para>If you want to use the published version in the
-            <literal>freemarker</literal> or
-            <literal>freemarker-site</literal> projects, don't forget to issue
-            <literal>ant update-deps</literal> there, or else they will keep
-            using their local copy of the last obtained version.</para>
-          </listitem>
-        </orderedlist>
+        <para>Docgen is not published to the Maven Central Repository (yet?),
+        only into the Apache Maven Snapshot Repository. That works for us
+        because it's an internal build dependency, and the dependent projects
+        are set up to find it in the Apache Maven Snapshot Repository. If you
+        modify Docgen, just issue <literal>mvn deploy</literal> to make the
+        new version available for the later dependent builds.</para>
       </section>
 
       <section xml:id="edit-docbook">
