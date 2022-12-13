@@ -1107,7 +1107,7 @@ var toc = {
 }
 ,
 {
-"title": "Customizing the behavior regarding TemplatException-s",
+"title": "Customizing the behavior regarding\n TemplateException-s",
 "url": "pgui_config_errorhandling.html#autoid_44",
 "isFile": false,
 "children": [

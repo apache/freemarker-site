@@ -299,6 +299,14 @@ var toc = {
 "children": [
 ]
 }
+,
+{
+"title": "Privacy policy",
+"url": "http://www.apache.org/licenses/",
+"isFile": true,
+"children": [
+]
+}
 ]
 }
 ]
