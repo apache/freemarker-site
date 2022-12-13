@@ -56,6 +56,7 @@ olinks: {
   // Manual links:
   manual: "docs/index.html"
   api: "docs/api/index.html"
+  apiConfigurationSettings: "docs/api/freemarker/core/Configurable.html#setSetting-java.lang.String-java.lang.String-"
   chienseManual: "https://sourceforge.net/projects/freemarker/files/chinese-manual/"
   templateAuthorsGuide: "docs/dgui_quickstart_basics.html"
   license: "docs/app_license.html"
@@ -90,13 +91,14 @@ olinks: {
   notificationsMailingListUnsubscribe: "mailto:notifications-unsubscribe@freemarker.apache.org"
   oldUserMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.user"
   oldDevelMailingListArchive: "http://news.gmane.org/gmane.comp.web.freemarker.devel"
-  newBugReport: "https://issues.apache.org/jira/browse/FREEMARKER/"
-  newStackOverflowQuestion: "https://stackoverflow.com/questions/ask?tags=freemarker"
+  reportBug: "https://issues.apache.org/jira/browse/FREEMARKER/"
+  askHelpOnStackOverflow: "https://stackoverflow.com/questions/ask?tags=freemarker"
   asfSponsorship: "http://www.apache.org/foundation/sponsorship.html"
   asfThanks: "http://www.apache.org/foundation/thanks.html"
   asfHome: "http://www.apache.org/"
   asfIncubator: "http://incubator.apache.org/"
   asfLicense: "http://www.apache.org/licenses/"
+  asfPrivacyPolicy: "https://privacy.apache.org/policies/privacy-policy-public.html"
   templateUploadingSecurityFaq: "https://freemarker.apache.org/docs/app_faq.html#faq_template_uploading_security"
   
   emacsPluginDownload: "https://sourceforge.net/projects/freemarker/files/editor-plugins/ftl.el/download"
@@ -118,7 +120,7 @@ tabs: {
 // .icon-star
 secondaryTabs: {
   "Contribute": { class: "icon-heart", href: "id:contribute" }
-  "Report a Bug": { class: "icon-bug", href: "olink:newBugReport" }
+  "Report a Bug": { class: "icon-bug", href: "olink:reportBug" }
   "Download": { class: "icon-download", href: "id:freemarkerdownload" }
 }
 
@@ -127,29 +129,32 @@ footerSiteMap: {
     "What is FreeMarker?": "id:what-is-freemarker"
     "Download": "id:freemarkerdownload"
     "Version history": "olink:versionHistory"
-    "About us": "id:history"
+    "FAQ": "olink:faq"
     "License": "olink:license"
+    "Privacy policy": "olink:asfPrivacyPolicy"
   }
-  "Handy stuff": {
+  "Often used / Reference": {
     "Try template online": "olink:onlineTemplateTester"
     "Expressions cheatsheet": "olink:expressionCheatsheet"
     "#directives": "olink:directives"
     "?built_ins": "olink:builtIns"
     ".special_vars": "olink:specialVariables"
+    "Configuration settings": "olink:apiConfigurationSettings"
   }
   "Community": {
-    "FreeMarker on Github": "olink:githubProject"
-    "Follow us on Twitter": "olink:twitter"
-    "Report a bug": "olink:newBugReport"
-    "Ask a question": "olink:newStackOverflowQuestion"
-    "Mailing lists": "id:mailing-lists"
+    "Github project page": "olink:githubProject"
+    "Report a bug": "olink:reportBug"
+    "Report security vulnerability": "id:report-security-vulnerabilities"
+    "Get help on StackOverflow": "olink:askHelpOnStackOverflow"
+    "Announcements on Twitter": "olink:twitter"
+    "Discuss on mailing lists": "id:mailing-lists"
   }
 }
 
 socialLinks: {
   "GitHub": { class: "github", href: "olink:githubProject" }
   "Twitter": { class: "twitter", href: "olink:twitter" }
-  "Stack Overflow": { class: "stack-overflow", href: "olink:newStackOverflowQuestion" }
+  "Stack Overflow": { class: "stack-overflow", href: "olink:askHelpOnStackOverflow" }
 }
 
 sideTOCLogos: [

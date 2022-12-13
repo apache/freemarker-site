@@ -475,7 +475,7 @@ two freemarker.jar-s and unpredictable behavior!
     <title>Community</title>
 
     <section>
-      <title><olink targetdoc="newBugReport">Report bugs</olink></title>
+      <title><olink targetdoc="reportBug">Report bugs</olink></title>
 
       <para/>
     </section>
@@ -491,8 +491,8 @@ two freemarker.jar-s and unpredictable behavior!
       first.</para>
 
       <para>If you want to report a bug that isn't an undisclosed security
-      vulnerability, please use <olink targetdoc="newBugReport">our regular
-      bug tracker</olink>.</para>
+      vulnerability, please use <olink targetdoc="reportBug">our regular bug
+      tracker</olink>.</para>
 
       <para>Committers should <link
       linkend="handle-security-vulnerabilities">see here</link> how to handle
@@ -500,7 +500,7 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section>
-      <title><olink targetdoc="newStackOverflowQuestion">Ask help on Stack
+      <title><olink targetdoc="askHelpOnStackOverflow">Ask help on Stack
       Overflow</olink></title>
 
       <para/>
@@ -592,7 +592,7 @@ two freemarker.jar-s and unpredictable behavior!
       <title>Discuss on mailing lists</title>
 
       <para>If you need help, you should ask on <olink
-      targetdoc="newStackOverflowQuestion">Stack Overflow with
+      targetdoc="askHelpOnStackOverflow">Stack Overflow with
       <quote>freemarker</quote> tag</olink>! To discuss deeper issues, feature
       requests, and other FreeMarker-related topics, subscribe to the
       developer mailing list!</para>
@@ -2102,6 +2102,12 @@ two freemarker.jar-s and unpredictable behavior!
 
     <section>
       <title><olink targetdoc="asfLicense">License</olink></title>
+
+      <para/>
+    </section>
+
+    <section>
+      <title><olink targetdoc="asfLicense">Privacy policy</olink></title>
 
       <para/>
     </section>
