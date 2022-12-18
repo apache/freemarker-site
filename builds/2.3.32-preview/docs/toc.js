@@ -1609,6 +1609,22 @@ var toc = {
 }
 ,
 {
+"title": "c_lower_case",
+"url": "ref_builtins_string.html#ref_builtin_c_lower_case",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "c_upper_case",
+"url": "ref_builtins_string.html#ref_builtin_c_upper_case",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "capitalize",
 "url": "ref_builtins_string.html#ref_builtin_capitalize",
 "isFile": false,
