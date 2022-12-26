@@ -804,6 +804,14 @@ var toc = {
 }
 ,
 {
+"title": "Formatting for humans, or for computers",
+"url": "dgui_misc_computer_vs_human_format.html",
+"isFile": true,
+"children": [
+]
+}
+,
+{
 "title": "White-space handling",
 "url": "dgui_misc_whitespace.html",
 "isFile": true,
@@ -1609,6 +1617,22 @@ var toc = {
 }
 ,
 {
+"title": "c (for string value)",
+"url": "ref_builtins_string.html#ref_builtin_c_string",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "cn (for string value)",
+"url": "ref_builtins_string.html#ref_builtin_cn_string",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "c_lower_case",
 "url": "ref_builtins_string.html#ref_builtin_c_lower_case",
 "isFile": false,
@@ -1992,8 +2016,16 @@ var toc = {
 }
 ,
 {
-"title": "c (when used with numerical value)",
+"title": "c (for numbers)",
 "url": "ref_builtins_number.html#ref_builtin_c",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "cn (for numbers)",
+"url": "ref_builtins_number.html#ref_builtin_cn",
 "isFile": false,
 "children": [
 ]
@@ -2094,8 +2126,16 @@ var toc = {
 "isFile": true,
 "children": [
 {
-"title": "c (when used with boolean)",
+"title": "c (for boolean value)",
 "url": "ref_builtins_boolean.html#ref_builtin_c_boolean",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "cn (for boolean value)",
+"url": "ref_builtins_boolean.html#ref_builtin_cn_boolean",
 "isFile": false,
 "children": [
 ]

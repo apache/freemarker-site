@@ -98,6 +98,10 @@ under the License.
       href="dgui_misc_autoescaping.html"
   ></topic>  
 <topic
+      label="Formatting for humans, or for computers"
+      href="dgui_misc_computer_vs_human_format.html"
+  ></topic>  
+<topic
       label="White-space handling"
       href="dgui_misc_whitespace.html"
   ></topic>  
