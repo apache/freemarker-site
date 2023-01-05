@@ -3,7 +3,6 @@ freemarker.core
 freemarker.debug
 freemarker.ext.ant
 freemarker.ext.beans
-freemarker.ext.beans.delme
 freemarker.ext.dom
 freemarker.ext.jdom
 freemarker.ext.jsp
