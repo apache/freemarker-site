@@ -148,12 +148,12 @@
     since 2.3.24.</para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.31</title>
+      <title>Latest stable release: 2.3.32</title>
 
-      <para>Released on 2021-02-16. Requires J2SE 1.7 or higher.</para>
+      <para>Released on 2023-01-14. Requires J2SE 1.7 or higher.</para>
 
       <para><link
-      xlink:href="https://freemarker.apache.org/docs/versions_2_3_31.html">See
+      xlink:href="https://freemarker.apache.org/docs/versions_2_3_32.html">See
       what's new...</link></para>
 
       <para>Downloads:</para>
@@ -161,21 +161,21 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.31/binaries/apache-freemarker-2.3.31-bin.tar.gz">Binary
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz">Binary
           release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
           and documentation) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/binaries/apache-freemarker-2.3.31-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/binaries/apache-freemarker-2.3.31-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.31/source/apache-freemarker-2.3.31-src.tar.gz">Source
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz">Source
           release (tar.gz)</link> [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/source/apache-freemarker-2.3.31-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/source/apache-freemarker-2.3.31-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -189,7 +189,7 @@ two freemarker.jar-s and unpredictable behavior!
 &lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.31&lt;/version&gt;
+  &lt;version&gt;2.3.32&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
@@ -207,23 +207,23 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.31/binaries/apache-freemarker-gae-2.3.31-bin.tar.gz">binary</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz">binary</link>
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/binaries/apache-freemarker-gae-2.3.31-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/binaries/apache-freemarker-gae-2.3.31-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.31/source/apache-freemarker-gae-2.3.31-src.tar.gz">source</link>
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz">source</link>
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/source/apache-freemarker-gae-2.3.31-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.31/source/apache-freemarker-gae-2.3.31-src.tar.gz.asc">ASC</link>].
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.31&lt;/version&gt;
+  &lt;version&gt;2.3.32&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
