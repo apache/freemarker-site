@@ -1173,7 +1173,7 @@ two freemarker.jar-s and unpredictable behavior!
         work under the Apache license. You grant the same rights (copyright
         license, patent license, etc.) to the Apache Software Foundation as if
         you have signed a <link
-        xlink:href="https://www.apache.org/dev/new-committers-guide.html#cla">Contributor
+        xlink:href="https://www.apache.org/licenses/contributor-agreements.html">Contributor
         License Agreement</link>. For contributions that are judged to be
         non-trivial, you will be asked to actually signing a Contributor
         License Agreement.</para>
@@ -1562,6 +1562,14 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
+            <para>Do a clean checkout of the branch to release, just to ensure
+            that you won't include any files temporary files that you put
+            there during development. Work in that checkout from now on. Don't
+            forget to create the <literal>build.properties</literal> in
+            it.</para>
+          </listitem>
+
+          <listitem>
             <para><literal>ant dist</literal></para>
           </listitem>
 
@@ -1653,8 +1661,7 @@ two freemarker.jar-s and unpredictable behavior!
           </listitem>
 
           <listitem>
-            <para>Voting on the FreeMarker developer list (the podling project
-            list)</para>
+            <para>Voting on the FreeMarker developer list</para>
 
             <orderedlist>
               <listitem>
@@ -1722,7 +1729,8 @@ two freemarker.jar-s and unpredictable behavior!
             of https://dist.apache.org/repos/dist/<emphasis
             role="bold">release</emphasis>/freemarker and commit them. (Of
             course get rid of any voting attempt numbers in the directory
-            names.) Now they should appear under <link
+            names.) After a few minutes of delay, they should appear under
+            <link
             xlink:href="https://www.apache.org/dist/freemarker/">https://www.apache.org/dist/freemarker/</link>.</para>
           </listitem>
 
@@ -1751,10 +1759,10 @@ two freemarker.jar-s and unpredictable behavior!
 
           <listitem>
             <para>Update <literal>doap.rdf</literal> in the
-            <literal>freemarker-site</literal> repository (don't forget to
-            commit it into the <literal>asf-site</literal> branch as well, not
-            just into <literal>master</literal>, or else it's not
-            published)</para>
+            <literal>freemarker-site</literal> repository, by adding a new
+            <literal>release</literal> element. Don't forget to commit it into
+            the <literal>asf-site</literal> branch as well, not just into
+            <literal>master</literal>, or else it's not published.</para>
           </listitem>
 
           <listitem>
