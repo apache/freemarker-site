@@ -76,6 +76,10 @@
       href="dgui_misc_autoescaping.html"
   ></topic>  
 <topic
+      label="Formatting for humans, or for computers"
+      href="dgui_misc_computer_vs_human_format.html"
+  ></topic>  
+<topic
       label="White-space handling"
       href="dgui_misc_whitespace.html"
   ></topic>  
@@ -479,6 +483,10 @@
       label="B: Version history"
       href="app_versions.html"
   >  
+<topic
+      label="2.3.32"
+      href="versions_2_3_32.html"
+  ></topic>  
 <topic
       label="2.3.31"
       href="versions_2_3_31.html"
