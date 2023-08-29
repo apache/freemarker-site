@@ -23,7 +23,7 @@
          xmlns:asfext="http://projects.apache.org/ns/asfext#"
          xmlns:foaf="http://xmlns.com/foaf/0.1/">
 
-  <Project rdf:about="https://freemarker.incubator.apache.org/">
+  <Project rdf:about="https://freemarker.apache.org/">
     <name>Apache FreeMarker</name>
     <homepage rdf:resource="https://freemarker.apache.org" />
     <created>2015-09-02</created><!-- When FreeMaker entered ASF, this must be later changed to real data of "TLPisation" -->
@@ -42,7 +42,7 @@
     <category rdf:resource="http://projects.apache.org/category/content" />
 
     <license rdf:resource="https://www.apache.org/licenses/LICENSE-2.0" />
-    <asfext:pmc rdf:resource="http://incubator.apache.org" />
+    <asfext:pmc rdf:resource="http://freemarker.apache.org" />
 
     <bug-database rdf:resource="https://issues.apache.org/jira/browse/FREEMARKER" />
     <mailing-list rdf:resource="https://freemarker.apache.org/mailing-lists.html" />
@@ -50,8 +50,8 @@
 
     <repository>
       <GitRepository><!-- not sure about the GitRepository tag -->
-        <location rdf:resource="git://git.apache.org/incubator-freemarker.git"/><!-- be changed when "TLPised" -->
-        <browse rdf:resource="https://github.com/apache/incubator-freemarker"/><!-- be changed when "TLPised" -->
+        <location rdf:resource="git://git.apache.org/freemarker.git"/>
+        <browse rdf:resource="https://github.com/apache/freemarker"/>
       </GitRepository>
     </repository>
 
