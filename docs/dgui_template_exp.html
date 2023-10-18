@@ -2101,16 +2101,16 @@ Jerry</pre>    </div>
               <code class="inline-code">!</code>, like <code class="inline-code">1 + x</code>,
               <em>always</em> use parentheses, like
               <code class="inline-code">${x!(1 + y)}</code> or <code class="inline-code">${(x!1) +
-              y)}</code>, depending on which interpretation you meant.
+              y}</code>, depending on which interpretation you meant.
               That&#39;s needed because due to a programming mistake in FreeMarker
               2.3.x, the precedence of <code class="inline-code">!</code> (when it&#39;s used as
               default value operator) is very low at its right side. This
               means that, for example, <code class="inline-code">${x!1 + y}</code> is
               misinterpreted by FreeMarker as <code class="inline-code">${x!(1 + y)}</code>
               while it should mean <code class="inline-code">${(x!1) + y}</code>. This
-              programming error will be fixed in FreeMarker 2.4, so you should
-              not utilize this wrong behavior, or else your templates will
-              break with FreeMarker 2.4!</p>
+              programming error will be possibly fixed in some future version
+              (maybe 2.4), and you should not utilize this wrong behavior, so
+              that the fix can be enabled in your project!</p>
               </div>
 
 
