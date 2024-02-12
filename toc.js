@@ -89,7 +89,7 @@ var toc = {
 "children": [
 {
 "title": "Report bugs",
-"url": "https://issues.apache.org/jira/browse/FREEMARKER/",
+"url": "https://issues.apache.org/jira/projects/FREEMARKER",
 "isFile": true,
 "children": [
 ]
@@ -270,7 +270,7 @@ var toc = {
 "children": [
 {
 "title": "Apache Software\n Foundation",
-"url": "http://www.apache.org/",
+"url": "https://www.apache.org",
 "isFile": true,
 "children": [
 ]
@@ -278,15 +278,7 @@ var toc = {
 ,
 {
 "title": "Sponsorship",
-"url": "http://www.apache.org/foundation/sponsorship.html",
-"isFile": true,
-"children": [
-]
-}
-,
-{
-"title": "Thanks",
-"url": "http://www.apache.org/foundation/thanks.html",
+"url": "https://www.apache.org/foundation/sponsors",
 "isFile": true,
 "children": [
 ]
@@ -294,7 +286,7 @@ var toc = {
 ,
 {
 "title": "License",
-"url": "http://www.apache.org/licenses/",
+"url": "https://www.apache.org/licenses/",
 "isFile": true,
 "children": [
 ]
@@ -302,7 +294,7 @@ var toc = {
 ,
 {
 "title": "Privacy policy",
-"url": "http://www.apache.org/licenses/",
+"url": "https://www.apache.org/licenses/",
 "isFile": true,
 "children": [
 ]
