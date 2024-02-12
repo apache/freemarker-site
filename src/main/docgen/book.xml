@@ -575,11 +575,6 @@ two freemarker.jar-s and unpredictable behavior!
           <literal>master</literal></para>
         </listitem>
       </itemizedlist>
-
-      <para>There are some other FreeMarker-related repositories, such FMPP
-      and Tutorials, which you can only find on the <olink
-      targetdoc="githubProjectOld">old GitHub project</olink> page, as they
-      aren't part of the project at Apache.</para>
     </section>
 
     <section>
@@ -2098,12 +2093,6 @@ two freemarker.jar-s and unpredictable behavior!
 
     <section>
       <title><olink targetdoc="asfSponsorship">Sponsorship</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
-      <title><olink targetdoc="asfThanks">Thanks</olink></title>
 
       <para/>
     </section>
