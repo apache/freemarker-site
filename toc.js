@@ -277,14 +277,6 @@ var toc = {
 }
 ,
 {
-"title": "Sponsorship",
-"url": "https://www.apache.org/foundation/sponsors",
-"isFile": true,
-"children": [
-]
-}
-,
-{
 "title": "License",
 "url": "https://www.apache.org/licenses/",
 "isFile": true,
@@ -294,7 +286,23 @@ var toc = {
 ,
 {
 "title": "Privacy policy",
-"url": "https://www.apache.org/licenses/",
+"url": "https://privacy.apache.org/policies/privacy-policy-public.html",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Sponsorship",
+"url": "https://www.apache.org/foundation/sponsorship",
+"isFile": true,
+"children": [
+]
+}
+,
+{
+"title": "Thanks",
+"url": "https://www.apache.org/foundation/thanks",
 "isFile": true,
 "children": [
 ]
