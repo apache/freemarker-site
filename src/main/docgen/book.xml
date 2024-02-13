@@ -2090,6 +2090,18 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para/>
     </section>
+    
+    <section>
+      <title><olink targetdoc="asfLicense">License</olink></title>
+
+      <para/>
+    </section>
+    
+    <section>
+      <title><olink targetdoc="asfPrivacyPolicy">Privacy policy</olink></title>
+
+      <para/>
+    </section>
 
     <section>
       <title><olink targetdoc="asfSponsorship">Sponsorship</olink></title>
@@ -2098,13 +2110,7 @@ two freemarker.jar-s and unpredictable behavior!
     </section>
 
     <section>
-      <title><olink targetdoc="asfLicense">License</olink></title>
-
-      <para/>
-    </section>
-
-    <section>
-      <title><olink targetdoc="asfLicense">Privacy policy</olink></title>
+      <title><olink targetdoc="asfThanks">Thanks</olink></title>
 
       <para/>
     </section>
