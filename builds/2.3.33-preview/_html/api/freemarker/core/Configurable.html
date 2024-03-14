@@ -1183,7 +1183,8 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setObjectWrapper(freemarker.template.ObjectWrapper)">setObjectWrapper</a></span>&#8203;(<a href="../template/ObjectWrapper.html" title="interface in freemarker.template">ObjectWrapper</a>&nbsp;objectWrapper)</code></div>
 <div class="col-last even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Sets the object wrapper used to wrap objects to <a href="../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s.</div>
+<div class="block">Sets the <a href="../template/ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> used to wrap objects to <a href="../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s when using this
+ <a href="Configurable.html" title="class in freemarker.core"><code>Configurable</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setOutputEncoding(java.lang.String)">setOutputEncoding</a></span>&#8203;(<a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;outputEncoding)</code></div>
@@ -3204,8 +3205,22 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="setObjectWrapper(freemarker.template.ObjectWrapper)">
 <h3>setObjectWrapper</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setObjectWrapper</span>&#8203;<span class="parameters">(<a href="../template/ObjectWrapper.html" title="interface in freemarker.template">ObjectWrapper</a>&nbsp;objectWrapper)</span></div>
-<div class="block">Sets the object wrapper used to wrap objects to <a href="../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s.
- The default is <a href="../template/ObjectWrapper.html#DEFAULT_WRAPPER"><code>ObjectWrapper.DEFAULT_WRAPPER</code></a>.</div>
+<div class="block">Sets the <a href="../template/ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> used to wrap objects to <a href="../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s when using this
+ <a href="Configurable.html" title="class in freemarker.core"><code>Configurable</code></a>.
+
+ <p>On <a href="../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a> level, the default is a <a href="../template/DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> instance with the same
+ <a href="../template/Configuration.html#setIncompatibleImprovements(freemarker.template.Version)"><code>incompatible_improvements</code></a> setting value as of the
+ <a href="../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>. (Also, with very low incompatible improvements it's
+ <a href="../template/ObjectWrapper.html#DEFAULT_WRAPPER"><code>ObjectWrapper.DEFAULT_WRAPPER</code></a>.). Untill you called this method, the default value will be
+ automatically replaced when <a href="../template/Configuration.html#setIncompatibleImprovements(freemarker.template.Version)"><code>Configuration.setIncompatibleImprovements(Version)</code></a> is called, to follow
+ the value of the <code>incompatible_improvements</code> setting.
+
+ <p>Below <a href="../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a> level it's usually unset, so we fall back to
+ what's coming from <a href="../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>objectWrapper</code> - Not null.</dd>
+</dl>
 </section>
 </li>
 <li>

@@ -673,10 +673,13 @@ implements <a href="../../template/utility/RichObjectWrapper.html" title="interf
    the application, but again, see the list of effects below.
    
    <p>The reason it's separate from <a href="../../template/Configuration.html#setIncompatibleImprovements(freemarker.template.Version)"><code>Configuration.setIncompatibleImprovements(Version)</code></a> is that
-   <a href="../../template/ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> objects are often shared among multiple <a href="../../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>-s, so the two version
-   numbers are technically independent. But it's recommended to keep those two version numbers the same.
- 
-   <p>The changes enabled by <code>incompatibleImprovements</code> are:
+   <a href="../../template/ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> objects are sometimes shared among multiple <a href="../../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>-s, so the two version
+   numbers are technically independent. But it's recommended to keep those two version numbers the same. Actually,
+   if you leave the <a href="../../template/Configuration.html#setObjectWrapper(freemarker.template.ObjectWrapper)"><code>object_wrapper</code></a> setting at its default
+   (and most do), then that will be kept the same as of the <a href="../../template/Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>.
+
+   <p>The changes enabled by <code>incompatibleImprovements</code> are (but also check the changes at
+   <a href="../../template/DefaultObjectWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>DefaultObjectWrapper(Version)</code></a>, if you are using <a href="../../template/DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a>):
    <ul>
      <li>
        <p>2.3.0: No changes; this is the starting point, the version used in older projects.
@@ -715,7 +718,7 @@ implements <a href="../../template/utility/RichObjectWrapper.html" title="interf
        <p>2.3.33 (or higher):
        The default of <a href="#setRecordZeroArgumentNonVoidMethodPolicy(freemarker.ext.beans.ZeroArgumentNonVoidMethodPolicy)"><code>setRecordZeroArgumentNonVoidMethodPolicy(ZeroArgumentNonVoidMethodPolicy)</code></a>
        has changed to <a href="ZeroArgumentNonVoidMethodPolicy.html#BOTH_PROPERTY_AND_METHOD"><code>ZeroArgumentNonVoidMethodPolicy.BOTH_PROPERTY_AND_METHOD</code></a>, from
-       <a href="ZeroArgumentNonVoidMethodPolicy.html#METHOD_ONLY"><code>ZeroArgumentNonVoidMethodPolicy.METHOD_ONLY</code></a>. This means that Java records public methods with
+       <a href="ZeroArgumentNonVoidMethodPolicy.html#METHOD_ONLY"><code>ZeroArgumentNonVoidMethodPolicy.METHOD_ONLY</code></a>. This means that Java record public methods with
        0-arguments and non-void return type are now exposed both as properties, and as methods, while earlier they
        were only exposed as methods. That is, if in a record you have <code>public String name()</code>, now in
        templates the value can be accessed both as <code>obj.name</code> (like a property), and as <code>obj.name()</code>
@@ -725,7 +728,11 @@ implements <a href="../../template/utility/RichObjectWrapper.html" title="interf
    
    <p>Note that the version will be normalized to the lowest version where the same incompatible
    <a href="BeansWrapper.html" title="class in freemarker.ext.beans"><code>BeansWrapper</code></a> improvements were already present, so <a href="#getIncompatibleImprovements()"><code>getIncompatibleImprovements()</code></a> might return
-   a lower version than what you have specified.</dd>
+   a lower version than what you have specified.
+
+   <p>Note again that most projects use <a href="../../template/DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> (which extends <a href="BeansWrapper.html" title="class in freemarker.ext.beans"><code>BeansWrapper</code></a>), in
+   which case see the additional changes at <a href="../../template/DefaultObjectWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>DefaultObjectWrapper(Version)</code></a>!
+   </p></dd>
 <dt>Since:</dt>
 <dd>2.3.21</dd>
 </dl>

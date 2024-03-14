@@ -1229,7 +1229,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="col-first odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setObjectWrapper(freemarker.template.ObjectWrapper)">setObjectWrapper</a></span>&#8203;(<a href="ObjectWrapper.html" title="interface in freemarker.template">ObjectWrapper</a>&nbsp;objectWrapper)</code></div>
 <div class="col-last odd-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table">
-<div class="block">Sets the object wrapper used to wrap objects to <a href="TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s.</div>
+<div class="block">Sets the <a href="ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> used to wrap objects to <a href="TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s when using this
+ <a href="../core/Configurable.html" title="class in freemarker.core"><code>Configurable</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table-tab2 method-summary-table-tab4 method-summary-table"><code><span class="member-name-link"><a href="#setOutputFormat(freemarker.core.OutputFormat)">setOutputFormat</a></span>&#8203;(<a href="../core/OutputFormat.html" title="class in freemarker.core">OutputFormat</a>&nbsp;outputFormat)</code></div>
@@ -2559,9 +2560,9 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
  <p>Bugfixes and improvements that are fully backward compatible, also those that are important security fixes,
  are enabled regardless of the incompatible improvements setting.
 
- <p>Do NOT ever use <a href="#getVersion()"><code>getVersion()</code></a> to set the "incompatible improvements". Always use a fixed value, like
- <a href="#VERSION_2_3_30"><code>VERSION_2_3_30</code></a>. Otherwise your application can break as you upgrade FreeMarker. (As of 2.3.30, doing
- this will be logged as an error. As of 2.4.0, it will be probably disallowed, by throwing exception.)
+ <p><b>Do NOT ever use <a href="#getVersion()"><code>getVersion()</code></a> to set the "incompatible improvements". Always use a fixed value</b>,
+ like <a href="#VERSION_2_3_33"><code>VERSION_2_3_33</code></a>. Otherwise, your application can break as you upgrade FreeMarker. (As of 2.3.30,
+ doing this will be logged as an error. As of 2.4.0, it will be probably disallowed, by throwing exception.)
  
  <p>An important consequence of setting this setting is that now your application will check if the stated minimum
  FreeMarker version requirement is met. Like if you set this setting to 2.3.22, but accidentally the application
@@ -2570,7 +2571,12 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
  
  <p>Note that as FreeMarker's minor (2nd) or major (1st) version number increments, it's possible that emulating
  some of the old bugs will become unsupported, that is, even if you set this setting to a low value, it silently
- wont bring back the old behavior anymore. Information about that will be present here.
+ won't bring back the old behavior anymore. Information about that will be present here.
+
+ <p>Note that <a href="DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> (and <a href="../ext/beans/BeansWrapper.html" title="class in freemarker.ext.beans"><code>BeansWrapper</code></a>, which it extends) has its own "incompatible
+ improvements" setting (see <a href="DefaultObjectWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>DefaultObjectWrapper(Version)</code></a>), but if you leave the
+ <a href="#setObjectWrapper(freemarker.template.ObjectWrapper)"><code>object_wrapper</code></a> setting at its default (and most do), then that will be
+ kept the same as of the <a href="Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>.
  
  <p>Currently the effects of this setting are:
  <ul>
@@ -2832,16 +2838,16 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
      2.3.26 (or higher):
      <ul>
        <li><p>
-          <a href="../ext/beans/BeansWrapper.html" title="class in freemarker.ext.beans"><code>BeansWrapper</code></a> and <a href="DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> now exposes Java 8 default methods (and the bean
-          properties they define); see <a href="../ext/beans/BeansWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>BeansWrapper(Version)</code></a>. 
+          The default <a href="#setObjectWrapper(freemarker.template.ObjectWrapper)"><code>object_wrapper</code></a> now exposes Java
+          8 default methods (and the bean properties they define); see <a href="../ext/beans/BeansWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>BeansWrapper(Version)</code></a>. 
      </ul>
    </li>
    <li><p>
      2.3.27 (or higher):
      <ul>
        <li><p>
-          <a href="../ext/beans/BeansWrapper.html" title="class in freemarker.ext.beans"><code>BeansWrapper</code></a> and <a href="DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> now prefers the non-indexed JavaBean property
-          read method over the indexed read method when Java 8 exposes both;
+          The default <a href="#setObjectWrapper(freemarker.template.ObjectWrapper)"><code>object_wrapper</code></a> now prefers the
+          non-indexed JavaBean property read method over the indexed read method when Java 8 exposes both;
           see <a href="../ext/beans/BeansWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>BeansWrapper(Version)</code></a>.
        <li><p>
           The following unchecked exceptions (but not their subclasses) will be wrapped into
@@ -2918,7 +2924,7 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
        <p>
        2.3.33 (or higher):
        <ul>
-           <li><p>Comparing strings is now way faster. If your template does lot of string comparisons, this can
+         <li><p>Comparing strings is now way faster. If your template does lot of string comparisons, this can
            mean very significant speedup. We now use a simpler way of comparing strings, and because templates
            were only ever allowed equality comparisons between strings (not less-than, or greater-than), it's very
            unlikely to change the behavior of your templates. (Technically, what changes is that instead of using
@@ -2926,7 +2932,11 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
            normalization. So, in theory it's possible that for some locales two different but similarly looking
            characters were treated as equal by the collator, but will count as different now. But it's very
            unlikely that anyone wanted to depend on such fragile logic anyway. Note again that we still do UNICODE
-           normalization, so combining characters won't break your comparison.)</p></li>
+           normalization, so combining characters won't break your comparisons.)</p></li>
+       <li><p>
+          The default <a href="#setObjectWrapper(freemarker.template.ObjectWrapper)"><code>object_wrapper</code></a> now exposes Java
+          records public methods with 0-arguments and non-void return type are now exposed both as properties,
+          and as methods; see <a href="../ext/beans/BeansWrapper.html#%3Cinit%3E(freemarker.template.Version)"><code>BeansWrapper(Version)</code></a>.
        </ul>
    </li>
  </ul></div>
@@ -3437,11 +3447,23 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <h3>setObjectWrapper</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setObjectWrapper</span>&#8203;<span class="parameters">(<a href="ObjectWrapper.html" title="interface in freemarker.template">ObjectWrapper</a>&nbsp;objectWrapper)</span></div>
 <div class="block"><span class="descfrm-type-label">Description copied from class:&nbsp;<code><a href="../core/Configurable.html#setObjectWrapper(freemarker.template.ObjectWrapper)">Configurable</a></code></span></div>
-<div class="block">Sets the object wrapper used to wrap objects to <a href="TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s.
- The default is <a href="ObjectWrapper.html#DEFAULT_WRAPPER"><code>ObjectWrapper.DEFAULT_WRAPPER</code></a>.</div>
+<div class="block">Sets the <a href="ObjectWrapper.html" title="interface in freemarker.template"><code>ObjectWrapper</code></a> used to wrap objects to <a href="TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>-s when using this
+ <a href="../core/Configurable.html" title="class in freemarker.core"><code>Configurable</code></a>.
+
+ <p>On <a href="Configuration.html" title="class in freemarker.template"><code>Configuration</code></a> level, the default is a <a href="DefaultObjectWrapper.html" title="class in freemarker.template"><code>DefaultObjectWrapper</code></a> instance with the same
+ <a href="#setIncompatibleImprovements(freemarker.template.Version)"><code>incompatible_improvements</code></a> setting value as of the
+ <a href="Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>. (Also, with very low incompatible improvements it's
+ <a href="ObjectWrapper.html#DEFAULT_WRAPPER"><code>ObjectWrapper.DEFAULT_WRAPPER</code></a>.). Untill you called this method, the default value will be
+ automatically replaced when <a href="#setIncompatibleImprovements(freemarker.template.Version)"><code>setIncompatibleImprovements(Version)</code></a> is called, to follow
+ the value of the <code>incompatible_improvements</code> setting.
+
+ <p>Below <a href="Configuration.html" title="class in freemarker.template"><code>Configuration</code></a> level it's usually unset, so we fall back to
+ what's coming from <a href="Configuration.html" title="class in freemarker.template"><code>Configuration</code></a>.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="../core/Configurable.html#setObjectWrapper(freemarker.template.ObjectWrapper)">setObjectWrapper</a></code>&nbsp;in class&nbsp;<code><a href="../core/Configurable.html" title="class in freemarker.core">Configurable</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>objectWrapper</code> - Not null.</dd>
 </dl>
 </section>
 </li>
@@ -3765,8 +3787,8 @@ implements <a href="https://docs.oracle.com/en/java/javase/16/docs/api/java.base
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIncompatibleImprovements</span>&#8203;<span class="parameters">(<a href="Version.html" title="class in freemarker.template">Version</a>&nbsp;incompatibleImprovements)</span></div>
 <div class="block">Use <a href="#%3Cinit%3E(freemarker.template.Version)"><code>Configuration(Version)</code></a> instead if possible; see the meaning of the parameter there.
  
- <p>Do NOT ever use <a href="#getVersion()"><code>getVersion()</code></a> to set the "incompatible improvements". Always use a fixed value, like
- <a href="#VERSION_2_3_30"><code>VERSION_2_3_30</code></a>. Otherwise your application can break as you upgrade FreeMarker. (As of 2.3.30, doing
+ <p><b>Do NOT ever use <a href="#getVersion()"><code>getVersion()</code></a> to set the "incompatible improvements"! Always use a fixed value</b>,
+ like <a href="#VERSION_2_3_30"><code>VERSION_2_3_30</code></a>. Otherwise, your application can break as you upgrade FreeMarker. (As of 2.3.30, doing
  this will be logged as an error. As of 2.4.0, it will be probably disallowed, by throwing exception.)
  
  <p>If the default value of a setting depends on the <code>incompatibleImprovements</code> and the value of that setting
