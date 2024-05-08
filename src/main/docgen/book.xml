@@ -156,14 +156,14 @@
       xlink:href="https://freemarker.apache.org/docs/versions_2_3_32.html">See
       what's new...</link></para>
 
-      <para>Downloads:</para>
+      <para>Download the latest FreeMarker™ version here:</para>
 
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz">Binary
-          release (tar.gz)</link> (includes <literal>freemarker.jar</literal>
-          and documentation) [<link
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz">FreeMarker™
+          binary release (tar.gz)</link> (includes
+          <literal>freemarker.jar</literal> with offline documentation) [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.sha512">SHA512</link>]
           [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.asc">ASC</link>]</para>
@@ -171,8 +171,8 @@
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz">Source
-          release (tar.gz)</link> [<link
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz">FreeMarker™
+          source release (tar.gz)</link> (to build the binary yourself) [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.sha512">SHA512</link>]
           [<link
           xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.asc">ASC</link>]</para>
@@ -181,12 +181,7 @@
 
       <para>For Maven:</para>
 
-      <programlisting language="XML" role="unspecified">&lt;!--
-Attention: Be sure nothing pulls in an old dependency with groupId
-"freemarker" (without the "org."), because then you will end up with
-two freemarker.jar-s and unpredictable behavior!
---&gt;
-&lt;dependency&gt;
+      <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
   &lt;version&gt;2.3.32&lt;/version&gt;
@@ -207,14 +202,14 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz">binary</link>
-      [<link
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz">FreeMarker™
+      GAE binary</link> [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.sha512">SHA512</link>]
       [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz">source</link>
-      [<link
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz">FreeMarker™
+      GAE source</link> [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.sha512">SHA512</link>]
       [<link
       xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.asc">ASC</link>].
@@ -1619,16 +1614,11 @@ two freemarker.jar-s and unpredictable behavior!
 
             <orderedlist>
               <listitem>
-                <para>If your Maven <literal>settings-security.xml</literal>
-                is relocated to an encrypted storage (recommended), mount it,
-                otherwise you will get 401 error when uploading. (How that's
-                done: create a file called settings-security.xml next to
-                ~/.m2/settings.xml, with content
-                <literal>&lt;settingsSecurity&gt;&lt;relocation&gt;<replaceable>your-decrypted-storage-mount</replaceable>/settings-security.xml&lt;/relocation&gt;&lt;/settingsSecurity&gt;</literal>)</para>
-              </listitem>
-
-              <listitem>
-                <para><literal>ant maven-dist</literal></para>
+                <para>To upload to The Apache Maven Repository (ASF Nexus),
+                you need to run <literal>gradle publish</literal>. You Apache
+                credentials will be needed for this to succeed; see details in
+                build section of the <literal>README.md</literal> of
+                FreeMarker!</para>
               </listitem>
 
               <listitem>
@@ -2090,15 +2080,16 @@ two freemarker.jar-s and unpredictable behavior!
 
       <para/>
     </section>
-    
+
     <section>
       <title><olink targetdoc="asfLicense">License</olink></title>
 
       <para/>
     </section>
-    
+
     <section>
-      <title><olink targetdoc="asfPrivacyPolicy">Privacy policy</olink></title>
+      <title><olink targetdoc="asfPrivacyPolicy">Privacy
+      policy</olink></title>
 
       <para/>
     </section>
