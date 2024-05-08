@@ -285,7 +285,7 @@ var toc = {
 }
 ,
 {
-"title": "Privacy policy",
+"title": "Privacy\n policy",
 "url": "https://privacy.apache.org/policies/privacy-policy-public.html",
 "isFile": true,
 "children": [
