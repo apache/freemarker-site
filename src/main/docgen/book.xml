@@ -1560,11 +1560,12 @@
           </listitem>
 
           <listitem>
-            <para><literal>ant dist</literal></para>
+            <para><literal>gradle build</literal></para>
           </listitem>
 
           <listitem>
-            <para><literal>ant rat</literal>, check output. There can't be any
+            <para>Check the RAT report in
+            <literal>build\reports\rat\</literal>! There can't be any
             binaries, archives, and especially not unknown or unapproved
             licenses in the reports. Skip to the next point if there were
             none! Otherwise, check if the problematic files are fine legally.
