@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_string.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1707770044859">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1717330009059">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script>
 </head>
 <body itemscope itemtype="https://schema.org/Code">
@@ -36,8 +36,8 @@
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Built-ins for strings"];</script>
-      <script src="toc.js?1707770044859"></script>
-      <script src="docgen-resources/main.min.js?1707770044859"></script>
+      <script src="toc.js?1717330009059"></script>
+      <script src="docgen-resources/main.min.js?1717330009059"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_alphaidx.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_number.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_string" itemprop="headline">Built-ins for strings</h1>
@@ -1987,11 +1987,29 @@ foobar</pre>    </div>
 
           
 
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>If you just want to limit the length of string with
+            straightforward behavior, then do not use this built in, but the
+            <a href="dgui_template_exp.html#dgui_template_exp_seqenceop_slice">sequence
+            slicing</a>, and <a href="dgui_template_exp.html#dgui_template_exp_direct_ranges">..* length limited
+            range</a> operators. For example, <code class="inline-code">s[0 ..*
+            10]</code> will give the first 10 characters of
+            <code class="inline-code">s</code>, if <code class="inline-code">s</code> is longer than that,
+            otherwise it just gives <code class="inline-code">s</code> as is. While
+            <code class="inline-code">s?truncate(10, &#39;&#39;)</code> expresses similar intent, it
+            has complicated rules to give a result that looks nicer for
+            humans, like it trims the right side at the cut, and sometimes
+            cuts a bit early to avoid cutting into the last word.</p>
+            </div>
+
+
           <p>Cuts off the end of a string if that&#39;s necessary to keep it
-          under a the length given as parameter, and appends a terminator
-          string (<code class="inline-code">[...]</code> by default) to indicate that the
-          string was truncated. Example (assuming default FreeMarker
-          configuration settings):</p>
+          under the length given as parameter, and appends a terminator string
+          (<code class="inline-code">[...]</code> by default) to indicate that the string
+          was truncated. Example (assuming default FreeMarker configuration
+          settings):</p>
 
           
 
@@ -2023,7 +2041,7 @@ Truncated at &quot;character boundary&quot;:
 This isonev[...]</pre>    </div>
 
 
-          <p>Things to note above:</p>
+          <p>Notes on some tricky aspects for truncation:</p>
 
           <ul>
             <li>
@@ -2039,9 +2057,9 @@ This isonev[...]</pre>    </div>
               better look (see later). Actually, the result length can also be
               longer than the parameter length, when the desired length is
               shorter than the terminator string alone, in which case the
-              terminator is still returned as is. Also, an algorithms other
+              terminator is still returned as is. Also, an algorithm other
               than the default might choses to return a longer string, as the
-              length parameter is in principle just hint for the desired
+              length parameter is in principle just a hint for the desired
               visual length.</p>
             </li>
 
@@ -2060,7 +2078,21 @@ This isonev[...]</pre>    </div>
               between the word end and the terminator string, otherwise
               there&#39;s no space between them. Only whitespace is treated as
               word separator, not punctuation, so this generally gives
-              intuitive results.</p>
+              intuitive results. (Except, if the terminator string is set to
+              be 0 length, no space is added before it, starting from
+              FreeMarker 2.3.33.)</p>
+            </li>
+
+            <li>
+              <p>Before adding the terminator string (possibly with a word
+              boundary space before it, as explained above) after the string
+              whose length was already cut, trailing whitespace is removed
+              from that. For example <code class="inline-code">&#39;1
+              67890A&#39;?truncate(10)</code>, where there are 4 spaces between
+              the <code class="inline-code">1</code> and <code class="inline-code">6</code>, will give
+              "<code class="inline-code">1 [...]</code>" (7 characters), not
+              "<code class="inline-code">1 [...]</code>" (10
+              characters).</p>
             </li>
           </ul>
 
@@ -2104,7 +2136,11 @@ This isonev[...]</pre>    </div>
                     to give a string length closer to the length specified,
                     but still not an exact length, as it removes white-space
                     before the terminator string, and re-adds a space if we
-                    are just after the end of a word, etc.</p>
+                    are just after the end of a word, etc. (Except, space is
+                    not re-added if the terminator string is set to be 0
+                    length, starting from FreeMarker 2.3.33.) If you need
+                    exact length, simply use <code class="inline-code">longName[0 ..*
+                    16]</code>.</p>
                   </li>
                 </ul>
               </li>
@@ -2113,11 +2149,11 @@ This isonev[...]</pre>    </div>
                 <p>Specifying the terminator string (instead of relying on
                 its default): <code class="inline-code">truncate</code> and all
                 <code class="inline-code">truncate_<em class="code-color">...</em></code>
-                built-ins have an additional optional parameter for it. After
-                that, a further optional parameter can specify the assumed
-                length of the terminator string (otherwise its real length
-                will be used). If you find yourself specifying the terminator
-                string often, then certainly the defaults should be configured
+                built-ins have an optional 2nd parameter for that. After that,
+                a further optional parameter can specify the assumed length of
+                the terminator string (otherwise its real length will be
+                used). If you find yourself specifying the terminator string
+                often, then certainly the defaults should be configured
                 instead (via <code class="inline-code">truncate_builtin_algorithm
                 configuration</code> - see earlier). Example:</p>
 
@@ -2932,7 +2968,7 @@ rif: foo XYr baar</pre>    </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="app_faq.html">FAQ</a></li><li><a itemprop="license" href="app_license.html">License</a></li><li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li></ul></div><div class="column"><h3 class="column-header">Often used / Reference</h3><ul><li><a href="https://try.freemarker.apache.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li><li><a href="api/freemarker/core/Configurable.html#setSetting-java.lang.String-java.lang.String-">Configuration settings</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/freemarker">Github project page</a></li><li><a href="https://issues.apache.org/jira/projects/FREEMARKER">Report a bug</a></li><li><a href="https://freemarker.apache.org/report-security-vulnerabilities.html">Report security vulnerability</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Get help on StackOverflow</a></li><li><a href="https://twitter.com/freemarker">Announcements on Twitter</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Discuss on mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2024-02-12T20:34:04Z" title="Monday, February 12, 2024 at 8:34:04 PM Greenwich Mean Time">2024-02-12 20:34:04 GMT</time>, for Freemarker 2.3.32 </p>
+<time itemprop="dateModified" datetime="2024-06-02T12:06:49Z" title="Sunday, June 2, 2024 12:06:49 PM GMT">2024-06-02 12:06:49 GMT</time>, for Freemarker 2.3.33 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2024
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
