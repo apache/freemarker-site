@@ -148,12 +148,12 @@
     since 2.3.24.</para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.32</title>
+      <title>Latest stable release: 2.3.33</title>
 
-      <para>Released on 2023-01-14. Requires J2SE 1.7 or higher.</para>
+      <para>Released on 2024-06-01. Requires Java 8 or higher.</para>
 
       <para><link
-      xlink:href="https://freemarker.apache.org/docs/versions_2_3_32.html">See
+      xlink:href="https://freemarker.apache.org/docs/versions_2_3_33.html">See
       what's new...</link></para>
 
       <para>Download the latest FreeMarker™ version here:</para>
@@ -161,21 +161,21 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz">FreeMarker™
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.33/binaries/apache-freemarker-bin-2.3.33.tgz">FreeMarker™
           binary release (tar.gz)</link> (includes
           <literal>freemarker.jar</literal> with offline documentation) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/binaries/apache-freemarker-bin-2.3.33.tgz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-2.3.32-bin.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.33/binaries/apache-freemarker-bin-2.3.33.tgz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz">FreeMarker™
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.33/source/apache-freemarker-src-2.3.33.tgz">FreeMarker™
           source release (tar.gz)</link> (to build the binary yourself) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.sha512">SHA512</link>]
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/source/apache-freemarker-src-2.3.33.tgz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-2.3.32-src.tar.gz.asc">ASC</link>]</para>
+          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/source/apache-freemarker-src-2.3.33.tgz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -184,16 +184,15 @@
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.32&lt;/version&gt;
+  &lt;version&gt;2.3.33&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
         <para>Until about 2007 the Maven group name was
         <quote>freemarker</quote> instead of <quote>org.freemarker</quote>,
-        and as the XML comment above says, this can cause problems, as Maven
-        will see them as two independent artifacts with no version conflict.
-        If you run into this issue, find the <literal>dependency</literal>
-        that depends on the old FreeMarker, and insert
+        which breaks version conflict resolution. If you run into a dependency
+        that still pulls in a such old FreeMarker version, you need to exclude
+        it in its <literal>dependency</literal> element:
         <literal>&lt;exclusions&gt;&lt;exclusion&gt;&lt;groupId&gt;freemarker&lt;!--
         Legacy org-less group
         --&gt;&lt;/groupId&gt;&lt;artifactId&gt;freemarker&lt;/artifactId&gt;
@@ -202,23 +201,23 @@
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz">FreeMarker™
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.33/binaries/apache-freemarker-gae-bin-2.3.33.tgz">FreeMarker™
       GAE binary</link> [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/binaries/apache-freemarker-gae-bin-2.3.33.tgz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/binaries/apache-freemarker-gae-2.3.32-bin.tar.gz.asc">ASC</link>],
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.33/binaries/apache-freemarker-gae-bin-2.3.33.tgz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz">FreeMarker™
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.33/source/apache-freemarker-gae-src-2.3.33.tgz">FreeMarker™
       GAE source</link> [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.sha512">SHA512</link>]
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/source/apache-freemarker-gae-src-2.3.33.tgz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.32/source/apache-freemarker-gae-2.3.32-src.tar.gz.asc">ASC</link>].
+      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.33/source/apache-freemarker-gae-src-2.3.33.tgz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.32&lt;/version&gt;
+  &lt;version&gt;2.3.33&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
