@@ -55,6 +55,16 @@ loadScripts(document, 'script');</script>
 </div>
 <hr>
 <div class="package-signature">package <span class="element-name">freemarker.ext.beans</span></div>
+<section class="package-description" id="package.description">
+<div class="block">The <a href="../../template/DefaultObjectWrapper.html" title="class in freemarker.template">default object wrapper</a> of FreeMarker uses
+ this to expose Java Beans and POJO-s to templates.
+
+ <p>Most of the issues dealing with beans are handled by the <a href="BeansWrapper.html#wrap(java.lang.Object)"><code>BeansWrapper.wrap(Object)</code></a>
+ and <a href="BeansWrapper.html#getStaticModels()"><code>BeansWrapper.getStaticModels()</code></a> methods. In normal cases, these are the only methods
+ you should use to turn an arbitrary Java object into a FreeMarker <a href="../../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>.
+ Additionally, you can manually create instance of any wrapper class using its constructors. Note, however that in
+ such cases you bypass the eventual model caching of the wrapper.</p></div>
+</section>
 <section class="summary">
 <ul class="summary-list">
 <li>

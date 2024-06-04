@@ -55,6 +55,16 @@ loadScripts(document, 'script');</script>
 </div>
 <hr>
 <div class="package-signature">package <span class="element-name">freemarker.ext.jython</span></div>
+<section class="package-description" id="package.description">
+<div class="block">Exposes <a href="http://www.jython.org" target="_blank">Jython</a> objects to templates.
+ The <a href="../../template/DefaultObjectWrapper.html" title="class in freemarker.template"><code>default object wrapper</code></a> of FreeMarker automatically wraps Jython
+ nodes with this.
+
+ <p>Most of the issues dealing with Jython objects are handled by the
+ <a href="JythonWrapper.html#wrap(java.lang.Object)"><code>JythonWrapper.wrap(Object)</code></a> method. In normal cases, this is the only method you should
+ use to turn an arbitrary Jython object into a FreeMarker <a href="../../template/TemplateModel.html" title="interface in freemarker.template"><code>TemplateModel</code></a>. Additionally, you
+ can manually create instances of any wrapper class using its constructors.</div>
+</section>
 <section class="summary">
 <ul class="summary-list">
 <li>
