@@ -106,6 +106,13 @@
         <foaf:mbox rdf:resource="mailto:jleroux@apache.org"/>
       </foaf:Person>
     </developer>
+    <developer>
+      <foaf:Person>
+        <foaf:name>Alon Ziv</foaf:name>
+        <foaf:nick>nolaviz</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:nolaviz@apache.org"/>
+      </foaf:Person>
+    </developer>
 
     <release>
         <Version>
