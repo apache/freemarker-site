@@ -3,18 +3,18 @@
 <html lang="en" class="page-type-section">
 <head prefix="og: http://ogp.me/ns#">
 <meta charset="utf-8">
-<title>switch, case, default, break - Apache FreeMarker Manual</title>
+<title>switch, on, case, default, break - Apache FreeMarker Manual</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="format-detection" content="telephone=no">
 <meta property="og:site_name" content="Apache FreeMarker Manual">
-<meta property="og:title" content="switch, case, default, break">
+<meta property="og:title" content="switch, on, case, default, break">
 <meta property="og:locale" content="en_US">
 <meta property="og:url" content="https://freemarker.apache.org/docs/ref_directive_switch.html">
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_directive_switch.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1717330009059">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1735030822409">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script>
 </head>
 <body itemscope itemtype="https://schema.org/Code">
@@ -31,19 +31,19 @@
 <div class="header-top-bg"><div class="site-width header-top"><div id="hamburger-menu" role="button"></div>          <div class="logo">
 <a href="https://freemarker.apache.org" role="banner"><img itemprop="image" src="logo.png" alt="FreeMarker"></a>          </div>
 <ul class="tabs"><li><a href="https://freemarker.apache.org/">Home</a></li><li class="current"><a href="index.html">Manual</a></li><li><a class="external" href="api/index.html">Java API</a></li></ul><ul class="secondary-tabs"><li><a class="tab icon-heart" href="https://freemarker.apache.org/contribute.html" title="Contribute"><span>Contribute</span></a></li><li><a class="tab icon-bug" href="https://issues.apache.org/jira/projects/FREEMARKER" title="Report a Bug"><span>Report a Bug</span></a></li><li><a class="tab icon-download" href="https://freemarker.apache.org/freemarkerdownload.html" title="Download"><span>Download</span></a></li></ul></div></div><div class="header-bottom-bg"><div class="site-width search-row"><a href="index.html" class="navigation-header">Manual</a><div class="navigation-header"></div><form method="get" class="search-form" action="search-results.html"><fieldset><legend class="sr-only">Search form</legend><label for="search-field" class="sr-only">Search query</label><input id="search-field" name="q" type="search" class="search-input" placeholder="Search" spellcheck="false" autocorrect="off" autocomplete="off"><button type="submit" class="search-btn"><span class="sr-only">Search</span></button></fieldset></form></div><div class="site-width breadcrumb-row">  <div class="breadcrumbs">
-<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref.html"><span itemprop="name">Template Language Reference</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref_directives.html"><span itemprop="name">Directive Reference</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref_directive_switch.html"><span itemprop="name">switch, case, default, break</span></a></li></ul>  </div>
+<ul class="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList"><li class="step-0" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="index.html"><span itemprop="name">Apache FreeMarker Manual</span></a></li><li class="step-1" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref.html"><span itemprop="name">Template Language Reference</span></a></li><li class="step-2" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref_directives.html"><span itemprop="name">Directive Reference</span></a></li><li class="step-3" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a class="label" itemprop="item" href="ref_directive_switch.html"><span itemprop="name">switch, on, case, default, break</span></a></li></ul>  </div>
 <div class="bookmarks" title="Bookmarks"><span class="sr-only">Bookmarks:</span><ul><li><a href="alphaidx.html">Alpha. index</a></li><li><a href="gloss.html">Glossary</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions</a></li><li><a href="ref_builtins_alphaidx.html">?builtins</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_specvar.html">.spec_vars</a></li><li><a href="app_faq.html">FAQ</a></li></ul></div></div></div>    <div class="main-content site-width">
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
-      <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Directive Reference","switch, case, default, break"];</script>
-      <script src="toc.js?1717330009059"></script>
-      <script src="docgen-resources/main.min.js?1717330009059"></script>
+      <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Directive Reference","switch, on, case, default, break"];</script>
+      <script src="toc.js?1735030822409"></script>
+      <script src="docgen-resources/main.min.js?1735030822409"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_directive_stop.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directive_t.html"><span>Next</span></a></div><div class="title-wrapper">
-<h1 class="content-header header-section1" id="ref_directive_switch" itemprop="headline">switch, case, default, break</h1>
+<h1 class="content-header header-section1" id="ref_directive_switch" itemprop="headline">switch, on, case, default, break</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#autoid_124" data-menu-target="autoid_124">Synopsis</a></li><li><a class="page-menu-link" href="#autoid_125" data-menu-target="autoid_125">Description</a></li></ul> </div><a name="ref.directive.switch"></a><a name="ref.directive.case"></a><a name="ref.directive.default"></a><a name="ref.directive.switch.break"></a>
+<ul><li><a class="page-menu-link" href="#autoid_124" data-menu-target="autoid_124">Synopsis</a></li><li><a class="page-menu-link" href="#autoid_125" data-menu-target="autoid_125">Description</a></li></ul> </div><a name="ref.directive.switch"></a><a name="ref.directive.case"></a><a name="ref.directive.on"></a><a name="ref.directive.default"></a><a name="ref.directive.switch.break"></a>
           
 
 
@@ -51,14 +51,35 @@
 <h2 class="content-header header-section2" id="autoid_124">Synopsis</h2>
 
 
+          <p>Recommended form (<code class="inline-code">on</code>-based), but this is
+          <strong>only supported since FreeMarker
+          2.3.34</strong>:</p>
+
           
-<pre class="metaTemplate">
-<code class="inline-code">&lt;#switch <em class="code-color">value</em>&gt;
-  &lt;#case <em class="code-color">refValue1</em>&gt;
+<pre class="metaTemplate"><code class="inline-code">&lt;#switch <em class="code-color">value</em>&gt;
+  &lt;#on <em class="code-color">refValue1</em>&gt;
+    <em class="code-color">... (Handles refValue1)</em>
+  &lt;#on <em class="code-color">refValue2, refValue3</em>&gt;
+    <em class="code-color">... (Handles both refValue2 and refValue3)</em>)
+  <em class="code-color">...</em>
+  &lt;#case <em class="code-color">refValueN</em>&gt;
     <em class="code-color">...</em>
     &lt;#break&gt;
-  &lt;#case <em class="code-color">refValue2</em>&gt;
+  &lt;#default&gt;
     <em class="code-color">...</em>
+&lt;/#switch&gt;</code></pre>
+
+
+          <p>Deprecated legacy form (<code class="inline-code">case</code>-based):</p>
+
+          
+<pre class="metaTemplate"><code class="inline-code">&lt;#switch <em class="code-color">value</em>&gt;
+  &lt;#case <em class="code-color">refValue1</em>&gt;
+    <em class="code-color">... (Handles refValue1)</em>
+    &lt;#break&gt;
+  &lt;#case <em class="code-color">refValue2</em>&gt;
+  &lt;#case <em class="code-color">refValue3</em>&gt;
+    <em class="code-color">... (Handles both refValue2 and refValue3)</em>
     &lt;#break&gt;
   <em class="code-color">...</em>
   &lt;#case <em class="code-color">refValueN</em>&gt;
@@ -66,9 +87,7 @@
     &lt;#break&gt;
   &lt;#default&gt;
     <em class="code-color">...</em>
-&lt;/#switch&gt;
-</code>
-</pre>
+&lt;/#switch&gt;</code></pre>
 
 
           <p>Where:</p>
@@ -81,8 +100,58 @@
             </li>
           </ul>
 
-          <p>The <code class="inline-code">break</code>-s and <code class="inline-code">default</code>
-          are optional.</p>
+          <p>Additional rules:</p>
+
+          <ul>
+            <li>
+              <p>A <code class="inline-code">switch</code> block either have
+              <code class="inline-code">on</code>-s, or <code class="inline-code">case</code>-s, but not
+              both.</p>
+            </li>
+
+            <li>
+              <p><code class="inline-code">default</code>: Optional, can occur at most
+              once. Must be after the <code class="inline-code">on</code>-s. There&#39;s no
+              ordering restriction when used with
+              <code class="inline-code">case</code>-s.</p>
+            </li>
+
+            <li>
+              <p><code class="inline-code">break</code>:</p>
+
+              <ul>
+                <li>
+                  <p>If the <code class="inline-code">switch</code> uses
+                  <code class="inline-code">case</code> then <code class="inline-code">break</code>
+                  immediately exits from the closes enclosing
+                  <code class="inline-code">switch</code>. This is used to prevent
+                  fall-through into the next <code class="inline-code">case</code>, or into
+                  the following (adjacent) <code class="inline-code">default</code>. (To be
+                  precise, <code class="inline-code">break</code> behaves as described if
+                  the <code class="inline-code">switch</code> doesn&#39;t contain
+                  <code class="inline-code">on</code>, and thus also if all it contains is a
+                  <code class="inline-code">default</code>.)</p>
+                </li>
+
+                <li>
+                  <p>If the <code class="inline-code">switch</code> uses
+                  <code class="inline-code">on</code> then <code class="inline-code">break</code> is not
+                  supported by <code class="inline-code">switch</code> directly, but
+                  naturally can be used when the <code class="inline-code">switch</code> is
+                  inside something else that supports <code class="inline-code">break</code>
+                  (like inside a <a href="ref_directive_list.html#ref.directive.list">list</a>).</p>
+                </li>
+
+                <li>
+                  <p>With <code class="inline-code">case</code>,
+                  <code class="inline-code">continue</code> does the same as
+                  <code class="inline-code">break</code>. This is an old bug that works for
+                  backward compatibility, but don&#39;t utilize it. With
+                  <code class="inline-code">on</code>, this is fixed.</p>
+                </li>
+              </ul>
+            </li>
+          </ul>
         
           
 
@@ -91,50 +160,95 @@
 <h2 class="content-header header-section2" id="autoid_125">Description</h2>
 
 
-          <p>The usage of this directive is not recommended, as it&#39;s
-          error-prone because of the fall-through behavior. Use <a href="ref_directive_if.html#ref.directive.elseif"><code>elseif</code></a>-s
-          instead unless you want to exploit the fall-through behavior.</p>
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>Using this directive with <code class="inline-code">case</code> is not
+            recommended, as it&#39;s error-prone because of the fall-through
+            behavior. Starting from FreeMarker 2.3.34, use
+            <code class="inline-code">on</code> instead of <code class="inline-code">case</code>. In
+            earlier versions use <a href="ref_directive_if.html#ref.directive.elseif"><code>elseif</code></a>-s
+            instead.</p>
+            </div>
+
 
           <p>Switch is used to choose a fragment of template depending on
-          the value of an expression:</p>
+          the value of an expression, and is a shorthand instead using <a href="ref_directive_if.html#ref.directive.if"><code>if</code>-<code>elseif</code>-<code>else</code></a>:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#switch animal.size&gt;
+  &lt;#on &quot;small&quot;&gt;
+     Processed if animal.size was &quot;small&quot; 
+  &lt;#on &quot;medium&quot;&gt;
+     Processed if animal.size was &quot;medium&quot; 
+  &lt;#on &quot;large&quot;, &quot;extra large&quot;&gt;
+     Processed if animal.size was &quot;large&quot; or &quot;extra large&quot;
+  &lt;#default&gt;
+     Processed if animal.size is neither of the above
+&lt;/#switch&gt;</pre>    </div>
+
+
+          <p>Before FreeMarker 2.3.24, <code class="inline-code">on</code> wasn&#39;t
+          supported, only <code class="inline-code">case</code> (note the usage of
+          <code class="inline-code">break</code>, and the intentional omission of it after
+          <code class="inline-code">&lt;#case &quot;large&quot;&gt;</code>):</p>
 
           
 
     <div class="code-block role-template">
 <div class="code-block-label">Template</div><pre class="code-block-body">&lt;#switch animal.size&gt;
   &lt;#case &quot;small&quot;&gt;
-     This will be processed if it is small
+     Processed if animal.size was &quot;small&quot; 
      &lt;#break&gt;
   &lt;#case &quot;medium&quot;&gt;
-     This will be processed if it is medium
+     Processed if animal.size was &quot;medium&quot; 
      &lt;#break&gt;
   &lt;#case &quot;large&quot;&gt;
-     This will be processed if it is large
+  &lt;#case &quot;extra large&quot;&gt;
+     Processed if animal.size was &quot;large&quot; or &quot;extra large&quot;
      &lt;#break&gt;
   &lt;#default&gt;
-     This will be processed if it is neither
+     Processed if animal.size is neither of the above
 &lt;/#switch&gt;</pre>    </div>
 
 
-          <p>Inside the <code class="inline-code">switch</code> must be one or more
-          <code class="inline-code">&lt;#case <em class="code-color">value</em>&gt;</code>,
-          and after all such <code class="inline-code">case</code> tags optionally one
-          <code class="inline-code">&lt;#default&gt;</code>. When FM reaches the
-          <code class="inline-code">switch</code> directive, it chooses a
-          <code class="inline-code">case</code> directive where
+          <p>Above examples are basically equivalent with this:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign value = animal.size&gt;
+&lt;#if value == &quot;small&quot;&gt;
+   Processed if animal.size was &quot;small&quot; 
+&lt;#elseif value == &quot;medium&quot;&gt;
+   Processed if animal.size was &quot;medium&quot; 
+&lt;#elseif value == &quot;large&quot; || value == &quot;extra large&quot;&gt;
+   Processed if animal.size was &quot;large&quot; or &quot;extra large&quot;
+&lt;#else&gt;
+   Processed if animal.size is neither of the above
+&lt;/#if&gt;</pre>    </div>
+
+
+          <p>That is, when the <code class="inline-code">switch</code> directive is
+          processed, it chooses an <code class="inline-code">on</code> or
+          <code class="inline-code">case</code> directive where a
           <code class="inline-code"><em class="code-color">refValue</em></code> equals with
-          <code class="inline-code"><em class="code-color">value</em></code> and continues
+          <code class="inline-code"><em class="code-color">value</em></code>, and continues
           the processing of the template there. If there is no
-          <code class="inline-code">case</code> directive with appropriate value then it
-          continues processing at the <code class="inline-code">default</code> directive if
-          that exists, otherwise it continues the processing after the end-tag
-          of <code class="inline-code">switch</code>. And now comes the confusing thing:
-          when it has chosen a <code class="inline-code">case</code> directive, it will
-          continue the processing there, and will go ahead until it reaches a
-          <code class="inline-code">break</code> directive. That is, it will not
-          automatically leave the <code class="inline-code">switch</code> directive when it
-          reaches another <code class="inline-code">case</code> directive or the
-          <code class="inline-code">&lt;#default&gt;</code> tag. Example:</p>
+          <code class="inline-code">on</code> or <code class="inline-code">case</code> directive with
+          appropriate <code class="inline-code"><em class="code-color">refValue</em></code>,
+          then it continues processing at the <code class="inline-code">default</code>
+          directive, if that exists, otherwise it continues the processing
+          after the end-tag of <code class="inline-code">switch</code>.</p>
+
+          <p>Be careful with <code class="inline-code">case</code>&#39;s fall-through
+          behavior! It means that after processing have jumped on the matching
+          <code class="inline-code">case</code>, it will not leave the
+          <code class="inline-code">switch</code> directive when it reaches another
+          <code class="inline-code">case</code> or <code class="inline-code">default</code>, only when it
+          reaches a <code class="inline-code">break</code>. Example:</p>
 
           
 
@@ -149,17 +263,19 @@
 &lt;/#switch&gt;</pre>    </div>
 
 
-          <p>If <code class="inline-code">x</code> is 1, then it will print 1 2 d; if
-          <code class="inline-code">x</code> is 2 then it will print 2 d; if
-          <code class="inline-code">x</code> is 3 then it will print d. This is the
-          mentioned fall-through behavior. The <code class="inline-code">break</code> tag
-          instructs FM to immediately skip past the <code class="inline-code">switch</code>
-          end-tag.</p>
+          <p>If <code class="inline-code">x</code> is <code class="inline-code">1</code>, then it will
+          print <code class="inline-code">1 2 d</code> (actually with more white-space
+          between); if <code class="inline-code">x</code> is <code class="inline-code">2</code> then it
+          will print <code class="inline-code">2 d</code>; if <code class="inline-code">x</code> is
+          <code class="inline-code">3</code> then it will print <code class="inline-code">d</code>. This
+          is usually unintended, or if it is intended then probably not
+          obvious for the reader, and that&#39;s why <code class="inline-code">on</code> is
+          recommended over <code class="inline-code">case</code>.</p>
         <div class="bottom-pagers-wrapper"><div class="pagers bottom"><a class="paging-arrow previous" href="ref_directive_stop.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_directive_t.html"><span>Next</span></a></div></div></div></div>      </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="app_faq.html">FAQ</a></li><li><a itemprop="license" href="app_license.html">License</a></li><li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li></ul></div><div class="column"><h3 class="column-header">Often used / Reference</h3><ul><li><a href="https://try.freemarker.apache.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li><li><a href="api/freemarker/core/Configurable.html#setSetting-java.lang.String-java.lang.String-">Configuration settings</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/freemarker">Github project page</a></li><li><a href="https://issues.apache.org/jira/projects/FREEMARKER">Report a bug</a></li><li><a href="https://freemarker.apache.org/report-security-vulnerabilities.html">Report security vulnerability</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Get help on StackOverflow</a></li><li><a href="https://twitter.com/freemarker">Announcements on Twitter</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Discuss on mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2024-06-02T12:06:49Z" title="Sunday, June 2, 2024 12:06:49 PM GMT">2024-06-02 12:06:49 GMT</time>, for Freemarker 2.3.33 </p>
+<time itemprop="dateModified" datetime="2024-12-24T09:00:22Z" title="Tuesday, December 24, 2024 at 9:00:22 AM Greenwich Mean Time">2024-12-24 09:00:22 GMT</time>, for Freemarker 2.3.34 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2024
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

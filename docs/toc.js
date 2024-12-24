@@ -1583,6 +1583,14 @@ var toc = {
 }
 ,
 {
+"title": "blank_to_null",
+"url": "ref_builtins_string.html#ref_builtin_blank_to_null",
+"isFile": false,
+"children": [
+]
+}
+,
+{
 "title": "cap_first",
 "url": "ref_builtins_string.html#ref_builtin_cap_first",
 "isFile": false,
@@ -1649,6 +1657,14 @@ var toc = {
 {
 "title": "date, time, datetime",
 "url": "ref_builtins_string.html#ref_builtin_string_date",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "empty_to_null",
+"url": "ref_builtins_string.html#ref_builtin_empty_to_null",
 "isFile": false,
 "children": [
 ]
@@ -1897,6 +1913,14 @@ var toc = {
 {
 "title": "trim",
 "url": "ref_builtins_string.html#ref_builtin_trim",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "trim_to_null",
+"url": "ref_builtins_string.html#ref_builtin_trim_to_null",
 "isFile": false,
 "children": [
 ]
@@ -3223,7 +3247,7 @@ var toc = {
 }
 ,
 {
-"title": "switch, case, default, break",
+"title": "switch, on, case, default, break",
 "url": "ref_directive_switch.html",
 "isFile": true,
 "children": [
@@ -3660,13 +3684,36 @@ var toc = {
 "isFile": true,
 "children": [
 {
+"title": "2.3.34",
+"url": "versions_2_3_34.html",
+"isFile": true,
+"children": [
+{
+"title": "Changes on the FTL side",
+"url": "versions_2_3_34.html#autoid_150",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Changes on the Java side",
+"url": "versions_2_3_34.html#autoid_151",
+"isFile": false,
+"children": [
+]
+}
+]
+}
+,
+{
 "title": "2.3.33",
 "url": "versions_2_3_33.html",
 "isFile": true,
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_33.html#autoid_150",
+"url": "versions_2_3_33.html#autoid_152",
 "isFile": false,
 "children": [
 ]
@@ -3689,7 +3736,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_32.html#autoid_151",
+"url": "versions_2_3_32.html#autoid_153",
 "isFile": false,
 "children": [
 ]
@@ -3697,7 +3744,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_32.html#autoid_152",
+"url": "versions_2_3_32.html#autoid_154",
 "isFile": false,
 "children": [
 ]
@@ -3712,7 +3759,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_31.html#autoid_153",
+"url": "versions_2_3_31.html#autoid_155",
 "isFile": false,
 "children": [
 ]
@@ -3720,7 +3767,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_31.html#autoid_154",
+"url": "versions_2_3_31.html#autoid_156",
 "isFile": false,
 "children": [
 ]
@@ -3735,7 +3782,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_30.html#autoid_155",
+"url": "versions_2_3_30.html#autoid_157",
 "isFile": false,
 "children": [
 ]
@@ -3743,7 +3790,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_30.html#autoid_156",
+"url": "versions_2_3_30.html#autoid_158",
 "isFile": false,
 "children": [
 ]
@@ -3758,7 +3805,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_29.html#autoid_157",
+"url": "versions_2_3_29.html#autoid_159",
 "isFile": false,
 "children": [
 ]
@@ -3766,7 +3813,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_29.html#autoid_158",
+"url": "versions_2_3_29.html#autoid_160",
 "isFile": false,
 "children": [
 ]
@@ -3781,7 +3828,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_28.html#autoid_159",
+"url": "versions_2_3_28.html#autoid_161",
 "isFile": false,
 "children": [
 ]
@@ -3789,7 +3836,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_28.html#autoid_160",
+"url": "versions_2_3_28.html#autoid_162",
 "isFile": false,
 "children": [
 ]
@@ -3797,7 +3844,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_28.html#autoid_161",
+"url": "versions_2_3_28.html#autoid_163",
 "isFile": false,
 "children": [
 ]
@@ -3812,7 +3859,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_27.html#autoid_162",
+"url": "versions_2_3_27.html#autoid_164",
 "isFile": false,
 "children": [
 ]
@@ -3820,7 +3867,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_27.html#autoid_163",
+"url": "versions_2_3_27.html#autoid_165",
 "isFile": false,
 "children": [
 ]
@@ -3835,7 +3882,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_26.html#autoid_164",
+"url": "versions_2_3_26.html#autoid_166",
 "isFile": false,
 "children": [
 ]
@@ -3843,7 +3890,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_26.html#autoid_165",
+"url": "versions_2_3_26.html#autoid_167",
 "isFile": false,
 "children": [
 ]
@@ -3851,7 +3898,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_26.html#autoid_166",
+"url": "versions_2_3_26.html#autoid_168",
 "isFile": false,
 "children": [
 ]
@@ -3866,7 +3913,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_25.html#autoid_167",
+"url": "versions_2_3_25.html#autoid_169",
 "isFile": false,
 "children": [
 ]
@@ -3874,7 +3921,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_25.html#autoid_168",
+"url": "versions_2_3_25.html#autoid_170",
 "isFile": false,
 "children": [
 ]
@@ -3889,22 +3936,6 @@ var toc = {
 "children": [
 {
 "title": "Legal changes",
-"url": "versions_2_3_24.html#autoid_169",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the FTL side",
-"url": "versions_2_3_24.html#autoid_170",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
 "url": "versions_2_3_24.html#autoid_171",
 "isFile": false,
 "children": [
@@ -3912,8 +3943,24 @@ var toc = {
 }
 ,
 {
-"title": "Changes compared to 2.3.24 Release Candidate 1",
+"title": "Changes on the FTL side",
 "url": "versions_2_3_24.html#autoid_172",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Changes on the Java side",
+"url": "versions_2_3_24.html#autoid_173",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Changes compared to 2.3.24 Release Candidate 1",
+"url": "versions_2_3_24.html#autoid_174",
 "isFile": false,
 "children": [
 ]
@@ -3928,22 +3975,6 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_23.html#autoid_173",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
-"url": "versions_2_3_23.html#autoid_174",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Other changes",
 "url": "versions_2_3_23.html#autoid_175",
 "isFile": false,
 "children": [
@@ -3951,8 +3982,24 @@ var toc = {
 }
 ,
 {
-"title": "Notes",
+"title": "Changes on the Java side",
 "url": "versions_2_3_23.html#autoid_176",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Other changes",
+"url": "versions_2_3_23.html#autoid_177",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Notes",
+"url": "versions_2_3_23.html#autoid_178",
 "isFile": false,
 "children": [
 ]
@@ -3967,7 +4014,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_22.html#autoid_177",
+"url": "versions_2_3_22.html#autoid_179",
 "isFile": false,
 "children": [
 ]
@@ -3975,7 +4022,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_22.html#autoid_178",
+"url": "versions_2_3_22.html#autoid_180",
 "isFile": false,
 "children": [
 ]
@@ -3983,7 +4030,7 @@ var toc = {
 ,
 {
 "title": "Notes",
-"url": "versions_2_3_22.html#autoid_179",
+"url": "versions_2_3_22.html#autoid_181",
 "isFile": false,
 "children": [
 ]
@@ -3998,7 +4045,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_21.html#autoid_180",
+"url": "versions_2_3_21.html#autoid_182",
 "isFile": false,
 "children": [
 ]
@@ -4006,7 +4053,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_21.html#autoid_181",
+"url": "versions_2_3_21.html#autoid_183",
 "isFile": false,
 "children": [
 ]
@@ -4014,7 +4061,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_21.html#autoid_182",
+"url": "versions_2_3_21.html#autoid_184",
 "isFile": false,
 "children": [
 ]
@@ -4029,7 +4076,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_20.html#autoid_183",
+"url": "versions_2_3_20.html#autoid_185",
 "isFile": false,
 "children": [
 ]
@@ -4037,7 +4084,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_20.html#autoid_184",
+"url": "versions_2_3_20.html#autoid_186",
 "isFile": false,
 "children": [
 ]
@@ -4045,7 +4092,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_20.html#autoid_185",
+"url": "versions_2_3_20.html#autoid_187",
 "isFile": false,
 "children": [
 ]
@@ -4060,7 +4107,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_19.html#autoid_186",
+"url": "versions_2_3_19.html#autoid_188",
 "isFile": false,
 "children": [
 ]
@@ -4068,7 +4115,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_19.html#autoid_187",
+"url": "versions_2_3_19.html#autoid_189",
 "isFile": false,
 "children": [
 ]
@@ -4083,7 +4130,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_18.html#autoid_188",
+"url": "versions_2_3_18.html#autoid_190",
 "isFile": false,
 "children": [
 ]
@@ -4091,7 +4138,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_18.html#autoid_189",
+"url": "versions_2_3_18.html#autoid_191",
 "isFile": false,
 "children": [
 ]
@@ -4106,7 +4153,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_17.html#autoid_190",
+"url": "versions_2_3_17.html#autoid_192",
 "isFile": false,
 "children": [
 ]
@@ -4114,7 +4161,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_17.html#autoid_191",
+"url": "versions_2_3_17.html#autoid_193",
 "isFile": false,
 "children": [
 ]
@@ -4122,7 +4169,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_17.html#autoid_192",
+"url": "versions_2_3_17.html#autoid_194",
 "isFile": false,
 "children": [
 ]
@@ -4137,7 +4184,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_16.html#autoid_193",
+"url": "versions_2_3_16.html#autoid_195",
 "isFile": false,
 "children": [
 ]
@@ -4145,7 +4192,7 @@ var toc = {
 ,
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_16.html#autoid_194",
+"url": "versions_2_3_16.html#autoid_196",
 "isFile": false,
 "children": [
 ]
@@ -4160,7 +4207,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_15.html#autoid_195",
+"url": "versions_2_3_15.html#autoid_197",
 "isFile": false,
 "children": [
 ]
@@ -4168,7 +4215,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_15.html#autoid_196",
+"url": "versions_2_3_15.html#autoid_198",
 "isFile": false,
 "children": [
 ]
@@ -4183,7 +4230,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_14.html#autoid_197",
+"url": "versions_2_3_14.html#autoid_199",
 "isFile": false,
 "children": [
 ]
@@ -4191,7 +4238,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_14.html#autoid_198",
+"url": "versions_2_3_14.html#autoid_200",
 "isFile": false,
 "children": [
 ]
@@ -4206,7 +4253,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_13.html#autoid_199",
+"url": "versions_2_3_13.html#autoid_201",
 "isFile": false,
 "children": [
 ]
@@ -4214,7 +4261,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_13.html#autoid_200",
+"url": "versions_2_3_13.html#autoid_202",
 "isFile": false,
 "children": [
 ]
@@ -4229,7 +4276,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_12.html#autoid_201",
+"url": "versions_2_3_12.html#autoid_203",
 "isFile": false,
 "children": [
 ]
@@ -4244,7 +4291,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_11.html#autoid_202",
+"url": "versions_2_3_11.html#autoid_204",
 "isFile": false,
 "children": [
 ]
@@ -4252,7 +4299,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_11.html#autoid_203",
+"url": "versions_2_3_11.html#autoid_205",
 "isFile": false,
 "children": [
 ]
@@ -4260,7 +4307,7 @@ var toc = {
 ,
 {
 "title": "Documentation changes",
-"url": "versions_2_3_11.html#autoid_204",
+"url": "versions_2_3_11.html#autoid_206",
 "isFile": false,
 "children": [
 ]
@@ -4275,7 +4322,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_10.html#autoid_205",
+"url": "versions_2_3_10.html#autoid_207",
 "isFile": false,
 "children": [
 ]
@@ -4283,7 +4330,7 @@ var toc = {
 ,
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_10.html#autoid_206",
+"url": "versions_2_3_10.html#autoid_208",
 "isFile": false,
 "children": [
 ]
@@ -4298,7 +4345,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_9.html#autoid_207",
+"url": "versions_2_3_9.html#autoid_209",
 "isFile": false,
 "children": [
 ]
@@ -4313,7 +4360,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_8.html#autoid_208",
+"url": "versions_2_3_8.html#autoid_210",
 "isFile": false,
 "children": [
 ]
@@ -4328,7 +4375,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_7.html#autoid_209",
+"url": "versions_2_3_7.html#autoid_211",
 "isFile": false,
 "children": [
 ]
@@ -4336,7 +4383,7 @@ var toc = {
 ,
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_7.html#autoid_210",
+"url": "versions_2_3_7.html#autoid_212",
 "isFile": false,
 "children": [
 ]
@@ -4351,7 +4398,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_7rc1.html#autoid_211",
+"url": "versions_2_3_7rc1.html#autoid_213",
 "isFile": false,
 "children": [
 ]
@@ -4359,7 +4406,7 @@ var toc = {
 ,
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_7rc1.html#autoid_212",
+"url": "versions_2_3_7rc1.html#autoid_214",
 "isFile": false,
 "children": [
 ]
@@ -4374,7 +4421,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_6.html#autoid_213",
+"url": "versions_2_3_6.html#autoid_215",
 "isFile": false,
 "children": [
 ]
@@ -4389,7 +4436,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_5.html#autoid_214",
+"url": "versions_2_3_5.html#autoid_216",
 "isFile": false,
 "children": [
 ]
@@ -4397,7 +4444,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_5.html#autoid_215",
+"url": "versions_2_3_5.html#autoid_217",
 "isFile": false,
 "children": [
 ]
@@ -4412,7 +4459,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_4.html#autoid_216",
+"url": "versions_2_3_4.html#autoid_218",
 "isFile": false,
 "children": [
 ]
@@ -4420,7 +4467,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_4.html#autoid_217",
+"url": "versions_2_3_4.html#autoid_219",
 "isFile": false,
 "children": [
 ]
@@ -4428,7 +4475,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_4.html#autoid_218",
+"url": "versions_2_3_4.html#autoid_220",
 "isFile": false,
 "children": [
 ]
@@ -4443,7 +4490,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_3_3.html#autoid_219",
+"url": "versions_2_3_3.html#autoid_221",
 "isFile": false,
 "children": [
 ]
@@ -4451,7 +4498,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_3.html#autoid_220",
+"url": "versions_2_3_3.html#autoid_222",
 "isFile": false,
 "children": [
 ]
@@ -4459,7 +4506,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_3_3.html#autoid_221",
+"url": "versions_2_3_3.html#autoid_223",
 "isFile": false,
 "children": [
 ]
@@ -4474,7 +4521,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_3_2.html#autoid_222",
+"url": "versions_2_3_2.html#autoid_224",
 "isFile": false,
 "children": [
 ]
@@ -4489,22 +4536,6 @@ var toc = {
 "children": [
 {
 "title": "Possible backward compatibility issue",
-"url": "versions_2_3_1.html#autoid_223",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the FTL side",
-"url": "versions_2_3_1.html#autoid_224",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
 "url": "versions_2_3_1.html#autoid_225",
 "isFile": false,
 "children": [
@@ -4512,7 +4543,7 @@ var toc = {
 }
 ,
 {
-"title": "Other changes",
+"title": "Changes on the FTL side",
 "url": "versions_2_3_1.html#autoid_226",
 "isFile": false,
 "children": [
@@ -4520,13 +4551,29 @@ var toc = {
 }
 ,
 {
-"title": "The history of the releases before the final version",
+"title": "Changes on the Java side",
 "url": "versions_2_3_1.html#autoid_227",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Other changes",
+"url": "versions_2_3_1.html#autoid_228",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "The history of the releases before the final version",
+"url": "versions_2_3_1.html#autoid_229",
 "isFile": false,
 "children": [
 {
 "title": "Differences between the preview release and final\n release",
-"url": "versions_2_3_1.html#autoid_228",
+"url": "versions_2_3_1.html#autoid_230",
 "isFile": false,
 "children": [
 ]
@@ -4543,22 +4590,6 @@ var toc = {
 "children": [
 {
 "title": "Non backward-compatible changes!",
-"url": "versions_2_3.html#autoid_229",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the FTL side",
-"url": "versions_2_3.html#autoid_230",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
 "url": "versions_2_3.html#autoid_231",
 "isFile": false,
 "children": [
@@ -4566,7 +4597,7 @@ var toc = {
 }
 ,
 {
-"title": "Other changes",
+"title": "Changes on the FTL side",
 "url": "versions_2_3.html#autoid_232",
 "isFile": false,
 "children": [
@@ -4574,12 +4605,15 @@ var toc = {
 }
 ,
 {
-"title": "The history of the releases before the final version",
+"title": "Changes on the Java side",
 "url": "versions_2_3.html#autoid_233",
 "isFile": false,
 "children": [
+]
+}
+,
 {
-"title": "Differences between the final release and Release Candidate\n 4",
+"title": "Other changes",
 "url": "versions_2_3.html#autoid_234",
 "isFile": false,
 "children": [
@@ -4587,15 +4621,12 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Release Candidate 4 and Release\n Candidate 3",
+"title": "The history of the releases before the final version",
 "url": "versions_2_3.html#autoid_235",
 "isFile": false,
 "children": [
-]
-}
-,
 {
-"title": "Differences between the Release Candidate 3 and Release\n Candidate 2",
+"title": "Differences between the final release and Release Candidate\n 4",
 "url": "versions_2_3.html#autoid_236",
 "isFile": false,
 "children": [
@@ -4603,7 +4634,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Release Candidate 2 and Release\n Candidate 1",
+"title": "Differences between the Release Candidate 4 and Release\n Candidate 3",
 "url": "versions_2_3.html#autoid_237",
 "isFile": false,
 "children": [
@@ -4611,7 +4642,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Release Candidate 1 and Preview 16\n releases",
+"title": "Differences between the Release Candidate 3 and Release\n Candidate 2",
 "url": "versions_2_3.html#autoid_238",
 "isFile": false,
 "children": [
@@ -4619,7 +4650,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 16 and Preview 15\n releases",
+"title": "Differences between the Release Candidate 2 and Release\n Candidate 1",
 "url": "versions_2_3.html#autoid_239",
 "isFile": false,
 "children": [
@@ -4627,7 +4658,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 15 and Preview 14\n releases",
+"title": "Differences between the Release Candidate 1 and Preview 16\n releases",
 "url": "versions_2_3.html#autoid_240",
 "isFile": false,
 "children": [
@@ -4635,7 +4666,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 14 and Preview 13\n releases",
+"title": "Differences between the Preview 16 and Preview 15\n releases",
 "url": "versions_2_3.html#autoid_241",
 "isFile": false,
 "children": [
@@ -4643,7 +4674,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 13 and Preview 12\n releases",
+"title": "Differences between the Preview 15 and Preview 14\n releases",
 "url": "versions_2_3.html#autoid_242",
 "isFile": false,
 "children": [
@@ -4651,7 +4682,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 12 and Preview 11\n releases",
+"title": "Differences between the Preview 14 and Preview 13\n releases",
 "url": "versions_2_3.html#autoid_243",
 "isFile": false,
 "children": [
@@ -4659,7 +4690,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 11 and Preview 10\n releases",
+"title": "Differences between the Preview 13 and Preview 12\n releases",
 "url": "versions_2_3.html#autoid_244",
 "isFile": false,
 "children": [
@@ -4667,7 +4698,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 10 and Preview 9\n releases",
+"title": "Differences between the Preview 12 and Preview 11\n releases",
 "url": "versions_2_3.html#autoid_245",
 "isFile": false,
 "children": [
@@ -4675,7 +4706,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 9 and Preview 8\n releases",
+"title": "Differences between the Preview 11 and Preview 10\n releases",
 "url": "versions_2_3.html#autoid_246",
 "isFile": false,
 "children": [
@@ -4683,7 +4714,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 8 and Preview 7\n releases",
+"title": "Differences between the Preview 10 and Preview 9\n releases",
 "url": "versions_2_3.html#autoid_247",
 "isFile": false,
 "children": [
@@ -4691,7 +4722,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 7 and Preview 6\n releases",
+"title": "Differences between the Preview 9 and Preview 8\n releases",
 "url": "versions_2_3.html#autoid_248",
 "isFile": false,
 "children": [
@@ -4699,7 +4730,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 6 and Preview 5\n releases",
+"title": "Differences between the Preview 8 and Preview 7\n releases",
 "url": "versions_2_3.html#autoid_249",
 "isFile": false,
 "children": [
@@ -4707,7 +4738,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 5 and Preview 4\n releases",
+"title": "Differences between the Preview 7 and Preview 6\n releases",
 "url": "versions_2_3.html#autoid_250",
 "isFile": false,
 "children": [
@@ -4715,7 +4746,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 4 and Preview 3\n releases",
+"title": "Differences between the Preview 6 and Preview 5\n releases",
 "url": "versions_2_3.html#autoid_251",
 "isFile": false,
 "children": [
@@ -4723,7 +4754,7 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 3 and Preview 2\n releases",
+"title": "Differences between the Preview 5 and Preview 4\n releases",
 "url": "versions_2_3.html#autoid_252",
 "isFile": false,
 "children": [
@@ -4731,8 +4762,24 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 2 and Preview 1\n releases",
+"title": "Differences between the Preview 4 and Preview 3\n releases",
 "url": "versions_2_3.html#autoid_253",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Differences between the Preview 3 and Preview 2\n releases",
+"url": "versions_2_3.html#autoid_254",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Differences between the Preview 2 and Preview 1\n releases",
+"url": "versions_2_3.html#autoid_255",
 "isFile": false,
 "children": [
 ]
@@ -4749,7 +4796,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_2_8.html#autoid_254",
+"url": "versions_2_2_8.html#autoid_256",
 "isFile": false,
 "children": [
 ]
@@ -4757,7 +4804,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_8.html#autoid_255",
+"url": "versions_2_2_8.html#autoid_257",
 "isFile": false,
 "children": [
 ]
@@ -4765,7 +4812,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_2_8.html#autoid_256",
+"url": "versions_2_2_8.html#autoid_258",
 "isFile": false,
 "children": [
 ]
@@ -4780,7 +4827,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_7.html#autoid_257",
+"url": "versions_2_2_7.html#autoid_259",
 "isFile": false,
 "children": [
 ]
@@ -4795,7 +4842,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_2_6.html#autoid_258",
+"url": "versions_2_2_6.html#autoid_260",
 "isFile": false,
 "children": [
 ]
@@ -4803,7 +4850,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_6.html#autoid_259",
+"url": "versions_2_2_6.html#autoid_261",
 "isFile": false,
 "children": [
 ]
@@ -4811,7 +4858,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_2_6.html#autoid_260",
+"url": "versions_2_2_6.html#autoid_262",
 "isFile": false,
 "children": [
 ]
@@ -4826,7 +4873,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_5.html#autoid_261",
+"url": "versions_2_2_5.html#autoid_263",
 "isFile": false,
 "children": [
 ]
@@ -4841,7 +4888,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_4.html#autoid_262",
+"url": "versions_2_2_4.html#autoid_264",
 "isFile": false,
 "children": [
 ]
@@ -4849,7 +4896,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_2_4.html#autoid_263",
+"url": "versions_2_2_4.html#autoid_265",
 "isFile": false,
 "children": [
 ]
@@ -4864,7 +4911,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_2_3.html#autoid_264",
+"url": "versions_2_2_3.html#autoid_266",
 "isFile": false,
 "children": [
 ]
@@ -4872,7 +4919,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_3.html#autoid_265",
+"url": "versions_2_2_3.html#autoid_267",
 "isFile": false,
 "children": [
 ]
@@ -4887,7 +4934,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_2.html#autoid_266",
+"url": "versions_2_2_2.html#autoid_268",
 "isFile": false,
 "children": [
 ]
@@ -4902,7 +4949,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_2_1.html#autoid_267",
+"url": "versions_2_2_1.html#autoid_269",
 "isFile": false,
 "children": [
 ]
@@ -4910,7 +4957,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_2_1.html#autoid_268",
+"url": "versions_2_2_1.html#autoid_270",
 "isFile": false,
 "children": [
 ]
@@ -4925,22 +4972,6 @@ var toc = {
 "children": [
 {
 "title": "Non backward-compatible changes!",
-"url": "versions_2_2.html#autoid_269",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes in FTL (FreeMarker Template Language)",
-"url": "versions_2_2.html#autoid_270",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
 "url": "versions_2_2.html#autoid_271",
 "isFile": false,
 "children": [
@@ -4948,7 +4979,7 @@ var toc = {
 }
 ,
 {
-"title": "Other changes",
+"title": "Changes in FTL (FreeMarker Template Language)",
 "url": "versions_2_2.html#autoid_272",
 "isFile": false,
 "children": [
@@ -4956,12 +4987,15 @@ var toc = {
 }
 ,
 {
-"title": "The history of the releases before the final version",
+"title": "Changes on the Java side",
 "url": "versions_2_2.html#autoid_273",
 "isFile": false,
 "children": [
+]
+}
+,
 {
-"title": "Differences between the final and RC2 releases",
+"title": "Other changes",
 "url": "versions_2_2.html#autoid_274",
 "isFile": false,
 "children": [
@@ -4969,15 +5003,12 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the RC2 and RC1 releases",
+"title": "The history of the releases before the final version",
 "url": "versions_2_2.html#autoid_275",
 "isFile": false,
 "children": [
-]
-}
-,
 {
-"title": "Differences between the Preview 2 and RC1 releases",
+"title": "Differences between the final and RC2 releases",
 "url": "versions_2_2.html#autoid_276",
 "isFile": false,
 "children": [
@@ -4985,8 +5016,24 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the Preview 1 and Preview 2\n releases",
+"title": "Differences between the RC2 and RC1 releases",
 "url": "versions_2_2.html#autoid_277",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Differences between the Preview 2 and RC1 releases",
+"url": "versions_2_2.html#autoid_278",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Differences between the Preview 1 and Preview 2\n releases",
+"url": "versions_2_2.html#autoid_279",
 "isFile": false,
 "children": [
 ]
@@ -5003,7 +5050,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_1_5.html#autoid_278",
+"url": "versions_2_1_5.html#autoid_280",
 "isFile": false,
 "children": [
 ]
@@ -5018,7 +5065,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the Java side",
-"url": "versions_2_1_4.html#autoid_279",
+"url": "versions_2_1_4.html#autoid_281",
 "isFile": false,
 "children": [
 ]
@@ -5033,7 +5080,7 @@ var toc = {
 "children": [
 {
 "title": "Changes on the FTL side",
-"url": "versions_2_1_3.html#autoid_280",
+"url": "versions_2_1_3.html#autoid_282",
 "isFile": false,
 "children": [
 ]
@@ -5041,7 +5088,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_1_3.html#autoid_281",
+"url": "versions_2_1_3.html#autoid_283",
 "isFile": false,
 "children": [
 ]
@@ -5056,7 +5103,7 @@ var toc = {
 "children": [
 {
 "title": "Changes in FTL (FreeMarker Template Language)",
-"url": "versions_2_1_2.html#autoid_282",
+"url": "versions_2_1_2.html#autoid_284",
 "isFile": false,
 "children": [
 ]
@@ -5064,7 +5111,7 @@ var toc = {
 ,
 {
 "title": "Other changes",
-"url": "versions_2_1_2.html#autoid_283",
+"url": "versions_2_1_2.html#autoid_285",
 "isFile": false,
 "children": [
 ]
@@ -5079,7 +5126,7 @@ var toc = {
 "children": [
 {
 "title": "Changes in FTL (FreeMarker Template Language)",
-"url": "versions_2_1_1.html#autoid_284",
+"url": "versions_2_1_1.html#autoid_286",
 "isFile": false,
 "children": [
 ]
@@ -5087,7 +5134,7 @@ var toc = {
 ,
 {
 "title": "Changes on the Java side",
-"url": "versions_2_1_1.html#autoid_285",
+"url": "versions_2_1_1.html#autoid_287",
 "isFile": false,
 "children": [
 ]
@@ -5102,22 +5149,6 @@ var toc = {
 "children": [
 {
 "title": "Changes in FTL (FreeMarker Template Language)",
-"url": "versions_2_1.html#autoid_286",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes on the Java side",
-"url": "versions_2_1.html#autoid_287",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Other changes",
 "url": "versions_2_1.html#autoid_288",
 "isFile": false,
 "children": [
@@ -5125,8 +5156,24 @@ var toc = {
 }
 ,
 {
-"title": "Differences between the RC1 and final release",
+"title": "Changes on the Java side",
 "url": "versions_2_1.html#autoid_289",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Other changes",
+"url": "versions_2_1.html#autoid_290",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Differences between the RC1 and final release",
+"url": "versions_2_1.html#autoid_291",
 "isFile": false,
 "children": [
 ]
@@ -5149,22 +5196,6 @@ var toc = {
 "children": [
 {
 "title": "Bugfixes",
-"url": "versions_2_0.html#autoid_290",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes to the Template language",
-"url": "versions_2_0.html#autoid_291",
-"isFile": false,
-"children": [
-]
-}
-,
-{
-"title": "Changes to the API",
 "url": "versions_2_0.html#autoid_292",
 "isFile": false,
 "children": [
@@ -5172,8 +5203,24 @@ var toc = {
 }
 ,
 {
-"title": "Miscellany",
+"title": "Changes to the Template language",
 "url": "versions_2_0.html#autoid_293",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Changes to the API",
+"url": "versions_2_0.html#autoid_294",
+"isFile": false,
+"children": [
+]
+}
+,
+{
+"title": "Miscellany",
+"url": "versions_2_0.html#autoid_295",
 "isFile": false,
 "children": [
 ]
@@ -5188,7 +5235,7 @@ var toc = {
 "children": [
 {
 "title": "Bug Fixes",
-"url": "versions_2_0RC3.html#autoid_294",
+"url": "versions_2_0RC3.html#autoid_296",
 "isFile": false,
 "children": [
 ]
@@ -5196,7 +5243,7 @@ var toc = {
 ,
 {
 "title": "Changes to the Template Language",
-"url": "versions_2_0RC3.html#autoid_295",
+"url": "versions_2_0RC3.html#autoid_297",
 "isFile": false,
 "children": [
 ]
@@ -5204,7 +5251,7 @@ var toc = {
 ,
 {
 "title": "API changes",
-"url": "versions_2_0RC3.html#autoid_296",
+"url": "versions_2_0RC3.html#autoid_298",
 "isFile": false,
 "children": [
 ]
@@ -5219,7 +5266,7 @@ var toc = {
 "children": [
 {
 "title": "Changes to Template Language",
-"url": "versions_2_0RC2.html#autoid_297",
+"url": "versions_2_0RC2.html#autoid_299",
 "isFile": false,
 "children": [
 ]
@@ -5227,7 +5274,7 @@ var toc = {
 ,
 {
 "title": "API Changes",
-"url": "versions_2_0RC2.html#autoid_298",
+"url": "versions_2_0RC2.html#autoid_300",
 "isFile": false,
 "children": [
 ]
@@ -5242,7 +5289,7 @@ var toc = {
 "children": [
 {
 "title": "Support for Numerical operations, both arithmetic and\n boolean, as well as numerical ranges.",
-"url": "versions_2_0RC1.html#autoid_299",
+"url": "versions_2_0RC1.html#autoid_301",
 "isFile": false,
 "children": [
 ]
@@ -5250,7 +5297,7 @@ var toc = {
 ,
 {
 "title": "API Changes",
-"url": "versions_2_0RC1.html#autoid_300",
+"url": "versions_2_0RC1.html#autoid_302",
 "isFile": false,
 "children": [
 ]
@@ -5258,7 +5305,7 @@ var toc = {
 ,
 {
 "title": "Syntactical Miscellany",
-"url": "versions_2_0RC1.html#autoid_301",
+"url": "versions_2_0RC1.html#autoid_303",
 "isFile": false,
 "children": [
 ]

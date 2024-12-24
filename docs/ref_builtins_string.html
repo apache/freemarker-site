@@ -14,7 +14,7 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_string.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1717330009059">
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1735030822409">
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js"></script>
 </head>
 <body itemscope itemtype="https://schema.org/Code">
@@ -36,14 +36,14 @@
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Built-ins for strings"];</script>
-      <script src="toc.js?1717330009059"></script>
-      <script src="docgen-resources/main.min.js?1717330009059"></script>
+      <script src="toc.js?1735030822409"></script>
+      <script src="docgen-resources/main.min.js?1735030822409"></script>
   </div>
 <div class="col-right"><div class="page-content"><div class="page-title"><div class="pagers top"><a class="paging-arrow previous" href="ref_builtins_alphaidx.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_number.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_string" itemprop="headline">Built-ins for strings</h1>
 </div></div><div class="page-menu">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#ref_builtin_boolean" data-menu-target="ref_builtin_boolean">boolean</a></li><li><a class="page-menu-link" href="#ref_builtin_cap_first" data-menu-target="ref_builtin_cap_first">cap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_c_string" data-menu-target="ref_builtin_c_string">c (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_cn_string" data-menu-target="ref_builtin_cn_string">cn (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_c_lower_case" data-menu-target="ref_builtin_c_lower_case">c_lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_c_upper_case" data-menu-target="ref_builtin_c_upper_case">c_upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_capitalize" data-menu-target="ref_builtin_capitalize">capitalize</a></li><li><a class="page-menu-link" href="#ref_builtin_chop_linebreak" data-menu-target="ref_builtin_chop_linebreak">chop_linebreak</a></li><li><a class="page-menu-link" href="#ref_builtin_contains" data-menu-target="ref_builtin_contains">contains</a></li><li><a class="page-menu-link" href="#ref_builtin_string_date" data-menu-target="ref_builtin_string_date">date, time, datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_ends_with" data-menu-target="ref_builtin_ends_with">ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_ends_with" data-menu-target="ref_builtin_ensure_ends_with">ensure_ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_starts_with" data-menu-target="ref_builtin_ensure_starts_with">ensure_starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_esc" data-menu-target="ref_builtin_esc">esc</a></li><li><a class="page-menu-link" href="#ref_builtin_groups" data-menu-target="ref_builtin_groups">groups</a></li><li><a class="page-menu-link" href="#ref_builtin_html" data-menu-target="ref_builtin_html">html (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_index_of" data-menu-target="ref_builtin_index_of">index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_j_string" data-menu-target="ref_builtin_j_string">j_string</a></li><li><a class="page-menu-link" href="#ref_builtin_js_string" data-menu-target="ref_builtin_js_string">js_string</a></li><li><a class="page-menu-link" href="#ref_builtin_json_string" data-menu-target="ref_builtin_json_string">json_string</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after" data-menu-target="ref_builtin_keep_after">keep_after</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after_last" data-menu-target="ref_builtin_keep_after_last">keep_after_last</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before" data-menu-target="ref_builtin_keep_before">keep_before</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before_last" data-menu-target="ref_builtin_keep_before_last">keep_before_last</a></li><li><a class="page-menu-link" href="#ref_builtin_last_index_of" data-menu-target="ref_builtin_last_index_of">last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_left_pad" data-menu-target="ref_builtin_left_pad">left_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_length" data-menu-target="ref_builtin_length">length</a></li><li><a class="page-menu-link" href="#ref_builtin_lower_case" data-menu-target="ref_builtin_lower_case">lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_matches" data-menu-target="ref_builtin_matches">matches</a></li><li><a class="page-menu-link" href="#ref_builtin_no_esc" data-menu-target="ref_builtin_no_esc">no_esc</a></li><li><a class="page-menu-link" href="#ref_builtin_number" data-menu-target="ref_builtin_number">number</a></li><li><a class="page-menu-link" href="#ref_builtin_replace" data-menu-target="ref_builtin_replace">replace</a></li><li><a class="page-menu-link" href="#ref_builtin_right_pad" data-menu-target="ref_builtin_right_pad">right_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_beginning" data-menu-target="ref_builtin_remove_beginning">remove_beginning</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_ending" data-menu-target="ref_builtin_remove_ending">remove_ending</a></li><li><a class="page-menu-link" href="#ref_builtin_rtf" data-menu-target="ref_builtin_rtf">rtf (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_split" data-menu-target="ref_builtin_split">split</a></li><li><a class="page-menu-link" href="#ref_builtin_starts_with" data-menu-target="ref_builtin_starts_with">starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_string_for_string" data-menu-target="ref_builtin_string_for_string">string (when used with a string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_substring" data-menu-target="ref_builtin_substring">substring (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_trim" data-menu-target="ref_builtin_trim">trim</a></li><li><a class="page-menu-link" href="#ref_builtin_truncate" data-menu-target="ref_builtin_truncate">truncate, truncate_...</a></li><li><a class="page-menu-link" href="#ref_builtin_uncap_first" data-menu-target="ref_builtin_uncap_first">uncap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_upper_case" data-menu-target="ref_builtin_upper_case">upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_url" data-menu-target="ref_builtin_url">url</a></li><li><a class="page-menu-link" href="#ref_builtin_url_path" data-menu-target="ref_builtin_url_path">url_path</a></li><li><a class="page-menu-link" href="#ref_builtin_word_list" data-menu-target="ref_builtin_word_list">word_list</a></li><li><a class="page-menu-link" href="#ref_builtin_xhtml" data-menu-target="ref_builtin_xhtml">xhtml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_xml" data-menu-target="ref_builtin_xml">xml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_string_flags" data-menu-target="ref_builtin_string_flags">Common flags</a></li></ul> </div><p>These built-ins act on a string left-value. However, if the
+<ul><li><a class="page-menu-link" href="#ref_builtin_boolean" data-menu-target="ref_builtin_boolean">boolean</a></li><li><a class="page-menu-link" href="#ref_builtin_blank_to_null" data-menu-target="ref_builtin_blank_to_null">blank_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_cap_first" data-menu-target="ref_builtin_cap_first">cap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_c_string" data-menu-target="ref_builtin_c_string">c (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_cn_string" data-menu-target="ref_builtin_cn_string">cn (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_c_lower_case" data-menu-target="ref_builtin_c_lower_case">c_lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_c_upper_case" data-menu-target="ref_builtin_c_upper_case">c_upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_capitalize" data-menu-target="ref_builtin_capitalize">capitalize</a></li><li><a class="page-menu-link" href="#ref_builtin_chop_linebreak" data-menu-target="ref_builtin_chop_linebreak">chop_linebreak</a></li><li><a class="page-menu-link" href="#ref_builtin_contains" data-menu-target="ref_builtin_contains">contains</a></li><li><a class="page-menu-link" href="#ref_builtin_string_date" data-menu-target="ref_builtin_string_date">date, time, datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_empty_to_null" data-menu-target="ref_builtin_empty_to_null">empty_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_ends_with" data-menu-target="ref_builtin_ends_with">ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_ends_with" data-menu-target="ref_builtin_ensure_ends_with">ensure_ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_starts_with" data-menu-target="ref_builtin_ensure_starts_with">ensure_starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_esc" data-menu-target="ref_builtin_esc">esc</a></li><li><a class="page-menu-link" href="#ref_builtin_groups" data-menu-target="ref_builtin_groups">groups</a></li><li><a class="page-menu-link" href="#ref_builtin_html" data-menu-target="ref_builtin_html">html (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_index_of" data-menu-target="ref_builtin_index_of">index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_j_string" data-menu-target="ref_builtin_j_string">j_string</a></li><li><a class="page-menu-link" href="#ref_builtin_js_string" data-menu-target="ref_builtin_js_string">js_string</a></li><li><a class="page-menu-link" href="#ref_builtin_json_string" data-menu-target="ref_builtin_json_string">json_string</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after" data-menu-target="ref_builtin_keep_after">keep_after</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after_last" data-menu-target="ref_builtin_keep_after_last">keep_after_last</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before" data-menu-target="ref_builtin_keep_before">keep_before</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before_last" data-menu-target="ref_builtin_keep_before_last">keep_before_last</a></li><li><a class="page-menu-link" href="#ref_builtin_last_index_of" data-menu-target="ref_builtin_last_index_of">last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_left_pad" data-menu-target="ref_builtin_left_pad">left_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_length" data-menu-target="ref_builtin_length">length</a></li><li><a class="page-menu-link" href="#ref_builtin_lower_case" data-menu-target="ref_builtin_lower_case">lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_matches" data-menu-target="ref_builtin_matches">matches</a></li><li><a class="page-menu-link" href="#ref_builtin_no_esc" data-menu-target="ref_builtin_no_esc">no_esc</a></li><li><a class="page-menu-link" href="#ref_builtin_number" data-menu-target="ref_builtin_number">number</a></li><li><a class="page-menu-link" href="#ref_builtin_replace" data-menu-target="ref_builtin_replace">replace</a></li><li><a class="page-menu-link" href="#ref_builtin_right_pad" data-menu-target="ref_builtin_right_pad">right_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_beginning" data-menu-target="ref_builtin_remove_beginning">remove_beginning</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_ending" data-menu-target="ref_builtin_remove_ending">remove_ending</a></li><li><a class="page-menu-link" href="#ref_builtin_rtf" data-menu-target="ref_builtin_rtf">rtf (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_split" data-menu-target="ref_builtin_split">split</a></li><li><a class="page-menu-link" href="#ref_builtin_starts_with" data-menu-target="ref_builtin_starts_with">starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_string_for_string" data-menu-target="ref_builtin_string_for_string">string (when used with a string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_substring" data-menu-target="ref_builtin_substring">substring (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_trim" data-menu-target="ref_builtin_trim">trim</a></li><li><a class="page-menu-link" href="#ref_builtin_trim_to_null" data-menu-target="ref_builtin_trim_to_null">trim_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_truncate" data-menu-target="ref_builtin_truncate">truncate, truncate_...</a></li><li><a class="page-menu-link" href="#ref_builtin_uncap_first" data-menu-target="ref_builtin_uncap_first">uncap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_upper_case" data-menu-target="ref_builtin_upper_case">upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_url" data-menu-target="ref_builtin_url">url</a></li><li><a class="page-menu-link" href="#ref_builtin_url_path" data-menu-target="ref_builtin_url_path">url_path</a></li><li><a class="page-menu-link" href="#ref_builtin_word_list" data-menu-target="ref_builtin_word_list">word_list</a></li><li><a class="page-menu-link" href="#ref_builtin_xhtml" data-menu-target="ref_builtin_xhtml">xhtml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_xml" data-menu-target="ref_builtin_xml">xml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_string_flags" data-menu-target="ref_builtin_string_flags">Common flags</a></li></ul> </div><p>These built-ins act on a string left-value. However, if the
         left-value is number or date/time/date-time or boolean (since 2.3.20),
         it will automatically converted to string according the current
         number-, date/time/date-time- and boolean-format settings (which are
@@ -76,6 +76,80 @@
           <p>If the string is not in the appropriate format, an error will
           abort template processing when you try to access this
           built-in.</p>
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_blank_to_null">blank_to_null</h2>
+
+
+          
+
+          
+
+          
+
+          
+
+          <p>Returns missing value (Java <code class="inline-code">null</code>) if the
+          value is a string with 0 length, or contains only whitespace
+          characters, or the value is missing (<code class="inline-code">null</code>, or an
+          undefined variable). Otherwise it returns the string as is (without
+          trimming). As it reduces blank strings to a missing value (Java
+          <code class="inline-code">null</code>), this let&#39;s you uniformly handle blanks the
+          same as missing values, with the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value handler
+          operators</a>. For example, if somewhere you have
+          <code class="inline-code">${user.fullName!&#39;Not specified&#39;}</code>, but then you
+          realize that sometimes <code class="inline-code">user.fullName</code> is a blank
+          string (which is not a missing value, hence the default value is not
+          applied), you can fix that as
+          <code class="inline-code">${user.fullName?blank_to_null!&#39;Not
+          specified&#39;}</code>.</p>
+
+          <p>Example:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${nonExisting?blank_to_null!&quot;-&quot;}
+${&quot;&quot;?blank_to_null!&quot;-&quot;}
+${&quot;    &quot;?blank_to_null!&quot;-&quot;}
+
+${&quot;a&quot;?blank_to_null!&quot;-&quot;}
+${&quot;  a  &quot;?blank_to_null!&quot;-&quot;}.</pre>    </div>
+
+
+          <p>The output:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">-
+-
+-
+
+a
+  a  .</pre>    </div>
+
+
+          <p>Note that this built-in considers everything that&#39;s whitespace
+          according to UNICODE as a blank character, including the various
+          non-breaking whitespace variants (like <code class="inline-code">&quot;\xA0&quot;</code>,
+          NBSP). This is in contrast with <a href="#ref_builtin_trim"><code>trim</code></a> and
+          <code class="inline-code"><a href="#ref_builtin_trim_to_null"><code>trim_to_null</code></a></code>,
+          which only considers ASCII whitespace as removable.</p>
+
+          <p>Note that this built-in behaves with parentheses on its left
+          side as the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value
+          handler operators</a>, that is,
+          <code class="inline-code">(missingValue.subvariable)?blank_or_null</code> will
+          handle <code class="inline-code">missingValue</code>, while
+          <code class="inline-code">missingValue.subvariable?blank_or_null</code> will fail
+          at the <code class="inline-code">.</code> (dot) operator.</p>
+
+          <p>See also: <a href="#ref_builtin_empty_to_null"><code>empty_to_null</code>,
+          <code><a href="#ref_builtin_trim_to_null"><code>trim_to_null</code></a></code></a></p>
         
           
 
@@ -439,6 +513,73 @@ Green Mouse</pre>    </div>
           implementation) returns, while <code class="inline-code">?date</code> without the
           <code class="inline-code">()</code> returns a tricky wrapper value that&#39;s a date
           and a method and hash on the same time.</p>
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_empty_to_null">empty_to_null</h2>
+
+
+          
+
+          
+
+          
+
+          
+
+          <p>Returns missing value (Java <code class="inline-code">null</code>) if the
+          value is a string with 0 length, or the value is missing
+          (<code class="inline-code">null</code>, or an undefined variable). Otherwise it
+          returns the string as is (without trimming). As it reduces empty
+          strings to a missing value (Java <code class="inline-code">null</code>), this
+          let&#39;s you uniformly handle empty strings the same as missing values,
+          with the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value
+          handler operators</a>. For example, if somewhere you have
+          <code class="inline-code">${user.fullName!&#39;Not specified&#39;}</code>, but then you
+          realize that sometimes <code class="inline-code">user.fullName</code> is an
+          0-length string (which is not a missing value, hence the default
+          value is not applied), you can fix that as
+          <code class="inline-code">${user.fullName?empty_to_null!&#39;Not
+          specified&#39;}</code>.</p>
+
+          <p>Example:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${nonExisting?empty_to_null!&quot;-&quot;}
+${&quot;&quot;?empty_to_null!&quot;-&quot;}
+
+${&quot;    &quot;?empty_to_null!&quot;-&quot;}.
+${&quot;a&quot;?empty_to_null!&quot;-&quot;}
+${&quot;  a  &quot;?empty_to_null!&quot;-&quot;}.</pre>    </div>
+
+
+          <p>The output:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">-
+-
+
+    .
+a
+  a  .</pre>    </div>
+
+
+          <p>Note that this built-in behaves with parentheses on its left
+          side as the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value
+          handler operators</a>, that is,
+          <code class="inline-code">(missingValue.subvariable)?empty_to_null</code> will
+          handle <code class="inline-code">missingValue</code>, while
+          <code class="inline-code">missingValue.subvariable?empty_to_null</code> will fail
+          at the <code class="inline-code">.</code> (dot) operator.</p>
+
+          <p>See also: <a href="#ref_builtin_blank_to_null"><code>blank_to_null</code></a>,
+          <code class="inline-code"><a href="#ref_builtin_trim_to_null"><code>trim_to_null</code></a></code></p>
         
           
 
@@ -1972,6 +2113,76 @@ foobar</pre>    </div>
 
 
 
+<h2 class="content-header header-section2" id="ref_builtin_trim_to_null">trim_to_null</h2>
+
+
+          
+
+          
+
+          
+
+          
+
+          <p>Similar to the <a href="#ref_builtin_trim"><code>trim</code> built-in</a>,
+          but when the result is an empty string, it instead returns a missing
+          value (Java <code class="inline-code">null</code>). Also, if the value to trim is
+          missing (Java <code class="inline-code">null</code>, or an undefined variable), it
+          returns a missing value (Java <code class="inline-code">null</code>) instead of
+          failing (while the <a href="#ref_builtin_trim"><code>trim</code> built-in</a>
+          will fail then). As it reduces blank strings to a missing value
+          (Java <code class="inline-code">null</code>), this let&#39;s you uniformly handle
+          blanks the same as missing values, with the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value handler
+          operators</a>. For example, if somewhere you have
+          <code class="inline-code">${user.fullName!&#39;Not specified&#39;}</code>, but then you
+          realize that sometimes <code class="inline-code">user.fullName</code> is a blank
+          string (which is not a missing value, hence the default value is not
+          applied), and you also want to get rid of leading and trailing
+          whitespace in non-blank values, then you can do that in one move as
+          <code class="inline-code">${user.fullName?trim_to_null!&#39;Not
+          specified&#39;}</code>.</p>
+
+          <p>Example:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${nonExisting?trim_to_null!&quot;-&quot;}
+${&quot;&quot;?trim_to_null!&quot;-&quot;}
+${&quot;    &quot;?trim_to_null!&quot;-&quot;}
+
+${&quot;a&quot;?trim_to_null!&quot;-&quot;}
+${&quot;  a  &quot;?trim_to_null!&quot;-&quot;}.</pre>    </div>
+
+
+          <p>The output:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">-
+-
+-
+
+a
+a.</pre>    </div>
+
+
+          <p>Note that this built-in behaves with parentheses on its left
+          side as the <a href="dgui_template_exp.html#dgui_template_exp_missing">missing value
+          handler operators</a>, that is,
+          <code class="inline-code">(missingValue.subvariable)?trim_to_null</code> will
+          handle <code class="inline-code">missingValue</code>, while
+          <code class="inline-code">missingValue.subvariable?trim_to_null</code> will fail
+          at the <code class="inline-code">.</code> (dot) operator.</p>
+
+          <p>See also: <a href="#ref_builtin_blank_to_null"><code>blank_to_null</code></a>,
+          <a href="#ref_builtin_blank_to_null"><code>empty_to_null</code></a>.</p>
+        
+          
+
+
+
 <h2 class="content-header header-section2" id="ref_builtin_truncate">truncate, truncate_...</h2>
 
 
@@ -2968,7 +3179,7 @@ rif: foo XYr baar</pre>    </div>
     </div>
 <div class="site-footer"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="app_faq.html">FAQ</a></li><li><a itemprop="license" href="app_license.html">License</a></li><li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li></ul></div><div class="column"><h3 class="column-header">Often used / Reference</h3><ul><li><a href="https://try.freemarker.apache.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li><li><a href="api/freemarker/core/Configurable.html#setSetting-java.lang.String-java.lang.String-">Configuration settings</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/freemarker">Github project page</a></li><li><a href="https://issues.apache.org/jira/projects/FREEMARKER">Report a bug</a></li><li><a href="https://freemarker.apache.org/report-security-vulnerabilities.html">Report security vulnerability</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Get help on StackOverflow</a></li><li><a href="https://twitter.com/freemarker">Announcements on Twitter</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Discuss on mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2024-06-02T12:06:49Z" title="Sunday, June 2, 2024 12:06:49 PM GMT">2024-06-02 12:06:49 GMT</time>, for Freemarker 2.3.33 </p>
+<time itemprop="dateModified" datetime="2024-12-24T09:00:22Z" title="Tuesday, December 24, 2024 at 9:00:22 AM Greenwich Mean Time">2024-12-24 09:00:22 GMT</time>, for Freemarker 2.3.34 </p>
 <p class="copyright">
 © <span itemprop="copyrightYear">1999</span>–2024
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache Incubator, Apache, the Apache FreeMarker logo are trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>

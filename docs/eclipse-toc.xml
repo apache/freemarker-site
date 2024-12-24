@@ -376,7 +376,7 @@
       href="ref_directive_stop.html"
   ></topic>  
 <topic
-      label="switch, case, default, break"
+      label="switch, on, case, default, break"
       href="ref_directive_switch.html"
   ></topic>  
 <topic
@@ -483,6 +483,10 @@
       label="B: Version history"
       href="app_versions.html"
   >  
+<topic
+      label="2.3.34"
+      href="versions_2_3_34.html"
+  ></topic>  
 <topic
       label="2.3.33"
       href="versions_2_3_33.html"
