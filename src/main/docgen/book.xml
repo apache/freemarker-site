@@ -139,13 +139,14 @@
     downloading from a mirror please check the checksum and verify the OpenPGP
     compatible signature specified next to the download link (MD5, SHA256 and
     ASC files, all must come from the <link
-    xlink:href="https://www.apache.org/">www.apache.org</link> domain). The
-    public keys used for signing are here: <link
-    xlink:href="https://www.apache.org/dist/freemarker/KEYS">KEYS</link> (also
-    must come from www.apache.org). <link
-    xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about how
-    to verify releases...</link> Note that such verification is only possible
-    since 2.3.24.</para>
+    xlink:href="https://downloads.apache.org/">downloads.apache.org</link>
+    domain). The public keys used for signing are here: <link
+    xlink:href="https://downloads.apache.org/freemarker/KEYS">KEYS</link>
+    (also must come from <link
+    xlink:href="https://downloads.apache.org/">downloads.apache.org</link>).
+    <link xlink:href="https://www.apache.org/dyn/closer.cgi#verify">More about
+    how to verify releases...</link> Note that such verification is only
+    possible since 2.3.24.</para>
 
     <simplesect>
       <title>Latest stable release: 2.3.34</title>
@@ -164,7 +165,7 @@
           xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz">FreeMarker™
           binary release (tar.gz)</link> (includes
           <literal>freemarker.jar</literal> with offline documentation) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.sha512">SHA512</link>]
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.sha512">SHA512</link>]
           [<link
           xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.asc">ASC</link>]</para>
         </listitem>
@@ -173,9 +174,9 @@
           <para><link
           xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz">FreeMarker™
           source release (tar.gz)</link> (to build the binary yourself) [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.sha512">SHA512</link>]
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.asc">ASC</link>]</para>
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -203,15 +204,15 @@
       (<quote>gae</quote>) variation. Download: <link
       xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz">FreeMarker™
       GAE binary</link> [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.sha512">SHA512</link>]
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.sha512">SHA512</link>]
       [<link
       xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.asc">ASC</link>],
       <link
       xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz">FreeMarker™
       GAE source</link> [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.sha512">SHA512</link>]
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://www.apache.org/dist/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.asc">ASC</link>].
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
