@@ -24,12 +24,12 @@
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
       xmlns:db="http://docbook.org/ns/docbook">
-  <title>Apache FreeMarker™</title>
+  <title>Apache FreeMarker®</title>
 
   <chapter role="index.html" xml:id="what-is-freemarker">
-    <title>What is Apache FreeMarker™?</title>
+    <title>What is Apache FreeMarker®?</title>
 
-    <para>Apache FreeMarker™ is a <emphasis>template engine</emphasis>: a Java
+    <para>Apache FreeMarker® is a <emphasis>template engine</emphasis>: a Java
     library to generate text output (HTML web pages, e-mails, configuration
     files, source code, etc.) based on templates and changing data. Templates
     are written in the FreeMarker Template Language (FTL), which is a simple,
@@ -157,12 +157,12 @@
       xlink:href="https://freemarker.apache.org/docs/versions_2_3_34.html">See
       what's new...</link></para>
 
-      <para>Download the latest FreeMarker™ version here:</para>
+      <para>Download the latest FreeMarker® version here:</para>
 
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz">FreeMarker™
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz">FreeMarker®
           binary release (tar.gz)</link> (includes
           <literal>freemarker.jar</literal> with offline documentation) [<link
           xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.sha512">SHA512</link>]
@@ -172,7 +172,7 @@
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz">FreeMarker™
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz">FreeMarker®
           source release (tar.gz)</link> (to build the binary yourself) [<link
           xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.sha512">SHA512</link>]
           [<link
@@ -202,13 +202,13 @@
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz">FreeMarker™
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz">FreeMarker®
       GAE binary</link> [<link
       xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.sha512">SHA512</link>]
       [<link
       xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz">FreeMarker™
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz">FreeMarker®
       GAE source</link> [<link
       xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.sha512">SHA512</link>]
       [<link
