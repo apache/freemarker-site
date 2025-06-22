@@ -41,7 +41,7 @@
             <plugin>
                 <groupId>org.apache.freemarker.docgen</groupId>
                 <artifactId>freemarker-docgen-maven</artifactId>
-                <version>0.0.3-SNAPSHOT</version>
+                <version>0.0.5-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <phase>package</phase>

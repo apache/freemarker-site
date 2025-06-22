@@ -24,21 +24,22 @@
       xmlns:m="http://www.w3.org/1998/Math/MathML"
       xmlns:html="http://www.w3.org/1999/xhtml"
       xmlns:db="http://docbook.org/ns/docbook">
-  <title>Apache FreeMarker®</title>
+  <title>Apache FreeMarker<superscript>®</superscript></title>
 
   <chapter role="index.html" xml:id="what-is-freemarker">
-    <title>What is Apache FreeMarker®?</title>
+    <title>What is Apache FreeMarker<superscript>®</superscript>?</title>
 
-    <para>Apache FreeMarker® is a <emphasis>template engine</emphasis>: a Java
-    library to generate text output (HTML web pages, e-mails, configuration
-    files, source code, etc.) based on templates and changing data. Templates
-    are written in the FreeMarker Template Language (FTL), which is a simple,
-    specialized language (not a full-blown programming language like PHP).
-    Usually, a general-purpose programming language (like Java) is used to
-    prepare the data (issue database queries, do business calculations). Then,
-    Apache FreeMarker displays that prepared data using templates. In the
-    template you are focusing on how to present the data, and outside the
-    template you are focusing on what data to present.</para>
+    <para>Apache FreeMarker<superscript>®</superscript> is a
+    <emphasis>template engine</emphasis>: a Java library to generate text
+    output (HTML web pages, e-mails, configuration files, source code, etc.)
+    based on templates and changing data. Templates are written in the
+    FreeMarker Template Language (FTL), which is a simple, specialized
+    language (not a full-blown programming language like PHP). Usually, a
+    general-purpose programming language (like Java) is used to prepare the
+    data (issue database queries, do business calculations). Then, Apache
+    FreeMarker displays that prepared data using templates. In the template
+    you are focusing on how to present the data, and outside the template you
+    are focusing on what data to present.</para>
 
     <mediaobject>
       <imageobject>
