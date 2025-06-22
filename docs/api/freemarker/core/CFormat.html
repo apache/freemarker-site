@@ -89,7 +89,8 @@ loadScripts(document, 'script');</script>
  <code>"c"</code> and <code>"computer"</code> <a href="Configurable.html#setNumberFormat(java.lang.String)"><code>number_format</code></a>, and
  the <code>"c"</code> <a href="Configurable.html#setBooleanFormat(java.lang.String)"><code>boolean_format</code></a>.
  A <a href="CFormat.html" title="class in freemarker.core"><code>CFormat</code></a> currently defines how numbers, booleans, and strings are converted to text that defines a similar
- value in a certain computer language (or other computer-parsed syntax).
+ value in a certain computer language (or other computer-parsed syntax). The <a href="CFormat.html" title="class in freemarker.core"><code>CFormat</code></a> that you want to use can
+ be set via <a href="Configurable.html#setCFormat(freemarker.core.CFormat)"><code>Configurable.setCFormat(CFormat)</code></a>.
 
  <p><b>Experimental class!</b> This class is too new, and might will change over time. Therefore, for now
  constructor and most methods are not exposed outside FreeMarker, and so you can't create a custom implementation.

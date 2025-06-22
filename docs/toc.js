@@ -750,7 +750,7 @@ var toc = {
 }
 ,
 {
-"title": "“+”\n operator",
+"title": "Markup output values and the “+”\n operator",
 "url": "dgui_misc_autoescaping.html#dgui_misc_autoescaping_concatenation",
 "isFile": false,
 "children": [
@@ -906,7 +906,7 @@ var toc = {
 "isFile": true,
 "children": [
 {
-"title": "“date-like” types",
+"title": "Difficulties with the “date-like” types",
 "url": "pgui_datamodel_scalar.html#autoid_31",
 "isFile": false,
 "children": [
@@ -1396,7 +1396,7 @@ var toc = {
 "isFile": true,
 "children": [
 {
-"title": "“Model 2”",
+"title": "Using FreeMarker for “Model 2”",
 "url": "pgui_misc_servlet.html#pgui_misc_servlet_model2",
 "isFile": false,
 "children": [
