@@ -1553,31 +1553,55 @@
           </listitem>
 
           <listitem>
-            <para>Do a clean checkout of the branch to release, just to ensure
-            that you won't include any files temporary files that you put
-            there during development. Work in that checkout from now on. See
-            <literal>gradle.properties</literal> for setting up
-            signing.</para>
+            <para>Always do a new, <emphasis>clean</emphasis> checkout of the
+            two branches to release, to ensure that you won't include any
+            files temporary files that you put there during development, or
+            other local modifications, and that you are up to date. Work in
+            that two clean checkouts from now on. See
+            <literal>gradle.properties</literal> for <emphasis>setting up
+            signing</emphasis>, which is required for releases! Do NOT modify
+            <literal>gradle.properties</literal> in the project, as then you
+            would release that modified version in the source release!</para>
           </listitem>
 
           <listitem>
-            <para><literal>gradle build</literal></para>
+            <para><literal>gradle build</literal>, or if you prefer not to
+            edit <literal>~/gradle.properties</literal> for the signing,
+            probably <literal>gradle build
+            -Pfreemarker.signMethod=gpg_command</literal></para>
+          </listitem>
+
+          <listitem>
+            <para>Double check with <literal>git status</literal> that:</para>
+
+            <itemizedlist>
+              <listitem>
+                <para>You have built from unmodified source code (not even
+                build configuration files can be modified)</para>
+              </listitem>
+
+              <listitem>
+                <para>From the right branches (<quote>On branch 2.3</quote>,
+                and <quote>On branch 2.3-gae</quote>)</para>
+              </listitem>
+            </itemizedlist>
           </listitem>
 
           <listitem>
             <para>Check the RAT report in
             <literal>build\reports\rat\</literal>! There can't be any
             binaries, archives, and especially not unknown or unapproved
-            licenses in the reports. Skip to the next point if there were
-            none! Otherwise, check if the problematic files are fine legally.
-            If they weren't produced in this project, add them to the related
-            <literal>LICENSE</literal> files (there are several of them,
-            depending on if it's for the source, the binary distribution, the
-            Maven jar artifact, or the Maven javadoc artifact). You also have
-            to add them to the related <literal>rat-excludes</literal> file
-            (there's one in the project root for the source release, and
-            another in <literal>src/dist/bin</literal> for the binary release)
-            so that the files won't be reported next time. Note that
+            licenses in the reports (though then the build should fail too).
+            Skip to the next point if there were none! Otherwise, check if the
+            problematic files are fine legally. If they weren't produced in
+            this project, add them to the related <literal>LICENSE</literal>
+            files (there are several of them, depending on if it's for the
+            source, the binary distribution, the Maven jar artifact, or the
+            Maven javadoc artifact). You also have to add them to the related
+            <literal>rat-excludes</literal> file (there's one in the project
+            root for the source release, and another in
+            <literal>src/dist/bin</literal> for the binary release) so that
+            the files won't be reported next time. Note that
             <literal>rat-exludes</literal> should contain a comment that
             clarifies the origin of the files. Finally restart the process
             from rebuilding the distribution.</para>
