@@ -108,12 +108,26 @@
     </developer>
     <developer>
       <foaf:Person>
+        <foaf:name>Christoph Rueger</foaf:name>
+        <foaf:nick>crueger</foaf:nick>
+        <foaf:mbox rdf:resource="mailto:crueger@apache.org"/>
+      </foaf:Person>
+    </developer>
+    <developer>
+      <foaf:Person>
         <foaf:name>Alon Ziv</foaf:name>
         <foaf:nick>nolaviz</foaf:nick>
         <foaf:mbox rdf:resource="mailto:nolaviz@apache.org"/>
       </foaf:Person>
     </developer>
 
+    <release>
+        <Version>
+            <name>Apache FreeMarker</name>
+            <created>2026-08-27</created>
+            <revision>2.3.35</revision>
+        </Version>
+    </release>
     <release>
         <Version>
             <name>Apache FreeMarker</name>
