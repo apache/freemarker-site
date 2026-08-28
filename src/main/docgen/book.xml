@@ -150,12 +150,12 @@
     possible since 2.3.24.</para>
 
     <simplesect>
-      <title>Latest stable release: 2.3.34</title>
+      <title>Latest stable release: 2.3.35</title>
 
-      <para>Released on 2024-12-22. Requires Java 8 or higher.</para>
+      <para>Released on 2025-08-27. Requires Java 8 or higher.</para>
 
       <para><link
-      xlink:href="https://freemarker.apache.org/docs/versions_2_3_34.html">See
+      xlink:href="https://freemarker.apache.org/docs/versions_2_3_35.html">See
       what's new...</link></para>
 
       <para>Download the latest FreeMarker® version here:</para>
@@ -163,21 +163,21 @@
       <itemizedlist>
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz">FreeMarker®
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.35/binaries/apache-freemarker-bin-2.3.35.tgz">FreeMarker®
           binary release (tar.gz)</link> (includes
           <literal>freemarker.jar</literal> with offline documentation) [<link
-          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.sha512">SHA512</link>]
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/binaries/apache-freemarker-bin-2.3.35.tgz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-bin-2.3.34.tgz.asc">ASC</link>]</para>
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/binaries/apache-freemarker-bin-2.3.35.tgz.asc">ASC</link>]</para>
         </listitem>
 
         <listitem>
           <para><link
-          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz">FreeMarker®
+          xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.35/source/apache-freemarker-src-2.3.35.tgz">FreeMarker®
           source release (tar.gz)</link> (to build the binary yourself) [<link
-          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.sha512">SHA512</link>]
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/source/apache-freemarker-src-2.3.35.tgz.sha512">SHA512</link>]
           [<link
-          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-src-2.3.34.tgz.asc">ASC</link>]</para>
+          xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/source/apache-freemarker-src-2.3.35.tgz.asc">ASC</link>]</para>
         </listitem>
       </itemizedlist>
 
@@ -186,7 +186,7 @@
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker&lt;/artifactId&gt;
-  &lt;version&gt;2.3.34&lt;/version&gt;
+  &lt;version&gt;2.3.35&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
 
       <note>
@@ -203,23 +203,23 @@
 
       <para>There's also a separate Google App Engine compatible
       (<quote>gae</quote>) variation. Download: <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz">FreeMarker®
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.35/binaries/apache-freemarker-gae-bin-2.3.35.tgz">FreeMarker®
       GAE binary</link> [<link
-      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.sha512">SHA512</link>]
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/binaries/apache-freemarker-gae-bin-2.3.35.tgz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/binaries/apache-freemarker-gae-bin-2.3.34.tgz.asc">ASC</link>],
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/binaries/apache-freemarker-gae-bin-2.3.35.tgz.asc">ASC</link>],
       <link
-      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz">FreeMarker®
+      xlink:href="https://www.apache.org/dyn/closer.cgi/freemarker/engine/2.3.35/source/apache-freemarker-gae-src-2.3.35.tgz">FreeMarker®
       GAE source</link> [<link
-      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.sha512">SHA512</link>]
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/source/apache-freemarker-gae-src-2.3.35.tgz.sha512">SHA512</link>]
       [<link
-      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.34/source/apache-freemarker-gae-src-2.3.34.tgz.asc">ASC</link>].
+      xlink:href="https://downloads.apache.org/freemarker/engine/2.3.35/source/apache-freemarker-gae-src-2.3.35.tgz.asc">ASC</link>].
       Maven:</para>
 
       <programlisting language="XML" role="unspecified">&lt;dependency&gt;
   &lt;groupId&gt;org.freemarker&lt;/groupId&gt;
   &lt;artifactId&gt;freemarker-gae&lt;/artifactId&gt;
-  &lt;version&gt;2.3.34&lt;/version&gt;
+  &lt;version&gt;2.3.35&lt;/version&gt;
 &lt;/dependency&gt;</programlisting>
     </simplesect>
 
@@ -1565,9 +1565,9 @@
           </listitem>
 
           <listitem>
-            <para><literal>gradle build</literal>, or if you prefer not to
+            <para><literal>gradlew build</literal>, or if you prefer not to
             edit <literal>~/gradle.properties</literal> for the signing,
-            probably <literal>gradle build
+            probably <literal>gradlew build
             -Pfreemarker.signMethod=gpg_command</literal></para>
           </listitem>
 
@@ -1641,7 +1641,7 @@
             <orderedlist>
               <listitem>
                 <para>To upload to The Apache Maven Repository (ASF Nexus),
-                you need to run <literal>gradle publish</literal>. You Apache
+                you need to run <literal>gradlew publish</literal>. You Apache
                 credentials will be needed for this to succeed; see details in
                 build section of the <literal>README.md</literal> of
                 FreeMarker!</para>
@@ -1758,7 +1758,7 @@
 
           <listitem>
             <para>Tag the release on Git (tags are like
-            <literal>v2.3.45-gae</literal> and <literal>v2.3.45</literal>). Be
+            <literal>v2.3.99-gae</literal> and <literal>v2.3.99</literal>). Be
             careful not to tag a commit made since the voting has
             succeeded.</para>
           </listitem>
