@@ -1,7 +1,5 @@
 freemarker.cache
 freemarker.core
-freemarker.debug
-freemarker.debug.impl
 freemarker.ext.ant
 freemarker.ext.beans
 freemarker.ext.dom

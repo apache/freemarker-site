@@ -15,10 +15,10 @@
 <link rel="canonical" href="https://freemarker.apache.org/docs/ref_builtins_string.html">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:500,700,400,300|Droid+Sans+Mono">
-<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1750604679962">
-<link href="pagefind/pagefind-ui.css?1750604679962" rel="stylesheet">
-<script src="pagefind/pagefind-ui.js?1750604679962"></script>
-<script src="docgen-resources/js/pagefind.js?1750604679962"></script>
+<link rel="stylesheet" type="text/css" href="docgen-resources/docgen.min.css?1787950671176">
+<link href="pagefind/pagefind-ui.css?1787950671176" rel="stylesheet">
+<script src="pagefind/pagefind-ui.js?1787950671176"></script>
+<script src="docgen-resources/js/pagefind.js?1787950671176"></script>
 </head>
 <body itemscope itemtype="https://schema.org/Code">
     <meta itemprop="url" content="https://freemarker.apache.org/docs/">
@@ -46,14 +46,14 @@
       <div class="content-wrapper">
   <div id="table-of-contents-wrapper" class="col-left" data-pagefind-ignore="all">
       <script>var breadcrumb = ["Apache FreeMarker Manual","Template Language Reference","Built-in Reference","Built-ins for strings"];</script>
-      <script src="toc.js?1750604679962"></script>
-      <script src="docgen-resources/main.min.js?1750604679962"></script>
+      <script src="toc.js?1787950671176"></script>
+      <script src="docgen-resources/main.min.js?1787950671176"></script>
   </div>
 <div class="col-right"><div class="page-content" data-pagefind-body><div class="page-title"><div class="pagers top" data-pagefind-ignore="all"><a class="paging-arrow previous" href="ref_builtins_alphaidx.html"><span>Previous</span></a><a class="paging-arrow next" href="ref_builtins_number.html"><span>Next</span></a></div><div class="title-wrapper">
 <h1 class="content-header header-section1" id="ref_builtins_string" itemprop="headline">Built-ins for strings</h1>
 </div></div><div class="page-menu" data-pagefind-ignore="all">
 <div class="page-menu-title">Page Contents</div>
-<ul><li><a class="page-menu-link" href="#ref_builtin_boolean" data-menu-target="ref_builtin_boolean">boolean</a></li><li><a class="page-menu-link" href="#ref_builtin_blank_to_null" data-menu-target="ref_builtin_blank_to_null">blank_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_cap_first" data-menu-target="ref_builtin_cap_first">cap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_c_string" data-menu-target="ref_builtin_c_string">c (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_cn_string" data-menu-target="ref_builtin_cn_string">cn (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_c_lower_case" data-menu-target="ref_builtin_c_lower_case">c_lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_c_upper_case" data-menu-target="ref_builtin_c_upper_case">c_upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_capitalize" data-menu-target="ref_builtin_capitalize">capitalize</a></li><li><a class="page-menu-link" href="#ref_builtin_chop_linebreak" data-menu-target="ref_builtin_chop_linebreak">chop_linebreak</a></li><li><a class="page-menu-link" href="#ref_builtin_contains" data-menu-target="ref_builtin_contains">contains</a></li><li><a class="page-menu-link" href="#ref_builtin_string_date" data-menu-target="ref_builtin_string_date">date, time, datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_empty_to_null" data-menu-target="ref_builtin_empty_to_null">empty_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_ends_with" data-menu-target="ref_builtin_ends_with">ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_ends_with" data-menu-target="ref_builtin_ensure_ends_with">ensure_ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_starts_with" data-menu-target="ref_builtin_ensure_starts_with">ensure_starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_esc" data-menu-target="ref_builtin_esc">esc</a></li><li><a class="page-menu-link" href="#ref_builtin_groups" data-menu-target="ref_builtin_groups">groups</a></li><li><a class="page-menu-link" href="#ref_builtin_html" data-menu-target="ref_builtin_html">html (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_index_of" data-menu-target="ref_builtin_index_of">index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_j_string" data-menu-target="ref_builtin_j_string">j_string</a></li><li><a class="page-menu-link" href="#ref_builtin_js_string" data-menu-target="ref_builtin_js_string">js_string</a></li><li><a class="page-menu-link" href="#ref_builtin_json_string" data-menu-target="ref_builtin_json_string">json_string</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after" data-menu-target="ref_builtin_keep_after">keep_after</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after_last" data-menu-target="ref_builtin_keep_after_last">keep_after_last</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before" data-menu-target="ref_builtin_keep_before">keep_before</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before_last" data-menu-target="ref_builtin_keep_before_last">keep_before_last</a></li><li><a class="page-menu-link" href="#ref_builtin_last_index_of" data-menu-target="ref_builtin_last_index_of">last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_left_pad" data-menu-target="ref_builtin_left_pad">left_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_length" data-menu-target="ref_builtin_length">length</a></li><li><a class="page-menu-link" href="#ref_builtin_lower_case" data-menu-target="ref_builtin_lower_case">lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_matches" data-menu-target="ref_builtin_matches">matches</a></li><li><a class="page-menu-link" href="#ref_builtin_no_esc" data-menu-target="ref_builtin_no_esc">no_esc</a></li><li><a class="page-menu-link" href="#ref_builtin_number" data-menu-target="ref_builtin_number">number</a></li><li><a class="page-menu-link" href="#ref_builtin_replace" data-menu-target="ref_builtin_replace">replace</a></li><li><a class="page-menu-link" href="#ref_builtin_right_pad" data-menu-target="ref_builtin_right_pad">right_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_beginning" data-menu-target="ref_builtin_remove_beginning">remove_beginning</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_ending" data-menu-target="ref_builtin_remove_ending">remove_ending</a></li><li><a class="page-menu-link" href="#ref_builtin_rtf" data-menu-target="ref_builtin_rtf">rtf (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_split" data-menu-target="ref_builtin_split">split</a></li><li><a class="page-menu-link" href="#ref_builtin_starts_with" data-menu-target="ref_builtin_starts_with">starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_string_for_string" data-menu-target="ref_builtin_string_for_string">string (when used with a string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_substring" data-menu-target="ref_builtin_substring">substring (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_trim" data-menu-target="ref_builtin_trim">trim</a></li><li><a class="page-menu-link" href="#ref_builtin_trim_to_null" data-menu-target="ref_builtin_trim_to_null">trim_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_truncate" data-menu-target="ref_builtin_truncate">truncate, truncate_...</a></li><li><a class="page-menu-link" href="#ref_builtin_uncap_first" data-menu-target="ref_builtin_uncap_first">uncap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_upper_case" data-menu-target="ref_builtin_upper_case">upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_url" data-menu-target="ref_builtin_url">url</a></li><li><a class="page-menu-link" href="#ref_builtin_url_path" data-menu-target="ref_builtin_url_path">url_path</a></li><li><a class="page-menu-link" href="#ref_builtin_word_list" data-menu-target="ref_builtin_word_list">word_list</a></li><li><a class="page-menu-link" href="#ref_builtin_xhtml" data-menu-target="ref_builtin_xhtml">xhtml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_xml" data-menu-target="ref_builtin_xml">xml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_string_flags" data-menu-target="ref_builtin_string_flags">Common flags</a></li></ul> </div><p>These built-ins act on a string left-value. However, if the
+<ul><li><a class="page-menu-link" href="#ref_builtin_boolean" data-menu-target="ref_builtin_boolean">boolean</a></li><li><a class="page-menu-link" href="#ref_builtin_blank_to_null" data-menu-target="ref_builtin_blank_to_null">blank_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_cap_first" data-menu-target="ref_builtin_cap_first">cap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_c_string" data-menu-target="ref_builtin_c_string">c (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_cn_string" data-menu-target="ref_builtin_cn_string">cn (for string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_c_lower_case" data-menu-target="ref_builtin_c_lower_case">c_lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_c_upper_case" data-menu-target="ref_builtin_c_upper_case">c_upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_capitalize" data-menu-target="ref_builtin_capitalize">capitalize</a></li><li><a class="page-menu-link" href="#ref_builtin_chop_linebreak" data-menu-target="ref_builtin_chop_linebreak">chop_linebreak</a></li><li><a class="page-menu-link" href="#ref_builtin_contains" data-menu-target="ref_builtin_contains">contains</a></li><li><a class="page-menu-link" href="#ref_builtin_string_date" data-menu-target="ref_builtin_string_date">date, time, datetime</a></li><li><a class="page-menu-link" href="#ref_builtin_dedent" data-menu-target="ref_builtin_dedent">dedent</a><ul><li><a class="page-menu-link" href="#autoid_76" data-menu-target="autoid_76">No-argument form</a></li><li><a class="page-menu-link" href="#autoid_77" data-menu-target="autoid_77">Explicit-prefix form</a></li></ul></li><li><a class="page-menu-link" href="#ref_builtin_empty_to_null" data-menu-target="ref_builtin_empty_to_null">empty_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_ends_with" data-menu-target="ref_builtin_ends_with">ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_ends_with" data-menu-target="ref_builtin_ensure_ends_with">ensure_ends_with</a></li><li><a class="page-menu-link" href="#ref_builtin_ensure_starts_with" data-menu-target="ref_builtin_ensure_starts_with">ensure_starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_esc" data-menu-target="ref_builtin_esc">esc</a></li><li><a class="page-menu-link" href="#ref_builtin_groups" data-menu-target="ref_builtin_groups">groups</a></li><li><a class="page-menu-link" href="#ref_builtin_html" data-menu-target="ref_builtin_html">html (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_indent" data-menu-target="ref_builtin_indent">indent</a></li><li><a class="page-menu-link" href="#ref_builtin_index_of" data-menu-target="ref_builtin_index_of">index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_j_string" data-menu-target="ref_builtin_j_string">j_string</a></li><li><a class="page-menu-link" href="#ref_builtin_js_string" data-menu-target="ref_builtin_js_string">js_string</a></li><li><a class="page-menu-link" href="#ref_builtin_json_string" data-menu-target="ref_builtin_json_string">json_string</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after" data-menu-target="ref_builtin_keep_after">keep_after</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_after_last" data-menu-target="ref_builtin_keep_after_last">keep_after_last</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before" data-menu-target="ref_builtin_keep_before">keep_before</a></li><li><a class="page-menu-link" href="#ref_builtin_keep_before_last" data-menu-target="ref_builtin_keep_before_last">keep_before_last</a></li><li><a class="page-menu-link" href="#ref_builtin_last_index_of" data-menu-target="ref_builtin_last_index_of">last_index_of</a></li><li><a class="page-menu-link" href="#ref_builtin_left_pad" data-menu-target="ref_builtin_left_pad">left_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_length" data-menu-target="ref_builtin_length">length</a></li><li><a class="page-menu-link" href="#ref_builtin_lower_case" data-menu-target="ref_builtin_lower_case">lower_case</a></li><li><a class="page-menu-link" href="#ref_builtin_lines" data-menu-target="ref_builtin_lines">lines</a></li><li><a class="page-menu-link" href="#ref_builtin_matches" data-menu-target="ref_builtin_matches">matches</a></li><li><a class="page-menu-link" href="#ref_builtin_no_esc" data-menu-target="ref_builtin_no_esc">no_esc</a></li><li><a class="page-menu-link" href="#ref_builtin_number" data-menu-target="ref_builtin_number">number</a></li><li><a class="page-menu-link" href="#ref_builtin_replace" data-menu-target="ref_builtin_replace">replace</a></li><li><a class="page-menu-link" href="#ref_builtin_right_pad" data-menu-target="ref_builtin_right_pad">right_pad</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_beginning" data-menu-target="ref_builtin_remove_beginning">remove_beginning</a></li><li><a class="page-menu-link" href="#ref_builtin_remove_ending" data-menu-target="ref_builtin_remove_ending">remove_ending</a></li><li><a class="page-menu-link" href="#ref_builtin_rtf" data-menu-target="ref_builtin_rtf">rtf (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_split" data-menu-target="ref_builtin_split">split</a></li><li><a class="page-menu-link" href="#ref_builtin_starts_with" data-menu-target="ref_builtin_starts_with">starts_with</a></li><li><a class="page-menu-link" href="#ref_builtin_string_for_string" data-menu-target="ref_builtin_string_for_string">string (when used with a string value)</a></li><li><a class="page-menu-link" href="#ref_builtin_substring" data-menu-target="ref_builtin_substring">substring (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_trim" data-menu-target="ref_builtin_trim">trim</a></li><li><a class="page-menu-link" href="#ref_builtin_trim_to_null" data-menu-target="ref_builtin_trim_to_null">trim_to_null</a></li><li><a class="page-menu-link" href="#ref_builtin_truncate" data-menu-target="ref_builtin_truncate">truncate, truncate_...</a></li><li><a class="page-menu-link" href="#ref_builtin_uncap_first" data-menu-target="ref_builtin_uncap_first">uncap_first</a></li><li><a class="page-menu-link" href="#ref_builtin_upper_case" data-menu-target="ref_builtin_upper_case">upper_case</a></li><li><a class="page-menu-link" href="#ref_builtin_url" data-menu-target="ref_builtin_url">url</a></li><li><a class="page-menu-link" href="#ref_builtin_url_path" data-menu-target="ref_builtin_url_path">url_path</a></li><li><a class="page-menu-link" href="#ref_builtin_word_list" data-menu-target="ref_builtin_word_list">word_list</a></li><li><a class="page-menu-link" href="#ref_builtin_wrap" data-menu-target="ref_builtin_wrap">wrap</a><ul><li><a class="page-menu-link" href="#autoid_80" data-menu-target="autoid_80">Adding line suffixed</a></li></ul></li><li><a class="page-menu-link" href="#ref_builtin_xhtml" data-menu-target="ref_builtin_xhtml">xhtml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_xml" data-menu-target="ref_builtin_xml">xml (deprecated)</a></li><li><a class="page-menu-link" href="#ref_builtin_string_flags" data-menu-target="ref_builtin_string_flags">Common flags</a></li></ul> </div><p>These built-ins act on a string left-value. However, if the
         left-value is number or date/time/date-time or boolean (since 2.3.20),
         it will automatically converted to string according the current
         number-, date/time/date-time- and boolean-format settings (which are
@@ -528,6 +528,184 @@ Green Mouse</pre>    </div>
 
 
 
+<h2 class="content-header header-section2" id="ref_builtin_dedent">dedent</h2>
+
+
+          
+
+          
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>This built-in is available since FreeMarker 2.3.35.</p>
+            </div>
+
+
+          <p>Removes a leading prefix (usually indentation) from each line
+          of the string. The built-in has two forms: a no-argument form that
+          strips common leading whitespace automatically, and an
+          explicit-prefix form for exact control. Line-breaks can be
+          <code class="inline-code">LF</code> (Linux), or <code class="inline-code">CRLF</code>
+          (DOS/Windows), even <code class="inline-code">CR</code> (old Mac), and are kept as
+          is.</p>
+
+          <p>See also the <a href="#ref_builtin_indent"><code>indent</code>
+          built-in</a>, which the inverse of this (roughly).</p>
+
+          
+            
+
+
+
+<h3 class="content-header header-section3" id="autoid_76">No-argument form</h3>
+
+
+            <p>The <em>no-argument form</em>
+            (<code class="inline-code">?dedent</code>) finds the longest indentation (spaces
+            and tabs only) that is a common prefix in all lines, and removes
+            it. Lines that are empty or only contain spaces and tabs are
+            treated specially; they don&#39;t influence the computation of the
+            longest indentation, and will be replaced with an empty
+            (line-break only) line in the output. (These semantics match
+            Python&#39;s <code class="inline-code">textwrap.dedent</code>.)</p>
+
+            <p>For example:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign code = &quot;  if (x) {\n    foo();\n  }&quot; /&gt;
+// &lt;- touches left margin
+${code?dedent}</pre>    </div>
+
+
+            <p>will output this (the common indentation prefix was 2
+            spaces, which was now removed from each line):</p>
+
+            
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">// &lt;- touches left margin
+if (x) {
+  foo();
+}</pre>    </div>
+
+
+            <p>A leading tab and a leading space are treated as distinct
+            characters (we don&#39;t resolve tabs to space or vice versa).</p>
+          
+
+          
+            
+
+
+
+<h3 class="content-header header-section3" id="autoid_77">Explicit-prefix form</h3>
+
+
+            <p>The <em>explicit-prefix form</em>
+            (<code class="inline-code">?dedent(prefix)</code>) removes from each line the
+            longest leading section of the <code class="inline-code">prefix</code> parameter
+            that the line starts with. So for
+            <code class="inline-code">?dedent(&quot;1234&quot;)</code>, the line "1234x"
+            is reduced "x", and so are "123x",
+            "12x", and "1x" too, as they start the
+            same as "1234". But a line like "x1234x"
+            or "234x", would remain unchanged. Use this form when
+            you want to specify the amount of indentation to remove, rather
+            than letting it be detected. For example:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign code = &quot;  if (x) {\n    foo();\n  }&quot; /&gt;
+// &lt;- touches left margin
+${code?dedent(&quot; &quot;)}</pre>    </div>
+
+
+            <p>will output this (removed just 1 space of indentation, so
+            the 1st line still has 1 space of indentation, and the 2nd has 3
+            spaces of indentation):</p>
+
+            
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">// &lt;- touches left margin
+ if (x) {
+   foo();
+ }</pre>    </div>
+
+
+            <p>With a 4-space prefix, lines that have less indentation than
+            that simply lose all the indentation they have:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign code = &quot;  if (x) {\n    foo();\n  }&quot; /&gt;
+// &lt;- touches left margin
+${code?dedent(&quot;    &quot;)}</pre>    </div>
+
+
+            <p>will output this (the 2nd line had 4 spaces, so all 4 were
+            removed; the other lines only had 2, so those 2 were
+            removed):</p>
+
+            
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">// &lt;- touches left margin
+if (x) {
+foo();
+}</pre>    </div>
+
+
+              <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+              <p>Partial matches are shortened rather than ignored on
+              purpose. This is what&#39;s familiar from code text editors, when
+              you repeatedly dedent a block of text, and some lines already
+              have too low indentation. Also, an all-or-nothing dedent could
+              leave a line that was originally the least indented as the most
+              indented one, which is a more confusing result than partially
+              flattening indentation hierarchy.</p>
+              </div>
+
+
+            <p>All <code class="inline-code">dedent(prefix)</code> removes the trailing
+            whitespace of each resulting line. (As a result, if after removing
+            a prefix a line only contains whitespace, it becomes an empty
+            line.) To disable trimming, set the optional 2nd parameter to
+            <code class="inline-code">false</code>:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${code?dedent(&quot;    &quot;, false)}</pre>    </div>
+
+
+            <p>Notes on trailing whitespace removal:</p>
+
+            <ul>
+              <li>
+                <p>Whitespace there means any UNICODE whitespace, and does
+                not include non-breaking space.</p>
+              </li>
+
+              <li>
+                <p>If the provided prefix argument is a 0-length string,
+                then <code class="inline-code">dedent</code> will return the string as is,
+                and will not trim the lines.</p>
+              </li>
+            </ul>
+          
+        
+          
+
+
+
 <h2 class="content-header header-section2" id="ref_builtin_empty_to_null">empty_to_null</h2>
 
 
@@ -845,6 +1023,141 @@ R&amp;amp;D</pre>    </div>
           for all interpolations. You can spare a lot of typing and lessen the
           chances of accidental mistakes by using the <a href="ref_directive_escape.html"><code>escape</code>
           directive</a>.</p>
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_indent">indent</h2>
+
+
+          
+
+          
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>This built-in is available since FreeMarker 2.3.35.</p>
+            </div>
+
+
+          <p>Prepends the string given as the 1st parameter to the
+          beginning of each line, then removes the trailing whitespace of each
+          resulting line (unless that&#39;s switched off with the 2nd parameter).
+          The 1st parameter is most often some spaces or tabs used for
+          indentation, but can be any string. Line-breaks can be
+          <code class="inline-code">LF</code> (Linux), or <code class="inline-code">CRLF</code>
+          (DOS/Windows), even <code class="inline-code">CR</code> (old Mac), and are kept as
+          is.</p>
+
+          <p>See also the <a href="#ref_builtin_dedent"><code>dedent</code>
+          built-in</a>, which the inverse of this (roughly).</p>
+
+          <p>Example of indenting each line with 4 spaces:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign code = &quot;int x;\nint y;&quot; /&gt;
+// &lt;- touches left margin
+${code?indent(&quot;    &quot;)}</pre>    </div>
+
+
+          <p>will output this :</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">// &lt;- touches left margin
+    int x;
+    int y;</pre>    </div>
+
+
+          <p>Another example, using a non-whitespace prefix:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign text = &quot;First line.\nSecond line.&quot; /&gt;
+${text?indent(&quot; * &quot;)}</pre>    </div>
+
+
+          <p>will output this:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body"> * First line.
+ * Second line.</pre>    </div>
+
+
+          <p>The prefix is added to <em>every</em> line,
+          including lines that are empty or contain whitespace only. That
+          would leave a trailing prefix on such lines, which is why the
+          trailing whitespace of each line is removed afterwards. Consider
+          commenting out a block of text with a <code class="inline-code">&quot;# &quot;</code>
+          prefix:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign text = &quot;First paragraph.\n\nSecond paragraph.&quot; /&gt;
+${text?indent(&quot;# &quot;)}</pre>    </div>
+
+
+          <p>will output this, where the empty line became
+          <code class="inline-code">&quot;#&quot;</code> rather than <code class="inline-code">&quot;# &quot;</code>, as the
+          space in <code class="inline-code">&quot;# &quot;</code> was only meant to separate the
+          prefix from the content of a line:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body"># First paragraph.
+#
+# Second paragraph.</pre>    </div>
+
+
+          <p>With a whitespace-only prefix this leaves empty lines empty,
+          so the trimming is only visible with prefixes like the above. It
+          also means that lines that are empty and lines that only contain
+          whitespace give the same result, and that accidental trailing
+          whitespace is removed from the other lines as well.</p>
+
+          <p>Set the optional 2nd parameter to <code class="inline-code">false</code> to
+          switch the trimming off, and thus get the prefix on every line
+          verbatim:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${text?indent(&quot;# &quot;, false)}</pre>    </div>
+
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>A non-breaking space (<code class="inline-code">U+00A0</code>) isn&#39;t
+            treated as whitespace when trimming, so it&#39;s kept; that&#39;s the
+            purpose of a non-breaking space.</p>
+            </div>
+
+
+          <p>Notes on trailing whitespace removal:</p>
+
+          <ul>
+            <li>
+              <p>Whitespace there means any UNICODE whitespace, and does
+              not include non-breaking space.</p>
+            </li>
+
+            <li>
+              <p>If the provided prefix argument is a 0-length string, then
+              <code class="inline-code">ident</code> will return the string as is, and will
+              not trim the lines.</p>
+            </li>
+          </ul>
         
           
 
@@ -1396,6 +1709,60 @@ String BEAN_NAME = &quot;${beanName?j_string}&quot;;</pre>    </div>
           <p>To convert to lower case for computer consumption (as opposed
           to human consumption), use the <a href="#ref_builtin_c_lower_case"><code>c_lower_case</code>
           built-in</a> instead!</p>
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_lines">lines</h2>
+
+
+          
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>This built-in is available since FreeMarker 2.3.35.</p>
+            </div>
+
+
+          <p>Splits the string at the line breaks to a sequence of lines.
+          The resulting lines themselves don&#39;t contain the line-break
+          character. All kind of line-breaks are recognized:
+          <code class="inline-code">LF</code> (Linux), or <code class="inline-code">CRLF</code>
+          (DOS/Windows), even <code class="inline-code">CR</code> (old Mac).</p>
+
+          <p>Example:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign text = &quot;Line 1\nLine 2\Line 3\n&quot;&gt;
+&lt;#list text?lines as line&gt;
+  - ${line}
+&lt;/#list&gt;</pre>    </div>
+
+
+          <p>will output:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">- Line 1
+- Line 2
+- Line 3</pre>    </div>
+
+
+          <p>The basic approach is that each line should end with a
+          line-break, including the last line. But if the text doesn&#39;t end
+          with line-break, then it&#39;s implied to have line-break at the end.
+          Therefore, with <code class="inline-code">&lt;#assign text = &quot;Line 1\nLine 2\Line
+          3&quot;&gt;</code> (no <code class="inline-code">\n</code> at the end), you would
+          get the same output like above.</p>
+
+          <p>With <code class="inline-code">&lt;#assign text = &quot;Line 1\nLine 2\Line
+          3\n\n&quot;&gt;</code> (two <code class="inline-code">\n</code>-s at the end), you
+          would get and additional empty line in the output.</p>
         
           
 
@@ -2322,7 +2689,7 @@ This isonev[...]</pre>    </div>
 
 
 
-<h3 class="content-header header-simplesect" id="autoid_76">Adjusting truncation rules</h3>
+<h3 class="content-header header-simplesect" id="autoid_78">Adjusting truncation rules</h3>
 
 
             <p>Truncation rules are highly configurable by setting the
@@ -2422,7 +2789,7 @@ Fo bar. ... (Word separator space prevents touching)</pre>    </div>
 
 
 
-<h3 class="content-header header-simplesect" id="autoid_77">Using markup as terminator string</h3>
+<h3 class="content-header header-simplesect" id="autoid_79">Using markup as terminator string</h3>
 
 
             <p>Each truncation built-in has a variation whose name ends
@@ -2727,6 +3094,128 @@ ${x?url}</pre>    </div>
     <div class="code-block role-output">
 <div class="code-block-label">Output</div><pre class="code-block-body">[a][bcd,][.][1-2-3]</pre>    </div>
 
+        
+          
+
+
+
+<h2 class="content-header header-section2" id="ref_builtin_wrap">wrap</h2>
+
+
+          
+
+          
+
+            <div class="callout note">
+    <strong class="callout-label">Note:</strong>
+
+            <p>This built-in is available since FreeMarker 2.3.35.</p>
+            </div>
+
+
+          <p>Word-wraps the string so that if possible, no line is longer
+          than the width given as the 1st parameter. It breaks line at <a href="gloss.html#gloss.whiteSpace">white-space</a> only. A section
+          without white-space that&#39;s longer than the width is emitted on its
+          own line without being broken.</p>
+
+          <p><a href="gloss.html#gloss.whiteSpace">White-space</a>
+          treatment:</p>
+
+          <ul>
+            <li>
+              <p>Each continuous sequence of white-space characters in the
+              input is in effect collapsed to a single space, or removed if
+              they are before a word-wrapping line-break</p>
+            </li>
+
+            <li>
+              <p>The result always ends with a line-break</p>
+            </li>
+
+            <li>
+              <p>All leading and trailing whitespace of the input
+              (including line-breaks!) is removed in effect</p>
+            </li>
+
+            <li>
+              <p>Non-breaking space (U+00A0) is <em>not</em>
+              treated as white-space by this built-in. <span class="marked-for-programmers">(We treat the Java regular expression
+              <code class="inline-code">\s</code> as white-space, which does
+              <em>not</em> include the non-breaking
+              space.)</span></p>
+            </li>
+          </ul>
+
+          <p>Example:</p>
+
+          
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;Some long text that need to be wrapper at reasonable width&quot;?wrap(25)}</pre>    </div>
+
+
+          <p>will output this:</p>
+
+          
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">Some long text that need
+to be wrapper at
+reasonable width</pre>    </div>
+
+
+          <p>The width parameter is truncated to integer, and must be at
+          least 1.</p>
+
+          
+            
+
+
+
+<h3 class="content-header header-section3" id="autoid_80">Adding line suffixed</h3>
+
+
+            <p>An optional 2nd parameter is a prefix prepended to the first
+            output line. The optional 3rd parameter is a prefix prepended to
+            all subsequent lines. If the 3rd parameter is omitted, the 2nd
+            parameter is used for all lines.</p>
+
+            <p>This is useful for generating wrapped comments, such as
+            documentation blocks. For example:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">&lt;#assign text = &quot;This is a long description that should be wrapped&quot; /&gt;
+${text?wrap(40, &quot; * @brief &quot;, &quot; *         &quot;)}</pre>    </div>
+
+
+            <p>will output this:</p>
+
+            
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body"> * @brief This is a long description
+ *         that should be wrapped</pre>    </div>
+
+
+            <p>With a single prefix used for all lines:</p>
+
+            
+
+    <div class="code-block role-template">
+<div class="code-block-label">Template</div><pre class="code-block-body">${&quot;A comment that needs to be wrapped at a reasonable width&quot;?wrap(40, &quot;// &quot;)}</pre>    </div>
+
+
+            <p>will output this:</p>
+
+            
+
+    <div class="code-block role-output">
+<div class="code-block-label">Output</div><pre class="code-block-body">// A comment that needs to be wrapped at
+// a reasonable width</pre>    </div>
+
+          
         
           
 
@@ -3189,9 +3678,9 @@ rif: foo XYr baar</pre>    </div>
     </div>
 <div class="site-footer" data-pagefind-ignore="all"><div class="site-width"><div class="footer-top"><div class="col-left sitemap"><div class="column"><h3 class="column-header">Overview</h3><ul><li><a href="https://freemarker.apache.org/">What is FreeMarker?</a></li><li><a href="https://freemarker.apache.org/freemarkerdownload.html">Download</a></li><li><a href="app_versions.html">Version history</a></li><li><a href="app_faq.html">FAQ</a></li><li><a itemprop="license" href="app_license.html">License</a></li><li><a href="https://privacy.apache.org/policies/privacy-policy-public.html">Privacy policy</a></li></ul></div><div class="column"><h3 class="column-header">Often used / Reference</h3><ul><li><a href="https://try.freemarker.apache.org/">Try template online</a></li><li><a href="dgui_template_exp.html#exp_cheatsheet">Expressions cheatsheet</a></li><li><a href="ref_directive_alphaidx.html">#directives</a></li><li><a href="ref_builtins_alphaidx.html">?built_ins</a></li><li><a href="ref_specvar.html">.special_vars</a></li><li><a href="api/freemarker/core/Configurable.html#setSetting-java.lang.String-java.lang.String-">Configuration settings</a></li></ul></div><div class="column"><h3 class="column-header">Community</h3><ul><li><a href="https://github.com/apache/freemarker">Github project page</a></li><li><a href="https://issues.apache.org/jira/projects/FREEMARKER">Report a bug</a></li><li><a href="https://freemarker.apache.org/report-security-vulnerabilities.html">Report security vulnerability</a></li><li><a href="https://stackoverflow.com/questions/ask?tags=freemarker">Get help on StackOverflow</a></li><li><a href="https://twitter.com/freemarker">Announcements on Twitter</a></li><li><a href="https://freemarker.apache.org/mailing-lists.html">Discuss on mailing lists</a></li></ul></div></div><div class="col-right"><ul class="social-icons"><li><a class="github" href="https://github.com/apache/freemarker">Github</a></li><li><a class="twitter" href="https://twitter.com/freemarker">Twitter</a></li><li><a class="stack-overflow" href="https://stackoverflow.com/questions/ask?tags=freemarker">Stack Overflow</a></li></ul><a class="xxe" href="http://www.xmlmind.com/xmleditor/" rel="nofollow" title="Edited with XMLMind XML Editor"><span>Edited with XMLMind XML Editor</span></a></div></div><div class="footer-bottom"> <p class="last-generated">
 Last generated:
-<time itemprop="dateModified" datetime="2025-06-22T15:04:39Z" title="Sunday, June 22, 2025 at 3:04:39 PM Greenwich Mean Time">2025-06-22 15:04:39 GMT</time>, for Freemarker 2.3.34 </p>
+<time itemprop="dateModified" datetime="2026-08-28T20:57:51Z" title="Friday, August 28, 2026 at 8:57:51 PM Greenwich Mean Time">2026-08-28 20:57:51 GMT</time>, for Freemarker 2.3.35 </p>
 <p class="copyright">
-© <span itemprop="copyrightYear">1999</span>–2025
+© <span itemprop="copyrightYear">1999</span>–2026
 <a itemtype="http://schema.org/Organization" itemprop="copyrightHolder" href="https://apache.org/">The Apache Software Foundation</a>. Apache FreeMarker, FreeMarker, Apache, the Apache feather logo, and the Apache FreeMarker project logo are trademarks or registered trademarks of The Apache Software Foundation. All other marks mentioned may be trademarks or registered trademarks of their respective owners. </p>
 </div></div></div></body>
 </html>

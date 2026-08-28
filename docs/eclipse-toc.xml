@@ -212,6 +212,10 @@
       href="pgui_misc_logging.html"
   ></topic>  
 <topic
+      label="GraalVM native support"
+      href="pgui_misc_graalvm_native.html"
+  ></topic>  
+<topic
       label="Using FreeMarker with servlets"
       href="pgui_misc_servlet.html"
   ></topic>  
@@ -483,6 +487,10 @@
       label="B: Version history"
       href="app_versions.html"
   >  
+<topic
+      label="2.3.35"
+      href="versions_2_3_35.html"
+  ></topic>  
 <topic
       label="2.3.34"
       href="versions_2_3_34.html"
